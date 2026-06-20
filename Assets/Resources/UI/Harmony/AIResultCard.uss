@@ -1,0 +1,41 @@
+:root {
+    --deep-obsidian: rgba(15, 8, 28, 0.9);
+    --oracle-gold: #D4AF37;
+    --gold-glow: rgba(212, 175, 55, 0.2);
+    --orbitron: resource("Fonts & Materials/Orbitron-VariableFont_wght Bitmap");
+}
+
+.ai-result-card {
+    flex-direction: column;
+    background-color: var(--deep-obsidian);
+    border-radius: 12px;
+    padding: 16px;
+    border-width: 1px;
+    border-color: var(--oracle-gold);
+    width: 100%;
+}
+
+.ai-result-card__header {
+    -unity-text-align: middle-center;
+    margin-bottom: 16px;
+}
+
+.ai-result-card__header > Label {
+    color: var(--oracle-gold);
+    -unity-font-definition: var(--orbitron);
+    font-size: 16px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.ai-result-card__body {
+    flex-grow: 1;
+}
+
+#LblResultContent {
+    color: #FFFFFF;
+    font-size: 14px;
+    white-space: normal;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    -unity-font-definition: var(--orbitron);
+}

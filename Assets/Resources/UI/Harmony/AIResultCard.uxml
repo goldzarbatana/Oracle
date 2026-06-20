@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UI/Harmony/AIResultCard.uss?fileID=7433441132597879392&amp;guid=938b0dea88d326e4c92b050fe7113e5a&amp;type=3#AIResultCard"/>
+    <ui:VisualElement class="ai-result-card" style="display: none; opacity: 0;">
+        <ui:VisualElement class="ai-result-card__header">
+            <ui:Label text="🔮 ПРОЯВЛЕНИЙ РЕЗУЛЬТАТ"/>
+        </ui:VisualElement>
+        <ui:ScrollView class="ai-result-card__body">
+            <ui:Label name="LblResultContent" text="The result will be manifested here..."/>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

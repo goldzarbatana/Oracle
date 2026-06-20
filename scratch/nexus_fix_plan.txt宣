@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="false"
+>
+    <ui:Style src="project://database/Assets/UI/Nexus/NexusScene.uss?fileID=7433441132597879392&amp;guid=3ee0ef23c57fa2c4096a46ba201a93c1&amp;type=3#NexusScene" />
+    <ui:Style src="project:/Assets/UI/Oracle/OracleWidget.uss" />
+
+    <ui:VisualElement name="ScreenRoot" class="screen-container" style="-unity-font-definition: resource('Fonts &amp; Materials/Orbitron-VariableFont_wght Bitmap');">
+        <ui:VisualElement name="WelcomeRite" style="display: flex;">
+            <ui:Label text="✦ ЛАСКАВО ПРОСИМО ДО НЕКСУСУ ✦" style="color: white; font-size: 32px; letter-spacing: 8px;"/>
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="PanelContent" class="content-area">
+            <!-- Panels (Radar, Vault, Feed, etc.) - Content omitted for brevity in this scratch but I must keep the whole file -->
+            <!-- ... (I will use replace_file_content instead to be safe) ... -->
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

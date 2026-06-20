@@ -1,0 +1,1652 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AuraTermsTable_fr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 4c99f03821d18444b98654ad6d359dfc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 316633612288
+    m_Localized: "Ma\xEEtre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316671361024
+    m_Localized: Horas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555328
+    m_Localized: Statut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555329
+    m_Localized: Convergence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749632
+    m_Localized: Visage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749633
+    m_Localized: Aura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749634
+    m_Localized: Chronique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749635
+    m_Localized: Flux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749636
+    m_Localized: Destin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749637
+    m_Localized: Transformer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749638
+    m_Localized: Connexion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749639
+    m_Localized: "R\xE9sonner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749640
+    m_Localized: Aligner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749641
+    m_Localized: Initiation de l'Harmonie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749642
+    m_Localized: Dissolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749643
+    m_Localized: "\xC9veil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943936
+    m_Localized: Le Temple s'ouvre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943941
+    m_Localized: "SUCC\xC8S"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943943
+    m_Localized: "Le temple attend votre pr\xE9sence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943944
+    m_Localized: "Votre signal r\xE9sonne avec clart\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943945
+    m_Localized: "Le signal n'est pas clair. Veuillez v\xE9rifier votre num\xE9ro
+      de t\xE9l\xE9phone."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943946
+    m_Localized: La convergence commence...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943947
+    m_Localized: Bienvenue. Le temple s'ouvre pour vous.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943948
+    m_Localized: "Le rituel a \xE9t\xE9 interrompu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943949
+    m_Localized: "La connexion faiblit. Veuillez r\xE9essayer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943950
+    m_Localized: "Une perturbation dans le flux. Veuillez r\xE9essayer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943951
+    m_Localized: Initiation de l'Harmonie...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943952
+    m_Localized: '{0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943953
+    m_Localized: 'Horas : ${0} /h'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943954
+    m_Localized: "Dans quelle mesure l'\xE9change de {0} Horas \xE9tait-il synchrone
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943955
+    m_Localized: Mission pour le niveau {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424642899968
+    m_Localized: Nexus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065792
+    m_Localized: "Sym\xE9trie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065793
+    m_Localized: Harmonie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065794
+    m_Localized: Laissez un mot de gratitude.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065795
+    m_Localized: "H\xE9ritage du Ma\xEEtre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065796
+    m_Localized: Mot de gratitude
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454400
+    m_Localized: "PR\xCAT POUR LA SYM\xC9TRIE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454401
+    m_Localized: "RECHERCHE DE SYM\xC9TRIE..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454402
+    m_Localized: "ARR\xCATER LE SCAN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454403
+    m_Localized: "SYM\xC9TRIE LOCALIS\xC9E : {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454404
+    m_Localized: INITIALISATION DE L'IMPULSION...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454405
+    m_Localized: "R\xC9SONNE TON AURA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454406
+    m_Localized: COULEURS D'AURA (OFFRE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454407
+    m_Localized: COULEURS D'AURA (BESOINS)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454408
+    m_Localized: FORGE TON PROPRE CHEMIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454409
+    m_Localized: ACTIVER L'AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454410
+    m_Localized: RADAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454411
+    m_Localized: FLUX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454412
+    m_Localized: CHAMBRE FORTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20605122049835008
+    m_Localized: "Num\xE9ro de t\xE9l\xE9phone"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560160550912
+    m_Localized: +33 0 00 00 00 00
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522432
+    m_Localized: Code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522433
+    m_Localized: Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522434
+    m_Localized: "\xC9criture"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522435
+    m_Localized: "Gu\xE9rison"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522436
+    m_Localized: "Strat\xE9gie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522437
+    m_Localized: Art
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522438
+    m_Localized: Visionnaire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522439
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522440
+    m_Localized: Crypto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901238259712
+    m_Localized: "MA\xCETRES \xC0 PROXIMIT\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901246648320
+    m_Localized: "R\xC9SONNER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697802838016
+    m_Localized: "Le chemin n\xE9cessite un num\xE9ro plus long..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809536
+    m_Localized: OUVERTURE DU PORTAIL...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809537
+    m_Localized: "Le portail reste ferm\xE9. R\xE9essayez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809538
+    m_Localized: "L'Aura a vacill\xE9. Veuillez r\xE9essayer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808302190592
+    m_Localized: Un Visage rapproche l'Harmonie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808327356416
+    m_Localized: "Un Visage est requis pour sceller cette Sym\xE9trie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550720
+    m_Localized: "R\xD4LE / RANG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550721
+    m_Localized: "\u2726 Canal d'Harmonie Ouvert \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550722
+    m_Localized: Actif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550723
+    m_Localized: "La fen\xEAtre de 24h s'est ferm\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550724
+    m_Localized: "\u2726 L'Harmonie s'est close paisiblement. \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550725
+    m_Localized: "\u2B21 Vous proposez {0} Horas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550726
+    m_Localized: 'Proposition : {0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550727
+    m_Localized: "\u2B21 {0} Horas accept\xE9s. L'Harmonie grandit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550728
+    m_Localized: "\u2B21 Proposition refus\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745024
+    m_Localized: Mentor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745025
+    m_Localized: Expert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745026
+    m_Localized: Conseiller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745027
+    m_Localized: "Cr\xE9ateur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745028
+    m_Localized: Innovateur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745029
+    m_Localized: "Esth\xE8te"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745030
+    m_Localized: Praticien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939328
+    m_Localized: Soutien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939329
+    m_Localized: Artisan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939330
+    m_Localized: Explorateur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939331
+    m_Localized: Chercheur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835772682240
+    m_Localized: "\u2728 Cr\xE9er l'Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835797848064
+    m_Localized: "\u2728 Mettre \xE0 jour l'Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945917734912
+    m_Localized: MENU NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945938706432
+    m_Localized: "PROFIL DU MA\xCETRE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900736
+    m_Localized: RITE DE L'AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900737
+    m_Localized: CHRONIQUES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900738
+    m_Localized: COFFRE-FORT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900739
+    m_Localized: "PARAM\xC8TRES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900740
+    m_Localized: "D\xC9CONNEXION"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21798597260836874
+    m_Localized: cycles d'hiver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862370189312
+    m_Localized: SOLDE HORAS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862399549440
+    m_Localized: "SYM\xC9TRIES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519346978816
+    m_Localized: VALIDER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144640
+    m_Localized: EXEC_SEQUENCE_AUTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144642
+    m_Localized: SE CONNECTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144646
+    m_Localized: C'EST PARTI !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584153645056
+    m_Localized: SYNERGIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393792
+    m_Localized: "D\xC9TENTE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393793
+    m_Localized: SYNC_PROCESSUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393794
+    m_Localized: "R\xC9SEAUTAGE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393795
+    m_Localized: MON VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584195588096
+    m_Localized: "DONN\xC9ES_UTILISATEUR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336832
+    m_Localized: SYSTEM_LOGIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336833
+    m_Localized: PERSPECTIVES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336834
+    m_Localized: "QUI EST L\xC0 ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336835
+    m_Localized: SCANNEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336836
+    m_Localized: "PR\xCAT POUR LE R\xC9SEAU"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336837
+    m_Localized: "QUI EST L\xC0 ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336838
+    m_Localized: "BALAYAGE DES FR\xC9QUENCES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336839
+    m_Localized: RECHERCHE D'ACTIFS...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336840
+    m_Localized: RECHERCHE DE VIBES...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336841
+    m_Localized: "ANALYSE DES DONN\xC9ES SPECTRALES..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336842
+    m_Localized: CONNECTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336843
+    m_Localized: DIS SALUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336844
+    m_Localized: UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336845
+    m_Localized: LA VOIX MYSTIQUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336846
+    m_Localized: LA VOIX DES AFFAIRES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336847
+    m_Localized: "LA VOIX D\xC9CONTRACT\xC9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336848
+    m_Localized: LA VOIX TECH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336849
+    m_Localized: "D\xC9FINIR LES COMP\xC9TENCES CL\xC9S"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336850
+    m_Localized: MONTRE TON VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336851
+    m_Localized: CONFIGURER LA MATRICE D'ATTRIBUTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584237531136
+    m_Localized: C'EST BON !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740322889728
+    m_Localized: "R\xC9GLAGES NEXUS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832768
+    m_Localized: VOLUME PRINCIPAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832769
+    m_Localized: MUSIQUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832770
+    m_Localized: EFFETS (SFX)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832771
+    m_Localized: AMBIANCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832772
+    m_Localized: TOUT MUTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832773
+    m_Localized: BIENVENUE AU NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832774
+    m_Localized: VOTRE AURA ACTUELLE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832775
+    m_Localized: MES DONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832776
+    m_Localized: JE CHERCHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832777
+    m_Localized: "COMBIEN DE CYCLES D'HIVER TON \xC9TINCELLE A-T-ELLE BR\xDBL\xC9
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027072
+    m_Localized: "QUELLE \xC9NERGIE APPORTES-TU AU NEXUS ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027073
+    m_Localized: "O\xD9 TON AURA EST-ELLE LA PLUS FORTE DANS L'ESPACE ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027074
+    m_Localized: "TON CHEMIN EST SCELL\xC9. BIENVENUE."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027075
+    m_Localized: L'Aura est silencieuse aujourd'hui.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027076
+    m_Localized: MASCULIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027077
+    m_Localized: "F\xC9MININ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027078
+    m_Localized: NEUTRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027079
+    m_Localized: RECHERCHE TON ROYAUME...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027080
+    m_Localized: "CONFIRMER L'\xC2GE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027081
+    m_Localized: "ILLUMINER MA PR\xC9SENCE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027082
+    m_Localized: "SYM\xC9TRIE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027083
+    m_Localized: "\xC0 PROXIMIT\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027084
+    m_Localized: "\U0001F441\uFE0F Oracle: Cette fonctionnalit\xE9 se manifestera
+      dans les cycles futurs (Beta)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027085
+    m_Localized: "VOLUME G\xC9N\xC9RAL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027086
+    m_Localized: MUSIQUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027087
+    m_Localized: EFFETS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027088
+    m_Localized: VOIX DE L'ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027089
+    m_Localized: SOURDINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027090
+    m_Localized: "LA VO\xDBTE AKASHIQUE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027091
+    m_Localized: "SYM\xC9TRIE D\xC9TECT\xC9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221376
+    m_Localized: "D\xC9CLINER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221377
+    m_Localized: TimeAura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221378
+    m_Localized: "PAR QUEL NOM LE NEXUS VOUS CONNA\xCETRA-T-IL ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221379
+    m_Localized: "R\xC9V\xC9LER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221380
+    m_Localized: Que apportez-vous au Nexus ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221381
+    m_Localized: "\u2692\uFE0F MAT\xC9RIEL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221382
+    m_Localized: "\u2726 \xC9TH\xC9R\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221383
+    m_Localized: CONFIRMER L'OFFRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221384
+    m_Localized: "Votre chemin est scell\xE9. Bienvenue."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415680
+    m_Localized: ASPIRANT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415681
+    m_Localized: "MA\xCETRE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415682
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415683
+    m_Localized: "Les Lignes de Force sont align\xE9es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415684
+    m_Localized: "L'\xE9ther est turbulent ici. Essayez un autre endroit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415685
+    m_Localized: "En attente du souffle sacr\xE9..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415686
+    m_Localized: Commencement du Rituel du Visage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415687
+    m_Localized: "Le chemin de l'ombre r\xE9v\xE8le votre v\xE9ritable essence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415688
+    m_Localized: Royaume Inconnu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415689
+    m_Localized: "Votre h\xE9ritage reste \xE0 \xE9crire..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415690
+    m_Localized: MANIFESTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609984
+    m_Localized: INTENTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609985
+    m_Localized: BOUSSOLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609986
+    m_Localized: "M\xC9DITER AVEC L'ORACLE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609987
+    m_Localized: "D\xE9crivez vos comp\xE9tences..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609988
+    m_Localized: "Choisissez votre style de r\xE9sonance"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609989
+    m_Localized: "Persona mise \xE0 jour."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609990
+    m_Localized: MYSTIQUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609991
+    m_Localized: AFFAIRES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609992
+    m_Localized: "D\xC9CONTRACT\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609993
+    m_Localized: TECH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609994
+    m_Localized: SCELLER LE RITUEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609995
+    m_Localized: "ENGAGER LES DONN\xC9ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609996
+    m_Localized: ENREGISTRER LE PROFIL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609997
+    m_Localized: C'EST PARTI !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609998
+    m_Localized: CONSULTER L'ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609999
+    m_Localized: "Profil synchronis\xE9. Le Nexus est optimis\xE9 pour votre pr\xE9sence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610000
+    m_Localized: "Veuillez pr\xE9ciser votre \xE2ge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610001
+    m_Localized: "S\xE9lectionnez votre identit\xE9 de genre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610002
+    m_Localized: "\xC9tablissez votre zone op\xE9rationnelle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610003
+    m_Localized: "Depuis combien d'ann\xE9es d\xE9chirez-vous sur cette plan\xE8te
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610004
+    m_Localized: "Boum ! Votre Aura est pr\xEAte \xE0 briller. On se voit dans le
+      Nexus !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610005
+    m_Localized: "Puret\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610006
+    m_Localized: Chaos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610007
+    m_Localized: FinTech
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610008
+    m_Localized: Architecture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610009
+    m_Localized: "Efficacit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610010
+    m_Localized: "Mise \xE0 l'\xE9chelle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610011
+    m_Localized: "Donn\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610012
+    m_Localized: Investissement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610013
+    m_Localized: Production
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610014
+    m_Localized: "Syst\xE8mes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610015
+    m_Localized: Artisanat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610016
+    m_Localized: "Cybern\xE9tique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610017
+    m_Localized: "Orient\xE9 r\xE9sultat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804288
+    m_Localized: Intuition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804289
+    m_Localized: "Po\xE9sie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804290
+    m_Localized: "Travail des r\xEAves"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804291
+    m_Localized: "M\xE9taphysique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804292
+    m_Localized: Storytelling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804293
+    m_Localized: Improvisation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804294
+    m_Localized: Philosophie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804295
+    m_Localized: Empathie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804296
+    m_Localized: Paysages sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804297
+    m_Localized: Biohacking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804298
+    m_Localized: Yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804299
+    m_Localized: Nutrition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804300
+    m_Localized: Nature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804301
+    m_Localized: "Long\xE9vit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804302
+    m_Localized: Travail respiratoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804303
+    m_Localized: Sport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804304
+    m_Localized: "R\xE9g\xE9n\xE9ration"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804305
+    m_Localized: "\xC9quilibre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804306
+    m_Localized: Herboristerie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804307
+    m_Localized: "Vitalit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804308
+    m_Localized: Pleine conscience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804309
+    m_Localized: Bio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804310
+    m_Localized: "Durabilit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804311
+    m_Localized: Mentorat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804312
+    m_Localized: Leadership
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804313
+    m_Localized: "Communaut\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804314
+    m_Localized: Networking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804315
+    m_Localized: Collaboration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804316
+    m_Localized: "\xC9ducation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998592
+    m_Localized: Diplomatie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998593
+    m_Localized: Tribal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998594
+    m_Localized: Altruisme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998595
+    m_Localized: Prise de parole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998596
+    m_Localized: Psychologie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998597
+    m_Localized: "Organisation d'\xE9v\xE9nements"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998598
+    m_Localized: Social
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998599
+    m_Localized: "BIEN-\xCATRE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998600
+    m_Localized: "BIEN-\xCATRE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998601
+    m_Localized: SOCIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192896
+    m_Localized: "\xC9chantillon de r\xE9sonance"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192897
+    m_Localized: PETIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192898
+    m_Localized: MOYEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192899
+    m_Localized: GRAND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387200
+    m_Localized: "L'Oeil per\xE7oit tout."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387201
+    m_Localized: ALIGNER LA VUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387202
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971566432256
+    m_Localized: COMMENCER LE RITUEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569600
+    m_Localized: "Signature num\xE9rique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569601
+    m_Localized: "Num\xE9ro de t\xE9l\xE9phone"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569602
+    m_Localized: "Ton num\xE9ro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569603
+    m_Localized: "ID_T\xC9L\xC9PHONE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569604
+    m_Localized: "Le seuil de l'\xE9ternit\xE9 attend votre pr\xE9sence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569605
+    m_Localized: En attente de l'authentification de l'utilisateur.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569606
+    m_Localized: La porte est ouverte, entre !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971616763904
+    m_Localized: ATTENTE_HANDSHAKE_CLIENT...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958208
+    m_Localized: "Le chemin n\xE9cessite une vibration plus profonde..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958209
+    m_Localized: "Entr\xE9e invalide. Longueur minimale non atteinte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958210
+    m_Localized: Oups, trop court ! Ajoute d'autres chiffres.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958211
+    m_Localized: "ERR_LONGUEUR_ENTR\xC9E_INSUFFISANTE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958212
+    m_Localized: "INVOCATION DE LA SYM\xC9TRIE..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958213
+    m_Localized: "CONNEXION AU R\xC9SEAU..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958214
+    m_Localized: Attends un peu, on y est presque...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958215
+    m_Localized: INITIALISATION_SERVICES_CENTRAUX...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958216
+    m_Localized: "Les \xE9toiles sont d\xE9salign\xE9es. R\xE9essayez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958217
+    m_Localized: "La connexion a \xE9chou\xE9. Veuillez r\xE9essayer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958218
+    m_Localized: "Quelque chose s'est mal pass\xE9. R\xE9essaie !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958219
+    m_Localized: TIMEOUT_HANDSHAKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958220
+    m_Localized: Le fil cosmique a rompu. Reconnectez-vous.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958221
+    m_Localized: "Erreur critique. Contactez le support ou r\xE9essayez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958222
+    m_Localized: "Gros bug ici ! R\xE9essaie encore une fois."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958223
+    m_Localized: "EXCEPTION_CRITIQUE_SYST\xC8ME"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318336
+    m_Localized: "R\xE9sonance d'\xE2me dans l'\xE9ther."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318337
+    m_Localized: "Attente du souffle sacr\xE9..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512640
+    m_Localized: Initialisation du protocole...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512641
+    m_Localized: "Attends, je v\xE9rifie..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512642
+    m_Localized: "ATTENTE_PAQUETS_DONN\xC9ES..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512643
+    m_Localized: "Ton chemin est scell\xE9. Bienvenue."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512644
+    m_Localized: "SYST\xC8ME_PR\xCAT. INITIALISATION..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512645
+    m_Localized: SCELLER L'AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953901727744
+    m_Localized: "INITI\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253696
+    m_Localized: CHERCHEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253697
+    m_Localized: JUNIOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253698
+    m_Localized: UTILISATEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253699
+    m_Localized: NOVICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253700
+    m_Localized: "MA\xCETRE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253701
+    m_Localized: ARCHIMAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253702
+    m_Localized: MANAGER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253703
+    m_Localized: "D\xC9VELOPPEUR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253704
+    m_Localized: CHEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253705
+    m_Localized: ANCIEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253706
+    m_Localized: SAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253707
+    m_Localized: DIRECTEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253708
+    m_Localized: RACINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253709
+    m_Localized: BOOMER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253710
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253711
+    m_Localized: DIVIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253712
+    m_Localized: PDG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253713
+    m_Localized: SUPER-UTILISATEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253714
+    m_Localized: MODE DIEU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253715
+    m_Localized: SYNCHRONISATION...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253716
+    m_Localized: ALIGNEMENT DES LIGNES LEY...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253717
+    m_Localized: "CONNEXION \xC0 LA BASE DE DONN\xC9ES..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253718
+    m_Localized: SYNC DU REPO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253719
+    m_Localized: CHARGEMENT DU CERVEAU...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253720
+    m_Localized: TRANSCENDANCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253721
+    m_Localized: ASCENSION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253722
+    m_Localized: PROMU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253723
+    m_Localized: "\xC9VOLUTION"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253724
+    m_Localized: "MONT\xC9E DE NIVEAU"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253725
+    m_Localized: ORACLE NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253726
+    m_Localized: "MENU EX\xC9CUTIF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253727
+    m_Localized: "CONTR\xD4LE SYST\xC8ME"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253728
+    m_Localized: "SANCTUAIRE INT\xC9RIEUR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253729
+    m_Localized: PROFIL PROFESSIONNEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253730
+    m_Localized: "DONN\xC9ES UTILISATEUR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253731
+    m_Localized: "ALIGNEMENT DE L'\xC2ME"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253732
+    m_Localized: VALEURS FONDAMENTALES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253733
+    m_Localized: CONFIG DU SPECTRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253734
+    m_Localized: VIBRATIONS DES LIGNES LEY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253735
+    m_Localized: "FLUX DU MARCH\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253736
+    m_Localized: "LOGS SYST\xC8ME"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253737
+    m_Localized: "TR\xC9SOR DU TEMPS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253738
+    m_Localized: COFFRE D'ACTIFS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253739
+    m_Localized: "STOCKAGE DE DONN\xC9ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253740
+    m_Localized: "REGARDER DANS L'\xC9THER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253741
+    m_Localized: "RECHERCHE D'\xC9CHOS DESTIN\xC9S..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253742
+    m_Localized: "SYM\xC9TRIE MANIFEST\xC9E !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253743
+    m_Localized: CIBLE ACQUISE !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253744
+    m_Localized: "NOEUDS CONNECT\xC9S !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253745
+    m_Localized: "CANALISER \u2728"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253746
+    m_Localized: "APPROUVER \U0001F91D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253747
+    m_Localized: "LIER \U0001F517"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253748
+    m_Localized: "AIMER \u2764\uFE0F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253749
+    m_Localized: "CANALIS\xC9 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253750
+    m_Localized: "APPROUV\xC9 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253751
+    m_Localized: "LI\xC9 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253752
+    m_Localized: "AIM\xC9 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253753
+    m_Localized: "Vecteur : {0} \xC2me/h"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253754
+    m_Localized: 'Production : {0} Actif/h'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253755
+    m_Localized: "D\xE9bit : {0} Op/sec"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253756
+    m_Localized: Essence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253757
+    m_Localized: Revenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253758
+    m_Localized: Cycles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253759
+    m_Localized: TENIR POUR ALIGNER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253760
+    m_Localized: FUSIONNEZ VOTRE ESPRIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253761
+    m_Localized: TENIR POUR CONFIRMER LE PARTENARIAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253762
+    m_Localized: MAINTENIR LA LIAISON MONTANTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253763
+    m_Localized: SAGESSE DE L'ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836608
+    m_Localized: "MUMURES \xC9TH\xC9R\xC9S"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836609
+    m_Localized: "APER\xC7US EX\xC9CUTIFS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836610
+    m_Localized: "ANALYSE DE C\u0152UR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836611
+    m_Localized: "Les flux cosmiques sont turbulents. R\xE9essayez plus tard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836612
+    m_Localized: "Les \xE9toiles sont voil\xE9es d'ombre. Reconnectez-vous quand
+      les courants s'\xE9claircissent."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836613
+    m_Localized: "Connexion r\xE9seau instable. Veuillez r\xE9initialiser la consultation
+      plus tard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836614
+    m_Localized: "Perte de paquets d\xE9tect\xE9e dans l'\xC9ther. \xC9chec de la
+      poign\xE9e de main. R\xE9essayez plus tard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836615
+    m_Localized: VISION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836616
+    m_Localized: SANCTUAIRE DE L'ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836617
+    m_Localized: QUITTER LE SILENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030912
+    m_Localized: "Le silence est absolu aujourd'hui. R\xE9essayez plus tard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030913
+    m_Localized: "Choisissez votre style de r\xE9sonance."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030914
+    m_Localized: "Quel chemin votre \xE2me murmure-t-elle ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030915
+    m_Localized: "S\xE9lectionnez votre ton de communication professionnel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030916
+    m_Localized: Configurer le protocole d'interaction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030917
+    m_Localized: Comment devrions-nous parler ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030918
+    m_Localized: "Votre vibration a \xE9t\xE9 r\xE9align\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030919
+    m_Localized: "Param\xE8tres du profil synchronis\xE9s avec succ\xE8s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030920
+    m_Localized: "Protocole d'interface mis \xE0 jour."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030921
+    m_Localized: Compris ! Je change de style maintenant.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030922
+    m_Localized: "Entrez dans le flux de la causalit\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030923
+    m_Localized: "Initialisation du module d'analyse pr\xE9dictive."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030924
+    m_Localized: "Acc\xE8s aux m\xE9tadonn\xE9es neurales."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030925
+    m_Localized: BOUSSOLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030926
+    m_Localized: CHRONIQUES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030927
+    m_Localized: "R\xC9SEAU"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030928
+    m_Localized: "FLUX DE DONN\xC9ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030929
+    m_Localized: "TR\xC9SORERIE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030930
+    m_Localized: ACTIFS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030931
+    m_Localized: STOCKAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030932
+    m_Localized: SANCTUAIRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030933
+    m_Localized: CONSULTANT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030934
+    m_Localized: INTERFACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030935
+    m_Localized: "FAITES R\xC9SONNER VOTRE ESPRIT"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030936
+    m_Localized: "TR\xC9SOR DU TEMPS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030937
+    m_Localized: "R\xC9PERTOIRE D'ACTIFS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030938
+    m_Localized: "COFFRE DE DONN\xC9ES CHIFFR\xC9ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030939
+    m_Localized: HISTOIRES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030940
+    m_Localized: MES TRUCS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030941
+    m_Localized: DISCUTER
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

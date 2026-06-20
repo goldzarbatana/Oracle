@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarbatana Systems | TimeAura</title>
+    <meta name="description" content="TimeAura — Reconnecting Real Communities Through Time Exchange">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mystic: '#0a0a1a',
+                        gold: '#d4af37',
+                        cyan: '#4a90e2',
+                        lightgray: '#e0e0e0'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-mystic text-lightgray font-inter overflow-x-hidden antialiased">
+    
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glassmorphism transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="TimeAura Logo" class="w-10 h-10 object-contain rounded-full shadow-[0_0_15px_#d4af37]">
+                <div class="flex flex-col">
+                    <span class="text-gold font-cinzel text-xl md:text-2xl font-bold tracking-wider">TimeAura</span>
+                    <span class="text-[10px] md:text-xs text-cyan tracking-widest opacity-80">ZARBATANA SYSTEMS</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex gap-6 items-center text-sm md:text-base">
+                    <a href="#manifesto" class="hover:text-gold transition-colors" data-i18n="nav_about">About</a>
+                    <a href="#company" class="hover:text-gold transition-colors" data-i18n="nav_company">Company</a>
+                    <a href="#tech" class="hover:text-gold transition-colors" data-i18n="nav_tech">Tech Stack</a>
+                    <a href="#roadmap" class="hover:text-gold transition-colors" data-i18n="nav_roadmap">Roadmap</a>
+                    <a href="#investors" class="hover:text-gold transition-colors" data-i18n="nav_investors">Investors</a>
+                </nav>
+                <button onclick="toggleLang()" class="text-xl hover:scale-110 transition-transform" id="lang-toggle">🇺🇦</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div id="particles-js" class="absolute inset-0 z-0 opacity-40"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up" data-aos-duration="1500">
+            <div class="floating-oracle mx-auto mb-8 w-28 h-28 rounded-full bg-cyan/10 border border-cyan/50 shadow-[0_0_40px_rgba(74,144,226,0.6)] flex items-center justify-center overflow-hidden p-2">
+                <img src="assets/oracle_eye.png" alt="Oracle Eye" class="w-full h-full object-contain mix-blend-screen opacity-90 hover:scale-110 transition-transform duration-700">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-cinzel font-bold text-white mb-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]">
+                TimeAura
+            </h1>
+            <h2 class="text-xl md:text-3xl text-cyan mb-8" data-i18n="hero_subtitle">
+                Bridging the Digital Divide to Reconnect Real Communities
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto" data-i18n="hero_desc">
+                Step away from the screen. We use AI not to keep you online, but to help you find and exchange skills with people right next door. Because true connection happens offline.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="assets/TimeAura_Technical_Architecture.html" target="_blank" class="btn-glow px-8 py-3 rounded border border-gold text-gold font-semibold hover:bg-gold hover:text-mystic transition-all">
+                    📄 <span data-i18n="btn_tech_doc">Technical Architecture</span>
+                </a>
+                <a href="#contact" class="px-8 py-3 rounded bg-cyan/10 border border-cyan/50 text-cyan font-semibold hover:bg-cyan hover:text-mystic transition-all">
+                    📧 <span data-i18n="btn_contact">Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Manifesto -->
+    <section id="manifesto" class="py-24 relative z-10 bg-white/5 border-y border-white/10">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-sm font-bold tracking-widest text-gold mb-8 uppercase" data-aos="fade-up" data-i18n="manifesto_title">OUR MANIFESTO</h2>
+            <div class="text-xl md:text-3xl font-cinzel text-white leading-relaxed space-y-6" data-aos="zoom-in">
+                <p data-i18n="manifesto_1">A neighbor is not just someone behind the wall. It’s someone nearby when you need them.</p>
+                <p data-i18n="manifesto_2" class="text-gray-300">Time is more valuable than money. You can't earn it back.</p>
+                <p data-i18n="manifesto_3" class="text-cyan">The best algorithm is human empathy. AI only helps us find it.</p>
+                <p data-i18n="manifesto_4" class="text-gold">True magic isn't in a screen. It's in the eyes of someone you helped.</p>
+            </div>
+            <p class="mt-12 text-lg text-gray-400 italic" data-aos="fade-up" data-i18n="manifesto_conclusion">
+                TimeAura is not an app. It's a movement to return to ourselves. To people. To life.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. The Pain Point -->
+    <section id="problem" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-cinzel text-center text-gray-500 mb-4" data-aos="fade-up" data-i18n="problem_title">THE AGE OF LONELINESS</h2>
+            <p class="text-center text-gray-400 mb-12" data-aos="fade-up" data-i18n="problem_subtitle">We live in a time of paradox:</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <div class="glass-card p-8 rounded-xl border border-red-500/20 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4">🚪</div>
+                    <p class="text-gray-300 font-bold" data-i18n="problem_1">87% of city dwellers don't know their neighbors' names.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border border-red-500/20 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">👤</div>
+                    <p class="text-gray-300 font-bold" data-i18n="problem_2">1 in 3 people experiences chronic loneliness.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border border-red-500/20 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">📱</div>
+                    <p class="text-gray-300 font-bold" data-i18n="problem_3">We have 500 friends on Facebook, but no one to help move a couch.</p>
+                </div>
+            </div>
+            <p class="text-center text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-i18n="problem_conclusion">
+                The internet connected continents but disconnected floors. We lost what our grandparents had naturally — a community where everyone knew everyone.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. About TimeAura -->
+    <section id="about" class="py-24 relative z-10 bg-gradient-to-b from-mystic to-[#0f172a]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-gold mb-12" data-aos="fade-up" data-i18n="about_title">What is TimeAura?</h2>
+            <div class="max-w-4xl mx-auto text-center mb-16 text-xl leading-relaxed text-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <p data-i18n="about_desc">TimeAura is a community-first platform designed to restore the lost art of neighborhood mutual aid—bringing back the human connection that existed before the internet. A professional cook and a talented hairdresser might live on the same floor, unaware that one wants to learn how to bake a perfect pizza, while the other needs a stylish haircut. TimeAura bridges that gap. We turn time into a currency of kindness, allowing neighbors within the same district or city to exchange services, help each other, and build real physical communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Story Example -->
+    <section id="story" class="py-24 relative z-10 bg-[url('assets/microphone.png')] bg-fixed bg-no-repeat bg-right-bottom bg-[length:200px] bg-opacity-10">
+        <div class="absolute inset-0 bg-mystic/90 z-0"></div>
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            <div class="glass-card p-10 rounded-2xl border-l-4 border-cyan">
+                <h3 class="text-cyan text-sm font-bold tracking-widest uppercase mb-6" data-aos="fade-right" data-i18n="story_title">IMAGINE THIS...</h3>
+                <div class="space-y-4 text-lg text-gray-300">
+                    <p data-aos="fade-up" data-i18n="story_p1">Maria, 34, Kyiv. She's lived on the 5th floor for 3 years. She's a hairdresser. She cuts hair beautifully, but dreams of learning to bake Italian pizza.</p>
+                    <p data-aos="fade-up" data-aos-delay="100" data-i18n="story_p2">On the 6th floor lives Andriy. A chef. He makes the best carbonara in town. But he needs a haircut — and he's too shy to go to a salon.</p>
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-white font-bold" data-i18n="story_p3">They live 3 meters apart. But they've never spoken.</p>
+                    <div class="my-6 p-4 bg-cyan/10 border border-cyan/30 rounded" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-cyan italic" data-i18n="story_p4">TimeAura connected them in 4 seconds. The Oracle saw: 'Hairdresser nearby wants pizza. Chef nearby wants a haircut.'</p>
+                    </div>
+                    <p data-aos="fade-up" data-aos-delay="400" data-i18n="story_p5">Today, Maria is teaching Andriy how to make dough. Andriy is cutting Maria's hair on Saturday morning. They drink coffee on the balcony. They are friends.</p>
+                    <p data-aos="fade-up" data-aos-delay="500" class="text-gold font-cinzel text-2xl mt-8 text-center" data-i18n="story_conclusion">It's not magic. It's the neighborhood we forgot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.5 How Users Earn -->
+    <section id="earn" class="py-24 relative z-10 bg-white/5 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-gold mb-4" data-aos="fade-up" data-i18n="earn_title">HOW TO EARN ON TIMEAURA?</h2>
+            <p class="text-center text-gray-400 mb-16 text-lg" data-aos="fade-up" data-i18n="earn_subtitle">The platform opens multiple revenue streams for active community members.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Freelancers -->
+                <div class="glass-card p-8 rounded-xl border-t-4 border-cyan" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><span class="text-2xl">🛠️</span> <span data-i18n="earn_freelance_title">FOR FREELANCERS</span></h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <h4 class="font-bold text-gold mb-1" data-i18n="earn_f1_t">Direct Orders</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_f1_d">Receive fiat payments for professional services (from $10 to $13,000+).</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-gold mb-1" data-i18n="earn_f2_t">Skill Barter</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_f2_d">Trade your services for others. Save money, get what you need.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-gold mb-1" data-i18n="earn_f3_t">Reputation Building</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_f3_d">Every successful deal boosts your rating. More orders = more income.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Neighbors -->
+                <div class="glass-card p-8 rounded-xl border-t-4 border-green-500" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><span class="text-2xl">🏘️</span> <span data-i18n="earn_neighbor_title">FOR NEIGHBORS</span></h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <h4 class="font-bold text-green-400 mb-1" data-i18n="earn_n1_t">Local Economy</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_n1_d">Earn Horas by helping neighbors. Spend them on local services.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-green-400 mb-1" data-i18n="earn_n2_t">Micro-services</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_n2_d">Even 30 minutes of help has value. Move furniture, walk a dog, help with a PC.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-green-400 mb-1" data-i18n="earn_n3_t">Community</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_n3_d">Build trust in your district. Become the 'reliable neighbor'.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Professionals -->
+                <div class="glass-card p-8 rounded-xl border-t-4 border-purple-500" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><span class="text-2xl">🌟</span> <span data-i18n="earn_pro_title">FOR PROFESSIONALS</span></h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <h4 class="font-bold text-purple-400 mb-1" data-i18n="earn_p1_t">Enlightened Subscription</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_p1_d">Search priority, advanced analytics, VIP support.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-purple-400 mb-1" data-i18n="earn_p2_t">B2B Contracts</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_p2_d">Work directly with companies. TimeAura provides escrow and security.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-purple-400 mb-1" data-i18n="earn_p3_t">Scaling</h4>
+                            <p class="text-sm text-gray-400" data-i18n="earn_p3_d">From individual gigs to retaining long-term clients.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Example -->
+            <div class="max-w-3xl mx-auto glass-card p-8 rounded-2xl border border-gold/30" data-aos="zoom-in">
+                <h4 class="text-gold font-bold mb-4 flex items-center gap-2"><span class="text-xl">💡</span> <span data-i18n="earn_story_title">Example: Olena, Web Designer</span></h4>
+                <ul class="text-gray-300 space-y-3 mb-6">
+                    <li data-i18n="earn_story_1">Month 1: 3 orders via TimeAura = $450</li>
+                    <li data-i18n="earn_story_2">Month 3: 8 orders + 2 regular clients = $1,200</li>
+                    <li class="font-bold text-white" data-i18n="earn_story_3">Month 6: Own studio, 3 assistants = $3,500/month</li>
+                </ul>
+                <p class="text-xl font-cinzel text-cyan text-center" data-i18n="earn_conclusion">TimeAura is not just an app. It's your path to financial independence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Features -->
+    <section class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="feature_1_title">Real-World Impact</h3>
+                    <p class="text-gray-400" data-i18n="feature_1_desc">Match with people in your neighborhood for physical, face-to-face service exchanges.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border-t border-gold/30" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">⏳</div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="feature_2_title">Time as Currency</h3>
+                    <p class="text-gray-400" data-i18n="feature_2_desc">Trade your skills using Horas. 1 hour of cooking lesson equals 1 hour of haircutting. Fair and simple.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="feature_3_title">AI Community Guide</h3>
+                    <p class="text-gray-400" data-i18n="feature_3_desc">Our Oracle understands human needs and connects neighbors who perfectly complement each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Social Impact -->
+    <section id="impact" class="py-24 relative z-10 bg-white/5 border-y border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-cinzel text-green-400 mb-4" data-aos="fade-up" data-i18n="impact_title">OUR IMPACT ON THE WORLD</h2>
+            <p class="text-gray-400 mb-12" data-aos="fade-up" data-i18n="impact_subtitle">Every exchange on TimeAura means:</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="p-6 glass-card rounded" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl mb-2">🤝</div>
+                    <p class="text-white font-bold" data-i18n="impact_1">1 new real-life connection (not on Instagram)</p>
+                </div>
+                <div class="p-6 glass-card rounded" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl mb-2">🌍</div>
+                    <p class="text-white font-bold" data-i18n="impact_2">0 carbon footprint (local service, no delivery)</p>
+                </div>
+                <div class="p-6 glass-card rounded" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl mb-2">💚</div>
+                    <p class="text-white font-bold" data-i18n="impact_3">1 person who felt: 'I am not alone'</p>
+                </div>
+                <div class="p-6 glass-card rounded" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl mb-2">🏘️</div>
+                    <p class="text-white font-bold" data-i18n="impact_4">1 step toward rebuilding a community</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl text-gold mb-8" data-aos="fade-up" data-i18n="impact_goal_title">By 2027 we plan to achieve:</h3>
+            <ul class="max-w-2xl mx-auto text-left space-y-4 text-xl text-gray-300 mb-12" data-aos="fade-up">
+                <li class="flex items-center gap-3"><span class="text-gold">✔</span> <span data-i18n="impact_goal_1">100,000+ real neighbor meetings</span></li>
+                <li class="flex items-center gap-3"><span class="text-gold">✔</span> <span data-i18n="impact_goal_2">500,000+ hours of mutual aid</span></li>
+                <li class="flex items-center gap-3"><span class="text-gold">✔</span> <span data-i18n="impact_goal_3">10,000+ restored 'lost' connections</span></li>
+                <li class="flex items-center gap-3"><span class="text-gold">✔</span> <span data-i18n="impact_goal_4">15% reduction in urban loneliness</span></li>
+            </ul>
+
+            <p class="text-2xl font-cinzel text-white" data-aos="fade-up" data-i18n="impact_conclusion">We are not just building a platform. We are building a world where 'neighbor' is not a word from the past.</p>
+        </div>
+    </section>
+
+    <!-- 7.5 Business Model -->
+    <section id="business" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-gold mb-4" data-aos="fade-up" data-i18n="biz_title">HOW IT WORKS?</h2>
+            <p class="text-center text-gray-400 mb-16 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-i18n="biz_subtitle">TimeAura combines a social mission with a sustainable business model.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- 3 Layers -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-cyan mb-8 flex items-center gap-3"><span class="text-3xl">🔹</span> <span data-i18n="biz_layer_title">THREE-LAYER ECONOMY</span></h3>
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-green-500">
+                            <h4 class="font-bold text-white mb-2" data-i18n="biz_l1_t">Fiat (USD/EUR)</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_l1_d">For professional services and B2B contracts. Stripe Connect handles payments from $1 to $13,000+.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-cyan">
+                            <h4 class="font-bold text-white mb-2" data-i18n="biz_l2_t">Horas (Time)</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_l2_d">For barter and neighborhood mutual aid. 1 Hora = 60 minutes of work. Zero fees.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-gold">
+                            <h4 class="font-bold text-white mb-2" data-i18n="biz_l3_t">Premium (Enlightened)</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_l3_d">$4.99/month subscription. Search priority, advanced analytical tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Streams -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gold mb-8 flex items-center gap-3"><span class="text-3xl">💵</span> <span data-i18n="biz_rev_title">REVENUE STREAMS</span></h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="font-bold text-gold mb-2" data-i18n="biz_r1_t">Transaction Fees</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_r1_d">7% fee on fiat transactions via Stripe. (e.g., 1,000 deals of $100 = $700 revenue).</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="font-bold text-gold mb-2" data-i18n="biz_r2_t">Enlightened Subscription</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_r2_d">$4.99/month for advanced functionality. 1,000 subscribers = $4,990/month.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="font-bold text-gold mb-2" data-i18n="biz_r3_t">Premium Features</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_r3_d">Post bumping, profile highlighting. Microtransactions via Unity IAP.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="font-bold text-gold mb-2" data-i18n="biz_r4_t">B2B Contracts</h4>
+                            <p class="text-sm text-gray-400" data-i18n="biz_r4_d">10-15% commission on large deals ($1,000+). Direct enterprise integration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projections -->
+            <h3 class="text-2xl font-bold text-center text-white mb-8 flex items-center justify-center gap-3"><span class="text-3xl">📈</span> <span data-i18n="biz_proj_title">REVENUE PROJECTION</span></h3>
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <div class="glass-card px-8 py-6 rounded-xl text-center flex-1 border border-white/10" data-aos="zoom-in" data-aos-delay="100">
+                    <h4 class="font-bold text-cyan mb-2 text-lg" data-i18n="biz_p1_t">Soft Launch (Q3 2026)</h4>
+                    <p class="text-gray-300" data-i18n="biz_p1_d">1,000 users<br>~$500/month MRR</p>
+                </div>
+                <div class="glass-card px-8 py-6 rounded-xl text-center flex-1 border border-cyan/30 transform md:scale-110 relative z-10" data-aos="zoom-in" data-aos-delay="200">
+                    <h4 class="font-bold text-cyan mb-2 text-xl" data-i18n="biz_p2_t">Full Launch (Q4 2026)</h4>
+                    <p class="text-white font-bold text-lg" data-i18n="biz_p2_d">10,000 users<br>~$5,000/month MRR</p>
+                </div>
+                <div class="glass-card px-8 py-6 rounded-xl text-center flex-1 border border-gold/50" data-aos="zoom-in" data-aos-delay="300">
+                    <h4 class="font-bold text-gold mb-2 text-xl" data-i18n="biz_p3_t">Scale (2027)</h4>
+                    <p class="text-white font-bold text-lg" data-i18n="biz_p3_d">100,000 users<br>~$50,000/month MRR</p>
+                </div>
+            </div>
+
+            <p class="text-center text-xl font-cinzel text-gray-300" data-aos="fade-up" data-i18n="biz_conclusion">We are building a sustainable business where every exchange brings value to both the platform and users.</p>
+        </div>
+    </section>
+
+    <!-- 8. About Zarbatana Systems -->
+    <section id="company" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-cyan mb-16" data-aos="fade-up" data-i18n="company_title">Who We Are</h2>
+            <div class="max-w-3xl mx-auto text-center mb-16 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">
+                <p data-i18n="company_desc">Zarbatana Systems is an indie game development studio founded by Roman Haliulko, specializing in AI-assisted development workflows and mobile-first experiences. We build tools and platforms that empower creators.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded border-l-4 border-cyan" data-aos="fade-right">
+                    <div class="text-3xl mb-2">🎮</div>
+                    <h4 class="font-bold text-white mb-2">Zarbatana 3D: Color Strike</h4>
+                    <p class="text-sm text-gray-400" data-i18n="portfolio_1">Published on Google Play, Amazon, AppGallery</p>
+                </div>
+                <div class="glass-card p-6 rounded border-l-4 border-gold" data-aos="fade-up">
+                    <div class="text-3xl mb-2">🛠️</div>
+                    <h4 class="font-bold text-white mb-2">Unity Assets</h4>
+                    <p class="text-sm text-gray-400" data-i18n="portfolio_2">Monetization Orchestrator, Ads Utilities</p>
+                </div>
+                <div class="glass-card p-6 rounded border-l-4 border-cyan" data-aos="fade-left">
+                    <div class="text-3xl mb-2">✨</div>
+                    <h4 class="font-bold text-white mb-2">TimeAura</h4>
+                    <p class="text-sm text-gray-400" data-i18n="portfolio_3">Our flagship platform (in development)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Technology Stack -->
+    <section id="tech" class="py-24 relative z-10 bg-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-gold mb-16" data-aos="fade-up" data-i18n="tech_title">Built with Cutting-Edge Technology</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl mb-2">🎮</div>
+                    <div class="font-bold">Unity 6.3 LTS</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_1">Mobile Client</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl mb-2">🌐</div>
+                    <div class="font-bold">Next.js 14</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_2">Web Portal</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl mb-2">🤖</div>
+                    <div class="font-bold">Alibaba Qwen</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_3">Primary AI</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-4xl mb-2">💳</div>
+                    <div class="font-bold">Stripe Connect</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_4">Payments & Escrow</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="text-4xl mb-2">🔥</div>
+                    <div class="font-bold">Firebase</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_5">Backend & Auth</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="text-4xl mb-2">☁️</div>
+                    <div class="font-bold">Alibaba OSS</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_6">Infrastructure</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="text-4xl mb-2">📊</div>
+                    <div class="font-bold">Google Sheets</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_7">LiveOps Config</div>
+                </div>
+                <div class="tech-card p-6 rounded-xl glass-card hover:-translate-y-2 transition-transform" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="text-4xl mb-2">💎</div>
+                    <div class="font-bold">Tailwind CSS</div>
+                    <div class="text-xs text-gray-400" data-i18n="tech_8">Styling</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9.5 Metrics -->
+    <section id="metrics" class="py-24 relative z-10 bg-gradient-to-b from-mystic to-[#0f172a] border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-white mb-4" data-aos="fade-up" data-i18n="metrics_title">OUR GOALS & KPI</h2>
+            <p class="text-center text-gray-400 mb-16 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-i18n="metrics_subtitle">We measure success not just by profit, but by real impact on people's lives.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <!-- User Metrics -->
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-cyan mb-6 flex items-center gap-3"><span class="text-2xl">📊</span> <span data-i18n="m_user_title">USER METRICS</span></h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-white w-24" data-i18n="m_u1_v">1,000</div>
+                            <div class="text-gray-400" data-i18n="m_u1_t">Active Users (Soft Launch, Q3 2026)</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-cyan w-24" data-i18n="m_u2_v">10,000</div>
+                            <div class="text-gray-300 font-bold" data-i18n="m_u2_t">Active Users (Full Launch, Q4 2026)</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-gold w-24" data-i18n="m_u3_v">100,000</div>
+                            <div class="text-white font-bold" data-i18n="m_u3_t">Active Users (Scale, 2027)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Metrics -->
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-green-400 mb-6 flex items-center gap-3"><span class="text-2xl">💰</span> <span data-i18n="m_fin_title">FINANCIAL METRICS</span></h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-white w-32" data-i18n="m_f1_v">$500/mo</div>
+                            <div class="text-gray-400" data-i18n="m_f1_t">MRR (Soft Launch)</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-green-400 w-32" data-i18n="m_f2_v">$5,000/mo</div>
+                            <div class="text-gray-300 font-bold" data-i18n="m_f2_t">MRR (Full Launch)</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-gold w-32" data-i18n="m_f3_v">$50,000/mo</div>
+                            <div class="text-white font-bold" data-i18n="m_f3_t">MRR (Scale 2027)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Impact -->
+                <div class="glass-card p-8 rounded-2xl md:col-span-2" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-gold mb-6 flex items-center gap-3"><span class="text-2xl">🤝</span> <span data-i18n="m_soc_title">SOCIAL IMPACT</span></h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2" data-i18n="m_s1_v">50,000+</div>
+                            <div class="text-gray-400" data-i18n="m_s1_t">Real neighbor meetings (by 2027)</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2" data-i18n="m_s2_v">200,000+</div>
+                            <div class="text-gray-400" data-i18n="m_s2_t">Hours of mutual aid (by 2027)</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2" data-i18n="m_s3_v">15%</div>
+                            <div class="text-gray-400" data-i18n="m_s3_t">Reduction in loneliness in partner cities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GEO -->
+            <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
+                <h3 class="text-xl font-bold text-cyan mb-6 flex items-center justify-center gap-3"><span class="text-2xl">🎯</span> <span data-i18n="m_geo_title">GEO EXPANSION</span></h3>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="px-4 py-2 glass-card rounded-full text-white border border-cyan/30" data-i18n="m_g1">2026: Ukraine (Kyiv, Lviv, Odesa, Dnipro)</span>
+                    <span class="px-4 py-2 glass-card rounded-full text-gray-300" data-i18n="m_g2">2027: Poland, Germany</span>
+                    <span class="px-4 py-2 glass-card rounded-full text-gray-400" data-i18n="m_g3">2028: EU, USA</span>
+                </div>
+                <p class="text-xl font-cinzel text-gold" data-i18n="metrics_conclusion">We start in Ukraine, but we are building a global platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Why Now? -->
+    <section class="py-24 relative z-10 border-t border-cyan/20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-cinzel text-cyan mb-12 text-center" data-aos="fade-up" data-i18n="whynow_title">WHY NOW?</h2>
+            <div class="space-y-6 text-lg text-gray-300">
+                <p data-aos="fade-up" data-i18n="whynow_1"><strong class="text-white">2020-2024:</strong> The pandemic showed us how lonely we are.</p>
+                <p data-aos="fade-up" data-aos-delay="100" data-i18n="whynow_2"><strong class="text-white">2025:</strong> AI reached a point where it can deeply understand human needs.</p>
+                <p data-aos="fade-up" data-aos-delay="200" data-i18n="whynow_3"><strong class="text-white">2026:</strong> People are ready to return to the real world.</p>
+                <p data-aos="fade-up" data-aos-delay="300" data-i18n="whynow_4"><strong class="text-gold">2027:</strong> TimeAura will become the standard of urban living.</p>
+            </div>
+            <p class="text-2xl mt-12 text-white font-cinzel text-center leading-relaxed" data-aos="fade-up" data-aos-delay="400" data-i18n="whynow_conclusion">
+                We are on the verge of a new era. An era where technology serves not to escape reality, but to return to it. Those who invest now, shape the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- 11. Roadmap -->
+    <section id="roadmap" class="py-24 relative z-10 bg-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-cinzel text-center text-cyan mb-16" data-aos="fade-up" data-i18n="roadmap_title">Our Journey</h2>
+            <div class="max-w-4xl mx-auto relative border-l-2 border-cyan/30 ml-4 md:mx-auto">
+                
+                <div class="mb-10 pl-8 relative" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold shadow-[0_0_10px_#d4af37]"></div>
+                    <h3 class="text-xl font-bold text-white">✅ <span data-i18n="q1">Q1 2026</span></h3>
+                    <p class="text-gray-400" data-i18n="road_1">Core Architecture, AI Integration</p>
+                </div>
+                
+                <div class="mb-10 pl-8 relative" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold shadow-[0_0_10px_#d4af37]"></div>
+                    <h3 class="text-xl font-bold text-white">✅ <span data-i18n="q2">Q2 2026</span></h3>
+                    <p class="text-gray-400" data-i18n="road_2">Three-Layer Economy, Commerce Orchestrator</p>
+                </div>
+                
+                <div class="mb-10 pl-8 relative" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-cyan shadow-[0_0_10px_#4a90e2] animate-pulse"></div>
+                    <h3 class="text-xl font-bold text-cyan">🚧 <span data-i18n="q3">Q3 2026</span></h3>
+                    <p class="text-gray-300 font-semibold" data-i18n="road_3">Soft Launch (Mobile, 1k users)</p>
+                </div>
+                
+                <div class="mb-10 pl-8 relative" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-600 border border-cyan/50"></div>
+                    <h3 class="text-xl font-bold text-gray-400">🎯 <span data-i18n="q4">Q4 2026</span></h3>
+                    <p class="text-gray-500" data-i18n="road_4">Web Portal Launch, B2B Features</p>
+                </div>
+                
+                <div class="pl-8 relative" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-600 border border-gold/50"></div>
+                    <h3 class="text-xl font-bold text-gray-400">🌟 2027</h3>
+                    <p class="text-gray-500" data-i18n="road_5">Creator Platform, 100k+ users</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Investors Proposal -->
+    <section id="investors" class="py-32 relative z-10 overflow-hidden border-t border-cyan/20">
+        <div class="absolute inset-0 bg-[url('assets/oracle_eye.png')] bg-center bg-no-repeat opacity-[0.03] mix-blend-screen scale-150"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-cinzel text-gold mb-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]" data-aos="zoom-in" data-i18n="inv_prop_title">INVESTMENT PROPOSAL</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-i18n="inv_prop_subtitle">TimeAura is a unique opportunity to invest in the future of social economies at an early stage.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16 max-w-6xl mx-auto">
+                <!-- Market -->
+                <div class="glass-card p-10 rounded-2xl border border-cyan/30" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4" data-i18n="inv_market_title">MARKET OPPORTUNITY</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6">
+                            <div class="text-4xl font-bold text-cyan w-24" data-i18n="inv_m1_v">$1.5T</div>
+                            <div class="text-gray-300" data-i18n="inv_m1_t">Global freelance market (2026)</div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="text-4xl font-bold text-cyan w-24" data-i18n="inv_m2_v">34%</div>
+                            <div class="text-gray-300" data-i18n="inv_m2_t">Annual gig-economy growth</div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="text-4xl font-bold text-cyan w-24" data-i18n="inv_m3_v">87%</div>
+                            <div class="text-gray-300" data-i18n="inv_m3_t">City dwellers seeking local communities</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advantages -->
+                <div class="glass-card p-10 rounded-2xl border border-gold/30" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4" data-i18n="inv_adv_title">COMPETITIVE ADVANTAGES</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gold mb-1 flex items-center gap-2"><span>✨</span> <span data-i18n="inv_a1_t">Hybrid Model</span></h4>
+                            <p class="text-sm text-gray-400" data-i18n="inv_a1_d">We combine barter + fiat + subscriptions. Competitors offer only one.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gold mb-1 flex items-center gap-2"><span>🤖</span> <span data-i18n="inv_a2_t">AI Integration</span></h4>
+                            <p class="text-sm text-gray-400" data-i18n="inv_a2_d">Qwen by Alibaba Cloud provides personalized neighbor matching.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gold mb-1 flex items-center gap-2"><span>🌍</span> <span data-i18n="inv_a3_t">Local Focus</span></h4>
+                            <p class="text-sm text-gray-400" data-i18n="inv_a3_d">Not just 'another freelance board'. We build physical communities.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gold mb-1 flex items-center gap-2"><span>💎</span> <span data-i18n="inv_a4_t">Ready Architecture</span></h4>
+                            <p class="text-sm text-gray-400" data-i18n="inv_a4_d">Already integrated: Stripe, Firebase, Alibaba Cloud, Unity IAP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Ask -->
+            <div class="glass-card p-10 rounded-3xl max-w-4xl mx-auto border-2 border-gold mb-16 text-center shadow-[0_0_50px_rgba(212,175,55,0.15)]" data-aos="zoom-in">
+                <h3 class="text-3xl font-cinzel text-gold mb-8" data-i18n="inv_ask_title">WHAT WE ARE LOOKING FOR</h3>
+                <div class="grid md:grid-cols-3 gap-8 text-left mb-10">
+                    <div class="bg-black/30 p-6 rounded-xl" data-i18n="inv_ask_1">
+                        <strong class="text-white text-xl">Seed Round: $150,000</strong><br>To complete mobile app development and launch Soft Launch (Q3 2026).
+                    </div>
+                    <div class="bg-black/30 p-6 rounded-xl text-sm" data-i18n="inv_ask_2">
+                        <strong class="text-cyan text-base">Use of Funds:</strong><br>40% Development (mobile + web)<br>30% Marketing & User Acquisition<br>20% Infrastructure (Alibaba Cloud)<br>10% Operational Expenses
+                    </div>
+                    <div class="bg-black/30 p-6 rounded-xl" data-i18n="inv_ask_3">
+                        <strong class="text-gold text-base">ROI Projection:</strong><br>18-24 months to break-even<br>5x return on investment by 2028
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="assets/TimeAura_Technical_Architecture.html" target="_blank" class="px-8 py-4 bg-gold text-mystic font-bold text-lg rounded shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:scale-105 transition-transform" data-i18n="inv_btn_deck">
+                        📄 Download Pitch Deck (PDF)
+                    </a>
+                    <a href="https://t.me/RomenGal" target="_blank" class="px-8 py-4 bg-cyan/10 border border-cyan/50 text-cyan font-bold text-lg rounded hover:bg-cyan hover:text-mystic transition-all" data-i18n="inv_btn_call">
+                        💬 Telegram
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-2xl font-cinzel text-white text-center max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-i18n="inv_conclusion">
+                We are not just looking for money. We are looking for partners who believe in the power of communities and social innovation.
+            </p>
+        </div>
+    </section>
+
+    <!-- 13. Contacts -->
+    <section id="contact" class="py-16 relative z-10 border-t border-white/10 bg-black/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-cinzel text-center text-white mb-10" data-aos="fade-up" data-i18n="contact_title">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-10 text-center md:text-left" data-aos="fade-up">
+                <div>
+                    <span class="text-gray-500 block text-sm uppercase tracking-widest mb-1" data-i18n="contact_email">Email</span>
+                    <a href="mailto:galiulko@gmail.com" class="text-gold hover:underline">galiulko@gmail.com</a>
+                </div>
+                <div>
+                    <span class="text-gray-500 block text-sm uppercase tracking-widest mb-1" data-i18n="contact_tg">Telegram</span>
+                    <a href="https://t.me/RomenGal" target="_blank" class="text-cyan hover:underline">@RomenGal</a>
+                </div>
+                <div>
+                    <span class="text-gray-500 block text-sm uppercase tracking-widest mb-1" data-i18n="contact_location">Location</span>
+                    <span class="text-white" data-i18n="contact_loc_text">Boryslav, Ukraine (Remote)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-black text-center text-gray-400 text-sm border-t border-white/5 relative z-10">
+        <p class="mb-2" data-i18n="footer_rights">© 2026 Zarbatana Systems. All rights reserved.</p>
+        <p data-i18n="footer_powered">Powered by Alibaba Cloud • Built with Unity & React</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js?v=3"></script>
+</body>
+</html>

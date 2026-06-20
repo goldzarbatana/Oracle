@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElementsSchema.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="ShopItemCard" class="shop-item-card">
+        <ui:VisualElement name="ShopItemIcon" class="shop-item-icon" />
+        <ui:Label name="ShopItemName" text="Product Name" class="shop-item-name" />
+        <ui:Label name="ShopItemPrice" text="$0.00" class="shop-item-price" />
+        <ui:Button name="BtnBuyItem" text="КУПИТИ" class="shop-item-buy-btn" />
+    </ui:VisualElement>
+</ui:UXML>

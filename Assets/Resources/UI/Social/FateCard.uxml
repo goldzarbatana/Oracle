@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="FateCard.uss" />
+    <ui:VisualElement name="FateCardRoot" class="fate-card">
+
+        <!-- ── Header: Avatar + User info + Timestamp ── -->
+        <ui:VisualElement class="fate-card__header">
+            <ui:VisualElement name="AvatarContainer" class="fate-card__avatar-container">
+                <ui:VisualElement name="AvatarImage" class="fate-card__avatar" />
+                <ui:Label name="LblAvatarInitials" text="" class="fate-card__avatar-initials" />
+                <ui:VisualElement name="AvatarAura" class="fate-card__avatar-aura" />
+            </ui:VisualElement>
+            <ui:VisualElement class="fate-card__user-info">
+                <ui:Label name="LblUsername" text="ADEPT NAME" class="fate-card__username" />
+                <ui:Label name="LblStatus" text="&quot;Seeking eternal harmony...&quot;" class="fate-card__status" />
+                <ui:Label name="LblVector" text="Vector: 150 H/hr" class="fate-card__vector" />
+            </ui:VisualElement>
+            <ui:Label name="LblTimestamp" text="12m" class="fate-card__timestamp" />
+        </ui:VisualElement>
+
+        <!-- ── Content: Text + optional image ── -->
+        <ui:VisualElement class="fate-card__content">
+            <ui:Label name="LblContentText" text="The resonance today is reaching new frequencies." class="fate-card__text" />
+            <ui:VisualElement name="ContentImageContainer" class="fate-card__image-container" style="display: none;">
+                <ui:VisualElement name="ContentImage" class="fate-card__image" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ── Footer: Stats + Action buttons ── -->
+        <ui:VisualElement class="fate-card__footer">
+            <ui:VisualElement class="fate-card__stats">
+                <ui:Label name="LblTransforms" text="1.2K &#x2728;" class="fate-card__stat" />
+                <ui:Label name="LblConnections" text="45 &#x1F4AC;" class="fate-card__stat" />
+            </ui:VisualElement>
+            <ui:VisualElement class="fate-card__actions">
+                <!-- BtnConnect used for "НАПИСАТИ" on SR posts, "CONNECT" on normal posts -->
+                <ui:Button name="BtnConnect" text="CONNECT" class="fate-card__btn" />
+                <!-- BtnRespond only shown on ServiceRequest posts -->
+                <ui:Button name="BtnRespond" text="&#x1F91D; &#x0412;&#x0406;&#x0414;&#x0413;&#x0423;&#x041A;&#x0422;&#x0418;&#x0421;&#x042F;" class="fate-card__btn fate-card__btn--respond" style="display: none;" />
+                <ui:Button name="BtnTransform" text="RESONATE &#x2726;" class="fate-card__btn fate-card__btn--gold" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="fate-card__divider" />
+    </ui:VisualElement>
+</ui:UXML>

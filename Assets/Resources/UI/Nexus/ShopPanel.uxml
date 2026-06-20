@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElementsSchema.xsd" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/Resources/UI/Nexus/ShopStyles.uss" />
+    <ui:VisualElement name="ShopPanel" class="shop-overlay shop-overlay--hidden">
+        <ui:VisualElement class="shop-container">
+            <ui:VisualElement class="shop-header">
+                <ui:Label text="💎 СВЯТИЛИЩЕ КВАНТІВ 💎" class="shop-title" />
+                <ui:Button name="BtnCloseShop" text="✕" class="shop-close-btn" />
+            </ui:VisualElement>
+            <ui:Label text="Активуйте підписку Enlightened або поповніть баланс Квантів для мікро-взаємодій." class="shop-subtitle" />
+            <ui:ScrollView class="shop-items-scroll">
+                <ui:VisualElement name="ShopItemsContainer" class="shop-items-container" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

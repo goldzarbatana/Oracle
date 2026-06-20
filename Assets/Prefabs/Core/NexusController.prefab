@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106826938269024924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898978091818217149}
+  - component: {fileID: 7114684684946812399}
+  - component: {fileID: 6192184997609003124}
+  - component: {fileID: 2072139121367069743}
+  - component: {fileID: 8358456651123752313}
+  - component: {fileID: 1826172527343265397}
+  - component: {fileID: 8938030905327987085}
+  - component: {fileID: 578752677948233668}
+  - component: {fileID: 3157956799629640140}
+  - component: {fileID: 6394039373711273}
+  - component: {fileID: 9000754341035429394}
+  - component: {fileID: 5759604118802455855}
+  m_Layer: 0
+  m_Name: NexusController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &898978091818217149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.08545, y: 28.9162, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7114684684946812399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: d715788da9e6c614ba9a8f96a6f5edd3, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 6b0754d56cedc7241ac4e50913587a60, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &6192184997609003124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f95b4d3c9853854e8fee5e602d4f74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.NexusController
+  _makePersistent: 1
+  uiDocument: {fileID: 7114684684946812399}
+  _nexusStyleSheets:
+  - {fileID: 7433441132597879392, guid: bccdecba54fb50f44b0b0a78e23adbc3, type: 3}
+  - {fileID: 7433441132597879392, guid: 3ee0ef23c57fa2c4096a46ba201a93c1, type: 3}
+  - {fileID: 7433441132597879392, guid: 08fd043a377ee0742b4b01621f3a7fc1, type: 3}
+  - {fileID: 7433441132597879392, guid: 8eb1a1db9fe812847ac8311d06c64095, type: 3}
+  - {fileID: 7433441132597879392, guid: da2d801b04a25e848adf7782ad331382, type: 3}
+  - {fileID: 7433441132597879392, guid: d15ffac0813b93740bd34cfe920a1c73, type: 3}
+  - {fileID: 7433441132597879392, guid: 87925f9d647b2e941b53f44c8e50c65b, type: 3}
+  - {fileID: 7433441132597879392, guid: a118ede5012dbb04ba0d2ff1ed692c83, type: 3}
+  - {fileID: 7433441132597879392, guid: 4d110d5ae739bfe479d0921e9d965e06, type: 3}
+  - {fileID: 7433441132597879392, guid: d94320b7c47abee4aafaaf0864436834, type: 3}
+  _oracleWidget: {fileID: 5807924607184197632, guid: a31a3991b5c375f4083135858f63386b, type: 3}
+  _radar: {fileID: 2072139121367069743}
+  _navigation: {fileID: 8358456651123752313}
+  _settings: {fileID: 1826172527343265397}
+  _fateCardTemplate: {fileID: 9197481963319205126, guid: e07a7f0fb75c61046bbd3579a4c9cccf, type: 3}
+  _content: {fileID: 8938030905327987085}
+  _menu: {fileID: 578752677948233668}
+  _vault: {fileID: 3157956799629640140}
+  _vfx: {fileID: 6183251606728707319, guid: 5b27759644152574d86ed8be4b28acb8, type: 3}
+  _feed: {fileID: 6394039373711273}
+--- !u!114 &2072139121367069743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e3289cf55a82c42adab3d97b64cbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.RadarController
+  _scanLineSprite: {fileID: 21300000, guid: ec18f8cbad3c74f4bbbb08c000be44a5, type: 3}
+  _compassNeedleSprite: {fileID: 21300000, guid: 7b1cfa913eb98794d84063c2228a7dab, type: 3}
+  _resonancePointSprite: {fileID: 21300000, guid: 47df65e6806080a49b0167dd0194f539, type: 3}
+--- !u!114 &8358456651123752313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aee03168102df8488f8451ded6bdbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.NexusNavigationManager
+--- !u!114 &1826172527343265397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4544d7706596c2449a553ee73d3c7b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.NexusSettingsController
+--- !u!114 &8938030905327987085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbb7682a0490d04881ab89710361992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.NexusContentController
+--- !u!114 &578752677948233668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43813dab62f878644a1abb519f39161f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.NexusMenuController
+--- !u!114 &3157956799629640140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd31bd600bfb7a4ab06f097726979e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Nexus.VaultController
+--- !u!114 &6394039373711273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ce703345be9bd418e87d61e1c56d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Social.ConvergenceFeedController
+--- !u!114 &9000754341035429394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3b134b00cb99e468c456bdb4c895dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Oracle.GeminiChatController
+  _uiDocument: {fileID: 7114684684946812399}
+--- !u!114 &5759604118802455855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106826938269024924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44105cce29c8fd64b994acd921e68d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Features.UI.Harmony.HarmonyWorkspaceController
+  _uiDocument: {fileID: 7114684684946812399}
+  _aiResultCardTemplate: {fileID: 9197481963319205126, guid: efd6be7dc255d76489a0bfb0ebefe135, type: 3}

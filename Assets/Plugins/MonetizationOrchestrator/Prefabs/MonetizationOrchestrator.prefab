@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3934358105280712648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6349948914636089386}
+  - component: {fileID: 976775745200712683}
+  - component: {fileID: 5889354949897814202}
+  - component: {fileID: 8267662467056873700}
+  - component: {fileID: 1129076015497987998}
+  m_Layer: 0
+  m_Name: MonetizationOrchestrator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6349948914636089386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934358105280712648}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976775745200712683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934358105280712648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7932f4533b66b4a468f7a770f685eab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UniversalMonetization::UniversalMonetization.AdManager
+  androidAppKey: android_app_key
+  iosAppKey: ios_app_key
+  androidRewardedId: Rewarded_Android
+  androidInterstitialId: Interstitial_Android
+  androidBannerId: Banner_Android
+  iosRewardedId: Rewarded_iOS
+  iosInterstitialId: Interstitial_iOS
+  iosBannerId: Banner_iOS
+  enableBanners: 1
+  minSecondsBetweenInterstitials: 45
+  rewardedToInterstitialCooldown: 5
+  sceneWarmupDelay: 5
+  minSecondsBetweenLoadRequests: 8
+  gameOverAdFrequency: 3
+  levelCompleteAdFrequency: 2
+  bannerAtTop: 0
+  useMockProviderInEditor: 1
+  enableTestSuite: 0
+  verboseAdLogs: 1
+--- !u!114 &5889354949897814202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934358105280712648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53baa04cea142bb428a2004ae712dd91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UniversalMonetization::UniversalMonetization.IAPManager
+  registeredOffers: []
+  enableMockModeInEditor: 1
+  enableDebugLogs: 1
+--- !u!114 &8267662467056873700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934358105280712648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a201ced62ca74a8f161361893d886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UniversalMonetization::UniversalMonetization.RemoteConfigManager
+  googleSheetCsvUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vSdUDeV1qOd9sH0-CdJ0jIvAbOqXl_qypNgmEhXszmP-YlwnJkYpJAK5ezVCJCRAFqKlZzqUGR1lbe9/pub?gid=0&single=true&output=csv
+  fetchOnStart: 1
+  applyToAdManagerAutomatically: 1
+  debugLogs: 1
+--- !u!114 &1129076015497987998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934358105280712648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91cf615f337bcc478797a45931d6efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UniversalMonetization::UniversalMonetization.MonetizationOrchestrator
+  adManager: {fileID: 976775745200712683}
+  iapManager: {fileID: 5889354949897814202}

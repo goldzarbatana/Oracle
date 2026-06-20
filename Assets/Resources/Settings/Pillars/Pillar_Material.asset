@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b2c3d4e5f6475890a1b2c3d4e5f6a1, type: 3}
+  m_Name: Pillar_Material
+  m_EditorClassIdentifier: 
+  Id: Pillar_Material
+  LocalizationKey: init.cat_material
+  Icon: {fileID: 0}
+  ThemeColor: {r: 1, g: 0.5, b: 0, a: 1}
+  weight: 100
+  isActive: 1
+  tags:
+  - tag.craftsmanship
+  - tag.architecture
+  - tag.production
+  - tag.systems
+  - tag.repair
+  - tag.cooking
+  - tag.cleaning
+  - tag.gardening
+  - tag.transport
+  - tag.handmade

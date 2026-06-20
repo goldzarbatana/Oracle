@@ -1,0 +1,165 @@
+/* Shop Panel overlay styling */
+.shop-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 12, 0.95);
+    justify-content: center;
+    align-items: center;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.shop-overlay--hidden {
+    display: none;
+    opacity: 0;
+}
+
+.shop-container {
+    width: 90%;
+    max-width: 600px;
+    height: 80%;
+    background-color: rgba(10, 10, 20, 0.95);
+    border-color: rgb(212, 175, 55);
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 25px;
+    align-items: stretch;
+}
+
+.shop-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(212, 175, 55, 0.2);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.shop-title {
+    color: rgb(212, 175, 55);
+    font-size: 24px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.shop-close-btn {
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    font-size: 24px;
+    -unity-font-style: bold;
+    transition: scale 0.2s, color 0.2s;
+}
+
+.shop-close-btn:hover {
+    color: rgb(212, 175, 55);
+    scale: 1.1;
+}
+
+.shop-close-btn:active {
+    scale: 0.9;
+}
+
+.shop-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    -unity-font-style: italic;
+    margin-bottom: 20px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+}
+
+.shop-items-scroll {
+    flex-grow: 1;
+}
+
+.shop-items-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+/* Card Styling */
+.shop-item-card {
+    width: 45%;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(212, 175, 55, 0.3);
+    border-width: 1px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    transition: scale 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.shop-item-card:hover {
+    scale: 1.03;
+    border-color: rgb(212, 175, 55);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.shop-item-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+    background-image: url("project://database/Assets/Sprite/imageTimAuraLogo_512.png?fileID=21300000&guid=0b505805786e54e4488361e9834544be&type=3#imageTimAuraLogo_512");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.shop-item-name {
+    color: white;
+    font-size: 18px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    -unity-text-align: middle-center;
+}
+
+.shop-item-price {
+    color: rgb(212, 175, 55);
+    font-size: 16px;
+    -unity-font-style: bold;
+    margin-bottom: 15px;
+}
+
+.shop-item-buy-btn {
+    width: 100%;
+    height: 38px;
+    background-color: rgb(212, 175, 55);
+    color: rgb(5, 5, 5);
+    font-size: 14px;
+    -unity-font-style: bold;
+    border-radius: 19px;
+    border-width: 0;
+    transition: background-color 0.2s, scale 0.2s;
+}
+
+.shop-item-buy-btn:hover {
+    background-color: #F0E68C;
+    scale: 1.05;
+}
+
+.shop-item-buy-btn:active {
+    scale: 0.95;
+}
+
+/* Enlightened Subscription Card Specific Styling */
+.shop-item--enlightened {
+    background-color: rgba(40, 20, 60, 0.6);
+    border-color: rgb(212, 175, 55);
+    border-width: 2px;
+}
+
+.shop-item--enlightened .shop-item-icon {
+    -unity-background-image-tint-color: rgb(255, 215, 0);
+}
+
+.shop-item--enlightened .shop-item-name {
+    color: #FFD700;
+}

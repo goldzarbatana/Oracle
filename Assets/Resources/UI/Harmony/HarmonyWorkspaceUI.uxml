@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UI/Harmony/HarmonyWorkspaceUI.uss?fileID=7433441132597879392&amp;guid=104ecc95996492a4793281d6f5823862&amp;type=3#HarmonyWorkspaceUI"/>
+    <ui:VisualElement name="HarmonyWorkspaceContainer" style="display: none; opacity: 0;">
+        <ui:Label name="LblWorkspaceHeader" text="Кімната Гармонії" class="workspace-header"/>
+        <ui:VisualElement name="RitualNexusContainer" class="ritual-nexus-container">
+            <ui:VisualElement name="RitualMandala" class="ritual-mandala">
+                <ui:VisualElement name="MandalaRings" class="mandala-rings"/>
+                <ui:VisualElement name="MandalaCore" class="mandala-core"/>
+            </ui:VisualElement>
+            <ui:Label name="LblRitualStatus" text="AWAITING OFFERING" class="ritual-status-text"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="RitualLogScroll" class="ritual-log-scroll">
+            <ui:VisualElement class="log-entry system-entry">
+                <ui:Label text="[System] The Chamber is sealed. Time flows slowly here." class="log-text"/>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement name="RitualInputArea" class="ritual-input-area">
+            <ui:TextField name="TxtOffering" placeholder-text="Your offering or result..." multiline="true" class="ritual-input"/>
+            <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-top: 10px; width: 100%;">
+                <ui:Button name="BtnDeclineTask" text="ВІДХИЛИТИ" class="ritual-btn ritual-btn--danger hidden"/>
+                <ui:Button name="BtnAcceptTask" text="ПРИЙНЯТИ РИТУАЛ" class="ritual-btn ritual-btn--gold hidden"/>
+                <ui:Button name="BtnSubmitOffering" text="SEAL THE PACT" class="ritual-btn ritual-btn--gold" style="flex-grow: 1;"/>
+                <ui:Button name="BtnSubmitResult" text="НАДІСЛАТИ РЕЗУЛЬТАТ" class="ritual-btn ritual-btn--gold hidden" style="flex-grow: 1;"/>
+                <ui:Button name="BtnAcceptResult" text="ЗАПЕЧАТАТИ СИМЕТРІЮ" class="ritual-btn ritual-btn--gold hidden" style="flex-grow: 1;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

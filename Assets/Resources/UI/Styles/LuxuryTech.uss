@@ -1,0 +1,236 @@
+/* Time Aura - Luxury Tech UI Styles */
+
+:root {
+    --color-background: #0A0A0A;
+    --color-gold: #D4AF37;
+    --color-gold-dim: rgba(212, 175, 55, 0.6);
+    --color-glassmorphism: rgba(26, 26, 26, 0.7);
+    --color-border: rgba(212, 175, 55, 0.3);
+    --font-primary: 'Arial';
+    font-size: 100%; /* Base size for adaptive typography */
+}
+
+/* TimeAura Global Typography Scale (Scales with :root font-size) */
+.text-h1 { font-size: 200%; -unity-font-style: bold; } /* ~32px */
+.text-h2 { font-size: 150%; -unity-font-style: bold; } /* ~24px */
+.text-body { font-size: 100%; } /* ~16px */
+.text-caption { font-size: 75%; } /* ~12px */
+.text-tag { font-size: 87.5%; -unity-font-style: bold; } /* ~14px */
+
+Label, Button {
+    /* Auto-size is killed by default to preserve uniformity */
+    -unity-text-auto-size: none;
+    -unity-text-generator: advanced;
+}
+
+.standard-text,
+.deal-modal-title,
+.btn-agree-terms {
+    -unity-text-generator: standard !important;
+}
+
+/* Global Background */
+.root {
+    background-color: var(--color-background);
+    flex-grow: 1;
+}
+
+/* Fate Card (Glassmorphism) */
+.fate-card {
+    background-color: var(--color-glassmorphism);
+    border-width: 1px;
+    border-color: var(--color-border);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 10px;
+    width: 320px;
+    min-height: 400px;
+}
+
+.fate-card:hover {
+    border-color: var(--color-gold);
+    transition-duration: 0.3s;
+}
+
+/* Avatar Container */
+.fate-card__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border-width: 2px;
+    border-color: var(--color-gold);
+    align-self: center;
+    margin-bottom: 16px;
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Nickname */
+.fate-card__nickname {
+    font-size: 150%; /* Was 24px */
+    color: var(--color-gold);
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+    -unity-font-style: bold;
+}
+
+/* Status */
+.fate-card__status {
+    font-size: 87.5%; /* Was 14px */
+    color: var(--color-gold-dim);
+    -unity-text-align: middle-center;
+    margin-bottom: 12px;
+}
+
+/* Aspect Row */
+.fate-card__aspects {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.fate-card__aspect-icon {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: var(--color-gold-dim);
+}
+
+/* Start Transformation Button */
+.fate-card__button {
+    background-color: var(--color-gold);
+    color: var(--color-background);
+    font-size: 100%; /* Was 16px */
+    padding: 12px 24px;
+    border-radius: 8px;
+    border-width: 0;
+    -unity-font-style: bold;
+    align-self: center;
+}
+
+.fate-card__button:hover {
+    background-color: #FFC107;
+    transition-duration: 0.2s;
+}
+
+.fate-card__button:active {
+    background-color: #B8860B;
+}
+
+/* Vector Counter (Top Panel) */
+.vector-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 125%; /* Was 20px */
+    color: var(--color-gold);
+    -unity-font-style: bold;
+}
+
+/* Convergence Stream (bottom card container) */
+.convergence-stream {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+/* Pillar Chips - Initiation Ritual */
+.pillar-chip {
+    background-color: var(--color-glassmorphism);
+    border-width: 2px;
+    border-color: var(--color-border);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 240px;
+    transition-duration: 0.3s;
+}
+
+.pillar-chip:hover {
+    border-color: var(--color-gold);
+    background-color: rgba(212, 175, 55, 0.1);
+    scale: 1.05;
+}
+
+.pillar-chip--active {
+    border-color: var(--color-gold);
+    background-color: rgba(212, 175, 55, 0.2);
+    border-width: 3px;
+}
+
+.pillar-chip__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.pillar-chip__label {
+    font-size: 112.5%; /* Was 18px */
+    color: var(--color-gold);
+    -unity-font-style: bold;
+}
+
+/* ---------------------------------------------------- */
+/* UNIVERSAL AURA GLOW                                  */
+/* ---------------------------------------------------- */
+.aura-glow--gold {
+    /* Base mystical shadow */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    /* In Unity 6, box-shadow or custom visual shadow could be supported. Using fallback scale/opacity if needed. */
+    border-color: rgba(212, 175, 55, 0.6);
+    background-color: transparent;
+    
+    transition-property: background-color, border-color, scale, opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.aura-glow--gold:hover {
+    background-color: transparent;
+    border-color: rgba(212, 175, 55, 1);
+    scale: 1.05;
+    opacity: 1;
+}
+
+/* ---------------------------------------------------- */
+/* BREATHING PULSE (Triggered by C# timer)              */
+/* ---------------------------------------------------- */
+.aura-glow--pulse {
+    background-color: transparent !important;
+    border-top-color: #FFD700 !important;
+}
+
+/* Magic Particle Base Style */
+.magic-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #FFD700;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #FFD700;
+    opacity: 0;
+    transition-property: translate, opacity, scale;
+}
+
+/* Target labels inside pulsing elements to make the text glow magically */
+.aura-glow--pulse .nav-label,
+.aura-glow--pulse .unity-text-element {
+    text-shadow: 0 0 25px rgba(255, 215, 0, 1);
+    color: #FFD700 !important;
+}
+
+/* Ensure smooth transitions on the labels */
+.nav-label {
+    transition-property: text-shadow, color, scale;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+

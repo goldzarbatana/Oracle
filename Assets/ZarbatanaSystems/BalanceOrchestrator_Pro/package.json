@@ -1,0 +1,9 @@
+{
+  "name": "com.zarbatanasystems.balanceorchestrator.pro",
+  "version": "1.0.0",
+  "displayName": "Balance Orchestrator Pro",
+  "description": "Balance Orchestrator Pro plugin",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0"
+  }
+}

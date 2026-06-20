@@ -1,0 +1,243 @@
+:root {
+    --oracle-gold: rgb(255, 215, 0);
+    --oracle-gold-glow: rgba(255, 215, 0, 0.4);
+    --oracle-void: rgb(10, 10, 10);
+    --eye-size: 80px;
+}
+
+/* GLOBAL TEXT FIELD OVERRIDES (Luxury Mystical Style) */
+.unity-text-field__input {
+    background-color: transparent !important;
+    border-width: 0 !important;
+    color: white !important;
+    --unity-cursor-color: #FFD700 !important;
+    -unity-text-align: middle-left;
+}
+
+.unity-text-field__input:focus {
+    color: #FFD700 !important;
+}
+
+.oracle-eye-root {
+    position: absolute;
+    width: var(--eye-size);
+    height: var(--eye-size);
+    align-items: center;
+    justify-content: center;
+}
+
+.oracle-eye-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    background-image: url("project://database/Assets/UI/Oracle/Textures/OracleEye_Base.png");
+    -unity-background-scale-mode: scale-to-fit;
+    
+    border-width: 2px;
+    border-color: rgba(255, 215, 0, 0.1);
+    transition-property: border-color, -unity-background-image-tint-color;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.oracle-eye-container--glow {
+    border-color: rgba(255, 215, 0, 0.9);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 1);
+}
+
+.oracle-eye-pupil {
+    width: 35%;
+    height: 35%;
+    margin-top: 8%;
+    background-image: url("project://database/Assets/UI/Oracle/Textures/OracleEye_Pupil.png");
+    -unity-background-scale-mode: scale-to-fit;
+    translate: 0 0;
+    border-radius: 100px;
+    background-color: transparent;
+    transition-property: translate, scale, -unity-background-image-tint-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.oracle-eye-lid {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: var(--oracle-void);
+    transition-property: translate;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+.oracle-eye-lid--top {
+    top: 0;
+    translate: 0 -105%;
+}
+
+.oracle-eye-lid--bottom {
+    bottom: 0;
+    translate: 0 105%;
+}
+
+.oracle-eye--closed .oracle-eye-lid--top { translate: 0 0; }
+.oracle-eye--closed .oracle-eye-lid--bottom { translate: 0 0; }
+.oracle-eye--closed .oracle-eye-pupil { scale: 0.5; }
+
+.oracle-eye--active .oracle-eye-container {
+    border-color: rgba(255, 215, 0, 1);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 1);
+}
+
+.hint-bubble {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    translate: -50% 10px;
+    background-color: rgba(5, 5, 10, 0.9);
+    border-width: 1px;
+    border-color: rgba(255, 215, 0, 0.7);
+    border-radius: 12px;
+    padding: 12px 20px;
+    min-width: 180px;
+    max-width: 320px;
+    height: auto;
+    opacity: 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.hint-bubble--visible {
+    opacity: 1;
+    translate: -50% 0;
+}
+
+.hint-text {
+    color: #ffd700;
+    font-size: 81.25%;
+    -unity-text-auto-size: best-fit 10px 13px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.chat-overlay {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    background-color: rgba(10, 10, 15, 0.95);
+    border-color: rgba(255, 215, 0, 0.5);
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 15px;
+    transition-property: translate, opacity, left, right, top, bottom;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out-cubic;
+    opacity: 1;
+    display: flex; /* Ensure it shows when active */
+}
+
+.chat-overlay--hidden {
+    translate: 400px 0;
+    opacity: 0;
+    display: none;
+}
+
+.chat-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 215, 0, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-title {
+    color: var(--oracle-gold);
+    font-size: 100%;
+    -unity-text-auto-size: best-fit 12px 16px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.chat-close-btn {
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    font-size: 150%;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.chat-message {
+    color: white;
+    font-size: 87.5%;
+    white-space: normal;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-message--oracle {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--oracle-gold);
+    border-left-width: 3px;
+    border-left-color: var(--oracle-gold);
+}
+
+.chat-message--user {
+    background-color: rgba(255, 255, 255, 0.05);
+    -unity-text-align: middle-right;
+    align-self: flex-end;
+}
+
+.chat-input-area {
+    flex-direction: row;
+    height: 40px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-color: rgba(255, 215, 0, 0.3);
+    border-width: 1px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.chat-send-btn {
+    width: 40px;
+    background-color: var(--oracle-gold);
+    color: black;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border-width: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 110%;
+    padding: 2px 6px;
+    margin: 0 4px;
+    transition-duration: 0.15s;
+}
+
+.icon-btn:hover {
+    color: white;
+    scale: 1.15;
+}
+
+.icon-btn--gold {
+    color: #FFD700 !important;
+}

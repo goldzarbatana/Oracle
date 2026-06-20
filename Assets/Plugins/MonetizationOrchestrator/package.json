@@ -1,0 +1,10 @@
+{
+  "name": "com.romangaliulko.monetizationorchestrator",
+  "version": "1.0.0",
+  "displayName": "Monetization Orchestrator",
+  "description": "Universal Monetization plugin for Unity.",
+  "unity": "2021.3",
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  }
+}

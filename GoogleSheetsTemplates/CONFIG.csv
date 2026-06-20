@@ -1,0 +1,8 @@
+Key,Value,Description
+demo_mode,TRUE,Режим демо (мок-дані) vs Live
+app_version_min,1.0.0,Мінімальна версія додатку
+maintenance_mode,FALSE,Режим обслуговування
+oracle_daily_limit_free,10,Ліміт запитів для безкоштовних
+oracle_daily_limit_enlightened,-1,Ліміт для Enlightened (-1 = безлім)
+cache_timeout_minutes,5,Таймаут кешування конфігу
+telemetry_enabled,TRUE,Чи збирати аналітику

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Technical Architecture | TimeAura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            background-color: #0d1117;
+        }
+        .markdown-body {
+            color: #c9d1d9;
+            background-color: #0d1117;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    <h1>TIMEAURA TECHNICAL ARCHITECTURE</h1>
+<h2>Executive Summary</h2>
+<p>TimeAura is a hybrid platform consisting of a Unity mobile app (iOS/Android) for the mystical Nexus experience, and a React/Next.js web portal for professional B2B interactions, freelancer profiles, and contract management. Built to target freelancers, creators, designers, and developers who trade expertise measured in <strong>Horas</strong> (time credits). Monetization combines a premium <strong>Enlightened</strong> subscription (Unity IAP) and a small commission on transactions (Stripe Connect). The unique value proposition lies in an AI‑driven Oracle that acts as a community participant, powered by a three‑layer economy (Fiat ↔ Horas ↔ Premium).</p>
+<hr>
+<h2>System Architecture</h2>
+<pre><code class="language-text">┌─────────────────────┐         ┌─────────────────────┐
+│   Unity Mobile      │         │   React Web         │
+│   (iOS/Android)     │         │   (Next.js)         │
+│   - Mystical UX     │         │   - B2B Portal      │
+│   - Oracle Chat     │         │   - Freelancer      │
+│   - Chamber         │         │     Profiles        │
+│   - Feed            │         │   - Contracts       │
+└──────────┬──────────┘         └──────────┬──────────┘
+           │                               │
+           └───────────────┬───────────────┘
+                           │
+                           ▼
+         ┌─────────────────────────────────┐
+         │      Shared Backend API         │
+         │   (Firebase Functions / Node.js)│
+         └──────────────┬──────────────────┘
+                        │
+    ┌───────────────────┼───────────────────┐
+    │                   │                   │
+    ▼                   ▼                   ▼
+┌─────────┐      ┌──────────┐       ┌──────────┐
+│Alibaba  │      │  Stripe  │       │ Firebase │
+│Cloud    │      │  Connect │       │ Firestore│
+│(AI/OSS/ │      │ (Escrow) │       │ (Auth,   │
+│ CDN)    │      │          │       │  DB)     │
+└─────────┘      └──────────┘       └──────────┘
+</code></pre>
+<h2>Platform Architecture</h2>
+<p>TimeAura operates as a hybrid platform with two client interfaces 
+sharing a unified backend:</p>
+<h3>Mobile App (Unity)</h3>
+<ul>
+<li><strong>Purpose:</strong> Mystical &quot;Nexus&quot; experience with AI Oracle</li>
+<li><strong>Target users:</strong> Active freelancers, daily interactions</li>
+<li><strong>Key features:</strong><ul>
+<li>Oracle Eye (floating AI widget)</li>
+<li>Sanctuary Panel (full AI chat)</li>
+<li>Convergence Feed (service requests)</li>
+<li>Chamber (active pacts workspace)</li>
+<li>Voice intent parsing</li>
+</ul>
+</li>
+<li><strong>Technology:</strong> Unity 2022.3 LTS, UI Toolkit, VContainer</li>
+</ul>
+<h3>Web Portal (React/Next.js)</h3>
+<ul>
+<li><strong>Purpose:</strong> Professional B2B interactions and contract management</li>
+<li><strong>Target users:</strong> Business clients, freelancers managing profiles</li>
+<li><strong>Key features:</strong><ul>
+<li>Freelancer profiles with portfolios</li>
+<li>Contract creation and management</li>
+<li>Escrow dashboard</li>
+<li>Invoice generation</li>
+<li>Admin panel for TimeAura team</li>
+<li>SEO-optimized public pages (for Google indexing)</li>
+</ul>
+</li>
+<li><strong>Technology:</strong> Next.js 14, React 18, TypeScript, Tailwind CSS</li>
+</ul>
+<h3>Shared Backend</h3>
+<ul>
+<li><strong>API Layer:</strong> Firebase Cloud Functions (or Node.js Express)</li>
+<li><strong>Database:</strong> Firebase Firestore (NoSQL) + ApsaraDB (relational for contracts)</li>
+<li><strong>Authentication:</strong> Firebase Auth (unified across mobile + web)</li>
+<li><strong>Storage:</strong> Alibaba Cloud OSS (user-generated content)</li>
+<li><strong>AI:</strong> Alibaba Cloud DashScope (Qwen) — accessible from both platforms</li>
+</ul>
+<hr>
+<h2>AI Integration Layer</h2>
+<p><strong>Current integration</strong></p>
+<ul>
+<li><strong>IOracleService</strong> – unified interface for all LLM interactions.</li>
+<li><strong>Providers</strong>:<ul>
+<li><code>QwenOracleProvider</code> – primary provider using Alibaba DashScope (optimized for Slavic languages).</li>
+<li><code>GeminiOracleProvider</code> – fallback provider (Google Gemini).</li>
+</ul>
+</li>
+<li><strong>OracleServiceProvider</strong> – router that selects provider based on language availability and health.</li>
+<li><strong>Use‑cases</strong>:<ul>
+<li>Voice intent parsing (Voice → Text → Intent).</li>
+<li>Interactive chat in the Sanctuary panel.</li>
+<li>Content generation (service descriptions, bios).</li>
+<li>Conflict arbitration in the Chronos Court.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Architectural benefits</strong></p>
+<ul>
+<li><strong>Modular</strong> – new providers (e.g., Grok, OpenAI) can be added without UI changes.</li>
+<li><strong>Automatic fallback</strong> – seamless switch when the primary provider is unavailable.</li>
+<li><strong>Localization aware</strong> – tone adapts per‑user language settings.</li>
+</ul>
+<hr>
+<h2>Planned Generative Models</h2>
+<ol>
+<li><strong>Image Generation</strong> (Tongyi Wanxiang / Stable Diffusion)<ul>
+<li>Unique user avatars generated from Aura tags.</li>
+<li>Service icons for categories (e.g., plumbing, code, design).</li>
+<li>Illustrated feed posts with a mystical/RPG visual style.</li>
+</ul>
+</li>
+<li><strong>Video Generation</strong><ul>
+<li>Auto‑created tutorials for onboarding newcomers.</li>
+<li>Short promotional clips for marketing campaigns.</li>
+<li>UI animation assets (spell effects, transitions).</li>
+</ul>
+</li>
+<li><strong>Audio Generation</strong><ul>
+<li>Mystical sound effects for UI interactions.</li>
+<li>Ambient background music for different panels.</li>
+<li>Text‑to‑Speech for Oracle responses with a “seer” voice.</li>
+</ul>
+</li>
+<li><strong>Multimodal AI</strong><ul>
+<li><strong>Voice + Vision</strong>: user shows a problem image while speaking → AI analyses both streams.</li>
+<li><strong>Text + Image</strong>: generate service description from an uploaded picture.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Infrastructure &amp; Scaling</h2>
+<p><strong>Current stack</strong></p>
+<ul>
+<li><strong>Client</strong>: Unity Mobile (iOS/Android) with UI Toolkit.</li>
+<li><strong>Config</strong>: Google Sheets Remote Config (temporary).</li>
+<li><strong>Database</strong>: Firebase Firestore (profiles, posts, deals).</li>
+<li><strong>Payments</strong>: Stripe Connect (fiat) + Unity IAP (subscriptions).</li>
+</ul>
+<p><strong>Planned Alibaba Cloud expansion</strong></p>
+<ul>
+<li><strong>AI Models</strong>: DashScope APIs (Qwen‑Max/Plus for text, Tongyi Wanxiang for images).</li>
+<li><strong>Storage</strong>: OSS (Object Storage Service) for generated assets (avatars, icons, videos).</li>
+<li><strong>CDN</strong>: Alibaba Cloud CDN for global, low‑latency delivery.</li>
+<li><strong>Compute</strong>: Function Compute for server‑side logic (escrow, arbitration, validation).</li>
+<li><strong>Database</strong>: ApsaraDB (RDS) as a fallback when Firestore scaling limits are reached.</li>
+</ul>
+<p><strong>Scaling roadmap</strong></p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Mobile Users</th>
+<th>Web Users</th>
+<th>Tokens/Day</th>
+<th>Storage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Soft Launch</td>
+<td>1k</td>
+<td>200</td>
+<td>50k</td>
+<td>10 GB</td>
+</tr>
+<tr>
+<td>Full Launch</td>
+<td>10k</td>
+<td>2k</td>
+<td>500k</td>
+<td>100 GB</td>
+</tr>
+<tr>
+<td>Creator Platform</td>
+<td>100k</td>
+<td>20k</td>
+<td>5M</td>
+<td>1 TB</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Technology Stack</h2>
+<h3>Client — Mobile</h3>
+<ul>
+<li>Unity 6.3 LTS (6000.3.10f1)</li>
+<li>UI Toolkit (UXML/USS)</li>
+<li>C# (VContainer for DI)</li>
+<li>Unity IAP (subscriptions)</li>
+</ul>
+<h3>Client — Web (NEW)</h3>
+<ul>
+<li>Next.js 14 (React framework)</li>
+<li>TypeScript</li>
+<li>Tailwind CSS (styling)</li>
+<li>React Query (data fetching)</li>
+<li>Stripe.js (payments)</li>
+</ul>
+<h3>Shared Backend</h3>
+<ul>
+<li>Firebase (Firestore, Auth, Cloud Functions)</li>
+<li>Stripe Connect (payments)</li>
+<li>Google Sheets API (configuration)</li>
+<li>Node.js (API layer for web)</li>
+</ul>
+<h3>AI/ML</h3>
+<ul>
+<li>Alibaba Cloud DashScope (Qwen-Max, Qwen-Plus — text)</li>
+<li>Google Gemini (fallback LLM)</li>
+<li>Planned: Tongyi Wanxiang (image), Video/Audio generation models</li>
+</ul>
+<h3>Infrastructure (Alibaba Cloud)</h3>
+<ul>
+<li>OSS (object storage)</li>
+<li>CDN (content delivery)</li>
+<li>Function Compute (serverless logic)</li>
+<li>ApsaraDB RDS (relational database)</li>
+<li>API Gateway (unified API for mobile + web)</li>
+</ul>
+<hr>
+<p><em>Prepared for Alibaba Cloud partnership discussion.</em></p>
+
+</body>
+</html>

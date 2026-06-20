@@ -1,0 +1,1645 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AuraTermsTable_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4c99f03821d18444b98654ad6d359dfc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 316633612288
+    m_Localized: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316671361024
+    m_Localized: Horas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555328
+    m_Localized: Status
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555329
+    m_Localized: Convergence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749632
+    m_Localized: Visage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749633
+    m_Localized: Aura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749634
+    m_Localized: Chronicle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749635
+    m_Localized: Feed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749636
+    m_Localized: Fate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749637
+    m_Localized: Transform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749638
+    m_Localized: Connection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749639
+    m_Localized: Resonate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749640
+    m_Localized: Align
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749641
+    m_Localized: Initiate Harmony
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749642
+    m_Localized: Dissolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749643
+    m_Localized: Awakening
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943936
+    m_Localized: The Temple Opens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943941
+    m_Localized: SUCCESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943943
+    m_Localized: The temple awaits your presence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943944
+    m_Localized: Your signal resonates with clarity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943945
+    m_Localized: The signal is unclear. Please verify your phone number.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943946
+    m_Localized: The convergence begins...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943947
+    m_Localized: Welcome. The temple opens for you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943948
+    m_Localized: The ritual was interrupted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943949
+    m_Localized: The connection falters. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943950
+    m_Localized: A disturbance in the flow. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943951
+    m_Localized: Initiating Harmony...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943952
+    m_Localized: '{0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943953
+    m_Localized: 'Horas: ${0} /hr'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943954
+    m_Localized: How synchronous was the exchange of {0} Horas?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943955
+    m_Localized: Mission for Level {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424642899968
+    m_Localized: Nexus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065792
+    m_Localized: Symmetry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065793
+    m_Localized: Harmony
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065794
+    m_Localized: Leave a Word of Gratitude.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065795
+    m_Localized: Master's Legacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065796
+    m_Localized: Word of Gratitude
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454400
+    m_Localized: READY FOR SYMMETRY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454401
+    m_Localized: SEARCHING FOR SYMMETRY...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454402
+    m_Localized: STOP SCAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454403
+    m_Localized: 'SYMMETRY LOCATED: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454404
+    m_Localized: INITIATING PULSE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454405
+    m_Localized: RESONATE YOUR AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454406
+    m_Localized: AURA COLORS (OFFER)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454407
+    m_Localized: AURA COLORS (NEEDS)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454408
+    m_Localized: FORGE YOUR OWN PATH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454409
+    m_Localized: ACTIVATE AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454410
+    m_Localized: RADAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454411
+    m_Localized: FEED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454412
+    m_Localized: VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20605122049835008
+    m_Localized: Phone Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560160550912
+    m_Localized: +380 00 000 0000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522432
+    m_Localized: Code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522433
+    m_Localized: Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522434
+    m_Localized: Writing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522435
+    m_Localized: Healing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522436
+    m_Localized: Strategy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522437
+    m_Localized: Art
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522438
+    m_Localized: Visionary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522439
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522440
+    m_Localized: Crypto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901238259712
+    m_Localized: MASTERS NEARBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901246648320
+    m_Localized: RESONATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697802838016
+    m_Localized: The path requires a longer number...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809536
+    m_Localized: OPENING THE PORTAL...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809537
+    m_Localized: The portal remains closed. Try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809538
+    m_Localized: The Aura flickered. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808302190592
+    m_Localized: A Visage draws Harmony closer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808327356416
+    m_Localized: A Visage is required to seal this Symmetry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550720
+    m_Localized: ROLE / RANK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550721
+    m_Localized: "\u2726 Harmony Channel Opened \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550722
+    m_Localized: Active
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550723
+    m_Localized: The 24-hour Harmony window has closed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550724
+    m_Localized: "\u2726 Harmony has been peacefully closed. \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550725
+    m_Localized: "\u2B21 You proposed {0} Horas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550726
+    m_Localized: 'Proposal: {0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550727
+    m_Localized: "\u2B21 {0} Horas accepted. Harmony grows."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550728
+    m_Localized: "\u2B21 Horas proposal declined."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745024
+    m_Localized: Mentor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745025
+    m_Localized: Expert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745026
+    m_Localized: Advisor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745027
+    m_Localized: Creator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745028
+    m_Localized: Innovator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745029
+    m_Localized: Aesthete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745030
+    m_Localized: Practitioner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939328
+    m_Localized: Supporter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939329
+    m_Localized: Craftsman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939330
+    m_Localized: Explorer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939331
+    m_Localized: Seeker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835772682240
+    m_Localized: "\u2728 Create Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835797848064
+    m_Localized: "\u2728 Update Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945917734912
+    m_Localized: NEXUS MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945938706432
+    m_Localized: MASTER PROFILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900736
+    m_Localized: AURA RITE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900737
+    m_Localized: CHRONICLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900738
+    m_Localized: VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900739
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900740
+    m_Localized: LOGOUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21798597260836874
+    m_Localized: winter cycles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862370189312
+    m_Localized: HORAS BALANCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862399549440
+    m_Localized: SYMMETRIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519346978816
+    m_Localized: COMMIT CHANGES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144640
+    m_Localized: EXECUTE_AUTH_SEQUENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144642
+    m_Localized: LOG IN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144646
+    m_Localized: LET'S GO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584153645056
+    m_Localized: SYNERGY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393792
+    m_Localized: CHILLIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393793
+    m_Localized: PROCESS_SYNC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393794
+    m_Localized: NETWORKING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393795
+    m_Localized: MY VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584195588096
+    m_Localized: USER_DATA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336832
+    m_Localized: LOGIN_SYSTEM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336833
+    m_Localized: PROSPECTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336834
+    m_Localized: WHO'S NEAR?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336835
+    m_Localized: SCANNER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336836
+    m_Localized: READY TO NETWORK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336837
+    m_Localized: WHO'S AROUND?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336838
+    m_Localized: SCANNING FREQUENCIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336839
+    m_Localized: SEARCHING FOR ASSETS...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336840
+    m_Localized: LOOKING FOR VIBES...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336841
+    m_Localized: PARSING SPECTRAL DATA...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336842
+    m_Localized: CONNECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336843
+    m_Localized: SAY HI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336844
+    m_Localized: UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336845
+    m_Localized: THE MYSTIC VOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336846
+    m_Localized: THE BUSINESS VOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336847
+    m_Localized: THE CASUAL VOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336848
+    m_Localized: THE TECH VOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336849
+    m_Localized: DEFINE CORE COMPETENCIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336850
+    m_Localized: SHOW YOUR VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336851
+    m_Localized: CONFIGURE ATTRIBUTE MATRIX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584237531136
+    m_Localized: READY!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740322889728
+    m_Localized: NEXUS SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832768
+    m_Localized: MASTER VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832769
+    m_Localized: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832770
+    m_Localized: EFFECTS (SFX)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832771
+    m_Localized: AMBIENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832772
+    m_Localized: MUTE ALL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832773
+    m_Localized: WELCOME TO THE NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832774
+    m_Localized: YOUR CURRENT AURA...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832775
+    m_Localized: MY GIFTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832776
+    m_Localized: I SEEK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832777
+    m_Localized: HOW MANY WINTER CYCLES HAS YOUR SPARK BURNED?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027072
+    m_Localized: WHAT ENERGY DO YOU BRING TO THE NEXUS?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027073
+    m_Localized: WHERE IS YOUR AURA STRONGEST IN SPACE?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027074
+    m_Localized: YOUR PATH IS SEALED. WELCOME.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027075
+    m_Localized: The Aura is silent today.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027076
+    m_Localized: MASCULINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027077
+    m_Localized: FEMININE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027078
+    m_Localized: NEUTRAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027079
+    m_Localized: SEARCH YOUR REALM...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027080
+    m_Localized: CONFIRM AGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027081
+    m_Localized: ILLUMINATE MY PRESENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027082
+    m_Localized: SYMMETRY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027083
+    m_Localized: NEARBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027084
+    m_Localized: "\U0001F441\uFE0F Oracle: This feature will manifest in future cycles
+      (Beta)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027085
+    m_Localized: MASTER VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027086
+    m_Localized: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027087
+    m_Localized: EFFECTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027088
+    m_Localized: ORACLE VOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027089
+    m_Localized: MUTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027090
+    m_Localized: THE AKASHIC VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027091
+    m_Localized: SYMMETRY DETECTED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221376
+    m_Localized: DECLINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221377
+    m_Localized: TimeAura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221378
+    m_Localized: BY WHAT NAME SHALL THE NEXUS KNOW YOU?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221379
+    m_Localized: REVEAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221380
+    m_Localized: What do you bring to the Nexus?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221381
+    m_Localized: "\u2692\uFE0F MATERIAL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221382
+    m_Localized: "\u2726 ETHEREAL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221383
+    m_Localized: CONFIRM OFFERING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221384
+    m_Localized: Your path is sealed. Welcome.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415680
+    m_Localized: ASPIRANT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415681
+    m_Localized: MASTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415682
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415683
+    m_Localized: The Ley Lines are aligned.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415684
+    m_Localized: The ether is turbulent here. Try another spot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415685
+    m_Localized: Awaiting the sacred breath...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415686
+    m_Localized: Commencing the Ritual of Visage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415687
+    m_Localized: The shadow path reveals your true essence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415688
+    m_Localized: Unknown Realm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415689
+    m_Localized: Your legacy remains unwritten...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415690
+    m_Localized: MANIFEST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609984
+    m_Localized: INTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609985
+    m_Localized: COMPASS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609986
+    m_Localized: MEDITATE WITH THE ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609987
+    m_Localized: Describe your skills and what you seek...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609988
+    m_Localized: Choose your resonance style
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609989
+    m_Localized: Persona updated.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609990
+    m_Localized: MYSTIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609991
+    m_Localized: BUSINESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609992
+    m_Localized: CASUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609993
+    m_Localized: TECH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609994
+    m_Localized: SEAL THE RITUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609995
+    m_Localized: COMMIT DATA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609996
+    m_Localized: SAVE PROFILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609997
+    m_Localized: LET'S GO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609998
+    m_Localized: CONSULT THE ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609999
+    m_Localized: Profile synchronized. The Nexus is optimized for your presence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610000
+    m_Localized: Please specify your age.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610001
+    m_Localized: Select your gender identity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610002
+    m_Localized: Establish your operational zone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610003
+    m_Localized: How many years have you been rocking this planet?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610004
+    m_Localized: Boom! Your Aura is ready to shine. Catch you in the Nexus!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610005
+    m_Localized: Purity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610006
+    m_Localized: Chaos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610007
+    m_Localized: FinTech
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610008
+    m_Localized: Architecture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610009
+    m_Localized: Efficiency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610010
+    m_Localized: Scaling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610011
+    m_Localized: Data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610012
+    m_Localized: Investment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610013
+    m_Localized: Production
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610014
+    m_Localized: Systems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610015
+    m_Localized: Craftsmanship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610016
+    m_Localized: Cybernetics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610017
+    m_Localized: Result-Oriented
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804288
+    m_Localized: Intuition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804289
+    m_Localized: Poetry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804290
+    m_Localized: Dreamwork
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804291
+    m_Localized: Metaphysics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804292
+    m_Localized: Storytelling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804293
+    m_Localized: Improvisation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804294
+    m_Localized: Philosophy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804295
+    m_Localized: Empathy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804296
+    m_Localized: Soundscapes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804297
+    m_Localized: Biohacking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804298
+    m_Localized: Yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804299
+    m_Localized: Nutrition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804300
+    m_Localized: Nature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804301
+    m_Localized: Longevity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804302
+    m_Localized: Breathwork
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804303
+    m_Localized: Sport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804304
+    m_Localized: Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804305
+    m_Localized: Equilibrium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804306
+    m_Localized: Herbalism
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804307
+    m_Localized: Vitality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804308
+    m_Localized: Mindfulness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804309
+    m_Localized: Organic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804310
+    m_Localized: Sustainability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804311
+    m_Localized: Mentorship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804312
+    m_Localized: Leadership
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804313
+    m_Localized: Community
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804314
+    m_Localized: Networking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804315
+    m_Localized: Collaboration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804316
+    m_Localized: Education
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998592
+    m_Localized: Diplomacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998593
+    m_Localized: Tribal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998594
+    m_Localized: Altruism
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998595
+    m_Localized: Public Speaking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998596
+    m_Localized: Psychology
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998597
+    m_Localized: Event-making
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998598
+    m_Localized: Social
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998599
+    m_Localized: WELLNESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998600
+    m_Localized: WELLNESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998601
+    m_Localized: SOCIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192896
+    m_Localized: Resonance Sample
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192897
+    m_Localized: SMALL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192898
+    m_Localized: MEDIUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192899
+    m_Localized: LARGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387200
+    m_Localized: The Eye perceives all.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387201
+    m_Localized: ALIGN SIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387202
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971566432256
+    m_Localized: START RITUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569600
+    m_Localized: Digital Signature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569601
+    m_Localized: Phone Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569602
+    m_Localized: Your Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569603
+    m_Localized: PHONE_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569604
+    m_Localized: The threshold of eternity awaits your presence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569605
+    m_Localized: Awaiting user authentication.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569606
+    m_Localized: The door's open, come on in!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971616763904
+    m_Localized: WAITING_FOR_CLIENT_HANDSHAKE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958208
+    m_Localized: The path requires a deeper vibration...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958209
+    m_Localized: Input invalid. Minimum length not met.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958210
+    m_Localized: Whoops, too short! Add some more numbers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958211
+    m_Localized: ERR_INPUT_LENGTH_INSUFFICIENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958212
+    m_Localized: INVOKING SYMMETRY...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958213
+    m_Localized: CONNECTING TO NETWORK...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958214
+    m_Localized: Hanging on, almost there...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958215
+    m_Localized: INITIALIZING_CORE_SERVICES...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958216
+    m_Localized: The stars are misaligned. Try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958217
+    m_Localized: Connection failed. Please retry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958218
+    m_Localized: Something went wrong. Give it another shot!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958219
+    m_Localized: ERR_HANDSHAKE_TIMEOUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958220
+    m_Localized: The cosmic thread snapped. Reconnect.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958221
+    m_Localized: Critical error. Contact support or retry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958222
+    m_Localized: Big glitch here! Try one more time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958223
+    m_Localized: SYSTEM_CRITICAL_EXCEPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318336
+    m_Localized: A soul resonance is felt in the ether.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318337
+    m_Localized: Awaiting the sacred breath...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512640
+    m_Localized: Initializing verification protocol...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512641
+    m_Localized: Hang tight, checking stuff...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512642
+    m_Localized: WAITING_FOR_DATA_PACKETS...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512643
+    m_Localized: Your path is sealed. Welcome.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512644
+    m_Localized: SYSTEM_READY. INITIALIZING_INTERFACE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512645
+    m_Localized: SEAL THE AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953901727744
+    m_Localized: INITIATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253696
+    m_Localized: SEEKER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253697
+    m_Localized: JUNIOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253698
+    m_Localized: USER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253699
+    m_Localized: NEWBIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253700
+    m_Localized: MASTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253701
+    m_Localized: ARCHMAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253702
+    m_Localized: MANAGER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253703
+    m_Localized: DEVELOPER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253704
+    m_Localized: BOSS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253705
+    m_Localized: ELDER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253706
+    m_Localized: SAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253707
+    m_Localized: DIRECTOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253708
+    m_Localized: ROOT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253709
+    m_Localized: BOOMER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253710
+    m_Localized: ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253711
+    m_Localized: DIVINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253712
+    m_Localized: CEO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253713
+    m_Localized: SUPERUSER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253714
+    m_Localized: GOD_MODE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253715
+    m_Localized: SYNCHRONIZING...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253716
+    m_Localized: ALIGNING LEY LINES...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253717
+    m_Localized: CONNECTING TO DATABASE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253718
+    m_Localized: SYNCING REPO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253719
+    m_Localized: DOWNLOADING BRAIN...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253720
+    m_Localized: TRANSCENDING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253721
+    m_Localized: ASCENDING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253722
+    m_Localized: PROMOTED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253723
+    m_Localized: EVOLVING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253724
+    m_Localized: LEVELING UP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253725
+    m_Localized: NEXUS ORACLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253726
+    m_Localized: EXECUTIVE MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253727
+    m_Localized: SYSTEM CONTROL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253728
+    m_Localized: INNER SANCTUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253729
+    m_Localized: PROFESSIONAL PROFILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253730
+    m_Localized: USER DATA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253731
+    m_Localized: SOUL ALIGNMENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253732
+    m_Localized: CORE VALUES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253733
+    m_Localized: SPECTRUM CONFIG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253734
+    m_Localized: LEY LINE VIBRATIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253735
+    m_Localized: MARKET FEED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253736
+    m_Localized: SYSTEM LOGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253737
+    m_Localized: TREASURY OF TIME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253738
+    m_Localized: ASSET VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253739
+    m_Localized: DATA STORAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253740
+    m_Localized: GAZE INTO THE ETHER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253741
+    m_Localized: SEEKING DESTINED ECHOES...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253742
+    m_Localized: SYMMETRY MANIFESTED!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253743
+    m_Localized: TARGET ACQUIRED!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253744
+    m_Localized: NODES CONNECTED!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253745
+    m_Localized: "CHANNEL \u2728"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253746
+    m_Localized: "ENDORSE \U0001F91D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253747
+    m_Localized: "LINK \U0001F517"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253748
+    m_Localized: "LIKE \u2764\uFE0F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253749
+    m_Localized: "CHANNELED \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253750
+    m_Localized: "ENDORSED \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253751
+    m_Localized: "LINKED \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253752
+    m_Localized: "LIKED \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253753
+    m_Localized: 'Vector: {0} Soul/hr'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253754
+    m_Localized: 'Output: {0} Asset/hr'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253755
+    m_Localized: 'Throughput: {0} Op/sec'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253756
+    m_Localized: Essence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253757
+    m_Localized: Revenue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253758
+    m_Localized: Cycles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253759
+    m_Localized: HOLD TO ALIGN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253760
+    m_Localized: MERGE YOUR SPIRIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253761
+    m_Localized: HOLD TO CONFIRM PARTNERSHIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253762
+    m_Localized: MAINTAIN UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253763
+    m_Localized: ORACLE WISDOM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836608
+    m_Localized: ETHEREAL WHISPERS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836609
+    m_Localized: EXECUTIVE INSIGHTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836610
+    m_Localized: CORE ANALYSIS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836611
+    m_Localized: The cosmic flows are turbulent. Try again later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836612
+    m_Localized: The stars are veiled in shadow. Reconnect when the currents clear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836613
+    m_Localized: Network connection unstable. Please re-initiate consultation later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836614
+    m_Localized: Packet loss detected in the Aether. Retrying handshake failed. Try
+      later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836615
+    m_Localized: VISION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836616
+    m_Localized: ORACLE SANCTUARY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836617
+    m_Localized: EXIT SILENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030912
+    m_Localized: The silence is absolute today. Try again later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030913
+    m_Localized: Choose your resonance style.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030914
+    m_Localized: Which path does your soul whisper?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030915
+    m_Localized: Select your professional communication tone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030916
+    m_Localized: Configure interaction protocol.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030917
+    m_Localized: How should we talk?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030918
+    m_Localized: Your vibration has been realigned.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030919
+    m_Localized: Profile settings successfully synchronized.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030920
+    m_Localized: Interface protocol updated.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030921
+    m_Localized: Got it! Switching styles now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030922
+    m_Localized: Step into the stream of causality.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030923
+    m_Localized: Initiating predictive analysis module.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030924
+    m_Localized: Accessing neural metadata.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030925
+    m_Localized: COMPASS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030926
+    m_Localized: CHRONICLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030927
+    m_Localized: NETWORK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030928
+    m_Localized: DATASTREAM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030929
+    m_Localized: TREASURY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030930
+    m_Localized: ASSETS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030931
+    m_Localized: STORAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030932
+    m_Localized: SANCTUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030933
+    m_Localized: CONSULTANT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030934
+    m_Localized: INTERFACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030935
+    m_Localized: RESONATE YOUR SPIRIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030936
+    m_Localized: TREASURY OF TIME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030937
+    m_Localized: ASSET REPOSITORY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030938
+    m_Localized: ENCRYPTED DATA VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030939
+    m_Localized: STORIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030940
+    m_Localized: MY STUFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030941
+    m_Localized: CHAT
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,99 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UI/Harmony/HarmonyChannel.uss?fileID=7433441132597879392&amp;guid=a118ede5012dbb04ba0d2ff1ed692c83&amp;type=3#HarmonyChannel"/>
+    <ui:VisualElement name="HarmonyChannelRoot" class="harmony-root" style="align-content: stretch; align-self: stretch; display: none; opacity: 0;">
+        <ui:VisualElement name="HarmonyTopBar" class="harmony-topbar">
+            <ui:Button name="BtnBack" text="⏬" class="btn-back"/>
+            <ui:VisualElement name="PartnerInfo" class="partner-info">
+                <ui:VisualElement name="PartnerVisage" class="partner-visage">
+                    <ui:VisualElement name="PartnerVisageGlow" class="visage-glow"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="PartnerMeta" class="partner-meta">
+                    <ui:Label name="LblPartnerName" text="Partner" class="partner-name"/>
+                    <ui:Label name="LblPartnerTitle" text="Mentor" class="partner-title"/>
+                    <ui:VisualElement style="flex-direction: row; align-items: center; margin-top: 2px;">
+                        <ui:Label name="LblPartnerLocation" text="📍 Realm Unknown" class="partner-details" style="color: rgba(255, 255, 255, 0.6); font-size: 11px; margin-right: 8px; -unity-font-style: italic;"/>
+                        <ui:Label name="LblPartnerStatus" text="✦ Lvl 0" class="partner-details" style="color: rgba(212, 175, 55, 0.8); font-size: 11px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="HarmonyStatus" class="harmony-status">
+                <ui:VisualElement name="StatusDot" class="status-dot status-dot--active"/>
+                <ui:Label name="LblHarmonyStatus" text="Active" class="status-label"/>
+            </ui:VisualElement>
+            <ui:Button name="BtnCloseHarmony" text="ЗАВЕРШИТИ ЧАТ" style="background-color: rgba(255, 68, 68, 0.1); color: rgb(255, 100, 100); border-width: 1px; border-color: rgba(255, 68, 68, 0.5); border-radius: 20px; padding-left: 20px; padding-right: 20px; height: 50px; -unity-font-style: bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="TimerBar" class="timer-bar">
+            <ui:Label name="LblTimerLabel" text="HARMONY WINDOW" class="timer-label"/>
+            <ui:VisualElement name="TimerTrack" class="timer-track">
+                <ui:VisualElement name="TimerFill" class="timer-fill"/>
+            </ui:VisualElement>
+            <ui:Label name="LblTimeRemaining" text="23:59:59" class="timer-remaining"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="ContextBanner" class="context-banner" style="display: none;">
+            <ui:Label name="LblContextTitle" text="Request Title" class="context-title"/>
+            <ui:Label name="LblContextPrice" text="Price" class="context-price"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="MessageList" vertical-scroller-visibility="Hidden" class="message-list">
+            <ui:VisualElement name="SessionBanner" class="session-banner">
+                <ui:Label name="LblSessionBanner" text="✦ Harmony Channel Opened ✦" class="session-banner-text"/>
+                <ui:Label name="LblSessionHint" text="Be clear and kind. Your Horas are ready." class="session-banner-hint"/>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement name="HorasWidget" class="horas-widget horas-widget--hidden">
+            <ui:Label text="⬡" class="horas-icon"/>
+            <ui:Label name="LblHorasProposal" text="Proposal: 0 Horas" class="horas-proposal-label"/>
+            <ui:Button name="BtnAcceptHoras" text="ACCEPT" class="btn-accept-horas"/>
+            <ui:Button name="BtnDeclineHoras" text="DECLINE" class="btn-decline-horas"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InputArea" class="input-area" style="justify-content: flex-start; align-self: stretch; align-content: stretch; padding-left: 5px;">
+            <ui:Button name="BtnSendHoras" tooltip="Send Horas offer" class="btn-action-horas" style="margin-right: 5px;">
+                <ui:Label text="⬡" class="action-icon"/>
+            </ui:Button>
+            <ui:Button name="BtnAttachMaterial" text="+" class="btn-attach"/>
+            <ui:TextField name="InputMessage" placeholder-text="Write a message..." max-length="500" class="message-input" style="width: 62%;"/>
+            <ui:Button name="BtnSendMessage" text="→" class="btn-send"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="CloseHarmonyModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement name="ModalCard" class="modal-card">
+                <ui:Label text="Close Harmony?" class="modal-title"/>
+                <ui:Label text="Both Masters will return to the Nexus." class="modal-body"/>
+                <ui:VisualElement class="modal-actions">
+                    <ui:Button name="BtnConfirmClose" text="CLOSE HARMONY" class="btn-modal-confirm"/>
+                    <ui:Button name="BtnCancelClose" text="STAY" class="btn-modal-cancel"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="DealSummaryModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement name="DealSummaryCard" class="modal-card deal-card">
+                <ui:Label text="⚖️ УМОВИ УГОДИ" class="modal-title deal-modal-title"/>
+                <ui:Label text="Перевірте умови перед скріпленням печаткою" class="modal-body" style="margin-bottom: 20px; opacity: 0.7;"/>
+                <ui:VisualElement class="deal-field-row">
+                    <ui:Label text="ОПИС" class="deal-field-label"/>
+                    <ui:Label name="LblDealDesc" text="—" class="deal-field-value deal-field-value--desc"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="deal-field-row">
+                    <ui:Label text="ЦІНА" class="deal-field-label"/>
+                    <ui:Label name="LblDealPrice" text="—" class="deal-field-value deal-field-value--price"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="deal-field-row">
+                    <ui:Label text="СФЕРА" class="deal-field-label"/>
+                    <ui:Label name="LblDealRealm" text="—" class="deal-field-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="deal-field-row">
+                    <ui:Label text="ПАРТНЕР" class="deal-field-label"/>
+                    <ui:Label name="LblDealPartner" text="—" class="deal-field-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="deal-divider"/>
+                <ui:Button name="BtnSealPact" text="✦ СКРІПИТИ ПЕЧАТКОЮ ✦" class="btn-seal-pact"/>
+                <ui:Button name="BtnCancelDeal" text="← ПОВЕРНУТИСЬ ДО ЧАТУ" class="btn-modal-cancel" style="margin-top: 10px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="DealActionBar" class="deal-action-bar">
+            <ui:Label text="Ви домовились?" class="deal-action-hint"/>
+            <ui:VisualElement class="deal-action-buttons">
+                <ui:Button name="BtnAgreeToTerms" text="✅  ПОГОДИТИСЬ" class="btn-agree-terms"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button name="BtnCompleteHarmony" text="✦ ЗАВЕРШИТИ ГАРМОНІЮ ✦" class="btn-complete-harmony" style="display: none;"/>
+    </ui:VisualElement>
+</ui:UXML>

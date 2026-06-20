@@ -1,0 +1,9 @@
+Feature,Enabled,RolloutPercent,Description
+voice_search,TRUE,100,Голосовий пошук через мікрофон
+matter_realm,TRUE,100,Сфера Матерії (Кванти)
+arbitration,FALSE,0,Арбітраж конфліктів через ШІ
+cashout,FALSE,0,Вивід коштів
+deep_linking,FALSE,0,Глибокі посилання на запити
+oracle_personality_engine,TRUE,50,Адаптивний тон Оракула
+analytics_logging,TRUE,100,Збір аналітики
+demo_mode_toggle,TRUE,100,Можливість перемикати Demo/Live

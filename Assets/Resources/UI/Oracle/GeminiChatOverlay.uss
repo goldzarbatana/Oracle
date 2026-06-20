@@ -1,0 +1,100 @@
+:root {
+    --oracle-gold: rgb(255, 215, 0);
+}
+
+.chat-overlay {
+    position: absolute;
+    bottom: 140px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(10, 10, 15, 0.95);
+    border-color: rgba(255, 215, 0, 0.5);
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 15px;
+    transition-property: translate, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out-cubic;
+    translate: 0 0;
+    opacity: 1;
+}
+
+.chat-overlay--hidden {
+    translate: 500px 0;
+    opacity: 0;
+}
+
+.chat-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 215, 0, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-title {
+    color: var(--oracle-gold);
+    font-size: 100%;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.chat-close-btn {
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    font-size: 150%;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.chat-message {
+    color: white;
+    font-size: 87.5%;
+    white-space: normal;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-message--oracle {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--oracle-gold);
+    border-left-width: 3px;
+    border-left-color: var(--oracle-gold);
+}
+
+.chat-message--user {
+    background-color: rgba(255, 255, 255, 0.05);
+    -unity-text-align: middle-right;
+    align-self: flex-end;
+}
+
+.chat-input-area {
+    flex-direction: row;
+    height: 40px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-color: rgba(255, 215, 0, 0.3);
+    border-width: 1px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.chat-send-btn {
+    width: 40px;
+    background-color: var(--oracle-gold);
+    color: black;
+    border-radius: 20px;
+    margin-left: 10px;
+}

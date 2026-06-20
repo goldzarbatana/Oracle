@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Nexus/NexusScene.uss" />
+    <ui:VisualElement name="FateTile" class="fate-tile">
+        <ui:VisualElement name="AuraGlow" class="fate-glow" />
+        <ui:VisualElement name="Content" class="fate-content">
+            <ui:VisualElement name="Header" class="fate-tile__header" style="flex-direction: row; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <ui:VisualElement style="flex-direction: row; align-items: center;">
+                    <ui:VisualElement name="IconGift" class="fate-mini-icon" style="width: 20px; height: 20px;" />
+                    <ui:VisualElement name="IconSeek" class="fate-mini-icon" style="margin-left: 5px; opacity: 0.6; width: 20px; height: 20px;" />
+                </ui:VisualElement>
+                <ui:Label text="25y" name="LblAge" class="fate-age" style="font-size: 14px; color: white; opacity: 0.6;" />
+                <ui:Label text="800m" name="LblDistance" class="fate-distance" style="font-size: 14px; color: #D4AF37;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="AvatarContainer" class="fate-avatar-container">
+                <ui:Label text="LK" name="LblInitials" class="fate-initials" />
+                <ui:VisualElement name="IconPillar" class="fate-pillar-icon" style="position: absolute; right: -5px; bottom: -5px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Info" class="fate-info" style="flex-grow: 1; justify-content: center; width: 100%;">
+                <ui:Label text="Master Name" name="LblName" class="fate-name" />
+                <ui:Label text="CHRONOS SAGE" name="LblPillar" class="fate-pillar" />
+                <ui:Label text="" name="LblOracleWhisper" class="fate-oracle-whisper" style="display: none;" />
+            </ui:VisualElement>
+            <ui:Button text="ALIGN" name="BtnAlign" class="fate-align-btn" style="margin-top: 15px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

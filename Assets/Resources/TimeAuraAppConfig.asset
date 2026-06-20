@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f1865fd3a388b4ba9c29ef8da90f7b, type: 3}
+  m_Name: TimeAuraAppConfig
+  m_EditorClassIdentifier: Assembly-CSharp::TimeAura.Core.AppConfig
+  initialHoras: 1
+  transformationMinHoras: 60
+  initialStatus: 0
+  lumenColor: {r: 0.529, g: 0.808, b: 0.922, a: 1}
+  formaColor: {r: 0.831, g: 0.686, b: 0.216, a: 1}
+  actionColor: {r: 0.863, g: 0.078, b: 0.235, a: 1}
+  essenceColor: {r: 0.596, g: 0.984, b: 0.596, a: 1}
+  twilioAccountSid: 
+  twilioAuthToken: 
+  twilioFromNumber: 
+  apiBaseUrl: https://api.timeaura.com
+  freeContractsLimit: 1
+  freeContractsPeriodDays: 7
+  requireVisageForHarmony: 0
+  simulateOracle: 1
+  useCloudFunctions: 1
+  oracleCloudFunctionUrl: AQ.Ab8RN6K6HK3PSBpY6RmJ_-jv9yld7sSr5kTNwdRTvA0ClPLcvw
+  googleSheetBaseUrl: https://docs.google.com/spreadsheets/d/1FUxZWdzPU3hoskr0ts25Y1eUfdQjkgt2ohNcLFBteGk/edit?usp=sharing
+  useRealStripeTestMode: 0

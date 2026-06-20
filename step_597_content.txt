@@ -1,0 +1,2 @@
+".sanctuary-root {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background-color: rgb(5, 2, 12);\n    align-items: center;\n    justify-content: center;\n    overflow: hidden;\n}\n\n/* --- Mystical Background Effects --- */\n.mystic-a
+<truncated 4116 bytes>

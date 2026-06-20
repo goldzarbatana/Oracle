@@ -1,0 +1,12 @@
+Type,ID,Text_UA,Text_EN
+tip,1,"Оракул бачить резонанс між тобою та цим майстром","The Oracle sees resonance between you and this master"
+tip,2,"Хори течуть крізь час, як вода крізь пісок","Horas flow through time like water through sand"
+tip,3,"Кожна Симетрія залишає слід у твоїй Аурі","Every Symmetry leaves a mark on your Aura"
+prophecy,1,"Сьогодні ідеальний день для угоди з кодування","Today is the perfect day for a coding contract"
+prophecy,2,"Твоя Аура приваблює творців мистецтва","Your Aura attracts creators of art"
+achievement,first_symmetry,"Перша Симетрія","First Symmetry"
+achievement,ten_symmetries,"Десять Симетрій","Ten Symmetries"
+achievement,oracle_whisperer,"Шепіт Оракула","Oracle Whisperer"
+button,create_request,"Створити запит","Create Request"
+button,enter_harmony,"Увійти в Гармонію","Enter Harmony"
+button,resonate,"Резонувати","Resonate"

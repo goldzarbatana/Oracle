@@ -1,0 +1,25 @@
+{
+    "name": "UniversalMonetization.Editor",
+    "rootNamespace": "UniversalMonetization.Editor",
+    "references": [
+        "UniversalMonetization",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ugui",
+            "expression": "1.0.0",
+            "define": "HAS_UGUI"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,286 @@
+:root {
+    --gold: #D4AF37;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --gold-glow-strong: rgba(212, 175, 55, 0.7);
+    --cyan: rgba(0, 255, 255, 0.85);
+    --urgent-red: rgba(255, 80, 30, 0.85);
+    --deep-obsidian: #05020C;
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --text-bright: rgba(255, 255, 255, 0.9);
+    --card-bg: rgba(8, 5, 20, 0.82);
+    --card-border: rgba(212, 175, 55, 0.12);
+}
+
+/* ═══════════════════════════════════════════════════
+   CARD BASE — Fade-in + slide-up entry animation
+   ═══════════════════════════════════════════════════ */
+.fate-card {
+    background-color: var(--card-bg);
+    margin-bottom: 14px;
+    padding: 16px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: var(--card-border);
+    width: 80%;
+    max-width: 600px;
+    align-self: center;
+    overflow: visible;
+    transition-property: background-color, border-color, scale, opacity, translate;
+    transition-duration: 0.3s;
+    cursor: link;
+    /* Entry state — script sets this then removes it */
+    opacity: 0;
+    translate: 0 24px;
+}
+
+.fate-card--visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.fate-card:active {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(212, 175, 55, 0.25);
+    scale: 0.985;
+}
+
+.fate-card--expanded {
+    background-color: rgba(16, 10, 40, 0.92);
+    border-color: rgba(212, 175, 55, 0.28);
+}
+
+/* ═══════════════════════════════════════════════════
+   URGENT GLOW — Pulsing border for isUrgent posts
+   ═══════════════════════════════════════════════════ */
+.fate-card--urgent {
+    border-color: rgba(255, 80, 30, 0.6);
+    border-width: 1.5px;
+}
+
+/* ═══════════════════════════════════════════════════
+   HEADER ROW
+   ═══════════════════════════════════════════════════ */
+.fate-card__header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* --- Avatar (Visage) --- */
+.fate-card__avatar-container {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.fate-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgba(30, 18, 60, 0.9);
+    border-width: 1.5px;
+    border-color: var(--gold);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.fate-card__avatar-aura {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    border-width: 1px;
+    border-color: var(--gold-glow);
+    opacity: 0.5;
+}
+
+/* Avatar initials fallback */
+.fate-card__avatar-initials {
+    position: absolute;
+    color: var(--gold);
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: 44px;
+    height: 44px;
+}
+
+/* --- User Info --- */
+.fate-card__user-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.fate-card__username {
+    color: var(--text-bright);
+    font-size: 112.5%;
+    -unity-font-style: bold;
+    margin-bottom: 0;
+}
+
+.fate-card__status {
+    color: var(--text-muted);
+    font-size: 87.5%;
+    -unity-font-style: italic;
+    white-space: normal;
+    display: none;
+    margin-top: 4px;
+}
+
+.fate-card--expanded .fate-card__status {
+    display: flex;
+}
+
+.fate-card__vector {
+    color: var(--gold);
+    font-size: 62.5%;
+    opacity: 0.65;
+    margin-top: 2px;
+    display: none;
+}
+
+.fate-card--expanded .fate-card__vector {
+    display: flex;
+}
+
+.fate-card__timestamp {
+    color: var(--text-muted);
+    font-size: 56.25%;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+/* ═══════════════════════════════════════════════════
+   CONTENT
+   ═══════════════════════════════════════════════════ */
+.fate-card__content {
+    margin-bottom: 12px;
+    padding-left: 2px;
+}
+
+.fate-card__text {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 100%;
+    white-space: normal;
+    -unity-text-align: upper-left;
+    max-height: 42px;
+    overflow: hidden;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.fate-card--expanded .fate-card__text {
+    max-height: none;
+}
+
+.fate-card__image-container {
+    margin-top: 12px;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 190px;
+    background-color: rgba(15, 8, 30, 0.8);
+}
+
+.fate-card__image {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER & ACTIONS
+   ═══════════════════════════════════════════════════ */
+.fate-card__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fate-card__stats {
+    flex-direction: row;
+    align-items: center;
+}
+
+.fate-card__stat {
+    color: var(--text-muted);
+    font-size: 75%;
+    margin-right: 12px;
+}
+
+.fate-card__actions {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ── Standard button ── */
+.fate-card__btn {
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 62.5%;
+    -unity-text-generator: advanced;
+    margin-left: 8px;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.15s;
+}
+
+.fate-card__btn:active {
+    background-color: rgba(255, 255, 255, 0.12);
+    scale: 0.95;
+}
+
+/* ── Gold "Resonate" button ── */
+.fate-card__btn--gold {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    border-color: var(--gold-glow);
+}
+
+.fate-card__btn--gold:active {
+    background-color: rgba(212, 175, 55, 0.22);
+    border-color: var(--gold-glow-strong);
+    scale: 0.95;
+}
+
+/* ── Cyan "Respond" button (for ServiceRequest) ── */
+.fate-card__btn--respond {
+    background-color: rgba(0, 255, 255, 0.08);
+    color: var(--cyan);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.fate-card__btn--respond:active {
+    background-color: rgba(0, 255, 255, 0.18);
+    scale: 0.95;
+}
+
+/* ── Write button ── */
+.fate-card__btn--write {
+    background-color: rgba(180, 120, 255, 0.08);
+    color: rgba(200, 150, 255, 0.9);
+    border-color: rgba(180, 120, 255, 0.3);
+}
+
+.fate-card__btn--write:active {
+    background-color: rgba(180, 120, 255, 0.18);
+    scale: 0.95;
+}
+
+/* ═══════════════════════════════════════════════════
+   DIVIDER
+   ═══════════════════════════════════════════════════ */
+.fate-card__divider {
+    height: 1px;
+    background-color: rgba(212, 175, 55, 0.08);
+    margin-top: 20px;
+    margin-left: -16px;
+    margin-right: -16px;
+}

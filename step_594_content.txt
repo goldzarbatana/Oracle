@@ -1,0 +1,2 @@
+"<ui:UXML xmlns:ui=\"UnityEngine.UIElements\" xmlns:uie=\"UnityEditor.UIElements\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" engine=\"UnityEngine.UIElements\" editor=\"UnityEditor.UIElements\" editor-extension-mode=\"False\">\n    <ui:Style s
+<truncated 1870 bytes>

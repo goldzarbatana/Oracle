@@ -1,0 +1,2 @@
+[{"AllowMultiple":false,"EndLine":27,"ReplacementContent":"        private Button _btnExit;\n        private VisualElement _sacredCircle;\n","StartLine":27,"TargetContent":"        private Button _btnExit;\n"},{"AllowMultiple":false,"EndLine":59,"Replaceme
+<truncated 844 bytes>

@@ -1,0 +1,28 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement class="chamber-session-card" style="display: none; opacity: 0;">
+        <ui:VisualElement class="session-card-header">
+            <ui:VisualElement name="SessionVisage" class="session-partner-visage">
+                <ui:Label name="LblVisageInitials" text="LS" class="visage-initials"/>
+            </ui:VisualElement>
+            <ui:Label name="LblPartnerName" text="Lyra Starlight" class="session-partner-name"/>
+            <ui:VisualElement style="flex-grow: 1;"/>
+            <ui:VisualElement class="session-badge">
+                <ui:Label text="В ПРОЦЕСІ" class="session-badge-text"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="session-card-body">
+            <ui:Label name="LblRequestTitle" text="Ремонт магічного крана" class="session-request-title"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="session-card-metrics">
+            <ui:VisualElement class="session-metric">
+                <ui:Label text="⏳" class="metric-icon"/>
+                <ui:Label name="LblTime" text="1:23 / 3:00 Хор" class="metric-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="session-metric">
+                <ui:Label text="⬡" class="metric-icon metric-icon-gold"/>
+                <ui:Label name="LblPrice" text="3 Хори" class="metric-value metric-value-gold"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button name="BtnEnterHarmony" text="🗝️ УВІЙТИ В ГАРМОНІЮ" class="btn-enter-harmony"/>
+    </ui:VisualElement>
+</ui:UXML>

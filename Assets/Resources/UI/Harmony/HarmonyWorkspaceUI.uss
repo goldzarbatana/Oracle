@@ -1,0 +1,205 @@
+:root {
+    --deep-obsidian: rgba(10, 5, 20, 0.85);
+    --oracle-gold: #D4AF37;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --orbitron: resource("Fonts & Materials/Orbitron-VariableFont_wght Bitmap");
+}
+
+#HarmonyWorkspaceContainer {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-color: var(--deep-obsidian);
+    border-color: var(--oracle-gold);
+    border-width: 1px;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.1);
+}
+
+.workspace-header {
+    -unity-font-definition: var(--orbitron);
+    font-size: 150%;
+    color: var(--oracle-gold);
+    -unity-text-align: middle-center;
+    margin-bottom: 24px;
+    text-shadow: 0 0 10px var(--gold-glow);
+    flex-shrink: 0;
+}
+
+/* --- Ritual Nexus (Mandala) --- */
+.ritual-nexus-container {
+    flex-grow: 1;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.ritual-mandala {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mandala-rings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: rgba(212, 175, 55, 0.3);
+    border-top-color: var(--oracle-gold);
+    /* In a real project, we'd use USS transition/animation for rotation, but we'll do it in C# */
+}
+
+.mandala-core {
+    width: 40px;
+    height: 40px;
+    background-color: var(--oracle-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--oracle-gold);
+    opacity: 0.5;
+}
+
+.ritual-status-text {
+    -unity-font-definition: var(--orbitron);
+    color: var(--oracle-gold);
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+/* --- Ritual Log --- */
+.ritual-log-scroll {
+    flex-grow: 1.5;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+.log-entry {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left-width: 2px;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.log-entry.system-entry {
+    border-color: #888888;
+    align-self: center;
+    background-color: transparent;
+    padding: 4px;
+}
+
+.log-entry.system-entry .log-text {
+    color: #888888;
+    font-size: 12px;
+    -unity-font-style: italic;
+    -unity-text-align: middle-center;
+}
+
+.log-entry.user-entry {
+    border-color: #4CAF50;
+    align-self: flex-end;
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.log-entry.master-entry {
+    border-color: var(--oracle-gold);
+    align-self: flex-start;
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.log-text {
+    color: white;
+    font-size: 14px;
+    white-space: normal;
+}
+
+/* --- Ritual Input Area --- */
+.ritual-input-area {
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.ritual-input {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: var(--oracle-gold);
+    border-width: 1px;
+    border-radius: 8px;
+    color: white;
+    min-height: 60px;
+    white-space: normal;
+}
+
+.ritual-input .unity-base-text-field__input {
+    background-color: transparent;
+    border-width: 0;
+    padding: 10px;
+}
+
+.ritual-btn {
+    background-color: var(--oracle-gold);
+    color: black;
+    -unity-font-style: bold;
+    border-radius: 8px;
+    border-width: 0;
+    padding: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.2s;
+}
+
+.ritual-btn:hover {
+    scale: 1.05;
+    background-color: #F8E287;
+}
+
+.ritual-btn--danger {
+    background-color: #E53935;
+    color: white;
+}
+
+.ritual-btn--danger:hover {
+    background-color: #FF5252;
+}
+
+.hidden {
+    display: none;
+}
+
+.action-button:active {
+    scale: 0.95;
+}
+
+.action-button--danger {
+    background-color: rgba(255, 50, 50, 0.2);
+    color: #FF5555;
+    border-color: #FF5555;
+    border-width: 1px;
+}
+
+.action-button--danger:hover {
+    background-color: rgba(255, 50, 50, 0.4);
+    color: white;
+}
+
+.action-button--gold {
+    background-color: var(--oracle-gold);
+    color: #000;
+}

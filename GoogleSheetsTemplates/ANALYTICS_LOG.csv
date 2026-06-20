@@ -1,0 +1,5 @@
+Timestamp,Event,UserID,Value,Metadata
+2026-06-14 10:30,oracle_request,user_123,tone=mystic,"duration=2.3s"
+2026-06-14 10:35,quant_purchased,user_456,amount=500,"price=4.99"
+2026-06-14 10:40,harmony_started,user_123,partner=user_789,"post_id=abc123"
+2026-06-14 10:45,symmetry_completed,user_456,horas=3,"rating=5"

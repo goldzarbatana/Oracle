@@ -1,0 +1,1645 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AuraTermsTable_it
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: 4c99f03821d18444b98654ad6d359dfc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 316633612288
+    m_Localized: Maestro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316671361024
+    m_Localized: Horas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555328
+    m_Localized: Status
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555329
+    m_Localized: Convergenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749632
+    m_Localized: Volto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749633
+    m_Localized: Aura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749634
+    m_Localized: Cronaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749635
+    m_Localized: Flusso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749636
+    m_Localized: Destino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749637
+    m_Localized: Trasformare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749638
+    m_Localized: Connessione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749639
+    m_Localized: Risonare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749640
+    m_Localized: Allineare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749641
+    m_Localized: Inizia l'Armonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749642
+    m_Localized: Dissoluzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749643
+    m_Localized: Risveglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943936
+    m_Localized: Il Tempio si apre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943941
+    m_Localized: SUCCESSO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943943
+    m_Localized: Il tempio attende la tua presenza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943944
+    m_Localized: Il tuo segnale risuona con chiarezza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943945
+    m_Localized: "Il segnale non \xE8 chiaro. Verifica il tuo numero di telefono."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943946
+    m_Localized: La convergenza inizia...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943947
+    m_Localized: Benvenuto. Il tempio si apre per te.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943948
+    m_Localized: "Il rituale \xE8 stato interrotto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943949
+    m_Localized: La connessione vacilla. Per favore riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943950
+    m_Localized: Un disturbo nel flusso. Per favore riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943951
+    m_Localized: Iniziando l'Armonia...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943952
+    m_Localized: '{0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943953
+    m_Localized: 'Horas: ${0} /ora'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943954
+    m_Localized: "Quanto \xE8 stato sincrono lo scambio di {0} Horas ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943955
+    m_Localized: Missione per il livello {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424642899968
+    m_Localized: Nexus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065792
+    m_Localized: Simmetria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065793
+    m_Localized: Armonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065794
+    m_Localized: Lascia una parola di gratitudine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065795
+    m_Localized: "L'eredit\xE0 del Maestro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065796
+    m_Localized: Parola di gratitudine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454400
+    m_Localized: PRONTO PER LA SIMMETRIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454401
+    m_Localized: RICERCA DELLA SIMMETRIA...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454402
+    m_Localized: FERMA SCANSIONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454403
+    m_Localized: 'SIMMETRIA INDIVIDUATA: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454404
+    m_Localized: AVVIO DELL'IMPULSO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454405
+    m_Localized: RISONA LA TUA AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454406
+    m_Localized: COLORI DELL'AURA (OFFRO)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454407
+    m_Localized: COLORI DELL'AURA (BISOGNI)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454408
+    m_Localized: FORGIA IL TUO CAMMINO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454409
+    m_Localized: ATTIVA AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454410
+    m_Localized: RADAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454411
+    m_Localized: Flusso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454412
+    m_Localized: VAULT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20605122049835008
+    m_Localized: Numero di telefono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560160550912
+    m_Localized: +39 000 000 0000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522432
+    m_Localized: Codice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522433
+    m_Localized: Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522434
+    m_Localized: Scrittura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522435
+    m_Localized: Guarigione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522436
+    m_Localized: Strategia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522437
+    m_Localized: Arte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522438
+    m_Localized: Visionario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522439
+    m_Localized: Musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522440
+    m_Localized: Cripto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901238259712
+    m_Localized: MAESTRI NELLE VICINANZE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901246648320
+    m_Localized: RISONA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697802838016
+    m_Localized: "Il percorso richiede un numero pi\xF9 lungo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809536
+    m_Localized: APERTURA DEL PORTALE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809537
+    m_Localized: Il portale rimane chiuso. Riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809538
+    m_Localized: "L'Aura tremol\xF2. Per favore riprova."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808302190592
+    m_Localized: Un Visage avvicina l'Armonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808327356416
+    m_Localized: "\xC8 richiesto un Visage per sigillare questa Simmetria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550720
+    m_Localized: RUOLO / RANGO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550721
+    m_Localized: "\u2726 Canale Armonia Aperto \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550722
+    m_Localized: Attivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550723
+    m_Localized: "La finestra di 24h si \xE8 chiusa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550724
+    m_Localized: "\u2726 Armonia chiusa in pace. \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550725
+    m_Localized: "\u2B21 Hai proposto {0} Horas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550726
+    m_Localized: 'Proposta: {0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550727
+    m_Localized: "\u2B21 {0} Horas accettati. L'Armonia cresce."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550728
+    m_Localized: "\u2B21 Proposta rifiutata."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745024
+    m_Localized: Mentore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745025
+    m_Localized: Esperto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745026
+    m_Localized: Consulente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745027
+    m_Localized: Creatore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745028
+    m_Localized: Innovatore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745029
+    m_Localized: Esteta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745030
+    m_Localized: Praticante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939328
+    m_Localized: Sostenitore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939329
+    m_Localized: Artigiano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939330
+    m_Localized: Esploratore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939331
+    m_Localized: Ricercatore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835772682240
+    m_Localized: "\u2728 Crea Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835797848064
+    m_Localized: "\u2728 Aggiorna Aura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945917734912
+    m_Localized: MENU NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945938706432
+    m_Localized: PROFILO MAESTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900736
+    m_Localized: RITO DELL'AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900737
+    m_Localized: CRONACHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900738
+    m_Localized: CAVEAU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900739
+    m_Localized: IMPOSTAZIONI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900740
+    m_Localized: LOGOUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21798597260836874
+    m_Localized: cicli invernali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862370189312
+    m_Localized: SALDO HORAS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862399549440
+    m_Localized: SIMMETRIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519346978816
+    m_Localized: APPLICA MODIFICHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144640
+    m_Localized: ESEGUI_SEQUENZA_AUTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144642
+    m_Localized: ACCEDI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144646
+    m_Localized: ANDIAMO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584153645056
+    m_Localized: SINERGIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393792
+    m_Localized: CHILLIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393793
+    m_Localized: SYNC_PROCESSO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393794
+    m_Localized: NETWORKING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393795
+    m_Localized: IL MIO VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584195588096
+    m_Localized: DATI_UTENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336832
+    m_Localized: LOGIN_SISTEMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336833
+    m_Localized: PROSPETTIVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336834
+    m_Localized: "CHI C'\xC8?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336835
+    m_Localized: SCANNER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336836
+    m_Localized: PRONTO PER IL NETWORKING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336837
+    m_Localized: "CHI C'\xC8 IN GIRO?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336838
+    m_Localized: SCANSIONE FREQUENZE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336839
+    m_Localized: RICERCA DI ASSET...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336840
+    m_Localized: CERCO VIBE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336841
+    m_Localized: PARSING DATI SPETTRALI...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336842
+    m_Localized: CONNETTI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336843
+    m_Localized: DI' CIAO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336844
+    m_Localized: UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336845
+    m_Localized: LA VOCE MISTICA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336846
+    m_Localized: LA VOCE BUSINESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336847
+    m_Localized: LA VOCE CASUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336848
+    m_Localized: LA VOCE TECH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336849
+    m_Localized: DEFINISCI LE COMPETENZE CHIAVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336850
+    m_Localized: MOSTRA IL TUO VIBE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336851
+    m_Localized: CONFIGURA LA MATRICE DEGLI ATTRIBUTI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584237531136
+    m_Localized: PRONTO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740322889728
+    m_Localized: IMPOSTAZIONI NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832768
+    m_Localized: VOLUME MASTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832769
+    m_Localized: MUSICA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832770
+    m_Localized: EFFETTI (SFX)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832771
+    m_Localized: AMBIENCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832772
+    m_Localized: MUTO TOTALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832773
+    m_Localized: BENVENUTI NEL NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832774
+    m_Localized: LA TUA AURA ATTUALE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832775
+    m_Localized: I MIEI DONI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832776
+    m_Localized: CERCO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832777
+    m_Localized: QUANTI CICLI INVERNALI HA BRUCIATO LA TUA SCINTILLA ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027072
+    m_Localized: QUALE ENERGIA PORTI AL NEXUS ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027073
+    m_Localized: "DOVE \xC8 PI\xD9 FORTE LA TUA AURA NELLO SPAZIO ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027074
+    m_Localized: "IL TUO CAMMINO \xC8 SIGILLATO. BENVENUTO."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027075
+    m_Localized: "L'Aura \xE8 silenziosa oggi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027076
+    m_Localized: MASCHILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027077
+    m_Localized: FEMMINILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027078
+    m_Localized: NEUTRALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027079
+    m_Localized: CERCA IL TUO REGNO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027080
+    m_Localized: "CONFERMA ET\xC0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027081
+    m_Localized: ILLUMINA LA MIA PRESENZA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027082
+    m_Localized: SIMMETRIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027083
+    m_Localized: VICINI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027084
+    m_Localized: "\U0001F441\uFE0F Oracolo: Questa funzione si manifester\xE0 nei
+      cicli futuri (Beta)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027085
+    m_Localized: VOLUME GENERALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027086
+    m_Localized: MUSICA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027087
+    m_Localized: EFFETTI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027088
+    m_Localized: VOCE DELL'ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027089
+    m_Localized: MUTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027090
+    m_Localized: IL VOLTO AKASHICO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027091
+    m_Localized: SIMMETRIA RILEVATA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221376
+    m_Localized: DECLINA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221377
+    m_Localized: TimeAura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221378
+    m_Localized: "CON QUALE NOME TI CONOSCER\xC0 IL NEXUS ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221379
+    m_Localized: RIVELA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221380
+    m_Localized: Cosa porti al Nexus ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221381
+    m_Localized: "\u2692\uFE0F MATERIALE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221382
+    m_Localized: "\u2726 ETEREO"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221383
+    m_Localized: CONFERMA OFFERTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221384
+    m_Localized: "Il tuo cammino \xE8 sigillato. Benvenuto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415680
+    m_Localized: ASPIRANTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415681
+    m_Localized: MAESTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415682
+    m_Localized: ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415683
+    m_Localized: Le Linee di Forza sono allineate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415684
+    m_Localized: "L'etere \xE8 turbolento qui. Prova un altro punto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415685
+    m_Localized: In attesa del respiro sacro...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415686
+    m_Localized: Inizio del Rituale del Volto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415687
+    m_Localized: Il cammino dell'ombra rivela la tua vera essenza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415688
+    m_Localized: Regno Sconosciuto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415689
+    m_Localized: "La tua eredit\xE0 resta non scritta..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415690
+    m_Localized: MANIFESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609984
+    m_Localized: INTENTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609985
+    m_Localized: BUSSOLA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609986
+    m_Localized: MEDITA CON L'ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609987
+    m_Localized: "Descrivi le tue abilit\xE0..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609988
+    m_Localized: Scegli il tuo stile di risonanza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609989
+    m_Localized: Persona aggiornata.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609990
+    m_Localized: MISTICO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609991
+    m_Localized: BUSINESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609992
+    m_Localized: CASUAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609993
+    m_Localized: TECH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609994
+    m_Localized: SIGILLA IL RITUALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609995
+    m_Localized: COMMIT DEI DATI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609996
+    m_Localized: SALVA PROFILO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609997
+    m_Localized: ANDIAMO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609998
+    m_Localized: CONSULTA L'ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609999
+    m_Localized: "Profilo sincronizzato. Il Nexus \xE8 ottimizzato per la tua presenza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610000
+    m_Localized: "Si prega di specificare l'et\xE0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610001
+    m_Localized: "Seleziona la tua identit\xE0 di genere."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610002
+    m_Localized: Stabilisci la tua zona operativa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610003
+    m_Localized: Da quanti anni spacchi su questo pianeta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610004
+    m_Localized: Boom! La tua Aura est pronta a splendere. Ci vediamo nel Nexus!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610005
+    m_Localized: Purezza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610006
+    m_Localized: Chaos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610007
+    m_Localized: FinTech
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610008
+    m_Localized: Architettura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610009
+    m_Localized: Efficienza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610010
+    m_Localized: Scaling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610011
+    m_Localized: Dati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610012
+    m_Localized: Investimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610013
+    m_Localized: Produzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610014
+    m_Localized: Sistemi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610015
+    m_Localized: Artigianato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610016
+    m_Localized: Cibernetica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610017
+    m_Localized: Orientato ai risultati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804288
+    m_Localized: Intuizione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804289
+    m_Localized: Poesia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804290
+    m_Localized: Lavoro onirico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804291
+    m_Localized: Metafisica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804292
+    m_Localized: Storytelling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804293
+    m_Localized: Improvvisazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804294
+    m_Localized: Filosofia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804295
+    m_Localized: Empatia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804296
+    m_Localized: Paesaggi sonori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804297
+    m_Localized: Biohacking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804298
+    m_Localized: Yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804299
+    m_Localized: Nutrizione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804300
+    m_Localized: Natura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804301
+    m_Localized: "Longevit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804302
+    m_Localized: Respirazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804303
+    m_Localized: Sport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804304
+    m_Localized: Rigenerazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804305
+    m_Localized: Equilibrio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804306
+    m_Localized: Erboristeria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804307
+    m_Localized: "Vitalit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804308
+    m_Localized: Consapevolezza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804309
+    m_Localized: Biologico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804310
+    m_Localized: "Sostenibilit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804311
+    m_Localized: Mentorship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804312
+    m_Localized: Leadership
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804313
+    m_Localized: "Comunit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804314
+    m_Localized: Networking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804315
+    m_Localized: Collaborazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804316
+    m_Localized: Educazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998592
+    m_Localized: Diplomazia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998593
+    m_Localized: Tribale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998594
+    m_Localized: Altruismo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998595
+    m_Localized: Parlare in pubblico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998596
+    m_Localized: Psicologia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998597
+    m_Localized: Organizzazione eventi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998598
+    m_Localized: Sociale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998599
+    m_Localized: BENESSERE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998600
+    m_Localized: BENESSERE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998601
+    m_Localized: SOCIALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192896
+    m_Localized: Campione di risonanza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192897
+    m_Localized: PICCOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192898
+    m_Localized: MEDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192899
+    m_Localized: GRANDE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387200
+    m_Localized: L'Occhio percepisce tutto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387201
+    m_Localized: ALLINEA LA VISTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387202
+    m_Localized: ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971566432256
+    m_Localized: INIZIA RITUALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569600
+    m_Localized: Firma digitale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569601
+    m_Localized: Numero di telefono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569602
+    m_Localized: Il tuo numero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569603
+    m_Localized: ID_TELEFONO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569604
+    m_Localized: "La soglia dell'eternit\xE0 attende la tua presenza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569605
+    m_Localized: In attesa dell'autenticazione utente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569606
+    m_Localized: "La porta \xE8 aperta, entra pure!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971616763904
+    m_Localized: IN_ATTESA_DI_HANDSHAKE_CLIENT...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958208
+    m_Localized: "Il percorso richiede una vibrazione pi\xF9 profonda..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958209
+    m_Localized: Input non valido. Lunghezza minima non raggiunta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958210
+    m_Localized: Ops, troppo corto! Aggiungi altri numeri.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958211
+    m_Localized: ERR_LUNGHEZZA_INPUT_INSUFFICIENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958212
+    m_Localized: INVOCAZIONE DELLA SIMMETRIA...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958213
+    m_Localized: CONNESSIONE ALLA RETE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958214
+    m_Localized: Resisti, ci siamo quasi...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958215
+    m_Localized: INIZIALIZZAZIONE_SERVIZI_CORE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958216
+    m_Localized: Le stelle sono disallineate. Riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958217
+    m_Localized: Connessione fallita. Per favore riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958218
+    m_Localized: "Qualcosa \xE8 andato storto. Riprova!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958219
+    m_Localized: TIMEOUT_HANDSHAKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958220
+    m_Localized: "Il filo cosmico si \xE8 spezzato. Riconnettiti."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958221
+    m_Localized: Errore critico. Contatta il supporto o riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958222
+    m_Localized: Grosso problema qui! Riprova ancora una volta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958223
+    m_Localized: ECCEZIONE_CRITICA_DI_SISTEMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318336
+    m_Localized: Risonanza dell'anima nell'etere.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318337
+    m_Localized: In attesa del respiro sacro...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512640
+    m_Localized: Inizializzazione protocollo...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512641
+    m_Localized: Aspetta, sto controllando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512642
+    m_Localized: ATTESA_PACCHETTI_DATI...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512643
+    m_Localized: "Il tuo cammino \xE8 segnato. Benvenuto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512644
+    m_Localized: SISTEMA_PRONTO. INIZIALIZZAZIONE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512645
+    m_Localized: SIGILLA L'AURA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953901727744
+    m_Localized: INIZIATO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253696
+    m_Localized: CERCATORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253697
+    m_Localized: JUNIOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253698
+    m_Localized: UTENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253699
+    m_Localized: PRINCIPIANTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253700
+    m_Localized: MAESTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253701
+    m_Localized: ARCIMAGO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253702
+    m_Localized: MANAGER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253703
+    m_Localized: SVILUPPATORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253704
+    m_Localized: CAPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253705
+    m_Localized: ANZIANO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253706
+    m_Localized: SAGGIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253707
+    m_Localized: DIRETTORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253708
+    m_Localized: ROOT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253709
+    m_Localized: BOOMER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253710
+    m_Localized: ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253711
+    m_Localized: DIVINO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253712
+    m_Localized: CEO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253713
+    m_Localized: SUPERUTENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253714
+    m_Localized: "MODALIT\xC0 DIO"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253715
+    m_Localized: SINCRONIZZAZIONE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253716
+    m_Localized: ALLINEAMENTO LINEE LEY...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253717
+    m_Localized: CONNESSIONE AL DATABASE...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253718
+    m_Localized: SINCRONIZZAZIONE REPO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253719
+    m_Localized: DOWNLOAD CERVELLO...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253720
+    m_Localized: TRASCENDENZA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253721
+    m_Localized: ASCENSIONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253722
+    m_Localized: PROMOSSO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253723
+    m_Localized: EVOLUZIONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253724
+    m_Localized: LIVELLO SU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253725
+    m_Localized: ORACOLO NEXUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253726
+    m_Localized: MENU ESECUTIVO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253727
+    m_Localized: CONTROLLO SISTEMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253728
+    m_Localized: SANTUARIO INTERIORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253729
+    m_Localized: PROFILO PROFESSIONALE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253730
+    m_Localized: DATI UTENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253731
+    m_Localized: ALLINEAMENTO ANIMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253732
+    m_Localized: VALORI CORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253733
+    m_Localized: CONFIG SPETTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253734
+    m_Localized: VIBRAZIONI LINEE LEY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253735
+    m_Localized: FEED DI MERCATO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253736
+    m_Localized: LOG DI SISTEMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253737
+    m_Localized: TESORO DEL TEMPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253738
+    m_Localized: CAVEAU DEGLI ASSET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253739
+    m_Localized: ARCHIVIAZIONE DATI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253740
+    m_Localized: SGUARDO NELL'ETERE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253741
+    m_Localized: RICERCA ECHI DESTINATI...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253742
+    m_Localized: SIMMETRIA MANIFESTATA!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253743
+    m_Localized: TARGET ACQUISITO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253744
+    m_Localized: NODI CONNESSI!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253745
+    m_Localized: "CANALIZZA \u2728"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253746
+    m_Localized: "APPROVA \U0001F91D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253747
+    m_Localized: "COLLEGA \U0001F517"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253748
+    m_Localized: "MI PIACE \u2764\uFE0F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253749
+    m_Localized: "CANALIZZATO \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253750
+    m_Localized: "APPROVATO \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253751
+    m_Localized: "COLLEGATO \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253752
+    m_Localized: "MI PIACE \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253753
+    m_Localized: 'Vettore: {0} Anima/ora'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253754
+    m_Localized: 'Output: {0} Asset/ora'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253755
+    m_Localized: 'Throughput: {0} Op/sec'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253756
+    m_Localized: Essenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253757
+    m_Localized: Ricavo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253758
+    m_Localized: Cicli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253759
+    m_Localized: TIENI PER ALLINEARE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253760
+    m_Localized: FONDETE IL VOSTRO SPIRITO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253761
+    m_Localized: TIENI PER CONFERMARE LA PARTNERSHIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253762
+    m_Localized: MANTIENI UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253763
+    m_Localized: SAGGEZZA DELL'ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836608
+    m_Localized: SUSSURRI ETEREI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836609
+    m_Localized: APPROFONDIMENTI ESECUTIVI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836610
+    m_Localized: ANALISI CORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836611
+    m_Localized: "I flussi cosmici sono turbolenti. Riprova pi\xF9 tardi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836612
+    m_Localized: Le stelle sono velate d'ombra. Riconnettiti quando le correnti si
+      schiariscono.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836613
+    m_Localized: "Connessione instabile. Riavvia la consultazione pi\xF9 tardi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836614
+    m_Localized: Rilevata perdita di pacchetti nell'Etere. Handshake fallito. Riprova.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836615
+    m_Localized: VISIONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836616
+    m_Localized: SANTUARIO DELL'ORACOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836617
+    m_Localized: ESCI DAL SILENZIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030912
+    m_Localized: "Il silenzio \xE8 assoluto oggi. Riprova pi\xF9 tardi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030913
+    m_Localized: Scegli il tuo stile di risonanza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030914
+    m_Localized: Quale sentiero sussurra la tua anima?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030915
+    m_Localized: Seleziona il tuo tono di comunicazione professionale.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030916
+    m_Localized: Configura il protocollo di interazione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030917
+    m_Localized: Come dovremmo parlare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030918
+    m_Localized: "La tua vibrazione \xE8 stata riallineata."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030919
+    m_Localized: Impostazioni del profilo sincronizzate con successo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030920
+    m_Localized: Protocollo di interfaccia aggiornato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030921
+    m_Localized: Ricevuto! Cambio stile ora.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030922
+    m_Localized: "Entra nel flusso della causalit\xE0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030923
+    m_Localized: Inizializzazione del modulo di analisi predittiva.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030924
+    m_Localized: Accesso ai metadati neurali.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030925
+    m_Localized: BUSSOLA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030926
+    m_Localized: CRONACHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030927
+    m_Localized: RETE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030928
+    m_Localized: FLUSSO DATI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030929
+    m_Localized: TESORERIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030930
+    m_Localized: ASSET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030931
+    m_Localized: ARCHIVIAZIONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030932
+    m_Localized: SANTUARIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030933
+    m_Localized: CONSULENTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030934
+    m_Localized: INTERFACCIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030935
+    m_Localized: FA RISUONARE IL TUO SPIRITO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030936
+    m_Localized: TESORO DEL TEMPO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030937
+    m_Localized: REPOSITORY DEGLI ASSET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030938
+    m_Localized: VAULT DATI CRITTOGRAFATI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030939
+    m_Localized: STORIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030940
+    m_Localized: LE MIE COSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030941
+    m_Localized: CHAT
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

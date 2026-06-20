@@ -1,0 +1,1650 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: AuraTermsTable_tr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 4c99f03821d18444b98654ad6d359dfc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 316633612288
+    m_Localized: Usta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316671361024
+    m_Localized: Horas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555328
+    m_Localized: "Stat\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316675555329
+    m_Localized: "Yak\u0131nsama"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749632
+    m_Localized: "G\xF6r\xFCn\xFCm"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749633
+    m_Localized: Aura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749634
+    m_Localized: Kronoloji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749635
+    m_Localized: "Ak\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749636
+    m_Localized: Kader
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749637
+    m_Localized: "D\xF6n\xFC\u015Ft\xFCr"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749638
+    m_Localized: "Ba\u011Flant\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749639
+    m_Localized: Rezonans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749640
+    m_Localized: Hizala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749641
+    m_Localized: "Uyumu Ba\u015Flat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749642
+    m_Localized: "\xC7\xF6z\xFClme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316679749643
+    m_Localized: "Uyan\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943936
+    m_Localized: "Tap\u0131nak A\xE7\u0131l\u0131yor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943941
+    m_Localized: "BA\u015EARI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943943
+    m_Localized: "Tap\u0131nak sizi bekliyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943944
+    m_Localized: "Sinyaliniz netlikle rezonans yap\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943945
+    m_Localized: "Sinyal belirsiz. L\xFCtfen telefon numaran\u0131z\u0131 do\u011Frulay\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943946
+    m_Localized: "Yak\u0131nsama ba\u015Fl\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943947
+    m_Localized: "Ho\u015F geldiniz. Tap\u0131nak sizin i\xE7in a\xE7\u0131l\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943948
+    m_Localized: "Rit\xFCel kesintiye u\u011Frad\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943949
+    m_Localized: "Ba\u011Flant\u0131 zay\u0131fl\u0131yor. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943950
+    m_Localized: "Ak\u0131\u015Fta bir bozulma. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943951
+    m_Localized: "Uyum ba\u015Flat\u0131l\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943952
+    m_Localized: '{0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943953
+    m_Localized: 'Horas: ${0} /saat'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943954
+    m_Localized: "{0} Horas de\u011Fi\u015Fimi ne kadar senkrondu ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 316683943955
+    m_Localized: "Seviye {0} i\xE7in g\xF6rev"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424642899968
+    m_Localized: Nexus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065792
+    m_Localized: Simetri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065793
+    m_Localized: Uyum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065794
+    m_Localized: "Bir \u015F\xFCkran kelimesi b\u0131rak\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065795
+    m_Localized: "Ustan\u0131n Miras\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424668065796
+    m_Localized: "\u015E\xFCkran S\xF6z\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454400
+    m_Localized: "S\u0130METR\u0130 \u0130\xC7\u0130N HAZIR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454401
+    m_Localized: "S\u0130METR\u0130 ARANIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454402
+    m_Localized: TARAMAYI DURDUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454403
+    m_Localized: "S\u0130METR\u0130 BULUNDU: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454404
+    m_Localized: "PULS BA\u015ELATILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454405
+    m_Localized: "\xD6Z\xDCN\xDC REZONANSA GET\u0130R"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454406
+    m_Localized: "AURA RENKLER\u0130 (TEKL\u0130F)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454407
+    m_Localized: "AURA RENKLER\u0130 (\u0130HT\u0130YA\xC7LAR)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454408
+    m_Localized: "KEND\u0130 YOLUNU D\xD6V"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454409
+    m_Localized: "AURA'YI AKT\u0130FLE\u015ET\u0130R"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454410
+    m_Localized: RADAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454411
+    m_Localized: "Ak\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16385424676454412
+    m_Localized: Kasa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20605122049835008
+    m_Localized: "Telefon Numaras\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560160550912
+    m_Localized: +90 000 000 00 00
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522432
+    m_Localized: Kod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522433
+    m_Localized: "Tasar\u0131m"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522434
+    m_Localized: "Yaz\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522435
+    m_Localized: "\u0130yile\u015Fme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522436
+    m_Localized: Strateji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522437
+    m_Localized: Sanat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522438
+    m_Localized: Vizyoner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522439
+    m_Localized: "M\xFCzik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20621560181522440
+    m_Localized: Kripto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901238259712
+    m_Localized: "YAKINDAK\u0130 USTALAR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624901246648320
+    m_Localized: REZONANS KUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697802838016
+    m_Localized: Yol daha uzun bir numara gerektiriyor...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809536
+    m_Localized: "PORTAL A\xC7ILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809537
+    m_Localized: "Portal kapal\u0131 kal\u0131yor. Tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20931697823809538
+    m_Localized: Aura Titredi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808302190592
+    m_Localized: "Bir sima Uyumu yak\u0131nla\u015Ft\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808327356416
+    m_Localized: "Bu Simetriyi m\xFCh\xFCrlemek i\xE7in bir sima gereklidir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550720
+    m_Localized: "ROL / R\xDCTBE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550721
+    m_Localized: "\u2726 Armoni Kanal\u0131 A\xE7\u0131ld\u0131 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550722
+    m_Localized: Aktif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550723
+    m_Localized: "24 saatlik pencere kapand\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550724
+    m_Localized: "\u2726 Armoni huzurla kapand\u0131. \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550725
+    m_Localized: "\u2B21 {0} Horas teklif ettiniz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550726
+    m_Localized: 'Teklif: {0} Horas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550727
+    m_Localized: "\u2B21 {0} Horas kabul edildi. Uyum b\xFCy\xFCyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808331550728
+    m_Localized: "\u2B21 Teklif reddedildi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745024
+    m_Localized: Mentor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745025
+    m_Localized: Uzman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745026
+    m_Localized: "Dan\u0131\u015Fman"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745027
+    m_Localized: "Yarat\u0131c\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745028
+    m_Localized: "Yenilik\xE7i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745029
+    m_Localized: "Estetik\xE7i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808335745030
+    m_Localized: "Uygulay\u0131c\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939328
+    m_Localized: "Destek\xE7i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939329
+    m_Localized: "Zanaatk\xE2r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939330
+    m_Localized: "Ka\u015Fif"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20974808339939331
+    m_Localized: "Aray\u0131c\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835772682240
+    m_Localized: "\u2728 Aura Olu\u015Ftur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21303835797848064
+    m_Localized: "\u2728 Auray\u0131 G\xFCncelle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945917734912
+    m_Localized: "NEXUS MEN\xDCS\xDC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945938706432
+    m_Localized: "USTA PROF\u0130L\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900736
+    m_Localized: "AURA R\u0130T\xDCEL\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900737
+    m_Localized: "G\xDCNCELER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900738
+    m_Localized: MAHZEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900739
+    m_Localized: AYARLAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21333945942900740
+    m_Localized: "\xC7IKI\u015E YAP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21798597260836874
+    m_Localized: "k\u0131\u015F d\xF6ng\xFCs\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862370189312
+    m_Localized: "HORAS BAK\u0130YES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22171862399549440
+    m_Localized: "S\u0130METR\u0130LER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519346978816
+    m_Localized: "DE\u011E\u0130\u015E\u0406KL\u0406KLER\u0406 ONAYLA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144640
+    m_Localized: YETKILENDIRME_DIZISINI_YURUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144642
+    m_Localized: "G\u0130R\u0130\u015E YAP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22520519372144646
+    m_Localized: "HAYD\u0130!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584153645056
+    m_Localized: "S\u0130NERJ\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393792
+    m_Localized: CHILLIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393793
+    m_Localized: "S\xDCRE\xC7_SENK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393794
+    m_Localized: "A\u011E KURMA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584191393795
+    m_Localized: VIBE'IM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584195588096
+    m_Localized: KULLANICI_VERISI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336832
+    m_Localized: "S\u0130STEME_G\u0130R\u0130\u015E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336833
+    m_Localized: "POTANS\u0130YELLER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336834
+    m_Localized: "K\u0130MLER VAR?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336835
+    m_Localized: TARAYICI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336836
+    m_Localized: "A\u011E KURMAYA HAZIR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336837
+    m_Localized: "K\u0130M VAR?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336838
+    m_Localized: FREKANSLAR TARANIYOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336839
+    m_Localized: VARLIKLAR ARANIYOR...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336840
+    m_Localized: VIBE ARANIYOR...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336841
+    m_Localized: "SPEKTRAL VER\u0130LER AYRI\u015ETIRILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336842
+    m_Localized: "BA\u011ELAN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336843
+    m_Localized: SELAM VER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336844
+    m_Localized: UPLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336845
+    m_Localized: "M\u0130ST\u0130K SES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336846
+    m_Localized: "\u0130\u015E SES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336847
+    m_Localized: "G\xDCNL\xDCK SES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336848
+    m_Localized: "TEKNOLOJ\u0130 SES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336849
+    m_Localized: "TEMEL YETERL\u0130L\u0130KLER\u0130 TANIMLAYIN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336850
+    m_Localized: "TARZINI G\xD6STER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584233336851
+    m_Localized: "\xD6ZN\u0130TEL\u0130K MATR\u0130S\u0130N\u0130 YAPILANDIRIN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24516584237531136
+    m_Localized: HAZIR!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740322889728
+    m_Localized: NEXUS AYARLARI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832768
+    m_Localized: ANA SES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832769
+    m_Localized: "M\xDCZ\u0130K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832770
+    m_Localized: EFEKTLER (SFX)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832771
+    m_Localized: AMBYANS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832772
+    m_Localized: "T\xDCM\xDCN\xDC SESS\u0130ZE AL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832773
+    m_Localized: "NEXUS'A HO\u015E GELD\u0130N\u0130Z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832774
+    m_Localized: MEVCUT AURANIZ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832775
+    m_Localized: "BEN\u0130M HED\u0130YELER\u0130M"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832776
+    m_Localized: "ARADI\u011EIM"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740364832777
+    m_Localized: "KIVILCIMIN KA\xC7 KI\u015E D\xD6NG\xDCS\xDC YANDI ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027072
+    m_Localized: "NEXUS'A HANG\u0130 ENERJ\u0130Y\u0130 GET\u0130R\u0130YORSUN ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027073
+    m_Localized: "AURAN UZAYDA EN G\xDC\xC7L\xDC NEREDE ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027074
+    m_Localized: "YOLUN M\xDCH\xDCRLEND\u0130. HO\u015E GELD\u0130N."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027075
+    m_Localized: "Aura bug\xFCn sessiz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027076
+    m_Localized: ERKEKSEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027077
+    m_Localized: KADINSEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027078
+    m_Localized: "N\xD6TR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027079
+    m_Localized: "\xC2LEM\u0130N\u0130 ARA..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027080
+    m_Localized: "YA\u015EI ONAYLA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027081
+    m_Localized: "VARLI\u011EIMI AYDINLAT"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027082
+    m_Localized: "S\u0130MET\u0420\u0406"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027083
+    m_Localized: YAKINDA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027084
+    m_Localized: "\U0001F441\uFE0F Kahin: Bu \xF6zellik gelecek d\xF6ng\xFClerde
+      (Beta) tezah\xFCr edecek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027085
+    m_Localized: ANA SES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027086
+    m_Localized: "M\xDCZ\u0130K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027087
+    m_Localized: EFEKTLER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027088
+    m_Localized: "KAH\u0130N SES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027089
+    m_Localized: "SESS\u0130Z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027090
+    m_Localized: "AKA\u015E\u0130K KASA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740369027091
+    m_Localized: "S\u0130METR\u0130 TESP\u0130T ED\u0130LD\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221376
+    m_Localized: REDDET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221377
+    m_Localized: TimeAura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221378
+    m_Localized: "NEXUS SEN\u0130 HANG\u0130 \u0406S\u0130MLE TANIMALI ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221379
+    m_Localized: "A\xC7I\u011EA \xC7IKAR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221380
+    m_Localized: Nexus'a ne getiriyorsun ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221381
+    m_Localized: "\u2692\uFE0F MATERYAL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221382
+    m_Localized: "\u2726 ETER\u0130K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221383
+    m_Localized: "TEKL\u0130F\u0130 ONAYLA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740373221384
+    m_Localized: "Yolun m\xFCh\xFCrlendi. Ho\u015F geldin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415680
+    m_Localized: ADAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415681
+    m_Localized: USTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415682
+    m_Localized: "KAH\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415683
+    m_Localized: "Ley Hatlar\u0131 hizaland\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415684
+    m_Localized: "Eter burada \xE7alkant\u0131l\u0131. Ba\u015Fka bir yer deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415685
+    m_Localized: Kutsal nefes bekleniyor...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415686
+    m_Localized: "G\xF6r\xFCn\xFCm Rit\xFCeli ba\u015Fl\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415687
+    m_Localized: "G\xF6lge yolu ger\xE7ek \xF6z\xFCn\xFC ortaya \xE7\u0131kar\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415688
+    m_Localized: Bilinmeyen Diyar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415689
+    m_Localized: "Miras\u0131n hen\xFCz yaz\u0131lmad\u0131..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740377415690
+    m_Localized: "TEZAH\xDCR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609984
+    m_Localized: "N\u0130YET"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609985
+    m_Localized: PUSULA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609986
+    m_Localized: "ORAKUL \u0130LE MED\u0130TASYON YAP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609987
+    m_Localized: "Becerilerinizi tan\u0131mlay\u0131n..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609988
+    m_Localized: "Rezonans tarz\u0131n\u0131z\u0131 se\xE7in"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609989
+    m_Localized: "Persona g\xFCncellendi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609990
+    m_Localized: "M\u0130ST\u0130K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609991
+    m_Localized: "\u0130\u015E D\xDCNYASI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609992
+    m_Localized: "G\xDCNL\xDCK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609993
+    m_Localized: "TEKNOLOJ\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609994
+    m_Localized: "R\u0130T\xDCEL\u0130 M\xDCH\xDCRLE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609995
+    m_Localized: "VER\u0130LER\u0130 \u0130\u015ELE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609996
+    m_Localized: "PROF\u0130L\u0130 KAYDET"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609997
+    m_Localized: "HAD\u0130 G\u0130DEL\u0130M!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609998
+    m_Localized: "ORAKUL'A DANI\u015E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381609999
+    m_Localized: "Profil senkronize edildi. Nexus varl\u0131\u011F\u0131n\u0131z
+      i\xE7in optimize edildi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610000
+    m_Localized: "L\xFCtfen ya\u015F\u0131n\u0131z\u0131 belirtin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610001
+    m_Localized: "Cinsiyet kimli\u011Finizi se\xE7in."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610002
+    m_Localized: "Operasyonel b\xF6lgenizi belirleyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610003
+    m_Localized: "Ka\xE7 y\u0131ld\u0131r bu gezegeni sall\u0131yorsun?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610004
+    m_Localized: "Boom! Auran parlamaya haz\u0131r. Nexus'ta g\xF6r\xFC\u015F\xFCr\xFCz!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610005
+    m_Localized: "Safl\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610006
+    m_Localized: Kaos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610007
+    m_Localized: FinTek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610008
+    m_Localized: Mimari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610009
+    m_Localized: Verimlilik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610010
+    m_Localized: "\xD6l\xE7ekleme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610011
+    m_Localized: Veri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610012
+    m_Localized: "Yat\u0131r\u0131m"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610013
+    m_Localized: "\xDCretim"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610014
+    m_Localized: Sistemler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610015
+    m_Localized: "Ustal\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610016
+    m_Localized: Sibernetik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740381610017
+    m_Localized: "Sonu\xE7 Odakl\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804288
+    m_Localized: Sezgi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804289
+    m_Localized: "\u015Eiir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804290
+    m_Localized: "R\xFCya \xC7al\u0131\u015Fmas\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804291
+    m_Localized: Metafizik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804292
+    m_Localized: "Hikaye Anlat\u0131m\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804293
+    m_Localized: "Do\u011Fa\xE7lama"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804294
+    m_Localized: Felsefe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804295
+    m_Localized: Empati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804296
+    m_Localized: "Ses Manzaralar\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804297
+    m_Localized: Biyo-hackleme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804298
+    m_Localized: Yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804299
+    m_Localized: Beslenme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804300
+    m_Localized: "Do\u011Fa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804301
+    m_Localized: "Uzun \xD6m\xFCr"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804302
+    m_Localized: "Nefes \xC7al\u0131\u015Fmas\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804303
+    m_Localized: Spor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804304
+    m_Localized: Rejenerasyon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804305
+    m_Localized: Denge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804306
+    m_Localized: Bitkisel Tedavi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804307
+    m_Localized: "Canl\u0131l\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804308
+    m_Localized: "Fark\u0131ndal\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804309
+    m_Localized: Organik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804310
+    m_Localized: "S\xFCrd\xFCr\xFClebilirlik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804311
+    m_Localized: Mentorluk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804312
+    m_Localized: Liderlik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804313
+    m_Localized: Topluluk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804314
+    m_Localized: "A\u011F Kurma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804315
+    m_Localized: "\u0130\u015Fbirli\u011Fi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740385804316
+    m_Localized: "E\u011Fitim"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998592
+    m_Localized: Diplomasi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998593
+    m_Localized: Kabile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998594
+    m_Localized: "\xD6zgecilik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998595
+    m_Localized: Hitabet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998596
+    m_Localized: Psikoloji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998597
+    m_Localized: Etkinlik Organizasyonu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998598
+    m_Localized: Sosyal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998599
+    m_Localized: "SA\u011ELIK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998600
+    m_Localized: "SA\u011ELIK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740389998601
+    m_Localized: SOSYAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192896
+    m_Localized: "Rezonans \xD6rne\u011Fi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192897
+    m_Localized: "K\xDC\xC7\xDCK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192898
+    m_Localized: ORTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740394192899
+    m_Localized: "B\xDCY\xDCK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387200
+    m_Localized: "G\xF6z her \u015Feyi alg\u0131lar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387201
+    m_Localized: "G\xD6R\xDC\u015E\xDC H\u0130ZALA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25083740398387202
+    m_Localized: "KAH\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971566432256
+    m_Localized: "R\u0130T\xDCEL\u0130 BA\u015ELAT"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569600
+    m_Localized: "Dijital \u0130mza"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569601
+    m_Localized: "Telefon Numaras\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569602
+    m_Localized: Numaran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569603
+    m_Localized: TELEFON_ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569604
+    m_Localized: "Sonsuzlu\u011Fun e\u015Fi\u011Fi varl\u0131\u011F\u0131n\u0131z\u0131
+      bekliyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569605
+    m_Localized: "Kullan\u0131c\u0131 kimlik do\u011Frulamas\u0131 bekleniyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971612569606
+    m_Localized: "Kap\u0131 a\xE7\u0131k, gel i\xE7eri!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971616763904
+    m_Localized: CLIENT_HANDSHAKE_BEKLENIYOR...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958208
+    m_Localized: "Yol daha derin bir titre\u015Fim gerektiriyor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958209
+    m_Localized: "Ge\xE7ersiz giri\u015F. Minimum uzunluk kar\u015F\u0131lanmad\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958210
+    m_Localized: "Hoppala, \xE7ok k\u0131sa! Biraz daha numara ekle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958211
+    m_Localized: HATA_GIRIS_UZUNLUGU_YETERSIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958212
+    m_Localized: "S\u0130METR\u0130 \xC7A\u011ERILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958213
+    m_Localized: "A\u011EA BA\u011ELANILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958214
+    m_Localized: "Dayan, az kald\u0131..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958215
+    m_Localized: "CEKIRDEK_SERVISLER_BA\u015ELATILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958216
+    m_Localized: "Y\u0131ld\u0131zlar hizal\u0131 de\u011Fil. Tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958217
+    m_Localized: "Ba\u011Flant\u0131 hatas\u0131. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958218
+    m_Localized: "Bir \u015Feyler ters gitti. Bir kez daha dene!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958219
+    m_Localized: HATA_EL_SIKISMASI_ZAMAN_ASIMI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958220
+    m_Localized: "Kozmik ba\u011F koptu. Yeniden ba\u011Flan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958221
+    m_Localized: "Kritik hata. Destekle ileti\u015Fime ge\xE7in veya tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958222
+    m_Localized: "Burada b\xFCy\xFCk bir aksakl\u0131k var! Bir kez daha dene."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971620958223
+    m_Localized: SISTEM_KRITIK_ISTISNASI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318336
+    m_Localized: "Eterde ruh rezonans\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971650318337
+    m_Localized: Kutsal nefes bekleniyor...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512640
+    m_Localized: "Do\u011Frulama protokol\xFC ba\u015Flat\u0131l\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512641
+    m_Localized: Bekle, kontrol ediliyor...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512642
+    m_Localized: VERI_PAKETLERI_BEKLENIYOR...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512643
+    m_Localized: "Yolun m\xFCh\xFCrlendi. Ho\u015F geldin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512644
+    m_Localized: "SISTEM_HAZIR. ARAY\xDCZ_BA\u015ELATILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25636971654512645
+    m_Localized: "AURAYI M\xDCH\xDCRLE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953901727744
+    m_Localized: "BA\u015ELANGI\xC7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253696
+    m_Localized: ARAYICI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253697
+    m_Localized: JUNIOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253698
+    m_Localized: KULLANICI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253699
+    m_Localized: "\xC7AYLAK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253700
+    m_Localized: USTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253701
+    m_Localized: "BA\u015EB\xDCY\xDCC\xDC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253702
+    m_Localized: "M\xDCD\xDCR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253703
+    m_Localized: "GEL\u0130\u015ET\u0130R\u0130C\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253704
+    m_Localized: PATRON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253705
+    m_Localized: "B\xDCY\xDCK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253706
+    m_Localized: "B\u0130LGE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253707
+    m_Localized: "D\u0130REKT\xD6R"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253708
+    m_Localized: "K\xD6K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253709
+    m_Localized: BOOMER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253710
+    m_Localized: "KAH\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253711
+    m_Localized: "\u0130LAH\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253712
+    m_Localized: CEO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253713
+    m_Localized: "S\xDCPER KULLANICI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253714
+    m_Localized: TANRI MODU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253715
+    m_Localized: "SENKRON\u0130ZE ED\u0130L\u0130YOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253716
+    m_Localized: "LEY HATLARI H\u0130ZALANIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253717
+    m_Localized: "VER\u0130TABANINA BA\u011ELANILIYOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253718
+    m_Localized: "REPO SENKRON\u0130ZE ED\u0130L\u0130YOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253719
+    m_Localized: "BEY\u0130N \u0130ND\u0130R\u0130L\u0130YOR..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253720
+    m_Localized: "\xDCST\xDCNL\xDCK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253721
+    m_Localized: "Y\xDCKSEL\u0130\u015E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253722
+    m_Localized: "TERF\u0130 ED\u0130LD\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253723
+    m_Localized: "EVR\u0130L\u0130YOR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253724
+    m_Localized: "SEV\u0130YE ATLANIYOR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253725
+    m_Localized: "NEXUS KAH\u0130N\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253726
+    m_Localized: "Y\xD6NET\u0130C\u0130 MEN\xDCS\xDC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253727
+    m_Localized: "S\u0130STEM KONTROL\xDC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253728
+    m_Localized: "\u0130\xC7 TAPINAK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253729
+    m_Localized: "PROFESYONEL PROF\u0130L"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253730
+    m_Localized: "KULLANICI VER\u0130LER\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253731
+    m_Localized: "RUH H\u0130ZALAMASI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253732
+    m_Localized: "TEMEL DE\u011EERLER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253733
+    m_Localized: SPEKTRUM YAPILANDIRMASI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253734
+    m_Localized: "LEY HATTI T\u0130TRE\u015E\u0130MLER\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253735
+    m_Localized: "PAZAR AKI\u015EI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253736
+    m_Localized: "S\u0130STEM G\xDCNL\xDCKLER\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253737
+    m_Localized: "ZAMAN HAZ\u0130NES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253738
+    m_Localized: "VARLIK MAHZEN\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253739
+    m_Localized: "VER\u0130 DEPOLAMA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253740
+    m_Localized: ETERE BAK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253741
+    m_Localized: KADER YANKILARI ARANIYOR...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253742
+    m_Localized: "S\u0130METR\u0130 TEZAH\xDCR ETT\u0130!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253743
+    m_Localized: "HEDEF BEL\u0130RLEND\u0130!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253744
+    m_Localized: "D\xDC\u011E\xDCMLER BA\u011ELANDI!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253745
+    m_Localized: "KANAL\u0130ZE ET \u2728"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253746
+    m_Localized: "ONAYLA \U0001F91D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253747
+    m_Localized: "BA\u011ELA \U0001F517"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253748
+    m_Localized: "BE\u011EEN \u2764\uFE0F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253749
+    m_Localized: "KANAL\u0130ZE ED\u0130LD\u0130 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253750
+    m_Localized: "ONAYLANDI \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253751
+    m_Localized: "BA\u011ELANDI \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253752
+    m_Localized: "BE\u011EEN\u0130LD\u0130 \u2726"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253753
+    m_Localized: "Vekt\xF6r: {0} Ruh/saat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253754
+    m_Localized: "\xC7\u0131kt\u0131: {0} Varl\u0131k/saat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253755
+    m_Localized: 'Verim: {0} Op/sn'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253756
+    m_Localized: "\xD6z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253757
+    m_Localized: Gelir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253758
+    m_Localized: "D\xF6ng\xFCler"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253759
+    m_Localized: "H\u0130ZALAMAK \u0130\xC7\u0130N BASILI TUTUN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253760
+    m_Localized: "RUHUNUZU B\u0130RLE\u015ET\u0130R\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253761
+    m_Localized: "ORTAKLI\u011EI ONAYLAMAK \u0130\xC7\u0130N BASILI TUTUN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253762
+    m_Localized: "BA\u011ELANTIYI KORU"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953956253763
+    m_Localized: "KAH\u0130N B\u0130LGEL\u0130\u011E\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836608
+    m_Localized: "ETER\u0130K FISILTILAR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836609
+    m_Localized: "Y\xD6NET\u0130C\u0130 G\xD6R\xDC\u015ELER\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836610
+    m_Localized: "\xC7EK\u0130RDEK ANAL\u0130Z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836611
+    m_Localized: "Kozmik ak\u0131\u015Flar \xE7alkant\u0131l\u0131. Daha sonra tekrar
+      deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836612
+    m_Localized: "Y\u0131ld\u0131zlar g\xF6lgeye b\xFCr\xFCnm\xFC\u015F. Ak\u0131nt\u0131lar
+      duruldu\u011Funda tekrar ba\u011Flan\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836613
+    m_Localized: "A\u011F ba\u011Flant\u0131s\u0131 karars\u0131z. L\xFCtfen dan\u0131\u015Fmanl\u0131\u011F\u0131
+      daha sonra tekrar ba\u015Flat\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836614
+    m_Localized: "Aether'da paket kayb\u0131 saptand\u0131. Protokol hatas\u0131.
+      Daha sonra deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836615
+    m_Localized: "V\u0130ZYON"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836616
+    m_Localized: "KAH\u0130N TAPINA\u011EI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953968836617
+    m_Localized: "SESS\u0130ZL\u0130KTEN \xC7IK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030912
+    m_Localized: "Bug\xFCn sessizlik hakim. Daha sonra tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030913
+    m_Localized: "Rezonans stilinizi se\xE7in."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030914
+    m_Localized: "Ruhunuz hangi yolu f\u0131s\u0131ld\u0131yor?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030915
+    m_Localized: "Profesyonel ileti\u015Fim tonunuzu se\xE7in."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030916
+    m_Localized: "Etkile\u015Fim protokol\xFCn\xFC yap\u0131land\u0131r\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030917
+    m_Localized: "Nas\u0131l konu\u015Fmal\u0131y\u0131z?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030918
+    m_Localized: "Titre\u015Fiminiz yeniden hizaland\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030919
+    m_Localized: "Profil ayarlar\u0131 ba\u015Far\u0131yla senkronize edildi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030920
+    m_Localized: "Aray\xFCz protokol\xFC g\xFCncellendi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030921
+    m_Localized: "Anla\u015F\u0131ld\u0131! Stiller de\u011Fi\u015Ftiriliyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030922
+    m_Localized: "Nedensellik ak\u0131\u015F\u0131na ad\u0131m at\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030923
+    m_Localized: "\xD6ng\xF6r\xFCc\xFC analiz mod\xFCl\xFC ba\u015Flat\u0131l\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030924
+    m_Localized: "Sinirsel meta verilere eri\u015Filiyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030925
+    m_Localized: PUSULA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030926
+    m_Localized: "KRON\u0130KLER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030927
+    m_Localized: "A\u011E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030928
+    m_Localized: "VER\u0130 AKI\u015EI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030929
+    m_Localized: "HAZ\u0130NE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030930
+    m_Localized: VARLIKLAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030931
+    m_Localized: DEPOLAMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030932
+    m_Localized: TAPINAK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030933
+    m_Localized: "DANI\u015EMAN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030934
+    m_Localized: "ARAY\xDCZ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030935
+    m_Localized: "RUHUNUZU REZONANSA GET\u0130R\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030936
+    m_Localized: "ZAMAN HAZ\u0130NES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030937
+    m_Localized: VARLIK DEPOSU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030938
+    m_Localized: "\u015E\u0130FREL\u0130 VER\u0130 MAHZEN\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030939
+    m_Localized: "H\u0130KAYELER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030940
+    m_Localized: "E\u015EYALARIM"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25732953973030941
+    m_Localized: SOHBET
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

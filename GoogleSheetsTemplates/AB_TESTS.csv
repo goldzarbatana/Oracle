@@ -1,0 +1,5 @@
+TestName,VariantA,VariantB,AllocationPercent,Description
+oracle_greeting,"Вітаю, Адепте","Привіт, друже",50,Тест привітання Оракула
+quant_pack_display,"Популярне","Найкраща ціна",50,Тест відображення пакетів
+empty_state_message,"🕸️ Немає активних пактів","🌌 Тут поки що тихо",50,Тест порожнього стану
+cta_button_color,Gold,Cyan,50,Тест кольору кнопок

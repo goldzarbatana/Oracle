@@ -1,0 +1,25 @@
+{
+    "name": "Pro_ZarbatanaSystems.BalanceOrchestrator.Pro.Editor",
+    "rootNamespace": "ZarbatanaSystems.BalanceOrchestrator.Pro.Editor",
+    "references": [
+        "Pro_ZarbatanaSystems.BalanceOrchestrator.Pro",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ugui",
+            "expression": "1.0.0",
+            "define": "USING_UNITY_UI"
+        }
+    ],
+    "noEngineReferences": false
+}

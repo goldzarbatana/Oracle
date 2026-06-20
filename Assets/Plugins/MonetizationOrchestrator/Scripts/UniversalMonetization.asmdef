@@ -1,0 +1,22 @@
+{
+    "name": "UniversalMonetization",
+    "rootNamespace": "UniversalMonetization",
+    "references": [
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "0.0.1",
+            "define": "MONETIZATION_UNITASK"
+        }
+    ],
+    "noEngineReferences": false
+}

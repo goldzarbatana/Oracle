@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114c3eb7efdd36a4db059d5f0fbe289d, type: 3}
+  m_Name: StoreDatabase
+  m_EditorClassIdentifier: 
+  products:
+    - productId: com.timeaura.quants.pack100
+      itemNameKey: SHOP_ITEM_QUANTS_100_NAME
+      itemDescriptionKey: SHOP_ITEM_QUANTS_100_DESC
+      itemIcon: {fileID: 0}
+      fallbackPriceUsd: 0.99
+      fallbackPriceCoins: 0
+      fallbackRewardString: 100 Quants
+      isSubscription: 0
+      isOneTimePurchase: 0
+    - productId: com.timeaura.quants.pack500
+      itemNameKey: SHOP_ITEM_QUANTS_500_NAME
+      itemDescriptionKey: SHOP_ITEM_QUANTS_500_DESC
+      itemIcon: {fileID: 0}
+      fallbackPriceUsd: 4.99
+      fallbackPriceCoins: 0
+      fallbackRewardString: 500 Quants
+      isSubscription: 0
+      isOneTimePurchase: 0
+    - productId: com.timeaura.quants.pack1000
+      itemNameKey: SHOP_ITEM_QUANTS_1000_NAME
+      itemDescriptionKey: SHOP_ITEM_QUANTS_1000_DESC
+      itemIcon: {fileID: 0}
+      fallbackPriceUsd: 9.99
+      fallbackPriceCoins: 0
+      fallbackRewardString: 1000 Quants
+      isSubscription: 0
+      isOneTimePurchase: 0
+    - productId: com.timeaura.subscription.enlightened
+      itemNameKey: SHOP_ITEM_ENLIGHTENED_NAME
+      itemDescriptionKey: SHOP_ITEM_ENLIGHTENED_DESC
+      itemIcon: {fileID: 0}
+      fallbackPriceUsd: 4.99
+      fallbackPriceCoins: 0
+      fallbackRewardString: 1 enlightened
+      isSubscription: 1
+      isOneTimePurchase: 1

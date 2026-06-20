@@ -1,0 +1,85 @@
+/* Custom Styles for Zarbatana Systems Landing Page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a1a;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+    background: rgba(10, 10, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glassmorphism {
+    background: rgba(10, 10, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Glowing Button */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-glow:hover::after {
+    opacity: 1;
+    animation: rotate 2s linear infinite;
+}
+
+/* Floating Oracle Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 0 20px rgba(74,144,226,0.4);
+    }
+    50% {
+        transform: translateY(-20px);
+        box-shadow: 0 0 40px rgba(74,144,226,0.8);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 0 20px rgba(74,144,226,0.4);
+    }
+}
+
+.floating-oracle {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Particle adjustments */
+#particles-js {
+    pointer-events: none;
+}

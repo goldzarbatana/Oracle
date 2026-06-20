@@ -1,0 +1,137 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UI/Intro/IntroScene.uss?fileID=7433441132597879392&amp;guid=b281905f74e9a4c4483f010b8db0c6a1&amp;type=3#IntroScene"/>
+    <ui:VisualElement name="IntroRoot" class="intro-root" style="opacity: 0; display: none;">
+        <ui:VisualElement name="VignetteOverlay" picking-mode="Ignore" class="vignette-overlay" style="display: none;"/>
+        <ui:VisualElement name="TopBar" class="top-bar">
+            <ui:VisualElement name="CarouselContainer" class="carousel-container">
+                <ui:Label text="&lt;" name="ArrowLeft" class="carousel-arrow"/>
+                <ui:ScrollView name="LangCarousel" mode="Horizontal" show-horizontal-scroller="false" show-vertical-scroller="false" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" enabled="true" class="lang-carousel" style="height: 100%; -unity-text-auto-size: best-fit 6px 120px; -unity-text-generator: advanced;">
+                    <ui:Button name="BtnUK" text="🇺🇦 UA" class="lang-btn lang-btn--active"/>
+                    <ui:Button name="BtnEN" text="🇺🇸 EN" class="lang-btn"/>
+                    <ui:Button name="BtnES" text="🇪🇸 ES" class="lang-btn"/>
+                    <ui:Button name="BtnFR" text="🇫🇷 FR" class="lang-btn"/>
+                    <ui:Button name="BtnDE" text="🇩🇪 DE" class="lang-btn"/>
+                    <ui:Button name="BtnIT" text="🇮🇹 IT" class="lang-btn"/>
+                    <ui:Button name="BtnPL" text="🇵🇱 PL" class="lang-btn"/>
+                    <ui:Button name="BtnRU" text="🇷🇺 RU" class="lang-btn"/>
+                    <ui:Button name="BtnTR" text="🇹🇷 TR" class="lang-btn"/>
+                    <ui:Button name="BtnHI" text="🇮🇳 HI" class="lang-btn"/>
+                </ui:ScrollView>
+                <ui:Label text="&gt;" name="ArrowRight" class="carousel-arrow"/>
+                <ui:VisualElement picking-mode="Ignore" class="carousel-fade-left"/>
+                <ui:VisualElement picking-mode="Ignore" class="carousel-fade-right"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="MainContent" class="main-content" style="flex-grow: 1; justify-content: center; display: flex;">
+            <ui:VisualElement name="LogoMain" picking-mode="Ignore" class="logo-main" style="display: none;"/>
+            <ui:VisualElement name="InputGroup" class="input-group">
+                <ui:Label name="InputLabel" text="" class="text-gold" style="-unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced;"/>
+                <ui:VisualElement name="InputContainer" style="width: 90%; justify-content: center; align-items: center;">
+                    <ui:TextField name="InputPhone" class="input-field" style="width: 100%;"/>
+                    <ui:Label name="PlaceholderLabel" text="" picking-mode="Ignore" class="placeholder-text" style="-unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; width: 100%; height: 100%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="OTPGroup" class="input-group" style="display: none; margin-top: 20px;">
+                <ui:Label name="OTPLabel" text="Захисти свій гаманець Horas. Надіслати ефірний код доступу?" class="text-gold" style="-unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; white-space: normal; text-align: center;"/>
+                <ui:VisualElement name="OTPContainer" style="width: 90%; justify-content: center; align-items: center; margin-top: 10px;">
+                    <ui:TextField name="InputOTP" max-length="4" class="input-field" style="width: 100%; -unity-text-align: middle-center;"/>
+                    <ui:Label name="OTPPlaceholder" text="XXXX" picking-mode="Ignore" class="placeholder-text" style="-unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; width: 100%; height: 100%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="OAuthGroup" style="width: 100%; align-items: center; margin-top: 40px; display: none;">
+                <ui:Label text="- OR -" class="text-gold" style="font-size: 24px; opacity: 0.6; margin-bottom: 20px;"/>
+                <ui:Button name="BtnGoogleAuth" text="G - CONTINUE WITH GOOGLE" class="ritual-btn" style="width: 200px; height: 60px; margin-bottom: 10px; font-size: 20px; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced;"/>
+                <ui:Button name="BtnAppleAuth" text="A - CONTINUE WITH APPLE" class="ritual-btn" style="width: 80%; height: 60px; margin-bottom: 10px; font-size: 20px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="RitualContainer" class="ritual-container" style="display: none; width: 100%; align-items: center;">
+                <ui:Button name="BtnRitualBack" text="←" class="back-btn" style="position: absolute; left: 10px; top: -50px; width: 60px; height: 60px; font-size: 40px; background-color: rgba(0, 0, 0, 0.3); border-radius: 30px; color: rgb(255, 215, 0); border-width: 0;"/>
+                <ui:VisualElement name="QuickStartSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:Button name="BtnQuickStartFindMaster" text="🔍 Знайти Майстра" class="btn-primary" style="width: 80%; height: 80px; margin-bottom: 20px; font-size: 24px;"/>
+                    <ui:Button name="BtnQuickStartAskOracle" text="👁️ Запитати Оракула" class="btn-primary" style="width: 80%; height: 80px; margin-bottom: 20px; font-size: 24px;"/>
+                    <ui:Button name="BtnQuickStartConfigureAura" text="✨ Налаштувати Ауру" class="ritual-btn" style="width: 80%; height: 60px; font-size: 20px; margin-top: 20px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="PersonaSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:Label name="LblPersonaQuestion" text="Choose your resonance style" class="text-gold" style="font-size: 20px; margin-bottom: 30px; opacity: 0.8;"/>
+                    <ui:VisualElement style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%;">
+                        <ui:Button name="BtnPersonaMystic" text="🌌 MYSTIC" class="ritual-btn persona-btn"/>
+                        <ui:Button name="BtnPersonaBusiness" text="💼 BUSINESS" class="ritual-btn persona-btn"/>
+                        <ui:Button name="BtnPersonaCasual" text="🎈 CASUAL" class="ritual-btn persona-btn"/>
+                        <ui:Button name="BtnPersonaTech" text="🦾 TECH" class="ritual-btn persona-btn"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="AgeSection" class="ritual-section ritual-section--column" style="width: 100%; align-items: center; display: none;">
+                    <ui:SliderInt name="SliderAge" low-value="18" high-value="88" value="25" class="age-slider" style="width: 80%;"/>
+                    <ui:Label name="LblAgeValue" text="" class="text-gold" style="font-size: 24px; margin-top: 10px;"/>
+                    <ui:Button name="BtnConfirmAge" text="" class="btn-primary" style="font-size: 24px; height: 80px; width: 60%; margin-top: 20px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="ScaleSection" class="ritual-section ritual-section--column" style="width: 100%; align-items: center; display: none;">
+                    <ui:SliderInt name="SliderScale" low-value="0" high-value="2" value="1" class="age-slider" style="width: 80%;"/>
+                    <ui:Label name="LblScaleValue" text="" class="text-gold" style="font-size: 24px; margin-top: 10px;"/>
+                    <ui:Label name="LblSampleText" text="" class="text-gold" style="font-size: 24px; margin-top: 30px; margin-bottom: 30px; white-space: normal; text-align: center; width: 90%; opacity: 0.6; -unity-font-style: italic;"/>
+                    <ui:Button name="BtnConfirmScale" text="" class="btn-primary" style="font-size: 24px; height: 80px; width: 60%; margin-top: 20px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="VisageSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:VisualElement name="VisageContainer" class="visage-container">
+                        <ui:VisualElement name="ImgVisage" class="visage-img"/>
+                        <ui:Label text="📷" picking-mode="Ignore" class="visage-icon"/>
+                    </ui:VisualElement>
+                    <ui:Label name="LblVisageHint" text="SEAL YOUR VISAGE IN THE AURA" class="text-gold" style="font-size: 18px; margin-top: 15px; opacity: 0.8;"/>
+                    <ui:VisualElement style="flex-direction: row; margin-top: 30px; justify-content: center; width: 100%;">
+                        <ui:Button name="BtnPickGallery" text="GALLERY" class="ritual-btn" style="width: 220px; font-size: 20px; margin: 0 10px;"/>
+                        <ui:Button name="BtnPickCamera" text="CAMERA" class="ritual-btn" style="width: 220px; font-size: 20px; margin: 0 10px;"/>
+                    </ui:VisualElement>
+                    <ui:Button name="BtnConfirmVisage" text="CONTINUE" class="btn-primary" style="margin-top: 60px; width: 70%; height: 90px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="GenderSection" class="ritual-section" style="width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; display: none;">
+                    <ui:VisualElement class="gender-item" style="align-items: center; margin: 10px 20px;">
+                        <ui:Button name="BtnGenderM" text="♂" class="ritual-btn" style="margin: 0;"/>
+                        <ui:Label name="LblGenderM" text="MALE" class="text-gold" style="opacity: 0.7;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="gender-item" style="align-items: center; margin: 0 10px;">
+                        <ui:Button name="BtnGenderF" text="♀" class="ritual-btn" style="margin: 0;"/>
+                        <ui:Label name="LblGenderF" text="FEMALE" class="text-gold" style="opacity: 0.7;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="gender-item" style="align-items: center; margin: 0 10px;">
+                        <ui:Button name="BtnGenderX" text="✦" class="ritual-btn" style="margin: 0;"/>
+                        <ui:Label name="LblGenderX" text="NEUTRAL" class="text-gold" style="opacity: 0.7;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="LocationSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:VisualElement name="SmartLocationContainer" style="width: 100%; align-items: center; display: none;">
+                        <ui:Label name="LblSmartLocationText" text="Ми відчуваємо твою енергію тут: ... Ви тут?" class="text-gold" style="font-size: 24px; white-space: normal; text-align: center; margin-bottom: 20px;"/>
+                        <ui:VisualElement style="flex-direction: row; justify-content: center; width: 100%; margin-bottom: 30px;">
+                            <ui:Button name="BtnSmartLocYes" text="ТАК, ПРИЙНЯТИ" class="btn-primary" style="width: 200px; height: 70px; font-size: 18px; margin-right: 10px;"/>
+                            <ui:Button name="BtnSmartLocNo" text="НІ, ЗМІНИТИ" class="ritual-btn" style="width: 200px; height: 70px; font-size: 18px; margin-left: 10px;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="SearchContainer" style="width: 100%; align-items: center;">
+                        <ui:TextField name="InputLocation" class="input-field" style="width: 100%; -unity-text-align: middle-center;"/>
+                        <ui:Label name="LocPlaceholder" text="SEARCH YOUR REALM..." picking-mode="Ignore" class="placeholder-text" style="width: 100%; height: 100%;"/>
+                        <ui:ScrollView name="LocationResults" mode="Vertical" class="location-results" style="width: 100%; max-height: 500px; margin-top: 15px; display: none;"/>
+                    </ui:VisualElement>
+                    <ui:Button name="BtnLocate" text="ILLUMINATE MY PRESENCE" class="btn-primary" style="font-size: 28px; height: 100px; margin-top: 40px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="NameSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:TextField name="InputName" label="Your Name:" class="input-field" style="width: 80%;"/>
+                    <ui:VisualElement style="flex-direction: row; margin-top: 20px; justify-content: center; width: 100%;">
+                        <ui:Button name="BtnConfirmName" text="REVEAL" class="btn-primary" style="width: 150px; font-size: 20px;"/>
+                        <ui:Button name="BtnSkipName" text="👤" tooltip="Stay in Shadow" class="ritual-btn" style="width: 80px; font-size: 40px; margin-left: 20px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="CategorySection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
+                    <ui:Label name="LblCategoryQuestion" text="What do you bring to the Nexus?" class="text-gold" style="font-size: 20px; margin-bottom: 20px; opacity: 0.8;"/>
+                    <ui:VisualElement style="flex-direction: row; justify-content: center; width: 100%;">
+                        <ui:Button name="BtnCatPhysical" text="⚒️ MATERIAL" class="ritual-btn" style="width: 160px; height: 160px; margin: 10px; font-size: 14px; white-space: normal;"/>
+                        <ui:Button name="BtnCatIntangible" text="✦ ETHEREAL" class="ritual-btn" style="width: 160px; height: 160px; margin: 10px; font-size: 14px; white-space: normal;"/>
+                    </ui:VisualElement>
+                    <ui:Button name="BtnConfirmCategories" text="CONFIRM OFFERING" class="btn-primary" style="margin-top: 30px; width: 80%; height: 80px; font-size: 24px;"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="PillarContainer" mode="Vertical" class="ritual-section" style="width: 100%; align-items: center; display: none; min-height: 300px;"/>
+            </ui:VisualElement>
+            <ui:Label name="ProphecyLabel" picking-mode="Ignore" text="" class="text-gold" style="margin-top: 40px; white-space: normal; -unity-font-style: italic; font-size: 37px; opacity: 0.8; text-align: center; width: 100%; height: 8%; -unity-text-align: middle-center; text-overflow: clip; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomBar" class="bottom-bar" style="-unity-text-auto-size: best-fit 10px 110px; -unity-text-generator: advanced; -unity-text-align: middle-center;">
+            <ui:Button name="BtnInitiate" text="" class="btn-primary" style="height: 44%; width: 70%; -unity-font-style: bold; font-size: 49%; flex-basis: 29%; aspect-ratio: auto; white-space: normal; text-overflow: clip; -unity-text-outline-width: 0;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,259 @@
+/* 🌌 Grand Ritual Radar Styles - UNLOCKED for UI Builder */
+
+.radar-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* The outer dim background */
+.radar-background {
+    position: absolute;
+    border-radius: 1000px;
+    background-color: rgba(5, 5, 5, 0.4);
+    border-width: 1px;
+    border-color: rgba(212, 175, 55, 0.1);
+}
+
+.scanner-area {
+    align-items: center;
+    justify-content: center;
+}
+
+.scanning-core {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulsing-rings-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 💠 Radar Rings */
+.radar-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-width: 4px;
+    border-color: rgba(212, 175, 55, 0.6);
+    border-radius: 1000px;
+    opacity: 0.1; /* Slightly visible in Builder */
+    scale: 0.1;
+    transition-property: scale, opacity;
+    transition-duration: 1.2s;
+    transition-timing-function: ease-out;
+}
+
+/* 🔦 Scanning Beam */
+.scanning-line {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: rgb(212, 175, 55);
+    border-radius: 3px;
+    bottom: 50%;
+    transform-origin: bottom;
+    opacity: 0;
+    border-left-width: 15px;
+    border-left-color: rgba(212, 175, 55, 0.15);
+}
+
+/* 📍 Resonance Points */
+.resonance-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #00FFFF;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+    opacity: 0;
+    scale: 0;
+    transition-property: scale, opacity;
+    transition-duration: 0.5s;
+}
+
+.resonance-point--active {
+    opacity: 1;
+    scale: 1;
+}
+
+/* 🧭 Compass & Center */
+.master-glow {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgba(212, 175, 55, 0.3);
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-color: rgba(212, 175, 55, 0.6);
+}
+
+.compass-needle {
+    width: 8px;
+    height: 80px;
+    background-color: white;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+/* 📊 Status Overlay */
+.status-overlay {
+    align-items: center;
+    width: 100%;
+}
+
+.status-text {
+    color: var(--gold);
+    font-size: 200%;
+    letter-spacing: 6px;
+    -unity-font-style: bold;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.match-count {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 100%;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* ⚡ The Ritual Button */
+.btn-toggle-search {
+    width: 280px;
+    height: 80px;
+    background-color: rgba(212, 175, 55, 0.05);
+    border-width: 2px;
+    border-color: rgba(212, 175, 55, 0.4);
+    border-radius: 40px;
+    color: var(--gold);
+    font-size: 137.5%;
+    -unity-font-style: bold;
+    letter-spacing: 4px;
+}
+
+/* ======================================================== */
+/* SCRYING ORB & TABS (Replaces classic radar)              */
+/* ======================================================== */
+
+.scrying-orb-base {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PEDESTAL STYLES (3-Piece Classical Stand) */
+.scrying-orb-pedestal-top {
+    position: absolute;
+    bottom: 12%;
+    width: 65%;
+    height: 8%;
+    background-color: rgb(15, 10, 5);
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: rgba(212, 175, 55, 0.6);
+    border-bottom-width: 6px;
+    border-bottom-color: rgba(100, 80, 20, 0.8);
+}
+
+.scrying-orb-pedestal-pillar {
+    position: absolute;
+    bottom: 5%;
+    width: 30%;
+    height: 10%;
+    background-color: rgb(20, 15, 10);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.scrying-orb-pedestal-base {
+    position: absolute;
+    bottom: 1%;
+    width: 55%;
+    height: 6%;
+    background-color: rgb(15, 10, 5);
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgba(212, 175, 55, 0.6);
+    border-bottom-width: 6px;
+    border-bottom-color: rgba(212, 175, 55, 0.9);
+}
+
+.scrying-orb-pedestal-image {
+    position: absolute;
+    bottom: -28%;
+    width: 190%;
+    height: 85%;
+    left: -45%;
+    background-image: resource('Textures/UI/scrying_orb');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: transparent;
+}
+
+.scrying-orb-sphere {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: rgb(15, 15, 20);
+    border-width: 3px;
+    border-color: rgba(212, 175, 55, 0.6);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.mist-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.orb-mist-particle {
+    position: absolute;
+    background-color: rgba(212, 175, 55, 0.4);
+    border-radius: 50%;
+    transition-property: translate, opacity, scale;
+}
+
+/* SCRYING TABS */
+.scrying-tab {
+    background-color: transparent;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    -unity-font-style: bold;
+    padding: 10px 20px;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.scrying-tab--active {
+    color: white;
+    border-bottom-color: white;
+}
+
+.scrying-tab--gold {
+    color: rgba(212, 175, 55, 0.6);
+    border-bottom-color: rgba(212, 175, 55, 0.2);
+}
+
+.scrying-tab--gold.scrying-tab--active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}

@@ -1,0 +1,677 @@
+:root {
+    --gold: rgb(212, 175, 55);
+    --gold-dim: rgba(212, 175, 55, 0.6);
+    --gold-glow: rgba(212, 175, 55, 0.25);
+    --void-black: rgb(5, 5, 5);
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-raised: rgba(255, 255, 255, 0.08);
+    --text-primary: rgba(255, 255, 255, 0.92);
+    --text-secondary: rgba(255, 255, 255, 0.45);
+    --msg-self-bg: rgba(212, 175, 55, 0.18);
+    --msg-other-bg: rgba(255, 255, 255, 0.07);
+    --radius-sm: 14px;
+    --radius-md: 22px;
+    --radius-lg: 30px;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.harmony-root {
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--void-black);
+    -unity-font-definition: resource("Fonts & Materials/Orbitron-VariableFont_wght Bitmap");
+}
+
+/* === CONTEXT BANNER ======================================== */
+.harmony-topbar {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.98);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gold-glow);
+    padding: 20px 24px;
+    min-height: 110px;
+}
+
+.btn-back {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: var(--surface);
+    border-width: 1px;
+    border-color: var(--gold-glow);
+    color: var(--gold);
+    font-size: 187.5%;
+    -unity-text-align: middle-center;
+    margin-right: 18px;
+    transition-property: background-color, scale;
+    transition-duration: 0.18s;
+    flex-shrink: 0;
+}
+
+.btn-back:hover {
+    background-color: var(--gold-glow);
+    scale: 1.06;
+}
+
+.partner-info {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.partner-visage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: rgba(212, 175, 55, 0.6);
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition-property: scale;
+    transition-duration: 0.3s;
+}
+
+.visage-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: transparent;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.partner-meta {
+    flex-direction: column;
+}
+
+.partner-name {
+    color: var(--text-primary);
+    font-size: 162.5%;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.partner-title {
+    color: var(--gold);
+    font-size: 112.5%;
+    letter-spacing: 2px;
+}
+
+.harmony-status {
+    flex-direction: row;
+    align-items: center;
+}
+
+.status-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    margin-right: 8px;
+}
+
+.status-dot--active {
+    background-color: rgb(72, 230, 162);
+}
+
+.status-dot--pending {
+    background-color: var(--gold);
+}
+
+.status-label {
+    color: var(--text-secondary);
+    font-size: 112.5%;
+    letter-spacing: 1px;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.timer-bar {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(212, 175, 55, 0.04);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gold-glow);
+    padding: 12px 24px;
+}
+
+.timer-label {
+    color: var(--text-secondary);
+    font-size: 93.75%;
+    letter-spacing: 2px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.timer-track {
+    flex-grow: 1;
+    height: 6px;
+    background-color: var(--surface-raised);
+    border-radius: 6px;
+    margin-right: 16px;
+    overflow: hidden;
+}
+
+.timer-fill {
+    height: 100%;
+    background-color: var(--gold);
+    border-radius: 6px;
+    width: 100%;
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.timer-remaining {
+    color: var(--gold);
+    font-size: 112.5%;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.message-list {
+    flex-grow: 1;
+    padding: 20px 20px 10px 20px;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.session-banner {
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 16px;
+}
+
+.session-banner-text {
+    color: var(--gold-dim);
+    font-size: 125%;
+    letter-spacing: 3px;
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.session-banner-hint {
+    color: var(--text-secondary);
+    font-size: 100%;
+    -unity-text-align: middle-center;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.msg-row {
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.msg-row--self {
+    justify-content: flex-end;
+}
+
+.msg-row--other {
+    justify-content: flex-start;
+}
+
+.msg-bubble {
+    max-width: 78%;
+    padding: 18px 22px;
+    border-radius: var(--radius-md);
+    flex-shrink: 1;
+}
+
+.msg-bubble--self {
+    background-color: var(--msg-self-bg);
+    border-width: 1px;
+    border-color: var(--gold-dim);
+    border-bottom-right-radius: 6px;
+}
+
+.msg-bubble--other {
+    background-color: var(--msg-other-bg);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 6px;
+}
+
+.msg-text {
+    color: var(--text-primary);
+    font-size: 137.5%;
+    white-space: normal;
+    margin-bottom: 6px;
+    flex-shrink: 1;
+    -unity-text-align: upper-left;
+}
+
+.msg-time {
+    color: var(--text-secondary);
+    font-size: 87.5%;
+    -unity-text-align: middle-right;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.msg-system {
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 8px;
+}
+
+.msg-system-text {
+    color: var(--gold-dim);
+    font-size: 100%;
+    letter-spacing: 1px;
+    background-color: var(--gold-glow);
+    padding: 8px 22px;
+    border-radius: 30px;
+    white-space: normal;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.horas-widget {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(212, 175, 55, 0.08);
+    border-top-width: 1px;
+    border-top-color: var(--gold-glow);
+    padding: 18px 24px;
+}
+
+.horas-widget--hidden {
+    display: none;
+}
+
+.horas-icon {
+    color: var(--gold);
+    font-size: 175%;
+    margin-right: 12px;
+}
+
+.horas-proposal-label {
+    color: white;
+    font-size: 137.5%;
+    flex-grow: 1;
+}
+
+.btn-accept-horas {
+    background-color: rgba(72, 230, 162, 0.2);
+    border-width: 1px;
+    border-color: rgb(72, 230, 162);
+    color: rgb(72, 230, 162);
+    font-size: 112.5%;
+    padding: 12px 22px;
+    border-radius: var(--radius-sm);
+    margin-right: 10px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.btn-accept-horas:hover {
+    background-color: rgba(72, 230, 162, 0.35);
+}
+
+.btn-decline-horas {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: rgba(255, 80, 80, 0.5);
+    color: rgba(255, 80, 80, 0.8);
+    font-size: 112.5%;
+    padding: 12px 22px;
+    border-radius: var(--radius-sm);
+}
+
+/* === CONTEXT BANNER ======================================== */
+.input-area {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.98);
+    border-top-width: 1px;
+    border-top-color: var(--gold-glow);
+    padding: 16px 18px;
+    min-height: 100px;
+}
+
+.btn-action-horas {
+    width: 68px;
+    height: 68px;
+    border-radius: 50px;
+    background-color: var(--surface);
+    border-width: 1px;
+    border-color: var(--gold-glow);
+    margin-right: 12px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+}
+
+.btn-action-horas:hover {
+    background-color: var(--gold-glow);
+    scale: 1.05;
+}
+
+.action-icon {
+    color: var(--gold);
+    font-size: 162.5%;
+}
+
+.message-input {
+    flex-grow: 1;
+    height: 68px;
+    background-color: var(--surface-raised);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-size: 137.5%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-right: 12px;
+    transition-property: border-color;
+    transition-duration: 0.2s;
+}
+
+.message-input:focus {
+    border-color: var(--gold-dim);
+}
+
+.btn-send {
+    width: 68px;
+    height: 68px;
+    border-radius: 50px;
+    background-color: var(--gold);
+    color: var(--void-black);
+    font-size: 175%;
+    -unity-font-style: bold;
+    border-width: 0;
+    flex-shrink: 0;
+    -unity-text-align: middle-center;
+    transition-property: scale, background-color;
+    transition-duration: 0.18s;
+}
+
+.btn-send:hover {
+    scale: 1.08;
+    background-color: white;
+}
+
+/* === CONTEXT BANNER ======================================== */
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal--hidden {
+    display: none;
+}
+
+.modal-card {
+    background-color: rgb(15, 15, 15);
+    border-width: 1px;
+    border-color: var(--gold-dim);
+    border-radius: var(--radius-lg);
+    padding: 50px 40px;
+    width: 80%;
+    max-width: 700px;
+    align-items: center;
+}
+
+.modal-title {
+    color: var(--gold);
+    font-size: 212.5%;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    -unity-text-align: middle-center;
+}
+
+.modal-body {
+    color: var(--text-secondary);
+    font-size: 137.5%;
+    -unity-text-align: middle-center;
+    margin-bottom: 40px;
+    white-space: normal;
+}
+
+.modal-actions {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-modal-confirm {
+    background-color: rgba(255, 80, 80, 0.15);
+    border-width: 1px;
+    border-color: rgba(255, 80, 80, 0.6);
+    color: rgb(255, 100, 100);
+    font-size: 137.5%;
+    padding: 18px 36px;
+    border-radius: var(--radius-md);
+    margin-right: 16px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.btn-modal-confirm:hover {
+    background-color: rgba(255, 80, 80, 0.3);
+}
+
+.btn-modal-cancel {
+    background-color: var(--surface-raised);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    font-size: 137.5%;
+    padding: 18px 36px;
+    border-radius: var(--radius-md);
+}
+
+/* === CONTEXT BANNER ======================================== */
+.context-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-bottom-width: 1px;
+    border-color: rgba(212, 175, 55, 0.3);
+    padding: 20px;
+}
+
+.context-title {
+    color: var(--text-primary);
+    font-size: 150%;
+    -unity-font-style: bold;
+    white-space: normal;
+    flex-shrink: 1;
+    margin-right: 16px;
+}
+
+.context-price {
+    color: var(--gold);
+    font-size: 150%;
+    -unity-font-style: bold;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   DEAL ACTION BAR — shown at bottom when no escrow is locked
+   ============================================================ */
+.deal-action-bar {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(212, 175, 55, 0.06);
+    border-top-width: 1px;
+    border-top-color: rgba(212, 175, 55, 0.3);
+    padding: 14px 20px 16px 20px;
+}
+
+.deal-action-hint {
+    color: var(--text-secondary);
+    font-size: 100%;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    -unity-text-align: middle-center;
+}
+
+.deal-action-buttons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-agree-terms {
+    flex: 1;
+    background-color: rgba(72, 210, 130, 0.15);
+    border-width: 1px;
+    border-color: rgba(72, 210, 130, 0.6);
+    color: rgb(90, 230, 150);
+    font-size: 125%;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    padding: 16px 10px;
+    border-radius: var(--radius-md);
+    margin-right: 12px;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+}
+
+.btn-agree-terms:hover {
+    background-color: rgba(72, 210, 130, 0.28);
+    scale: 1.02;
+}
+
+.btn-decline-terms {
+    flex: 1;
+    background-color: rgba(255, 80, 80, 0.08);
+    border-width: 1px;
+    border-color: rgba(255, 80, 80, 0.35);
+    color: rgba(255, 100, 100, 0.8);
+    font-size: 125%;
+    letter-spacing: 1px;
+    padding: 16px 10px;
+    border-radius: var(--radius-md);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.btn-decline-terms:hover {
+    background-color: rgba(255, 80, 80, 0.18);
+}
+
+/* ============================================================
+   DEAL SUMMARY MODAL — agreement card before sealing
+   ============================================================ */
+.deal-card {
+    padding: 44px 40px 36px 40px;
+    width: 85%;
+    max-width: 680px;
+    background-color: rgb(10, 10, 16);
+    border-color: var(--gold);
+    border-width: 1px;
+}
+
+.deal-modal-title {
+    font-size: 225%;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.deal-field-row {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+.deal-field-label {
+    color: var(--gold-dim);
+    font-size: 100%;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    min-width: 90px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.deal-field-value {
+    color: var(--text-primary);
+    font-size: 125%;
+    flex-shrink: 1;
+    white-space: normal;
+    margin-left: 12px;
+}
+
+.deal-field-value--desc {
+    -unity-font-style: italic;
+    opacity: 0.9;
+}
+
+.deal-field-value--price {
+    color: var(--gold);
+    -unity-font-style: bold;
+    font-size: 150%;
+}
+
+.deal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(212, 175, 55, 0.25);
+    margin-top: 8px;
+    margin-bottom: 28px;
+}
+
+/* The seal button — main CTA in deal modal */
+.btn-seal-pact {
+    width: 100%;
+    background-color: rgba(212, 175, 55, 0.12);
+    border-width: 2px;
+    border-color: var(--gold);
+    color: var(--gold);
+    font-size: 162.5%;
+    -unity-font-style: bold;
+    letter-spacing: 3px;
+    padding: 22px 0;
+    border-radius: var(--radius-md);
+    transition-property: background-color, scale, border-color;
+    transition-duration: 0.25s;
+}
+
+.btn-seal-pact:hover {
+    background-color: rgba(212, 175, 55, 0.25);
+    scale: 1.02;
+    border-color: white;
+}
+
+/* ============================================================
+   COMPLETE HARMONY button — after escrow is locked
+   ============================================================ */
+.btn-complete-harmony {
+    width: 100%;
+    background-color: rgba(72, 210, 130, 0.18);
+    border-width: 2px;
+    border-color: rgba(72, 210, 130, 0.8);
+    color: rgb(90, 230, 150);
+    font-size: 150%;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    border-radius: var(--radius-md);
+    margin: 8px 18px 14px 18px;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-complete-harmony:hover {
+    background-color: rgba(72, 210, 130, 0.32);
+    scale: 1.02;
+}

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "502715313503",
+    "firebase_url": "https://timeaura-12f61-default-rtdb.firebaseio.com",
+    "project_id": "timeaura-12f61",
+    "storage_bucket": "timeaura-12f61.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502715313503:android:a0a7d53393be9a1b275aea",
+        "android_client_info": {
+          "package_name": "com.TimeAura.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmwhUK84Zqh9hsb3oC4fI84U4svJzW6xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+productId,priceUsd,rewardString,discountPercent,isSubscription
+com.timeaura.quants.pack100,0.99,100 Quants,0,FALSE
+com.timeaura.quants.pack500,4.99,500 Quants,0,FALSE
+com.timeaura.quants.pack1000,9.99,1000 Quants,0,FALSE
+com.timeaura.subscription.enlightened,4.99,1 enlightened,0,TRUE

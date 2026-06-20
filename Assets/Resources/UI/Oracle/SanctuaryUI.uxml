@@ -1,0 +1,52 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UI/Oracle/SanctuaryUI.uss?fileID=7433441132597879392&amp;guid=87925f9d647b2e941b53f44c8e50c65b&amp;type=3#SanctuaryUI"/>
+    <Style src="project://database/Assets/Resources/UI/Nexus/NexusScene.uss?fileID=7433441132597879392&amp;guid=3ee0ef23c57fa2c4096a46ba201a93c1&amp;type=3#NexusScene"/>
+    <ui:VisualElement name="SanctuaryRoot" class="sanctuary-root">
+        <ui:VisualElement class="mystic-aura-bg"/>
+        <ui:VisualElement name="SacredCircle" class="sacred-circle"/>
+        <ui:VisualElement class="pillars-container">
+            <ui:VisualElement class="oracle-pillar left"/>
+            <ui:VisualElement class="oracle-pillar right"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="sanctuary-glass">
+            <ui:VisualElement class="sanctuary-header">
+                <ui:VisualElement class="header-accent"/>
+                <ui:Label text="ORACLE SANCTUARY" class="sanctuary-title"/>
+                <ui:Label text="A place for deep contemplation beyond time." class="sanctuary-subtitle"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="CosmicOverview" class="cosmic-overview">
+                <ui:VisualElement class="cosmic-stat">
+                    <ui:Label text="RESONANCE" class="cosmic-stat-label"/>
+                    <ui:Label text="HARMONIOUS" class="cosmic-stat-value" style="color: rgb(212, 175, 55);"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="cosmic-stat">
+                    <ui:Label text="HORAS BALANCE" class="cosmic-stat-label"/>
+                    <ui:Label text="140" name="LblSanctuaryHoras" class="cosmic-stat-value" style="color: rgb(0, 255, 255);"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="SanctuaryTabs" class="sanctuary-tabs">
+                <ui:Button name="BtnTabOracle" text="👁️ ORACLE" class="sanctuary-tab-btn sanctuary-tab-btn--active"/>
+                <ui:Button name="BtnTabChronicles" text="📜 CHRONICLES" class="sanctuary-tab-btn"/>
+                <ui:Button name="BtnTabResonances" text="✨ RESONANCES" class="sanctuary-tab-btn"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="chat-container">
+                <ui:ScrollView name="SanctuaryChat" class="sanctuary-messages"/>
+                <ui:ScrollView name="ChroniclesScroll" class="sanctuary-messages sanctuary-messages--hidden"/>
+                <ui:ScrollView name="ResonancesScroll" class="sanctuary-messages sanctuary-messages--hidden"/>
+            </ui:VisualElement>
+            <ui:ScrollView name="QuickPromptsScroll" mode="Horizontal" show-horizontal-scroller="false" class="quick-prompts-scroll">
+                <ui:Button name="BtnPromptAura" text="Interpret my Aura" class="quick-prompt-btn"/>
+                <ui:Button name="BtnPromptDestiny" text="What awaits me?" class="quick-prompt-btn"/>
+                <ui:Button name="BtnPromptRitual" text="Explain last Ritual" class="quick-prompt-btn"/>
+            </ui:ScrollView>
+            <ui:VisualElement name="InputAreaContainer" class="sanctuary-input-area" style="flex-direction: row; justify-content: space-between; align-items: center;">
+                <ui:VisualElement class="input-glow-border" style="flex-grow: 1; margin-right: 15px;">
+                    <ui:TextField name="InputMeditation" placeholder-text="Pour your soul into words..." class="sanctuary-input"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="BtnRecordVoiceSanctuary" class="chat-voice-btn" tooltip="Запис голосу" style="margin-right: 10px;"/>
+                <ui:Button name="BtnMeditate" text="➤" class="sanctuary-btn" style="width: 80px; height: 80px; -unity-font-style: bold; font-size: 32px;"/>
+            </ui:VisualElement>
+            <ui:Button name="BtnExitSanctuary" text="EXIT SILENCE" class="sanctuary-exit-btn" style="color: rgb(255, 255, 255);"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,10 @@
+{
+  "name": "com.commerce.orchestrator",
+  "version": "1.0.0",
+  "displayName": "Commerce Orchestrator",
+  "description": "Standalone IAP & LiveOps Pricing Sync plugin for Unity",
+  "unity": "2021.3",
+  "author": {
+    "name": "Roman Haliulko"
+  }
+}

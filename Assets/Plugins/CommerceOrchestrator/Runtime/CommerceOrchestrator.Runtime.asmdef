@@ -1,0 +1,33 @@
+{
+    "name": "CommerceOrchestrator.Runtime",
+    "rootNamespace": "CommerceOrchestrator",
+    "references": [
+        "UniTask",
+        "UnityEngine.Purchasing",
+        "UnityEngine.Purchasing.Stores",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.Localization",
+        "DOTween.Modules"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "0.0.1",
+            "define": "COMMERCE_UNITASK"
+        },
+        {
+            "name": "com.unity.purchasing",
+            "expression": "0.0.1",
+            "define": "UNITY_PURCHASING"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+Key,Value,Description
+quant_to_usd_rate,0.01,1 Квант = $0.01
+horas_to_usd_rate,0.15,1 Хора ≈ $0.15
+commission_percent,7,Комісія платформи (%)
+min_cashout_threshold,50,Мінімальний вивід ($)
+max_cashout_threshold,1000,Максимальний вивід ($)
+quant_pack_100_price,0.99,Ціна пакета 100 Квантів ($)
+quant_pack_500_price,4.99,Ціна пакета 500 Квантів ($)
+quant_pack_1000_price,9.99,Ціна пакета 1000 Квантів ($)
+enlightened_subscription_price,4.99,Ціна підписки Enlightened ($/міс)
+free_user_daily_bonus,50,Щоденний бонус безкоштовним (Кванти)
+hora_display_threshold,60,Поріг відображення Хори в хвилинах
+quant_to_waves_rate,100,Співвідношення Квант до Хвиль
+post_boost_cost_waves,5000,Вартість бусту поста у хвилях
+tip_min_waves,1000,Мінімальні чайові у хвилях
+stripe_commission_percent,7,Комісія Stripe (%)
+stripe_test_mode,TRUE,Режим тестування Stripe (TRUE/FALSE)

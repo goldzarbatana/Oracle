@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5491330942423139301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8489944110065852009}
+  - component: {fileID: 6824703207184283248}
+  - component: {fileID: 2178754059563544254}
+  m_Layer: 0
+  m_Name: Pro_DDA_System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8489944110065852009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491330942423139301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6824703207184283248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491330942423139301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e77f4ec814cb4419596ed39a747d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Pro_ZarbatanaSystems.BalanceOrchestrator.Pro::ZarbatanaSystems.BalanceOrchestrator.Pro.Pro_DDA_Manager
+  DataSource: 1tqITiO_iAecnLoY7WWL3Am29VgoVpjk1GxlugVwzv6U
+  Gid: 0
+  KeyColumnName: LevelId
+  DefaultBalanceCSV: {fileID: 0}
+  AutoSyncOnPlay: 0
+  cachedCsvData: 
+--- !u!114 &2178754059563544254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491330942423139301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a5840d35f547e4898295965f09711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Pro_ZarbatanaSystems.BalanceOrchestrator.Pro::ZarbatanaSystems.BalanceOrchestrator.Pro.Pro_DifficultyManager
+  profile: {fileID: 11400000, guid: 091419c71326afc478b22c4fe66db959, type: 2}
+  difficultyPercentageOverride: -1
+  ddaEnabled: 0
+  ddaMinPercent: 10
+  ddaMaxPercent: 90
+  ddaStep: 5
+  ddaCooldownSeconds: 120
+  ddaDeadzone01: 0.05
+  ddaTargetSafety01: 0.5
+  ddaTargetWinRate01: 0.6

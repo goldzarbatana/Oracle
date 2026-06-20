@@ -1,0 +1,564 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Sanctuary" src="project://database/Assets/Resources/UI/Oracle/SanctuaryUI.uxml?fileID=9197481963319205126&amp;guid=67fb9ce18882d9f4881baf934d44af0a&amp;type=3#SanctuaryUI"/>
+    <Style src="project://database/Assets/Resources/UI/Nexus/NexusScene.uss?fileID=7433441132597879392&amp;guid=3ee0ef23c57fa2c4096a46ba201a93c1&amp;type=3#NexusScene"/>
+    <Style src="project://database/Assets/Resources/UI/Nexus/RadarStyles.uss?fileID=7433441132597879392&amp;guid=8eb1a1db9fe812847ac8311d06c64095&amp;type=3#RadarStyles"/>
+    <Style src="project://database/Assets/Resources/UI/Oracle/OracleWidget.uss?fileID=7433441132597879392&amp;guid=d15ffac0813b93740bd34cfe920a1c73&amp;type=3#OracleWidget"/>
+    <Style src="project://database/Assets/Resources/UI/Nexus/HarmonyStyles.uss?fileID=7433441132597879392&amp;guid=bccdecba54fb50f44b0b0a78e23adbc3&amp;type=3#HarmonyStyles"/>
+    <ui:VisualElement name="ScreenRoot" class="screen-container" style="width: 100%; height: 100%; flex-grow: 1; display: flex; opacity: 1;">
+        <ui:VisualElement name="WelcomeRite" style="display: none; opacity: 0;">
+            <ui:Label name="LblWelcomeText" text="✦ ЛАСКАВО ПРОСИМО ДО НЕКСУСУ ✦" style="color: white; font-size: 32px; letter-spacing: 8px; -unity-text-align: middle-center; -unity-text-auto-size: best-fit 10px 74px; -unity-text-generator: advanced; height: 1087px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="PanelContent" class="content-area" style="width: 100%; height: 100%; flex-grow: 1;">
+            <ui:VisualElement name="RadarPanel" class="panel radar-panel panel--hidden" style="display: none; opacity: 0; width: 100%; height: 100%; position: absolute; flex-direction: column;">
+                <ui:VisualElement name="RadarBackground" picking-mode="Ignore" class="radar-background" style="height: 100%; width: 100%; position: absolute;"/>
+                <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; width: 100%; height: 85%;">
+                    <ui:VisualElement style="width: 75%; max-width: 400px;">
+                        <ui:VisualElement style="width: 100%; padding-bottom: 100%;">
+                            <ui:VisualElement name="ScannerArea" class="scanner-area" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
+                                <ui:VisualElement name="ScryingOrbBase" class="scrying-orb-base" style="width: 150%; height: 151%;">
+                                    <ui:VisualElement name="ScryingOrbSphere" class="scrying-orb-sphere" style="height: 400%;">
+                                        <ui:VisualElement name="MistContainer" picking-mode="Ignore" class="mist-container"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="ResonancePoints" picking-mode="Ignore" class="resonance-points-container" style="position: absolute; width: 100%; height: 100%;"/>
+                                    <ui:VisualElement name="OrbPedestalImage" picking-mode="Ignore" class="scrying-orb-pedestal-image" style="height: 140%; bottom: -316px;"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="StatusOverlay" class="status-overlay" style="flex-shrink: 0; align-items: center; padding-bottom: 35%;">
+                    <ui:Label text="READY TO SCRY" name="LblStatus" class="status-text" style="-unity-text-auto-size: best-fit 10px 60px; -unity-text-generator: advanced; -unity-text-align: middle-center;"/>
+                    <ui:Label text="0 VISIONS" name="LblMatchCount" class="match-count" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 64px; margin-bottom: 30px;"/>
+                    <ui:Button text="PEER INTO THE ORB" name="BtnToggleSearch" class="btn-toggle-search" style="-unity-background-scale-mode: stretch-to-fill; height: 11%; max-height: 120px; min-height: 80px; width: 80%; max-width: 400px; -unity-text-auto-size: best-fit 10px 103px; -unity-text-generator: advanced;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="DiscoveryPanel" class="panel discovery-panel panel--hidden" style="align-items: stretch; justify-content: flex-start;">
+                <ui:VisualElement class="discovery-container" style="flex-grow: 1; display: flex; flex-direction: column; width: 100%; height: 100%;">
+                    <ui:ScrollView name="DiscoveryTabsScroll" mode="Horizontal" class="discovery-tabs-scroll" style="height: 60px; margin-bottom: 10px; flex-shrink: 0;">
+                        <ui:VisualElement name="DiscoveryTabs" class="discovery-tabs" style="flex-direction: row; align-items: center; padding: 5px;"/>
+                    </ui:ScrollView>
+                    <ui:ScrollView name="DiscoveryFeed" class="discovery-feed" style="flex-grow: 1;">
+                        <ui:VisualElement name="GridContainer" class="grid-container"/>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ChamberPanel" class="panel chamber-panel panel--hidden" style="opacity: 0; display: none;">
+                <ui:Label text="THE CHAMBER" class="panel-title" style="margin-bottom: 5px; color: rgb(218, 165, 32); -unity-text-align: middle-center;"/>
+                <ui:Label text="YOUR COVENANTS AND ARTIFACTS" class="panel-subtitle" style="margin-bottom: 20px; -unity-text-align: middle-center;"/>
+                <ui:ScrollView class="chamber-scroll" style="flex-grow: 1; width: 100%;">
+                    <ui:VisualElement class="chamber-section" style="flex-grow: 1;">
+                        <ui:Label text="ACTIVE SESSIONS" class="chamber-section-title"/>
+                        <ui:ScrollView name="ChamberActiveSessions" class="chamber-sessions-scroll" style="flex-grow: 1; min-height: 200px;">
+                            <ui:VisualElement name="ChamberEmptyState" class="chamber-empty-state" style="align-items: center; justify-content: center; height: 100%; padding-top: 50px;">
+                                <ui:Label text="🕸️" style="font-size: 80px; -unity-text-align: middle-center; opacity: 0.5;"/>
+                                <ui:Label text="NO ACTIVE PACTS" style="color: rgba(255, 255, 255, 0.5); -unity-font-style: bold; margin-top: 10px; -unity-text-align: middle-center;"/>
+                                <ui:Label text="Seek resonance in the Feed to form new covenants." style="color: rgba(255, 255, 255, 0.3); font-size: 12px; margin-top: 5px; white-space: normal; -unity-text-align: middle-center;"/>
+                            </ui:VisualElement>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="chamber-section">
+                        <ui:Label text="CHRONICLES OF POWER" class="chamber-section-title"/>
+                        <ui:VisualElement class="chamber-stats-group" style="flex-direction: row; justify-content: space-around; background-color: rgba(0, 0, 0, 0.3); border-radius: 12px; padding: 15px; margin-top: 10px;">
+                            <ui:VisualElement class="chamber-stat-box" style="align-items: center;">
+                                <ui:Label text="ACTIVE PACTS" class="stat-label" style="font-size: 10px; color: rgba(255, 255, 255, 0.5); margin-bottom: 5px;"/>
+                                <ui:Label name="LblChamberActivePacts" text="0" class="stat-value" style="font-size: 24px; color: rgb(212, 175, 55); -unity-font-style: bold;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="chamber-stat-box" style="align-items: center;">
+                                <ui:Label text="TOTAL HORAS" class="stat-label" style="font-size: 10px; color: rgba(255, 255, 255, 0.5); margin-bottom: 5px;"/>
+                                <ui:Label name="LblChamberHoras" text="0" class="stat-value" style="font-size: 24px; color: rgb(212, 175, 55); -unity-font-style: bold;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="chamber-stat-box" style="align-items: center;">
+                                <ui:Label text="SYMMETRIES" class="stat-label" style="font-size: 10px; color: rgba(255, 255, 255, 0.5); margin-bottom: 5px;"/>
+                                <ui:Label name="LblChamberSymmetries" text="0" class="stat-value" style="font-size: 24px; color: rgb(212, 175, 55); -unity-font-style: bold;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="chamber-section" style="margin-top: 20px;">
+                        <ui:Label text="QUICK ACTIONS" class="chamber-section-title"/>
+                        <ui:VisualElement class="chamber-actions-group" style="flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 10px;">
+                            <ui:Button name="BtnActionCreate" text="✦ FEED" class="chamber-action-btn" style="width: 48%; margin-bottom: 10px;"/>
+                            <ui:Button name="BtnActionOracle" text="👁️ ORACLE" class="chamber-action-btn" style="width: 48%; margin-bottom: 10px;"/>
+                            <ui:Button name="BtnActionVault" text="🛡️ VAULT" class="chamber-action-btn" style="width: 100%;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+            </ui:VisualElement>
+            <ui:VisualElement name="SettingsPanel" class="panel settings-panel panel--hidden">
+                <ui:Button name="BtnCloseSettingsTop" text="✕" style="position: absolute; top: 8%; right: 4%; background-color: transparent; border-width: 0; color: white; font-size: 80px; -unity-font-style: bold; padding: 0;"/>
+                <ui:Label text="NEXUS SETTINGS" class="essence-header" style="margin-bottom: 80px; margin-top: 40px;"/>
+                <ui:ScrollView class="settings-scroll">
+                    <ui:VisualElement name="MenuLangSelector" class="carousel-container" style="margin-top: 0; height: 100px; margin-bottom: 20px;">
+                        <ui:Label text="&lt;" class="carousel-arrow"/>
+                        <ui:ScrollView name="LangCarousel" mode="Horizontal" show-horizontal-scroller="false" show-vertical-scroller="false" class="lang-carousel" style="flex-grow: 1; height: 100%;">
+                            <ui:Button name="BtnLangUA" text="🇺🇦 UA" class="lang-btn lang-btn--active" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangEN" text="🇺🇸 EN" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangES" text="🇪🇸 ES" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangFR" text="🇫🇷 FR" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangDE" text="🇩🇪 DE" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangIT" text="🇮🇹 IT" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangPL" text="🇵🇱 PL" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangRU" text="🇷🇺 RU" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangTR" text="🇹🇷 TR" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnLangHI" text="🇮🇳 HI" class="lang-btn" style="flex-shrink: 0;"/>
+                        </ui:ScrollView>
+                        <ui:Label text="&gt;" class="carousel-arrow"/>
+                    </ui:VisualElement>
+                    <ui:Label text="ORACLE VOICE" class="menu-header" style="font-size: 12px; opacity: 0.5; margin-top: 10px; margin-bottom: 5px;"/>
+                    <ui:VisualElement name="MenuPersonaSelector" class="carousel-container" style="margin-top: 0; height: 100px; margin-bottom: 20px;">
+                        <ui:ScrollView name="PersonaScroll" mode="Horizontal" show-horizontal-scroller="false" show-vertical-scroller="false" class="lang-carousel" style="flex-grow: 1; height: 100%;">
+                            <ui:Button name="BtnSidePersonaMystic" text="🌌" tooltip="Mystic" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnSidePersonaBusiness" text="💼" tooltip="Business" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnSidePersonaCasual" text="🎈" tooltip="Casual" class="lang-btn" style="flex-shrink: 0;"/>
+                            <ui:Button name="BtnSidePersonaTech" text="🦾" tooltip="Tech" class="lang-btn" style="flex-shrink: 0;"/>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="settings-group">
+                        <ui:Label text="AUDIO CHANNELS" class="section-label"/>
+                        <ui:VisualElement class="setting-item">
+                            <ui:Label text="MASTER VOLUME" class="setting-label"/>
+                            <ui:Slider name="SliderMasterVol" low-value="0" high-value="1" value="1" class="aura-slider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="setting-item">
+                            <ui:Label text="MUSIC" class="setting-label"/>
+                            <ui:Slider name="SliderMusicVol" low-value="0" high-value="1" value="0.7" class="aura-slider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="setting-item">
+                            <ui:Label text="EFFECTS (SFX)" class="setting-label"/>
+                            <ui:Slider name="SliderSFXVol" low-value="0" high-value="1" value="0.8" class="aura-slider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="setting-item">
+                            <ui:Label text="AMBIENCE" class="setting-label"/>
+                            <ui:Slider name="SliderAmbienceVol" low-value="0" high-value="1" value="0.5" class="aura-slider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="setting-item">
+                            <ui:Label text="UI SCALE" class="setting-label"/>
+                            <ui:Slider name="SliderUIScale" low-value="0.8" high-value="1.3" value="1" class="aura-slider"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="setting-item setting-item--row">
+                            <ui:Label text="SILENCE MODE (MUTE)" class="setting-label"/>
+                            <ui:Toggle name="ToggleMute" class="aura-toggle"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:Button text="CLOSE" name="BtnCloseSettings" class="confirm-button" style="background-color: rgba(255, 255, 255, 0.05); margin-top: auto;"/>
+                <ui:Label text="v1.0.0 (Adept Core)" name="LblAppVersion" style="-unity-text-align: middle-center; color: rgba(255, 255, 255, 0.3); font-size: 14px; margin-top: 15px; margin-bottom: 15px; -unity-font-style: bold;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="AuraPanel" class="panel essence-panel panel--hidden" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: none; opacity: 0; background-color: rgba(5, 5, 12, 0.98); z-index: 1000; padding-top: 10%;">
+                <ui:Button name="BtnCloseAura" text="✕" style="position: absolute; top: 30px; right: 30px; width: 50px; height: 50px; font-size: 24px; color: white; background-color: transparent; border-width: 0; -unity-font-style: bold;"/>
+                <ui:VisualElement class="aura-container" style="padding-top: 6%; padding-bottom: 5%;">
+                    <ui:VisualElement class="aura-header-group" style="align-items: auto; align-content: auto; width: 100%; height: 15%;">
+                        <ui:Label text="RESONATE YOUR AURA" name="AuraHeader" class="essence-header" style="-unity-text-auto-size: best-fit 10px 100px; align-self: stretch; margin-bottom: 30px; width: 100%; height: 25%;"/>
+                        <ui:VisualElement name="AuraTabs" class="aura-tabs" style="height: 100%; align-self: auto; align-content: auto; -unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; align-items: auto;">
+                            <ui:Button name="BtnTabUnified" text="ОБ&apos;ЄДНАНО" class="aura-tab-btn aura-tab-btn--active" style="-unity-text-auto-size: best-fit 6px 100px; align-items: auto; align-content: auto; width: 50%; height: 75%;"/>
+                            <ui:Button name="BtnTabCompass" text="COMPASS" class="aura-tab-btn" style="-unity-text-auto-size: best-fit 10px 100px; width: 50%; align-items: auto; align-content: auto; height: 75%;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ActiveSelectionContainer" class="active-tags-container" style="height: 20%; width: 100%; margin-bottom: 0; padding-bottom: 0; padding-top: 0;">
+                        <ui:VisualElement name="SelectedTagsList" class="tags-cloud" style="align-content: auto; align-items: auto; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-self: auto; height: auto;"/>
+                        <ui:VisualElement name="HarmonyIndicator" class="harmony-indicator" style="height: 13%;">
+                            <ui:VisualElement name="ManifestationFill" class="harmony-fill manifestation-fill" style="-unity-text-align: middle-left; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; width: 100%;"/>
+                            <ui:VisualElement name="IntentFill" class="harmony-fill intent-fill" style="width: 100%; height: 100%;"/>
+                        </ui:VisualElement>
+                        <ui:Label name="LblHarmonyValue" text="MANIFESTATION: 0% | INTENT: 0%" class="harmony-value-label" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 52px; -unity-text-align: middle-center; width: 100%; height: 25%;"/>
+                    </ui:VisualElement>
+                    <ui:ScrollView name="ScrollContainer" class="scroll-container" style="flex-grow: 1; margin-top: 10px;">
+                        <ui:VisualElement name="TabContentUnified" class="essence-section" style="flex-direction: column; width: 100%; padding-bottom: 40px;">
+                            <ui:Label name="LblGifts" text="🎁 Я ПРОПОНУЮ (МОЖУ)" class="section-label" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 32px; color: rgb(212, 175, 55);"/>
+                            <ui:ScrollView name="ManifestPillarSelector" mode="Horizontal" show-horizontal-scroller="false" class="pillar-selector" style="height: 60px; min-height: 60px; margin-top: 10px; margin-bottom: 10px;"/>
+                            <ui:VisualElement name="GiftsContainer" class="tags-cloud" style="align-self: stretch;"/>
+                            <ui:Label name="LblSeeks" text="🔍 Я ШУКАЮ (ХОЧУ)" class="section-label" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 33px; color: rgb(0, 255, 255); margin-top: 30px;"/>
+                            <ui:ScrollView name="IntentPillarSelector" mode="Horizontal" show-horizontal-scroller="false" class="pillar-selector" style="height: 60px; min-height: 60px; margin-top: 10px; margin-bottom: 10px;"/>
+                            <ui:VisualElement name="SeeksContainer" class="tags-cloud"/>
+                            <ui:VisualElement name="OracleEquipSection" class="oracle-equip-section" style="margin-top: 30px; margin-bottom: 20px; align-items: center;">
+                                <ui:Label text="ОРАКУЛ-СУПУТНИК" name="LblOracleSectionTitle" class="section-label oracle-section-label"/>
+                                <ui:VisualElement name="OracleSlot" class="oracle-slot oracle-slot--empty">
+                                    <ui:VisualElement name="OracleSlotGlow" class="oracle-slot-glow"/>
+                                    <ui:VisualElement name="OracleSlotIcon" class="oracle-slot-icon" style="display: none;"/>
+                                    <ui:Label name="LblOracleSlotHint" text="⬡" class="oracle-slot-hint"/>
+                                    <ui:Label name="LblOracleName" text="" class="oracle-slot-name"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="TabContentCompass" class="essence-section" style="display: none;">
+                            <ui:Label name="LblSacredCompass" text="SACRED COMPASS (FILTERS)" class="section-label" style="color: rgb(212, 175, 55); margin-bottom: 20px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px;"/>
+                            <ui:VisualElement class="filter-item" style="flex-direction: row; align-items: center; margin-bottom: 20px;">
+                                <ui:Label name="LblAgeRangeTag" text="AGE RANGE:" style="width: 30%; color: white; opacity: 0.7; font-size: 14px;"/>
+                                <ui:SliderInt name="SliderMinAge" low-value="18" high-value="99" value="18" class="aura-slider" style="flex-grow: 1;"/>
+                                <ui:Label name="LblMinAge" text="18" style="width: 40px; color: rgb(212, 175, 55); -unity-text-align: middle-right; font-size: 16px;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="filter-item" style="flex-direction: row; align-items: center; margin-bottom: 20px;">
+                                <ui:Label name="LblToTag" text="TO:" style="width: 30%; color: white; opacity: 0.7; font-size: 14px;"/>
+                                <ui:SliderInt name="SliderMaxAge" low-value="18" high-value="99" value="99" class="aura-slider" style="flex-grow: 1;"/>
+                                <ui:Label name="LblMaxAge" text="99" style="width: 40px; color: rgb(212, 175, 55); -unity-text-align: middle-right; font-size: 16px;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="filter-item" style="flex-direction: row; align-items: center; margin-bottom: 30px;">
+                                <ui:Label name="LblDistanceTag" text="DISTANCE (KM):" style="width: 30%; color: white; opacity: 0.7; font-size: 14px;"/>
+                                <ui:Slider name="SliderDistance" low-value="1" high-value="500" value="50" class="aura-slider" style="flex-grow: 1;"/>
+                                <ui:Label name="LblDistance" text="50" style="width: 40px; color: rgb(212, 175, 55); -unity-text-align: middle-right; font-size: 16px;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="footer-actions" style="position: relative; bottom: auto; left: auto; right: auto; margin-bottom: 2%; background-color: transparent; border-top-width: 0; height: 8%; width: 100%;">
+                        <ui:Button text="MYSTICAL REFINEMENT" name="BtnRefineAura" class="confirm-button" style="display: none;"/>
+                        <ui:Button text="SEAL THE AURA" name="BtnConfirmAura" class="confirm-button" style="display: none;"/>
+                        <ui:Button text="BACK" name="BtnEditAura" class="confirm-button confirm-button--cancel" style="display: none;"/>
+                        <ui:Button text="ШУКАТИ" name="BtnLaunchResonance" class="confirm-button" style="background-color: rgb(212, 175, 55); color: rgb(5, 5, 5); width: 59%; align-items: center; align-self: center; height: 180%; padding-bottom: 10px; -unity-text-auto-size: best-fit 10px 58px; margin-bottom: 12px;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="OracleSelectionModal" class="modal-overlay modal--hidden" style="display: none;">
+                    <ui:VisualElement class="modal-content oracle-modal-content">
+                        <ui:Label text="ОБЕРІТЬ ОРАКУЛА" name="LblOracleModalHeader" class="modal-header"/>
+                        <ui:Label name="LblResonanceHint" text="Резонанс розраховано на основі ваших дарів" class="modal-text"/>
+                        <ui:ScrollView name="OracleListScroll" class="oracle-list-scroll">
+                            <ui:VisualElement name="OracleListContainer" class="oracle-list-container"/>
+                        </ui:ScrollView>
+                        <ui:Button name="BtnGenerateOracle" text="Створити кастомного Оракула під твої таланти" class="modal-btn modal-btn--gold" style="margin-bottom: 12px;"/>
+                        <ui:Button name="BtnCloseOracleModal" text="ЗАКРИТИ" class="modal-btn"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="SupportModal" class="modal-overlay modal--hidden">
+                <ui:VisualElement class="modal-content">
+                    <ui:Label name="LblSupportHeader" text="SUPPORT TIME AURA" class="modal-header" style="color: rgb(212, 175, 55);"/>
+                    <ui:Label name="LblSupportText" text="Choose how to send energy to the creators." class="modal-text" style="margin-bottom: 30px;"/>
+                    <ui:Button name="BtnSupportAd" text="VIEW A VISION (AD)" class="modal-btn" style="margin-bottom: 15px;"/>
+                    <ui:Button name="BtnSupportDonate" text="SHARE RESOURCES ($1)" class="modal-btn modal-btn--gold" style="margin-bottom: 30px;"/>
+                    <ui:Button name="BtnSupportClose" text="CLOSE" class="modal-btn" style="background-color: rgba(255, 255, 255, 0.05);"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Instance template="Sanctuary" name="SanctuaryPanel" class="panel panel--hidden" style="display: none; opacity: 0; height: 90%; top: -100px; bottom: 0;"/>
+            <ui:VisualElement name="RadarPopup" class="modal-overlay modal--hidden" style="display: none; opacity: 0; align-items: center; justify-content: center; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(5, 5, 12, 0.96);">
+                <ui:VisualElement class="modal-content" style="width: 80%; max-width: 400px; align-items: center; background-color: rgba(10, 10, 20, 0.95); border-color: rgb(212, 175, 55); border-width: 1px; border-radius: 20px; padding: 30px;">
+                    <ui:VisualElement style="width: 200px; height: 200px; margin-bottom: 20px; align-items: center; justify-content: center;">
+                        <ui:VisualElement name="ScryingOrbBase" class="scrying-orb-base" style="width: 150px; height: 150px; position: relative; overflow: visible;">
+                            <ui:VisualElement name="ScryingOrbSphere" class="scrying-orb-sphere" style="width: 100%; height: 100%; border-radius: 75px; overflow: hidden; background-color: rgba(0, 0, 50, 0.4); border-width: 2px; border-color: rgba(0, 255, 255, 0.5);">
+                                <ui:VisualElement name="MistContainer" picking-mode="Ignore" class="mist-container" style="width: 100%; height: 100%; position: absolute;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ResonancePoints" picking-mode="Ignore" class="resonance-points-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="Оракул шукає резонанс..." name="LblStatus" class="modal-text" style="margin-bottom: 25px; -unity-text-align: middle-center;"/>
+                    <ui:Button name="BtnToggleSearch" text="СКАСУВАТИ" class="modal-btn" style="width: 100%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="FeedPanel" class="panel feed-panel panel--hidden" style="display: none; opacity: 0;">
+                <ui:VisualElement style="flex-grow: 1; padding: 20px; flex-direction: column;">
+                    <ui:Label text="FEED" name="FeedHeader" class="panel-title"/>
+                    <ui:Label text="CHRONICLES OF THE REALM" name="FeedSubtitle" class="panel-subtitle"/>
+                    <ui:VisualElement name="RealmSwitcher" style="flex-direction: row; justify-content: center; margin-top: 10px; margin-bottom: 5px;">
+                        <ui:Button name="BtnRealmAll" text="ВСІ" class="modal-btn modal-btn--gold" style="flex: 1; margin: 2px; font-size: 11px;"/>
+                        <ui:Button name="BtnRealmEther" text="🌌 ЕФІР" class="modal-btn" style="flex: 1; margin: 2px; font-size: 11px;"/>
+                        <ui:Button name="BtnRealmMatter" text="💵 МАТЕРІЯ" class="modal-btn" style="flex: 1; margin: 2px; font-size: 11px;"/>
+                    </ui:VisualElement>
+                    <ui:ScrollView name="FeedList" class="feed-scroll" style="flex-grow: 1; margin-top: 20px; margin-bottom: 40px;"/>
+                    <ui:Button name="BtnCreatePost" text="+" style="position: absolute; bottom: 20px; right: 20px; width: 100px; height: 100px; border-radius: 28px; background-color: rgb(212, 175, 55); color: white; font-size: 28px; -unity-font-style: bold; justify-content: center; align-items: center; border-width: 0; border-bottom-right-radius: 36px; border-top-left-radius: 36px; border-bottom-left-radius: 36px; border-top-right-radius: 36px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="VaultPanel" class="panel vault-panel panel--hidden" style="opacity: 0; display: none;">
+                <ui:VisualElement name="VisualElement" style="padding: 20px; align-items: center; width: 100%; height: 77%; align-self: stretch; align-content: stretch; top: 10%; bottom: 346px;">
+                    <ui:Label text="MASTER VAULT" name="VaultHeader" class="panel-title" style="margin-bottom: 0; color: rgb(218, 165, 32); -unity-text-align: middle-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; align-content: stretch; align-self: center; width: 90%; height: 6%; bottom: 3%;"/>
+                    <ui:ScrollView class="vault-scroll" style="flex-grow: 1;">
+                        <ui:VisualElement class="vault-content" style="height: 1170px;">
+                            <ui:VisualElement name="VaultAuraSphere" class="vault-aura-large" style="height: 20%; -unity-text-align: upper-center; aspect-ratio: 1; width: 100%; margin-top: 5px; margin-bottom: 5px;">
+                                <ui:VisualElement name="VaultAvatar" class="avatar-image" style="display: flex; padding-top: 0; height: 100%;"/>
+                                <ui:Label text="CHANGE VISAGE" name="LblChangePhoto" style="position: absolute; bottom: 20px; font-size: 12px; color: white; opacity: 0.5; display: none;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="VaultViewMode" style="align-items: center; width: 100%; height: 35%;">
+                                <ui:VisualElement style="flex-direction: row; align-items: stretch; justify-content: center; width: 90%; height: 100%; align-content: stretch; -unity-text-align: middle-center;">
+                                    <ui:Label name="VaultName" text="ADEPT NAME" class="vault-name" style="width: 63%; height: 100%; margin-bottom: 0; align-content: stretch; -unity-text-align: middle-center;"/>
+                                    <ui:VisualElement class="edit-pencil-icon" style="width: 28%; height: 100%; margin-left: 10px; background-image: url(&quot;project://database/Assets/Resources/UI/Icons/nexus_pencil_edit_icon.png?fileID=21300000&amp;guid=66a932a2fe902bf44ac6ee535a854f2f&amp;type=3#nexus_pencil_edit_icon&quot;); -unity-background-scale-mode: scale-to-fit; opacity: 0.4;"/>
+                                    <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; margin-bottom: 5px; height: 100%; width: 100%; -unity-text-align: middle-center; white-space: nowrap;">
+                                        <ui:Label name="VaultAge" text="Age: --" style="color: rgba(255, 255, 255, 0.7); font-size: 24px; -unity-text-auto-size: best-fit 10px 58px; -unity-text-generator: advanced; -unity-text-align: middle-center; height: 52px; align-content: auto; align-self: auto;"/>
+                                        <ui:VisualElement class="edit-pencil-icon" style="width: 18px; height: 18px; margin-left: 8px; background-image: url(&quot;project://database/Assets/Resources/UI/Icons/nexus_pencil_edit_icon.png?fileID=21300000&amp;guid=66a932a2fe902bf44ac6ee535a854f2f&amp;type=3#nexus_pencil_edit_icon&quot;); -unity-background-scale-mode: scale-to-fit; opacity: 0.3;"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:Label name="VaultLocation" text="📍 Unknown Realm" style="color: rgb(212, 175, 55); font-size: 20px; margin-bottom: 10px; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; height: 25%; width: 100%; -unity-text-align: middle-center; white-space: nowrap; text-overflow: ellipsis;"/>
+                                <ui:Label name="VaultTitle" text="INITIATE" class="vault-title" style="-unity-text-auto-size: best-fit 10px 88px; height: 16%; -unity-text-align: middle-center; width: 44%; align-content: stretch; align-self: center; justify-content: space-between; flex-direction: row; margin-bottom: 0;"/>
+                                <ui:VisualElement style="width: 100%; align-items: center; margin-bottom: 5px; -unity-text-align: middle-center; height: 100%; align-self: center; justify-content: center;">
+                                    <ui:Label name="VaultBio" text="Your legacy remains unwritten..." style="color: white; opacity: 0.6; -unity-font-style: italic; -unity-text-align: middle-center; width: 100%; white-space: normal; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; height: 70%; text-overflow: ellipsis; top: 0; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;"/>
+                                    <ui:VisualElement class="edit-pencil-icon" style="width: 50%; height: 30%; margin-top: 0; background-image: url(&quot;project://database/Assets/Resources/UI/Icons/nexus_pencil_edit_icon.png?fileID=21300000&amp;guid=66a932a2fe902bf44ac6ee535a854f2f&amp;type=3#nexus_pencil_edit_icon&quot;); -unity-background-scale-mode: scale-to-fit; opacity: 0.2;"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="vault-stats-group" style="margin-top: 10px; top: 2%;">
+                                <ui:VisualElement class="vault-stat-item" style="-unity-text-align: middle-center;">
+                                    <ui:Label text="SYMMETRIES" class="stat-label" style="color: rgb(212, 175, 55);"/>
+                                    <ui:Label name="StatSymmetries" text="0" class="stat-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="vault-stat-item">
+                                    <ui:Label text="HORAS" class="stat-label" style="color: rgb(212, 175, 55); -unity-text-align: middle-center;"/>
+                                    <ui:Label name="StatHoras" text="0" class="stat-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="vault-stat-item">
+                                    <ui:Label text="QUANTS" class="stat-label" style="color: rgb(212, 175, 55); -unity-text-align: middle-center;"/>
+                                    <ui:Label name="StatQuants" text="0" class="stat-value"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="VaultMonetizationGroup" style="flex-direction: column; justify-content: center; margin-top: 15px; width: 90%; align-content: stretch; align-self: center; top: 2%;">
+                                <ui:Button name="BtnWatchAd" text="👁️ WATCH AD (+1 CONTRACT SLOT)" style="background-color: rgb(46, 204, 113); color: rgb(255, 255, 255); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; width: 100%; height: 45px; margin-bottom: 8px;"/>
+                                <ui:Button name="BtnBuyStarterPack" text="🛒 BUY STARTER PACK (10 HORAS)" style="background-color: rgb(212, 175, 55); color: rgb(255, 255, 255); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; width: 100%; height: 45px; margin-bottom: 8px;"/>
+                                <ui:Button name="BtnOpenShop" text="💎 ПОПОВНИТИ КВАНТИ" style="background-color: rgb(155, 89, 182); color: rgb(255, 255, 255); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; width: 100%; height: 45px; margin-bottom: 8px;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="VaultEditMode" style="width: 90%; display: none; margin-top: 20px;">
+                                <ui:TextField name="InputVaultName" label="NEXUS NAME" class="aura-input" style="margin-bottom: 20px;"/>
+                                <ui:SliderInt name="SliderVaultAge" label="YOUR AGE" low-value="18" high-value="99" class="aura-slider" style="margin-bottom: 20px;"/>
+                                <ui:TextField name="InputVaultBio" label="LEGACY (BIO)" multiline="true" class="aura-input" style="height: 120px; margin-bottom: 40px;"/>
+                                <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                                    <ui:Button name="BtnSaveProfile" text="SEAL CHANGES" class="confirm-button"/>
+                                    <ui:Button name="BtnCancelEdit" text="CANCEL" class="confirm-button confirm-button--cancel"/>
+                                </ui:VisualElement>
+                                <ui:Label name="LblCooldownHint" text="Identity stability: 7 days cooldown" style="color: rgb(255, 68, 68); font-size: 12px; margin-top: 10px; -unity-text-align: middle-center; display: none;"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="VisualElement" style="flex-grow: 0; width: 100%; height: 19%; align-self: center; align-content: stretch; flex-wrap: nowrap; flex-direction: row; align-items: stretch; justify-content: center; top: 5%; flex-shrink: 0;">
+                                <ui:Button name="BtnOpenAura" text="🔮 МОЯ АУРА" class="btn-oracle-ritual" style="margin-top: 20px; margin-bottom: 20px; height: 175px; width: 461px; flex-wrap: nowrap; flex-direction: row; white-space: pre-wrap; flex-basis: 45%; background-color: rgb(212, 175, 55); color: black;"/>
+                                <ui:Button name="BtnProfileSupport" text="SEND ENERGY TO CREATORS" class="confirm-button" style="margin-top: 6px; height: 199px; min-height: 16%; width: 445px; -unity-text-auto-size: best-fit 10px 100px; align-self: stretch; align-content: stretch; flex-basis: 45%;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="NavigationDock" class="nav-dock" style="position: absolute; bottom: 0; width: 100%;">
+            <ui:VisualElement name="NavFeed" class="nav-item nav-item--active" style="width: 5%;">
+                <ui:Label name="LblNavFeed" text="СТРІЧКА" class="nav-label"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="BtnOpenChamber" class="nav-item nav-item--center" style="margin-top: 0; width: 20%; margin-bottom: 0;">
+                <ui:Label text="CHAMBER" class="nav-label"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="BtnOracleEyeCollapsed" class="nav-item" style="width: 5%;">
+                <ui:Label name="LblNavOracle" text="👁️ ОРАКУЛ" class="nav-label"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="LogoMini" picking-mode="Ignore" class="logo-mini" style="height: 48px; width: 61px;">
+            <ui:Label name="LblCurrentLangHUD" text="UA" style="position: absolute; bottom: 0; right: -29px; color: rgba(212, 175, 55, 0.7); font-size: 14px; -unity-font-style: bold; width: 21px; -unity-text-align: upper-center;"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="position: absolute; top: 6%; right: 4%; flex-direction: row-reverse; align-items: center;">
+            <ui:Button name="MenuBtn" class="menu-btn" style="height: 80px; width: 80px; position: relative;">
+                <ui:VisualElement class="menu-bar"/>
+                <ui:VisualElement class="menu-bar"/>
+                <ui:VisualElement class="menu-bar"/>
+            </ui:Button>
+            <ui:Button name="BtnOpenProfile" text="Я" class="profile-btn-top"/>
+            <ui:Button name="BtnOpenSanctuary" text="📜" class="profile-btn-top" style="margin-right: 15px; font-size: 28px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="SideMenu" focusable="false" class="side-menu-overlay side-menu--hidden" style="display: none;">
+            <ui:VisualElement name="SideMenuDim" picking-mode="Position" class="side-menu-dim" style="display: flex;"/>
+            <ui:VisualElement name="SideMenuContent" class="side-menu-content" style="display: flex;">
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 30px; flex-shrink: 0; padding-top: 20px;">
+                    <ui:Label text="NEXUS MENU" class="menu-header" style="margin-bottom: 0;"/>
+                    <ui:Button name="BtnCloseMenu" text="✕" class="close-menu-btn" style="background-color: transparent; border-width: 0; color: white; font-size: 80px; -unity-font-style: bold;"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="MenuScroll" show-vertical-scroller="false" style="flex-grow: 1;">
+                    <ui:Button text="MASTER PROFILE" name="BtnMenuProfile" class="menu-item" style="-unity-font-style: normal;"/>
+                    <ui:Button text="AURA RITE" name="BtnMenuAura" class="menu-item"/>
+                    <ui:Button text="ORACLE SANCTUARY" name="BtnMenuSanctuary" class="menu-item" style="color: rgb(180, 0, 255);"/>
+                    <ui:VisualElement style="flex-grow: 1; min-height: 20px;"/>
+                    <ui:Button text="SUPPORT TIME AURA" name="BtnMenuSupport" class="menu-item menu-item--secondary" style="color: rgb(212, 175, 55);"/>
+                    <ui:Button text="SETTINGS" name="BtnMenuSettings" class="menu-item menu-item--secondary"/>
+                    <ui:Button text="LOGOUT" name="BtnMenuLogout" class="menu-item menu-item--danger"/>
+                </ui:ScrollView>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="MasterDossierPanel" class="dossier-overlay dossier-overlay--hidden" style="opacity: 1; display: none;">
+            <ui:VisualElement name="DossierBottomSheet" class="dossier-bottom-sheet">
+                <ui:VisualElement name="DossierTopBar" style="flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 50px; margin-bottom: 10px;">
+                    <ui:Button name="BtnCloseDossier" text="✕" style="position: absolute; left: 20px; font-size: 20px; color: rgba(255, 255, 255, 0.6); border-width: 0; background-color: transparent;"/>
+                    <ui:VisualElement class="drag-indicator"/>
+                    <ui:Button name="BtnOracleExplain" class="dossier-oracle-btn" style="position: absolute; right: 20px;"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="DossierScroll" class="dossier-scroll" style="flex-grow: 1; width: 100%;">
+                    <ui:VisualElement name="DossierHero" class="dossier-hero">
+                        <ui:VisualElement class="dossier-avatar-container">
+                            <ui:VisualElement class="dossier-avatar-glow"/>
+                            <ui:VisualElement class="dossier-avatar-core"/>
+                        </ui:VisualElement>
+                        <ui:Label name="LblCardName" text="Adept-9090" class="dossier-name"/>
+                        <ui:VisualElement name="PresenceContainer" style="flex-direction: row; justify-content: center; margin-top: 5px;">
+                            <ui:Label name="LblDistance" text="✦ &lt; 5 KM" class="presence-tag" style="color: rgba(212, 175, 55, 0.9); font-size: 14px; margin-right: 15px; -unity-font-style: bold; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 32px;"/>
+                            <ui:Label name="LblLastActive" text="СЬОГОДНІ В НЕКСУСІ" class="presence-tag" style="color: rgba(0, 255, 255, 0.7); font-size: 14px; -unity-font-style: bold; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 34px;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DossierCompatibility" class="dossier-section">
+                        <ui:Label text="СИНХРОНІЗАЦІЯ СТОВПІВ" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 48px; -unity-text-generator: advanced;"/>
+                        <ui:VisualElement name="CardTags" class="dossier-pillars-container" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="BioContainer" class="dossier-section" style="margin-top: 20px;">
+                        <ui:Label text="ВІДОМОСТІ АКАШІ" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 41px; -unity-text-generator: advanced;"/>
+                        <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.03); border-radius: 15px; padding: 20px; margin-top: 10px;">
+                            <ui:Label name="LblCardBio" text="Розгорнута біографія майстра..." multiline="true" class="dossier-bio-text" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 38px;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DossierStats" class="dossier-section" style="margin-top: 20px; flex-direction: row; justify-content: space-around;">
+                        <ui:VisualElement class="dossier-stat-box">
+                            <ui:Label text="РЕЗОНАНС" class="stat-label" style="color: rgb(212, 175, 55);"/>
+                            <ui:Label name="LblResonance" text="98%" class="stat-value" style="color: rgb(212, 175, 55);"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="dossier-stat-box">
+                            <ui:Label text="ЧАСТОТА" class="stat-label" style="color: rgb(212, 175, 55);"/>
+                            <ui:Label name="LblFrequency" text="432 Hz" class="stat-value" style="color: rgb(0, 255, 255);"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="height: 120px;"/>
+                </ui:ScrollView>
+                <ui:VisualElement name="DossierFooter" class="dossier-footer" style="height: auto; padding-bottom: 20%;">
+                    <ui:Button text="ПЕРЕГУКНУТИСЯ" name="BtnOpenQuickChat" class="btn-dossier-primary" style="width: 61%; height: 21%; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced;"/>
+                    <ui:Button text="ЗАКРИТИ ДОСЬЄ" name="BtnDeclineDossier" class="btn-dossier-secondary" style="color: rgb(255, 255, 255); -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; height: 27%; width: 60%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="SymmetryRiteModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement class="modal-content" style="background-color: transparent; border-width: 0; align-items: center; width: 100%;">
+                <ui:Label text="SEAL YOUR INTENT" class="modal-header" style="color: rgb(212, 175, 55); font-size: 28px; margin-bottom: 40px;"/>
+                <ui:VisualElement name="SealContainer" class="seal-container" style="height: 320px; width: 100%; align-items: center; justify-content: center; margin-bottom: 40px;">
+                    <ui:VisualElement name="SealBase" class="seal-base" style="width: 200px; height: 200px; background-image: url(&quot;project://database/Assets/Resources/UI/Icons/seal_of_consent_icon.png?fileID=21300000&amp;guid=6309e34f75e12c646b96b97674b50917&amp;type=3#seal_of_consent_icon&quot;); -unity-background-scale-mode: scale-to-fit; opacity: 0.5;"/>
+                    <ui:VisualElement name="SealFill" class="seal-fill" style="position: absolute; width: 220px; height: 220px; border-radius: 110px; border-width: 4px; border-color: rgba(255, 215, 0, 0); scale: 0.8; opacity: 0;"/>
+                    <ui:Label text="Hold to align" name="LblHoldHint" style="position: absolute; bottom: 6px; font-size: 20px; color: rgba(255, 255, 255, 0.6); -unity-font-style: bold; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; height: 50px;"/>
+                </ui:VisualElement>
+                <ui:Button name="BtnCancelRite" text="CANCEL" class="modal-btn" style="width: 200px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="CloseHarmonyModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement class="modal-content">
+                <ui:Label name="LblConfirmClose" text="Dissolve this Harmony?" class="modal-header"/>
+                <ui:Label text="The connection will be lost, but honor remains." class="modal-text"/>
+                <ui:VisualElement style="flex-direction: row; margin-top: 40px;">
+                    <ui:Button name="BtnConfirmClose" text="DISSOLVE" class="modal-btn modal-btn--danger"/>
+                    <ui:Button name="BtnCancelClose" text="CANCEL" class="modal-btn"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="HorasScalesPanel" class="modal-overlay modal--hidden">
+            <ui:VisualElement class="scales-panel-content">
+                <ui:Label name="LblScalesTitle" text="ОРАКУЛ ЗВАЖУЄ..." class="scales-title" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 40px;"/>
+                <ui:Label name="LblScalesSubtitle" text="Визначаю важкість твого наміру" class="scales-subtitle" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 24px;"/>
+                <ui:VisualElement name="ScalesRoot" class="scales-root">
+                    <ui:VisualElement name="ScalesPivot" class="scales-pivot"/>
+                    <ui:VisualElement name="ScalesBeam" class="scales-beam">
+                        <ui:VisualElement class="scales-arm scales-arm--left">
+                            <ui:VisualElement name="ScalesChainLeft" class="scales-chain"/>
+                            <ui:VisualElement name="ScalesPanLeft" class="scales-pan">
+                                <ui:Label name="LblTaskScroll" text="✦" class="scales-scroll-icon" style="-unity-text-generator: advanced;"/>
+                                <ui:Label name="LblMasterSkills" text="Програмування" class="scales-task-label" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 8px 16px;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="scales-arm scales-arm--right">
+                            <ui:VisualElement name="ScalesChainRight" class="scales-chain"/>
+                            <ui:VisualElement name="ScalesPanRight" class="scales-pan">
+                                <ui:VisualElement name="HorasCoinsContainer" class="horas-coins-container"/>
+                                <ui:Label name="LblHorasCount" text="?" class="scales-horas-count" style="-unity-text-generator: advanced;"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ScalesPedestal" class="scales-pedestal"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="VerdictContainer" class="scales-verdict-container" style="opacity: 0;">
+                    <ui:Label name="LblVerdict" text="" multiline="true" class="scales-verdict-text" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 20px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="ScalesActions" class="scales-actions" style="opacity: 0;">
+                    <ui:Button name="BtnAcceptEvaluation" text="✦ ПРИЙНЯТИ ОЦІНКУ" class="modal-btn modal-btn--gold scales-btn-accept" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 22px;"/>
+                    <ui:Button name="BtnManualHoras" text="◈ ПРИЗНАЧИТИ ВРУЧНУ" class="modal-btn modal-btn--outline scales-btn-manual" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 18px;"/>
+                    <ui:Button name="BtnCancelScales" text="СКАСУВАТИ" class="modal-btn modal-btn--ghost" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 16px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="EscrowModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement class="modal-content">
+                <ui:Label text="РИТУАЛ ЕСКРОУ" class="modal-header"/>
+                <ui:Label text="Заморозьте час у ефірі для забезпечення вашої домовленості." class="modal-text"/>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%;">
+                    <ui:TextField name="InputEscrowHours" label="ХОРАСИ (ГОД)" class="modal-input" style="flex: 1; margin-right: 10px;"/>
+                    <ui:TextField name="InputEscrowMinutes" label="АТОМИ (ХВИЛ)" class="modal-input" style="flex: 1; margin-left: 10px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; margin-top: 40px;">
+                    <ui:Button name="BtnConfirmEscrow" text="ЗАПЕЧАТАТИ ЧАС" class="modal-btn modal-btn--gold"/>
+                    <ui:Button name="BtnCancelEscrow" text="СКАСУВАТИ" class="modal-btn"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="GratitudeModal" class="modal-overlay modal--hidden">
+            <ui:VisualElement class="modal-content">
+                <ui:Label text="WORD OF GRATITUDE" class="modal-header"/>
+                <ui:Label text="Leave a brief legacy for your partner (20 chars)." class="modal-text"/>
+                <ui:TextField name="InputGratitude" max-length="20" class="modal-input"/>
+                <ui:Button name="BtnSendGratitude" text="SEAL LEGACY" class="modal-btn modal-btn--gold"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="CreatePostModal" class="modal-overlay modal--hidden" style="display: none;">
+            <ui:VisualElement class="modal-content" style="width: 90%; max-width: 650px;">
+                <ui:Label text="НОВИЙ ЗАПИТ" class="modal-header" style="-unity-font-style: bold;"/>
+                <ui:Label text="Опишіть вашу потребу та виберіть сферу" class="modal-text"/>
+                <ui:TextField name="InputPostContent" label="ОПИС" multiline="true" class="modal-input" style="min-height: 120px; margin-bottom: 15px;"/>
+                <ui:Label text="СФЕРА ОБМІНУ" class="stat-label" style="align-self: flex-start; margin-top: 5px; color: rgb(212, 175, 55);"/>
+                <ui:VisualElement name="ModalRealmSelector" style="flex-direction: row; width: 100%; margin-bottom: 15px;">
+                    <ui:Button name="BtnModalEther" text="🌌 БАРТЕР (ХОРИ)" class="modal-btn modal-btn--gold" style="flex: 1; margin-right: 5px;"/>
+                    <ui:Button name="BtnModalMatter" text="💵 ФІАТ (USD)" class="modal-btn" style="flex: 1; margin-left: 5px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%; margin-bottom: 15px;">
+                    <ui:TextField name="InputPostPrice" label="ЦІНА" class="modal-input" style="flex: 1; margin-right: 5px;"/>
+                    <ui:DropdownField name="DropdownPostCategory" label="КАТЕГОРІЯ" class="modal-input" style="flex: 1; margin-left: 5px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="LocationSearchContainer" style="width: 100%; margin-bottom: 25px;">
+                    <ui:Label text="ЛОКАЦІЯ / МІСТО" class="modal-input" style="color: rgb(212, 175, 55); font-size: 13px; -unity-font-style: bold; margin-bottom: 6px; align-self: flex-start;"/>
+                    <ui:VisualElement style="flex-direction: row; width: 100%; margin-bottom: 6px;">
+                        <ui:TextField name="InputLocationSearch" placeholder-text="Пошук міста або Online..." class="modal-input" style="flex: 1; margin-right: 8px; margin-bottom: 0;"/>
+                        <ui:Button name="BtnLocationOnline" text="🌐 Online" class="modal-btn" style="width: 90px; flex-shrink: 0; font-size: 12px; height: 48px; padding: 0 8px;"/>
+                    </ui:VisualElement>
+                    <ui:Label name="LblSelectedLocation" text="" style="color: rgb(150, 220, 150); font-size: 12px; margin-bottom: 4px; display: none;"/>
+                    <ui:ScrollView name="LocationResultsList" style="max-height: 150px; background-color: rgba(10, 10, 20, 0.95); border-width: 1px; border-color: rgba(212, 175, 55, 0.4); border-radius: 8px; display: none;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%;">
+                    <ui:Button name="BtnConfirmPost" text="ОПУБЛІКУВАТИ" class="modal-btn modal-btn--gold" style="flex: 1; margin-right: 10px;"/>
+                    <ui:Button name="BtnCancelPost" text="СКАСУВАТИ" class="modal-btn" style="flex: 1; margin-left: 10px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="OracleIntentModal" class="modal-overlay modal--hidden" style="display: none;">
+            <ui:VisualElement class="modal-content" style="width: 90%; max-width: 650px;">
+                <ui:Label text="ОРАКУЛ БАЖАНЬ" class="modal-header" style="-unity-font-style: bold;"/>
+                <ui:Label text="Промовте або введіть бажання для створення запиту" class="modal-text"/>
+                <ui:VisualElement style="flex-direction: row; align-items: center; width: 100%; margin-bottom: 20px;">
+                    <ui:TextField name="InputIntentText" placeholder-text="Я хочу навчитись грі на гітарі за 2 хори..." multiline="true" class="modal-input" style="flex: 1; margin-right: 10px; height: 60px;"/>
+                    <ui:Button name="BtnRecordVoice" text="🎙️" class="modal-btn" style="width: 50px; height: 50px; border-radius: 25px; font-size: 20px; align-self: center; justify-content: center; padding: 0; margin: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%;">
+                    <ui:Button name="BtnSubmitIntent" text="🔮 ЗАПРОСИТИ ШІ" class="modal-btn modal-btn--gold" style="flex: 1.5; margin-right: 5px;"/>
+                    <ui:Button name="BtnSwitchToManual" text="✍️ ВРУЧНУ" class="modal-btn" style="flex: 1; margin-left: 5px; margin-right: 5px;"/>
+                    <ui:Button name="BtnCloseIntent" text="СКАСУВАТИ" class="modal-btn" style="flex: 1; margin-left: 5px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="OracleEyeRoot" picking-mode="Position" class="oracle-eye-root oracle-eye--closed">
+            <ui:VisualElement name="EyeContainer" picking-mode="Ignore" class="oracle-eye-container">
+                <ui:VisualElement name="Pupil" class="oracle-eye-pupil"/>
+                <ui:VisualElement name="LidTop" class="oracle-eye-lid oracle-eye-lid--top"/>
+                <ui:VisualElement name="LidBottom" class="oracle-eye-lid oracle-eye-lid--bottom"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="HintBubble" class="hint-bubble">
+                <ui:Label name="HintLabel" text="The threads of time are weaving..." class="hint-text"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="GeminiChatOverlay" picking-mode="Position" class="chat-overlay chat-overlay--hidden">
+                <ui:VisualElement class="chat-header">
+                    <ui:Label text="ORACLE WISDOM" class="chat-title"/>
+                    <ui:Button name="BtnCloseChat" text="×" class="chat-close-btn"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="ChatScrollView" class="chat-messages">
+                    <ui:Label text="I am listening to the whispers of the Nexus..." class="chat-message chat-message--oracle"/>
+                </ui:ScrollView>
+                <ui:VisualElement class="chat-input-area" style="align-items: auto; justify-content: space-between;">
+                    <ui:TextField name="InputChat" placeholder-text="Ask the Oracle..." class="chat-input"/>
+                    <ui:Button name="BtnSendChat" text="➤" class="chat-send-btn"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label name="PanelTitleToast" text="SANCTUARY" picking-mode="Ignore" class="panel-toast" style="height: 5%; width: 100%; padding-top: 5px; padding-bottom: 5px; align-self: stretch; justify-content: center; right: auto; left: auto;"/>
+        <ui:VisualElement name="DeveloperAdminPanel" class="modal-overlay modal--hidden" style="display: none; background-color: rgba(5, 5, 12, 0.98); align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+            <ui:VisualElement class="modal-content" style="width: 90%; max-width: 600px; height: 80%; background-color: rgba(10, 10, 20, 0.98); border-color: rgb(212, 175, 55); border-width: 1px; border-radius: 12px; padding: 25px;">
+                <ui:Label text="NEXUS CORE: REMOTE ARCHIVE (ADMIN)" style="font-size: 20px; color: rgb(212, 175, 55); -unity-font-style: bold; margin-bottom: 15px; -unity-text-align: middle-center;"/>
+                <ui:ScrollView name="AdminConfigList" style="flex-grow: 1; margin-bottom: 15px; background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 8px;"/>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; flex-shrink: 0;">
+                    <ui:Button name="BtnAdminReload" text="RELOAD FROM SHEETS" class="modal-btn modal-btn--gold" style="width: 48%; margin: 0;"/>
+                    <ui:Button name="BtnAdminClose" text="CLOSE CORE" class="modal-btn" style="width: 48%; background-color: rgba(255, 255, 255, 0.05); margin: 0;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
