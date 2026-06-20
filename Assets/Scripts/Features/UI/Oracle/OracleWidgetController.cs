@@ -569,7 +569,10 @@ namespace TimeAura.Features.UI.Oracle
             collapsedBtn.RemoveFromClassList("aura-glow--sapphire");
             collapsedBtn.RemoveFromClassList("aura-glow--pulse");
 
-            if (lblNavOracle != null) lblNavOracle.text = "👁️ ОРАКУЛ";
+            if (lblNavOracle != null)
+            {
+                lblNavOracle.text = (_localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian) ? "👁️ ОРАКУЛ" : "👁️ ORACLE";
+            }
 
             if (_widgetState == OracleWidgetState.Closed)
             {

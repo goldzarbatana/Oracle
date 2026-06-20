@@ -65,7 +65,7 @@ namespace TimeAura.Core.Services
             if (_config.SimulateOracle)
             {
                 await UniTask.Delay(1000);
-                return "[Request: (Тестовий голосовий запит)]\n[Simulation] Оракул почув твій голос через Золотий Мікрофон! Для реального розпізнавання вимкни 'Simulate Oracle' та вкажи Cloud Function URL.\n[Search: Seek=Lawn]";
+                return "[Request: (Test voice request)]\n[Simulation] The Oracle has heard your voice through the Golden Microphone! For actual recognition, disable 'Simulate Oracle' and provide the Cloud Function URL.\n[Search: Seek=Lawn]";
             }
 
             if (string.IsNullOrEmpty(_config.OracleCloudFunctionUrl))

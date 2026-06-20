@@ -50,7 +50,7 @@ namespace TimeAura.Core.Services
             if (_config.SimulateOracle)
             {
                 await UniTask.Delay(500);
-                return $"[Qwen Simulation] Оракул проаналізував: {userPrompt.Substring(0, Mathf.Min(20, userPrompt.Length))}...";
+                return $"[Qwen Simulation] Oracle analyzed: {userPrompt.Substring(0, Mathf.Min(20, userPrompt.Length))}...";
             }
 
             if (string.IsNullOrEmpty(_config.QwenApiKey))

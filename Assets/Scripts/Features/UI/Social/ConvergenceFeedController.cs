@@ -20,6 +20,9 @@ namespace TimeAura.Features.UI.Social
     public class ConvergenceFeedController : MonoBehaviour
     {
         private VisualTreeAsset _fateCardTemplate;
+        private VisualElement _root;
+        private Label _prophecyTitle;
+        private Core.GlobalProphecyEvent? _lastProphecyEvent;
 
         [Inject] private SocialManager _socialManager;
         [Inject] private AddressableAssetService _assetService;
@@ -82,6 +85,7 @@ namespace TimeAura.Features.UI.Social
 
         public void Initialize(VisualElement root, VisualTreeAsset template)
         {
+            _root = root;
             _fateCardTemplate = template;
             _feedList = root.Q<ScrollView>("FeedList");
             if (_feedList == null)
@@ -105,12 +109,12 @@ namespace TimeAura.Features.UI.Social
             _prophecyContainer.style.paddingRight = 20;
             _prophecyContainer.style.marginBottom = 10;
 
-            var prophecyTitle = new Label("\ud83d\udd2e \u0413\u041b\u041e\u0411\u0410\u041b\u042c\u041d\u0415 \u041f\u0420\u041e\u0420\u041e\u0426\u0422\u0412\u041e");
-            prophecyTitle.style.color = new StyleColor(new Color(0.83f, 0.69f, 0.22f));
-            prophecyTitle.style.unityFontStyleAndWeight = FontStyle.Bold;
-            prophecyTitle.style.fontSize = 18;
-            prophecyTitle.style.unityTextAlign = TextAnchor.MiddleCenter;
-            _prophecyContainer.Add(prophecyTitle);
+            _prophecyTitle = new Label("\ud83d\udd2e \u0413\u041b\u041e\u0411\u0410\u041b\u042c\u041d\u0415 \u041f\u0420\u041e\u0420\u041e\u0426\u0422\u0412\u041e");
+            _prophecyTitle.style.color = new StyleColor(new Color(0.83f, 0.69f, 0.22f));
+            _prophecyTitle.style.unityFontStyleAndWeight = FontStyle.Bold;
+            _prophecyTitle.style.fontSize = 18;
+            _prophecyTitle.style.unityTextAlign = TextAnchor.MiddleCenter;
+            _prophecyContainer.Add(_prophecyTitle);
 
             _lblProphecyDesc = new Label(" ");
             _lblProphecyDesc.style.color = Color.white;
@@ -146,6 +150,8 @@ namespace TimeAura.Features.UI.Social
 
             SetupCreatePostModal(root);
 
+            UpdateLocalization();
+
             RefreshAsync().Forget();
         }
 
@@ -156,9 +162,14 @@ namespace TimeAura.Features.UI.Social
 
         private void OnGlobalProphecyReceived(Core.GlobalProphecyEvent evt)
         {
+            _lastProphecyEvent = evt;
             _prophecyContainer.style.display = DisplayStyle.Flex;
             _lblProphecyDesc.text = evt.Description;
-            _lblProphecyBonus.text = $"\u0420\u0435\u043a. \u0434\u0456\u044f: {evt.RecommendedAction} (\u041c\u043d\u043e\u0436\u043d\u0438\u043a: x{evt.BonusMultiplier})";
+            
+            bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+            _lblProphecyBonus.text = isUk 
+                ? $"Рек. дія: {evt.RecommendedAction} (Множник: x{evt.BonusMultiplier})" 
+                : $"Rec. action: {evt.RecommendedAction} (Multiplier: x{evt.BonusMultiplier})";
         }
 
         private void OnScrollValueChanged(float value)
@@ -268,6 +279,7 @@ namespace TimeAura.Features.UI.Social
             var post   = _posts[index];
             var cardRoot = element.Q<VisualElement>("FateCardRoot");
             var tone   = _localization != null ? _localization.CurrentTone : OracleTone.Business;
+            bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
 
             // ── Part 1: Entry animation ────────────────────────────────────────
             // Reset to invisible/translated so transition plays on every bind
@@ -335,7 +347,7 @@ namespace TimeAura.Features.UI.Social
             {
                 if (post.postType == PostType.ServiceRequest)
                 {
-                    btnConnect.text = "ДОСЬЄ";
+                    btnConnect.text = isUk ? "ДОСЬЄ" : "DOSSIER";
                     btnConnect.RemoveFromClassList("fate-card__btn--write");
                     btnConnect.clickable = null;
                     btnConnect.RegisterCallback<ClickEvent>(e => {
@@ -346,7 +358,7 @@ namespace TimeAura.Features.UI.Social
                 }
                 else
                 {
-                    btnConnect.text = "CONNECT";
+                    btnConnect.text = isUk ? "З'ЄДНАТИСЬ" : "CONNECT";
                     btnConnect.RemoveFromClassList("fate-card__btn--write");
                     btnConnect.clickable = null;
                     btnConnect.RegisterCallback<ClickEvent>(e => {
@@ -435,7 +447,8 @@ namespace TimeAura.Features.UI.Social
 
             if (post.isUrgent)
             {
-                var urgentLbl = new Label(" \ud83d\udd25 \u0422\u0415\u0420\u041c\u0406\u041d");
+                bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+                var urgentLbl = new Label(isUk ? " 🔥 ТЕРМІНОВО" : " 🔥 URGENT");
                 urgentLbl.style.color = new StyleColor(new Color(1f, 0.42f, 0.1f));
                 urgentLbl.style.fontSize = 10;
                 urgentLbl.style.marginLeft = 8;
@@ -586,8 +599,8 @@ namespace TimeAura.Features.UI.Social
             if (post.userId == "ai_qwen_translator") return "20 H / $5";
             if (post.userId == "ai_qwen_lawyer") return "100 H / $50";
 
-            if (post.priceType == PriceType.Free)      return "🎁 ДАР";
-            if (post.priceType == PriceType.Negotiate) return "🤝 Домовитись";
+            if (post.priceType == PriceType.Free)      return "🎁 FREE";
+            if (post.priceType == PriceType.Negotiate) return "🤝 Negotiate";
             if (post.realm == ExchangeRealm.Matter)
             {
                 return EconomyFormatter.FormatFiat(post.priceWaves);
@@ -866,7 +879,7 @@ namespace TimeAura.Features.UI.Social
             {
                 if (_uiManager != null)
                 {
-                    _uiManager.ShowToast("🔮 Ліміт ШІ-запитів вичерпано! Потрібна підписка Enlightened.", "error");
+                    _uiManager.ShowToast("🔮 AI request limit reached! Enlightened subscription required.", "error");
                 }
                 return;
             }
@@ -899,7 +912,7 @@ namespace TimeAura.Features.UI.Social
             {
                 if (_uiManager != null)
                 {
-                    _uiManager.ShowToast("⚠️ Впевненість ШІ низька (< 70%). Перевірте дані вручну.", "error");
+                    _uiManager.ShowToast("⚠️ AI confidence low (< 70%). Verify data manually.", "error");
                 }
 
                 OpenCreatePostModal();
@@ -1106,6 +1119,49 @@ namespace TimeAura.Features.UI.Social
             ApplyFiltersAndRefreshList();
             CloseCreatePostModal();
             Debug.Log($"[ConvergenceFeed] New service request published: ID={newPost.postId}, realm={newPost.realm}");
+        }
+
+        public void UpdateLocalization()
+        {
+            if (_root == null || _localization == null) return;
+
+            bool isUk = _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+
+            var feedHeader = _root.Q<Label>("FeedHeader");
+            if (feedHeader != null)
+            {
+                feedHeader.text = isUk ? "СТРІЧКА" : "FEED";
+            }
+
+            var feedSubtitle = _root.Q<Label>("FeedSubtitle");
+            if (feedSubtitle != null)
+            {
+                feedSubtitle.text = isUk ? "ХРОНІКИ ЦАРСТВА" : "CHRONICLES OF THE REALM";
+            }
+
+            if (_prophecyTitle != null)
+            {
+                _prophecyTitle.text = isUk ? "🔮 ГЛОБАЛЬНЕ ПРОРОЦТВО" : "🔮 GLOBAL PROPHECY";
+            }
+
+            if (_lastProphecyEvent != null)
+            {
+                var evt = _lastProphecyEvent.Value;
+                _lblProphecyBonus.text = isUk 
+                    ? $"Рек. дія: {evt.RecommendedAction} (Множник: x{evt.BonusMultiplier})" 
+                    : $"Rec. action: {evt.RecommendedAction} (Multiplier: x{evt.BonusMultiplier})";
+            }
+
+            var btnAll = _root.Q<Button>("BtnRealmAll");
+            var btnEther = _root.Q<Button>("BtnRealmEther");
+            var btnMatter = _root.Q<Button>("BtnRealmMatter");
+
+            if (btnAll != null) btnAll.text = isUk ? "ВСІ" : "ALL";
+            if (btnEther != null) btnEther.text = isUk ? "🌌 ЕФІР" : "🌌 ETHER";
+            if (btnMatter != null) btnMatter.text = isUk ? "💵 МАТЕРІЯ" : "💵 MATTER";
+
+            _filter?.UpdateLocalization();
+            ApplyFiltersAndRefreshList();
         }
     }
 }

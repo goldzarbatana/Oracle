@@ -243,8 +243,8 @@ namespace TimeAura.Features.UI.Nexus
         public void UpdateLocalization()
         {
             if (_localization == null) return;
-            if (_lblNavFeed != null) _lblNavFeed.text = _localization.Get(AuraTerms.NAV_FEED, "СТРІЧКА").ToUpper();
-            if (_lblNavOracle != null) _lblNavOracle.text = _localization.Get("nav_oracle", "👁️ ОРАКУЛ").ToUpper();
+            if (_lblNavFeed != null) _lblNavFeed.text = _localization.Get(AuraTerms.NAV_FEED, "FEED").ToUpper();
+            if (_lblNavOracle != null) _lblNavOracle.text = _localization.Get("nav_oracle", "👁️ ORACLE").ToUpper();
         }
 
         public void SetTabResonance(string tabId, bool isActive, string glowClass = "aura-glow--cyan")

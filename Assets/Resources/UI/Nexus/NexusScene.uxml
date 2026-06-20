@@ -325,7 +325,7 @@
                 <ui:Label text="CHAMBER" class="nav-label"/>
             </ui:VisualElement>
             <ui:VisualElement name="BtnOracleEyeCollapsed" class="nav-item" style="width: 5%;">
-                <ui:Label name="LblNavOracle" text="👁️ ОРАКУЛ" class="nav-label"/>
+                <ui:Label name="LblNavOracle" text="👁️ ORACLE" class="nav-label"/>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="LogoMini" picking-mode="Ignore" class="logo-mini" style="height: 48px; width: 61px;">
@@ -337,7 +337,7 @@
                 <ui:VisualElement class="menu-bar"/>
                 <ui:VisualElement class="menu-bar"/>
             </ui:Button>
-            <ui:Button name="BtnOpenProfile" text="Я" class="profile-btn-top"/>
+            <ui:Button name="BtnOpenProfile" text="ME" class="profile-btn-top"/>
             <ui:Button name="BtnOpenSanctuary" text="📜" class="profile-btn-top" style="margin-right: 15px; font-size: 28px;"/>
         </ui:VisualElement>
         <ui:VisualElement name="SideMenu" focusable="false" class="side-menu-overlay side-menu--hidden" style="display: none;">
@@ -382,18 +382,18 @@
                         <ui:VisualElement name="CardTags" class="dossier-pillars-container" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;"/>
                     </ui:VisualElement>
                     <ui:VisualElement name="BioContainer" class="dossier-section" style="margin-top: 20px;">
-                        <ui:Label text="ВІДОМОСТІ АКАШІ" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 41px; -unity-text-generator: advanced;"/>
+                        <ui:Label name="LblDossierSectionTitle" text="AKASHIC RECORDS" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 41px; -unity-text-generator: advanced;"/>
                         <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.03); border-radius: 15px; padding: 20px; margin-top: 10px;">
                             <ui:Label name="LblCardBio" text="Розгорнута біографія майстра..." multiline="true" class="dossier-bio-text" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 38px;"/>
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="DossierStats" class="dossier-section" style="margin-top: 20px; flex-direction: row; justify-content: space-around;">
                         <ui:VisualElement class="dossier-stat-box">
-                            <ui:Label text="РЕЗОНАНС" class="stat-label" style="color: rgb(212, 175, 55);"/>
+                            <ui:Label name="LblResonanceTitle" text="РЕЗОНАНС" class="stat-label" style="color: rgb(212, 175, 55);"/>
                             <ui:Label name="LblResonance" text="98%" class="stat-value" style="color: rgb(212, 175, 55);"/>
                         </ui:VisualElement>
                         <ui:VisualElement class="dossier-stat-box">
-                            <ui:Label text="ЧАСТОТА" class="stat-label" style="color: rgb(212, 175, 55);"/>
+                            <ui:Label name="LblFrequencyTitle" text="ЧАСТОТА" class="stat-label" style="color: rgb(212, 175, 55);"/>
                             <ui:Label name="LblFrequency" text="432 Hz" class="stat-value" style="color: rgb(0, 255, 255);"/>
                         </ui:VisualElement>
                     </ui:VisualElement>
@@ -485,7 +485,7 @@
         <ui:VisualElement name="CreatePostModal" class="modal-overlay modal--hidden" style="display: none;">
             <ui:VisualElement class="modal-content" style="width: 90%; max-width: 650px;">
                 <ui:Label text="НОВИЙ ЗАПИТ" class="modal-header" style="-unity-font-style: bold;"/>
-                <ui:Label text="Опишіть вашу потребу та виберіть сферу" class="modal-text"/>
+                <ui:Label text="Describe your need and select a domain" class="modal-text"/>
                 <ui:TextField name="InputPostContent" label="ОПИС" multiline="true" class="modal-input" style="min-height: 120px; margin-bottom: 15px;"/>
                 <ui:Label text="СФЕРА ОБМІНУ" class="stat-label" style="align-self: flex-start; margin-top: 5px; color: rgb(212, 175, 55);"/>
                 <ui:VisualElement name="ModalRealmSelector" style="flex-direction: row; width: 100%; margin-bottom: 15px;">
@@ -520,7 +520,7 @@
                     <ui:Button name="BtnRecordVoice" text="🎙️" class="modal-btn" style="width: 50px; height: 50px; border-radius: 25px; font-size: 20px; align-self: center; justify-content: center; padding: 0; margin: 0;"/>
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%;">
-                    <ui:Button name="BtnSubmitIntent" text="🔮 ЗАПРОСИТИ ШІ" class="modal-btn modal-btn--gold" style="flex: 1.5; margin-right: 5px;"/>
+                    <ui:Button name="BtnSubmitIntent" text="🔮 INVOKE AI" class="modal-btn modal-btn--gold" style="flex: 1.5; margin-right: 5px;"/>
                     <ui:Button name="BtnSwitchToManual" text="✍️ ВРУЧНУ" class="modal-btn" style="flex: 1; margin-left: 5px; margin-right: 5px;"/>
                     <ui:Button name="BtnCloseIntent" text="СКАСУВАТИ" class="modal-btn" style="flex: 1; margin-left: 5px;"/>
                 </ui:VisualElement>

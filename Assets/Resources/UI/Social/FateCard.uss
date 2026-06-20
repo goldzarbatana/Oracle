@@ -89,17 +89,20 @@
 
 .fate-card__avatar-aura {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
-    border-width: 1px;
+    left: -2px;
+    top: -2px;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    border-width: 1.5px;
     border-color: var(--gold-glow);
     opacity: 0.5;
 }
 
-/* Avatar initials fallback */
 .fate-card__avatar-initials {
     position: absolute;
+    top: 2px;
+    left: 2px;
     color: var(--gold);
     font-size: 16px;
     -unity-font-style: bold;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using TimeAura.Features.Social;
+using TimeAura.Features.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -25,48 +26,76 @@ namespace TimeAura.Features.UI.Social
         private VisualElement _filterBar;       // horizontal chip bar
         private VisualElement _filterModal;     // full-screen modal overlay
         private Label _lblActiveCount;
+        private LocalizationManager _localization;
 
-        // ── Chip data ────────────────────────────────────────────────────────────
-        private static readonly (string label, FeedContentFilter val)[] ContentChips =
-        {
-            ("\ud83c\udf0c \u0412\u0441\u0435",   FeedContentFilter.All),
-            ("\ud83d\udcdc \u0425\u0440\u043e\u043d\u0456\u043a\u0438", FeedContentFilter.ChronicleOnly),
-            ("\u26a1 \u0417\u0430\u043f\u0438\u0442\u0438",  FeedContentFilter.RequestsOnly),
-        };
+        // ── Chip arrays for iteration ───────────────────────────────────────────
+        private static readonly FeedContentFilter[] ContentFilters = { FeedContentFilter.All, FeedContentFilter.ChronicleOnly, FeedContentFilter.RequestsOnly };
+        private static readonly FeedLocationFilter[] LocationFilters = { FeedLocationFilter.Near5km, FeedLocationFilter.City20km, FeedLocationFilter.All };
+        private static readonly ServiceCategory[] PillarFilters = { ServiceCategory.All, ServiceCategory.Teaching, ServiceCategory.Craft, ServiceCategory.Code, ServiceCategory.Art, ServiceCategory.Nature };
+        private static readonly FeedTimeFilter[] TimeFilters = { FeedTimeFilter.Urgent24h, FeedTimeFilter.Recent3d, FeedTimeFilter.All };
+        private static readonly FeedPriceFilter[] PriceFilters = { FeedPriceFilter.Free, FeedPriceFilter.Low_1_3, FeedPriceFilter.Mid_3_10, FeedPriceFilter.High_10plus, FeedPriceFilter.Negotiate, FeedPriceFilter.All };
 
-        private static readonly (string label, FeedLocationFilter val)[] LocationChips =
+        // ── Chip Labels (Localized on-the-fly) ───────────────────────────────────
+        private string GetContentChipLabel(FeedContentFilter val, bool isUk)
         {
-            ("\ud83c\udfe0 \u041f\u043e\u0440\u0443\u0447",  FeedLocationFilter.Near5km),
-            ("\ud83c\udfd9\ufe0f \u0426\u0430\u0440\u0441\u0442\u0432\u043e", FeedLocationFilter.City20km),
-            ("\ud83c\udf0d \u0412\u0441\u0456 \u0415\u0444\u0456\u0440\u0438", FeedLocationFilter.All),
-        };
+            return val switch
+            {
+                FeedContentFilter.All => isUk ? "🌌 Все" : "🌌 All",
+                FeedContentFilter.ChronicleOnly => isUk ? "📜 Хроніки" : "📜 Chronicles",
+                FeedContentFilter.RequestsOnly => isUk ? "⚡ Запити" : "⚡ Requests",
+                _ => ""
+            };
+        }
 
-        private static readonly (string label, ServiceCategory val)[] PillarChips =
+        private string GetLocationChipLabel(FeedLocationFilter val, bool isUk)
         {
-            ("\u2694\ufe0f \u0412\u0441\u0456",      ServiceCategory.All),
-            ("\ud83d\udc69 \u041d\u0430\u0432\u0447\u0430\u043d\u043d\u044f", ServiceCategory.Teaching),
-            ("\ud83d\udd27 \u0420\u0435\u043c\u0435\u0441\u043b\u043e",  ServiceCategory.Craft),
-            ("\ud83d\udcbb \u0415\u0444\u0456\u0440\u043d\u0438\u0439 \u041a\u043e\u0434", ServiceCategory.Code),
-            ("\ud83c\udfa8 \u041c\u0438\u0441\u0442\u0435\u0446\u0442\u0432\u043e", ServiceCategory.Art),
-            ("\ud83c\udf3f \u041f\u0440\u0438\u0440\u043e\u0434\u0430",  ServiceCategory.Nature),
-        };
+            return val switch
+            {
+                FeedLocationFilter.Near5km => isUk ? "🏠 Поруч" : "🏠 Nearby",
+                FeedLocationFilter.City20km => isUk ? "🏙️ Царство" : "🏙️ Realm",
+                FeedLocationFilter.All => isUk ? "🌍 Всі Ефіри" : "🌍 All Realms",
+                _ => ""
+            };
+        }
 
-        private static readonly (string label, FeedTimeFilter val)[] TimeChips =
+        private string GetPillarChipLabel(ServiceCategory val, bool isUk)
         {
-            ("\ud83d\udd25 \u0422\u0435\u0440\u043c\u0456\u043d\u043e\u0432\u0456",  FeedTimeFilter.Urgent24h),
-            ("\ud83c\udf1f \u0421\u0432\u0456\u0436\u0456",  FeedTimeFilter.Recent3d),
-            ("\ud83c\udf19 \u0412\u0441\u0456 \u0426\u0438\u043a\u043b\u0438",  FeedTimeFilter.All),
-        };
+            return val switch
+            {
+                ServiceCategory.All => isUk ? "⚔️ Всі" : "⚔️ All",
+                ServiceCategory.Teaching => isUk ? "👩 Навчання" : "👩 Teaching",
+                ServiceCategory.Craft => isUk ? "🔧 Ремесло" : "🔧 Craft",
+                ServiceCategory.Code => isUk ? "💻 Ефірний Код" : "💻 Ether Code",
+                ServiceCategory.Art => isUk ? "🎨 Мистецтво" : "🎨 Art",
+                ServiceCategory.Nature => isUk ? "🌿 Природа" : "🌿 Nature",
+                _ => ""
+            };
+        }
 
-        private static readonly (string label, FeedPriceFilter val)[] PriceChips =
+        private string GetTimeChipLabel(FeedTimeFilter val, bool isUk)
         {
-            ("\ud83c\udf81 \u0414\u0430\u0440",    FeedPriceFilter.Free),
-            ("\ud83d\udc7b 1-3 \u0425",  FeedPriceFilter.Low_1_3),
-            ("\ud83d\udcab 3-10 \u0425", FeedPriceFilter.Mid_3_10),
-            ("\ud83c\udf1f 10+ \u0425",  FeedPriceFilter.High_10plus),
-            ("\ud83e\udd1d \u0414\u043e\u043c\u043e\u0432\u0438\u0442\u0438\u0441\u044c", FeedPriceFilter.Negotiate),
-            ("\u26a1 \u0411\u0443\u0434\u044c-\u044f\u043a\u0430",  FeedPriceFilter.All),
-        };
+            return val switch
+            {
+                FeedTimeFilter.Urgent24h => isUk ? "🔥 Термінові" : "🔥 Urgent",
+                FeedTimeFilter.Recent3d => isUk ? "🌟 Свіжі" : "🌟 Recent",
+                FeedTimeFilter.All => isUk ? "🌙 Всі Цикли" : "🌙 All Cycles",
+                _ => ""
+            };
+        }
+
+        private string GetPriceChipLabel(FeedPriceFilter val, bool isUk)
+        {
+            return val switch
+            {
+                FeedPriceFilter.Free => isUk ? "🎁 Дар" : "🎁 Gift",
+                FeedPriceFilter.Low_1_3 => isUk ? "👻 1-3 Х" : "👻 1-3 H",
+                FeedPriceFilter.Mid_3_10 => isUk ? "💫 3-10 Х" : "💫 3-10 H",
+                FeedPriceFilter.High_10plus => isUk ? "🌟 10+ Х" : "🌟 10+ H",
+                FeedPriceFilter.Negotiate => isUk ? "🤝 Домовитись" : "🤝 Negotiate",
+                FeedPriceFilter.All => isUk ? "⚡ Будь-яка" : "⚡ Any",
+                _ => ""
+            };
+        }
 
         // ── Colours ─────────────────────────────────────────────────────────────
         private static readonly Color GOLD       = new Color(0.83f, 0.68f, 0.21f, 1f);
@@ -80,6 +109,7 @@ namespace TimeAura.Features.UI.Social
         public void Initialize(VisualElement nexusRoot)
         {
             _root = nexusRoot;
+            _localization = UnityEngine.Object.FindAnyObjectByType<LocalizationManager>(FindObjectsInactive.Include);
             BuildFilterBar();
         }
 
@@ -162,10 +192,12 @@ namespace TimeAura.Features.UI.Social
             chipRow.style.alignItems = Align.Center;
             chipRow.style.paddingRight = 8;
 
+            bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+
             // Content quick chips
-            foreach (var (label, val) in ContentChips)
+            foreach (var val in ContentFilters)
             {
-                var chip = MakeChip(label, val == State.Content);
+                var chip = MakeChip(GetContentChipLabel(val, isUk), val == State.Content);
                 var captured = val;
                 chip.clicked += () =>
                 {
@@ -180,9 +212,9 @@ namespace TimeAura.Features.UI.Social
             chipRow.Add(MakeSeparator());
 
             // Pillar quick chips
-            foreach (var (label, val) in PillarChips)
+            foreach (var val in PillarFilters)
             {
-                var chip = MakeChip(label, val == State.Pillar);
+                var chip = MakeChip(GetPillarChipLabel(val, isUk), val == State.Pillar);
                 var captured = val;
                 chip.clicked += () =>
                 {
@@ -239,7 +271,7 @@ namespace TimeAura.Features.UI.Social
             var feedPanel = _root.Q("FeedPanel");
             if (feedPanel != null)
             {
-                var feedList = feedPanel.Q<ListView>("FeedList");
+                var feedList = feedPanel.Q("FeedList");
                 if (feedList != null && feedList.parent != null)
                 {
                     feedList.parent.Insert(feedList.parent.IndexOf(feedList), _filterBar);
@@ -260,17 +292,19 @@ namespace TimeAura.Features.UI.Social
 
             chipRow.Clear();
 
-            foreach (var (label, val) in ContentChips)
+            bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+
+            foreach (var val in ContentFilters)
             {
-                var chip = MakeChip(label, val == State.Content);
+                var chip = MakeChip(GetContentChipLabel(val, isUk), val == State.Content);
                 var captured = val;
                 chip.clicked += () => { State.Content = captured; RebuildBar(); OnFiltersChanged?.Invoke(); };
                 chipRow.Add(chip);
             }
             chipRow.Add(MakeSeparator());
-            foreach (var (label, val) in PillarChips)
+            foreach (var val in PillarFilters)
             {
-                var chip = MakeChip(label, val == State.Pillar);
+                var chip = MakeChip(GetPillarChipLabel(val, isUk), val == State.Pillar);
                 var captured = val;
                 chip.clicked += () =>
                 {
@@ -327,8 +361,10 @@ namespace TimeAura.Features.UI.Social
             handle.style.marginBottom = 16;
             sheet.Add(handle);
 
+            bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+
             // Header
-            var header = new Label("\ud83d\udd2e \u041e\u0420\u0410\u041a\u0423\u041b \u0424\u0406\u041b\u042c\u0422\u0420\u0406\u0412");
+            var header = new Label(isUk ? "🔮 ОРАКУЛ ФІЛЬТРІВ" : "🔮 ORACLE FILTERS");
             header.style.fontSize = 22;
             header.style.color = new StyleColor(GOLD);
             header.style.unityFontStyleAndWeight = FontStyle.Bold;
@@ -342,20 +378,30 @@ namespace TimeAura.Features.UI.Social
             scroll.style.paddingRight = 20;
 
             // Sections
-            scroll.Add(BuildModalSection("\ud83d\udd2e \u0421\u0424\u0415\u0420\u0418 \u0420\u0415\u0417\u041e\u041d\u0410\u041d\u0421\u0423", ContentChips.Select(c => (c.label, c.val == State.Content)).ToArray(),
-                i => { State.Content = ContentChips[i].val; RefreshModal(); }));
+            scroll.Add(BuildModalSection(
+                isUk ? "🔮 СФЕРИ РЕЗОНАНСУ" : "🔮 RESONANCE SPHERES", 
+                ContentFilters.Select(val => (GetContentChipLabel(val, isUk), val == State.Content)).ToArray(),
+                i => { State.Content = ContentFilters[i]; RefreshModal(); }));
 
-            scroll.Add(BuildModalSection("\ud83c\udfd9\ufe0f \u041a\u041e\u041b\u041e \u0415\u041d\u0415\u0420\u0413\u0406\u0407", LocationChips.Select(c => (c.label, c.val == State.Location)).ToArray(),
-                i => { State.Location = LocationChips[i].val; RefreshModal(); }));
+            scroll.Add(BuildModalSection(
+                isUk ? "🏙️ КОЛО ЕНЕРГІЇ" : "🏙️ ENERGY CIRCLE", 
+                LocationFilters.Select(val => (GetLocationChipLabel(val, isUk), val == State.Location)).ToArray(),
+                i => { State.Location = LocationFilters[i]; RefreshModal(); }));
 
-            scroll.Add(BuildModalSection("\ud83c\udfdb\ufe0f \u041f\u0406\u041b\u041b\u0410\u0420\u0418", PillarChips.Select(c => (c.label, c.val == State.Pillar)).ToArray(),
-                i => { State.Pillar = PillarChips[i].val; RefreshModal(); }));
+            scroll.Add(BuildModalSection(
+                isUk ? "🏛️ ПІЛЛАРИ" : "🏛️ PILLARS", 
+                PillarFilters.Select(val => (GetPillarChipLabel(val, isUk), val == State.Pillar)).ToArray(),
+                i => { State.Pillar = PillarFilters[i]; RefreshModal(); }));
 
-            scroll.Add(BuildModalSection("\u23f1\ufe0f \u041f\u041b\u0418\u041d \u0427\u0410\u0421\u0423", TimeChips.Select(c => (c.label, c.val == State.Time)).ToArray(),
-                i => { State.Time = TimeChips[i].val; RefreshModal(); }));
+            scroll.Add(BuildModalSection(
+                isUk ? "⏱️ ПЛИН ЧАСУ" : "⏱️ FLOW OF TIME", 
+                TimeFilters.Select(val => (GetTimeChipLabel(val, isUk), val == State.Time)).ToArray(),
+                i => { State.Time = TimeFilters[i]; RefreshModal(); }));
 
-            scroll.Add(BuildModalSection("\u2696\ufe0f \u0412\u0410\u0413\u0418 \u0425\u0420\u041e\u041d\u041e\u0421\u0410", PriceChips.Select(c => (c.label, c.val == State.Price)).ToArray(),
-                i => { State.Price = PriceChips[i].val; RefreshModal(); }));
+            scroll.Add(BuildModalSection(
+                isUk ? "⚖️ ВАГИ ХРОНОСА" : "⚖️ SCALES OF CHRONOS", 
+                PriceFilters.Select(val => (GetPriceChipLabel(val, isUk), val == State.Price)).ToArray(),
+                i => { State.Price = PriceFilters[i]; RefreshModal(); }));
 
             sheet.Add(scroll);
 
@@ -368,12 +414,12 @@ namespace TimeAura.Features.UI.Social
             btnRow.style.paddingRight = 20;
 
             var btnReset = new Button(() => { State = new FeedFilterState(); CloseModal(); OnFiltersChanged?.Invoke(); });
-            btnReset.text = "\u2716 \u0421\u043a\u0438\u043d\u0443\u0442\u0438";
+            btnReset.text = isUk ? "✖ Скинути" : "✖ Reset";
             StyleModalBtn(btnReset, false);
             btnRow.Add(btnReset);
 
             var btnApply = new Button(() => { CloseModal(); OnFiltersChanged?.Invoke(); });
-            btnApply.text = "\u2714 \u0417\u0430\u0441\u0442\u043e\u0441\u0443\u0432\u0430\u0442\u0438";
+            btnApply.text = isUk ? "✔ Застосувати" : "✔ Apply";
             StyleModalBtn(btnApply, true);
             btnRow.Add(btnApply);
 
@@ -402,6 +448,15 @@ namespace TimeAura.Features.UI.Social
             _filterModal = null;
             RebuildBar();
             UpdateActiveCount();
+        }
+
+        public void UpdateLocalization()
+        {
+            RebuildBar();
+            if (_filterModal != null)
+            {
+                ShowFilterModal();
+            }
         }
 
         private VisualElement BuildModalSection(string title, (string label, bool active)[] chips, Action<int> onSelect)

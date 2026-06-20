@@ -18,6 +18,7 @@ namespace TimeAura.Features.Social
     {
         [Inject] private INetworkService _networkService;
         [Inject] private AddressableAssetService _assetService;
+        [Inject] private TimeAura.Features.Localization.LocalizationManager _localization;
 
         private UserProfile _currentUser;
         private readonly Dictionary<string, UserProfile> _profileCache = new();
@@ -406,11 +407,15 @@ namespace TimeAura.Features.Social
                     if (master.UserId == "ai_qwen_translator") horasPrice = 20;
                     if (master.UserId == "ai_qwen_lawyer") horasPrice = 100;
 
+                    bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+                    string titleStr = isUk ? "ШІ МАЙСТЕР" : "AI MASTER";
+                    string promptStr = isUk ? "Готовий до співпраці. Натисніть 'ДОСЬЄ' для початку взаємодії." : "Ready for collaboration. Tap 'DOSSIER' to initiate interaction.";
+
                     result.Add(new Post {
                         postId = $"ai_sr_{master.UserId}",
                         userId = master.UserId,
                         username = master.DisplayName,
-                        content = $"🤖 [ШІ МАЙСТЕР] {master.Bio}\n\nГотовий до співпраці. Натисніть 'ДОСЬЄ' щоб розпочати взаємодію.",
+                        content = $"🤖 [{titleStr}] {master.Bio}\n\n{promptStr}",
                         postType = PostType.ServiceRequest,
                         serviceCategory = ServiceCategory.Code,
                         horasPrice = horasPrice,

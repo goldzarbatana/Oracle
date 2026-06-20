@@ -32,6 +32,10 @@ namespace TimeAura.Features.UI.Nexus
         private Button _btnOracleExplain;
         private Button _btnOpenQuickChat;
 
+        private Label _lblResonanceTitle;
+        private Label _lblFrequencyTitle;
+        private Label _lblDossierSectionTitle;
+
         public event Action OnDossierClosed;
         public event Action<UserProfile> OnQuickChatRequested;
 
@@ -62,6 +66,10 @@ namespace TimeAura.Features.UI.Nexus
             _btnDecline = _root.Q<Button>("BtnDeclineDossier");
             _btnOpenQuickChat = _root.Q<Button>("BtnOpenQuickChat");
             _btnOracleExplain = _root.Q<Button>("BtnOracleExplain");
+
+            _lblResonanceTitle = _root.Q<Label>("LblResonanceTitle");
+            _lblFrequencyTitle = _root.Q<Label>("LblFrequencyTitle");
+            _lblDossierSectionTitle = _root.Q<Label>("LblDossierSectionTitle");
 
             // Set the Oracle eye icon programmatically to avoid UXML url() parsing issues
             if (_btnOracleExplain != null)
@@ -126,7 +134,7 @@ namespace TimeAura.Features.UI.Nexus
             _targetUser = target;
             if (_lblCardName != null) 
             {
-                string aiPrefix = target.IsAiMaster ? "🤖 [ШІ] " : "";
+                string aiPrefix = target.IsAiMaster ? "🤖 [AI] " : "";
                 _lblCardName.text = aiPrefix + target.DisplayName;
             }
             
@@ -134,7 +142,7 @@ namespace TimeAura.Features.UI.Nexus
             if (_lblCardBio != null && _bioContainer != null)
             {
                 bool hasBio = !string.IsNullOrEmpty(target.Bio);
-                _lblCardBio.text = hasBio ? target.Bio : "Акаша мовчить про цього майстра... Його наміри приховані в тумані часу.";
+                _lblCardBio.text = hasBio ? target.Bio : "Akasha remains silent about this master... Their intents are hidden in the mists of time.";
                 _lblCardBio.style.color = hasBio ? new StyleColor(new Color(1f, 1f, 1f, 0.85f)) : new StyleColor(new Color(1f, 1f, 1f, 0.4f));
                 _bioContainer.style.display = DisplayStyle.Flex; // Always show bio box now
             }
@@ -177,7 +185,7 @@ namespace TimeAura.Features.UI.Nexus
                 }
                 else
                 {
-                    var emptyTag = new Label("Немає відкритих стовпів");
+                    var emptyTag = new Label("No awakened pillars");
                     emptyTag.AddToClassList("presence-tag");
                     emptyTag.style.color = new StyleColor(new Color(1f, 1f, 1f, 0.3f));
                     _tagsContainer.Add(emptyTag);
@@ -225,17 +233,43 @@ namespace TimeAura.Features.UI.Nexus
             _root.pickingMode = PickingMode.Ignore;
         }
 
+        public void UpdateLocalization()
+        {
+            if (_localization == null || _root == null) return;
+            bool isUk = _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+
+            if (_lblDossierSectionTitle != null) _lblDossierSectionTitle.text = isUk ? "ХРОНІКИ АКАШІ" : "AKASHIC RECORDS";
+            if (_lblResonanceTitle != null) _lblResonanceTitle.text = isUk ? "РЕЗОНАНС" : "RESONANCE";
+            if (_lblFrequencyTitle != null) _lblFrequencyTitle.text = isUk ? "ЧАСТОТА" : "FREQUENCY";
+            if (_btnOpenQuickChat != null) _btnOpenQuickChat.text = isUk ? "ПЕРЕГУКНУТИСЯ" : "RESONATE";
+            if (_btnDecline != null) _btnDecline.text = isUk ? "ЗАКРИТИ ДОСЬЄ" : "CLOSE DOSSIER";
+            
+            // Re-render strings that depend on target user if dossier is open
+            if (_root.style.display == DisplayStyle.Flex && _targetUser != null)
+            {
+                if (_lblDistance != null) _lblDistance.text = "✦ < 5 KM";
+                if (_lblLastActive != null) _lblLastActive.text = GetLastActiveString(_targetUser.UpdatedAt);
+                
+                if (_lblCardBio != null && _bioContainer != null)
+                {
+                    bool hasBio = !string.IsNullOrEmpty(_targetUser.Bio);
+                    string defaultBio = isUk ? "Акаша мовчить про цього майстра..." : "Akasha remains silent about this master...";
+                    _lblCardBio.text = hasBio ? _targetUser.Bio : defaultBio;
+                }
+            }
+        }
+
         private string GetLastActiveString(long timestamp)
         {
-            if (timestamp == 0) return "✦ НЕВІДОМО";
+            if (timestamp == 0) return "✦ UNKNOWN";
             
             var lastActive = DateTimeOffset.FromUnixTimeSeconds(timestamp).LocalDateTime;
             var now = DateTime.Now;
             var diff = now - lastActive;
 
-            if (diff.TotalMinutes < 60) return "✦ ЗАРАЗ У НЕКСУСІ";
-            if (lastActive.Date == now.Date) return "✦ СЬОГОДНІ В НЕКСУСІ";
-            if (lastActive.Date == now.Date.AddDays(-1)) return "✦ ВЧОРА В НЕКСУСІ";
+            if (diff.TotalMinutes < 60) return "✦ IN NEXUS NOW";
+            if (lastActive.Date == now.Date) return "✦ TODAY IN NEXUS";
+            if (lastActive.Date == now.Date.AddDays(-1)) return "✦ YESTERDAY IN NEXUS";
             
             return $"✦ {lastActive:dd.MM.yy}";
         }

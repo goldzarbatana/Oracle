@@ -315,10 +315,13 @@ namespace TimeAura.Features.UI.Oracle
                         return;
                     }
 
+                    var tone = _auth?.CurrentProfile?.OracleTone ?? OracleTone.Business;
                     var uiManagerToast = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
-                    uiManagerToast?.ShowToast("🔮 Оракул розпізнає голос...", "hint");
+                    string toastMsg = _localization?.GetPersonaString("sanctuary_voice_recognizing", tone, "🔮 Oracle is parsing voice...") ?? "🔮 Oracle is parsing voice...";
+                    uiManagerToast?.ShowToast(toastMsg, "hint");
 
-                    var userMsgLabel = AddMessage("🎙️ [Голосовий запит]", true, _oracleScroll);
+                    string requestMsg = _localization?.GetPersonaString("sanctuary_voice_request", tone, "🎙️ [Voice Request]") ?? "🎙️ [Voice Request]";
+                    var userMsgLabel = AddMessage(requestMsg, true, _oracleScroll);
                     var thinkingLabel = AddMessage("...", false, _oracleScroll);
 
                     try
@@ -350,10 +353,10 @@ namespace TimeAura.Features.UI.Oracle
                             string response = await _gemini.RequestOracleWithAudio(
                                 audioBase64, 
                                 systemInstruction: customSystemInstruction,
-                                fallback: "[Request: (Голосовий запит без бекенду)]\nОракул чує твій голос, але URL хмарної функції (Cloud Function URL) не вказано в налаштуваннях AppConfig. Заповни це поле в інспекторі Unity, щоб розблокувати повне розпізнавання голосу."
+                                fallback: _localization?.GetPersonaString("sanctuary_voice_fallback", tone, "[Request: (Voice request without backend)]\nThe Oracle hears your voice, but the Cloud Function URL is not set in AppConfig. Fill this field in the Unity Inspector to unlock full voice recognition.") ?? "[Request: (Voice Request)]\nBackend missing."
                             );
 
-                            string userRequestText = "🎙️ [Голосовий запит]";
+                            string userRequestText = requestMsg;
                             string oracleResponseText = response;
 
                             if (response.StartsWith("[Request:"))
@@ -382,7 +385,7 @@ namespace TimeAura.Features.UI.Oracle
                     }
                     catch (Exception ex)
                     {
-                        var tone = _auth?.CurrentProfile?.OracleTone ?? OracleTone.Business;
+                        // tone is already declared in enclosing scope
                         thinkingLabel.text = _localization?.GetPersonaString(AuraTerms.ERR_SILENCE_ABSOLUTE, tone, "The silence is absolute today. Try again later.") ?? "The silence is absolute today. Try again later.";
                         Debug.LogError($"[Sanctuary Voice] Error: {ex.Message}");
                     }
@@ -405,6 +408,24 @@ namespace TimeAura.Features.UI.Oracle
             if (title != null) title.text = _localization.GetPersonaString(AuraTerms.ORACLE_SANCTUARY, tone, "ORACLE SANCTUARY").ToUpper();
             
             if (_btnExit != null) _btnExit.text = _localization.GetPersonaString(AuraTerms.BTN_EXIT_SILENCE, tone, "EXIT SILENCE").ToUpper();
+            
+            // Translate missing UI Elements
+            var subtitle = _root.Q<Label>(null, "sanctuary-subtitle");
+            if (subtitle != null) subtitle.text = _localization.GetPersonaString("sanctuary_subtitle", tone, "A place for deep contemplation beyond time.");
+
+            if (_btnTabOracle != null) _btnTabOracle.text = _localization.GetPersonaString("sanctuary_tab_oracle", tone, "👁️ ORACLE");
+            if (_btnTabChronicles != null) _btnTabChronicles.text = _localization.GetPersonaString("sanctuary_tab_chronicles", tone, "📜 CHRONICLES");
+            if (_btnTabResonances != null) _btnTabResonances.text = _localization.GetPersonaString("sanctuary_tab_resonances", tone, "✨ RESONANCES");
+
+            if (_inputMeditation != null) ((TextField)_inputMeditation).value = ""; // clear to show placeholder
+            
+            var btnPromptAura = _root.Q<Button>("BtnPromptAura");
+            var btnPromptDestiny = _root.Q<Button>("BtnPromptDestiny");
+            var btnPromptRitual = _root.Q<Button>("BtnPromptRitual");
+            
+            if (btnPromptAura != null) btnPromptAura.text = _localization.GetPersonaString("sanctuary_prompt_aura", tone, "Interpret my Aura");
+            if (btnPromptDestiny != null) btnPromptDestiny.text = _localization.GetPersonaString("sanctuary_prompt_destiny", tone, "What awaits me?");
+            if (btnPromptRitual != null) btnPromptRitual.text = _localization.GetPersonaString("sanctuary_prompt_ritual", tone, "Explain last Ritual");
         }
     }
 }

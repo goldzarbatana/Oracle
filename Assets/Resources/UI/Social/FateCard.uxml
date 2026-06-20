@@ -35,7 +35,7 @@
                 <!-- BtnConnect used for "НАПИСАТИ" on SR posts, "CONNECT" on normal posts -->
                 <ui:Button name="BtnConnect" text="CONNECT" class="fate-card__btn" />
                 <!-- BtnRespond only shown on ServiceRequest posts -->
-                <ui:Button name="BtnRespond" text="&#x1F91D; &#x0412;&#x0406;&#x0414;&#x0413;&#x0423;&#x041A;&#x0422;&#x0418;&#x0421;&#x042F;" class="fate-card__btn fate-card__btn--respond" style="display: none;" />
+                <ui:Button name="BtnRespond" text="&#x1F91D; RESPOND" class="fate-card__btn fate-card__btn--respond" style="display: none;" />
                 <ui:Button name="BtnTransform" text="RESONATE &#x2726;" class="fate-card__btn fate-card__btn--gold" />
             </ui:VisualElement>
         </ui:VisualElement>

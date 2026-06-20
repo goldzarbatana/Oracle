@@ -200,24 +200,25 @@ namespace TimeAura.Features.Localization
             long hours = totalMinutes / 60;
             long mins = Math.Abs(totalMinutes % 60);
 
+            bool isUa = CurrentLanguage == SystemLanguage.Ukrainian;
+
             if (tone == OracleTone.Mystic)
             {
-                // Mystic format: "X Хорасів, Y Атомів"
-                string horasWord = hours == 1 || hours == -1 ? "Хорас" : "Хораси";
-                string atomsWord = mins == 1 ? "Атом" : "Атомів";
+                // Mystic format
+                string horasWord = isUa ? (hours == 1 || hours == -1 ? "Хорас" : "Хораси") : "Horas";
+                string atomsWord = isUa ? (mins == 1 ? "Атом" : "Атомів") : (mins == 1 ? "Atom" : "Atoms");
 
-                if (mins == 0)
-                    return $"{hours} {horasWord}";
-                
+                if (mins == 0) return $"{hours} {horasWord}";
                 return $"{hours} {horasWord}, {mins} {atomsWord}";
             }
             else
             {
-                // Standard format: "X год. Y хв."
-                if (mins == 0)
-                    return $"{hours} год.";
+                // Standard format
+                string hStr = isUa ? "год." : "h";
+                string mStr = isUa ? "хв." : "m";
 
-                return $"{hours} год. {mins} хв.";
+                if (mins == 0) return $"{hours} {hStr}";
+                return $"{hours} {hStr} {mins} {mStr}";
             }
         }
 

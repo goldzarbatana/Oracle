@@ -119,7 +119,8 @@ namespace TimeAura.Features.UI.Harmony
             
             if (partnerId.StartsWith("AI_MASTER_"))
             {
-                _partnerProfile = new UserProfile(partnerId, "", "AI Master", 0, 0);
+                bool isUk = _localization != null && _localization.CurrentLanguage == SystemLanguage.Ukrainian;
+                _partnerProfile = new UserProfile(partnerId, "", isUk ? "ШІ-Майстер" : "AI Master", 0, 0);
             }
             else
             {

@@ -112,6 +112,11 @@ namespace TimeAura.Features.UI.Nexus
             if (_settings == null) _settings = GetComponentInChildren<NexusSettingsController>();
             if (_content == null) _content = GetComponentInChildren<NexusContentController>();
             if (_menu == null) _menu = GetComponentInChildren<NexusMenuController>();
+            if (_menu == null)
+            {
+                _menu = gameObject.AddComponent<NexusMenuController>();
+                Debug.Log("[NexusController] 🛠️ NexusMenuController missing - automatically synthesized.");
+            }
             if (_vault == null) _vault = GetComponentInChildren<VaultController>();
             if (_vault == null)
             {
@@ -494,7 +499,7 @@ namespace TimeAura.Features.UI.Nexus
             // Add a floating AI button to ScreenRoot so it's always visible
             if (_screenRoot != null && _screenRoot.Q("BtnFloatingAi") == null)
             {
-                var btnFloatingAI = new Button { text = "🤖 ШІ", name = "BtnFloatingAi" };
+                var btnFloatingAI = new Button { text = "🤖 AI", name = "BtnFloatingAi" };
                 btnFloatingAI.style.position = Position.Absolute;
                 btnFloatingAI.style.right = 20;
                 btnFloatingAI.style.bottom = 120;
@@ -1099,9 +1104,11 @@ namespace TimeAura.Features.UI.Nexus
             _navigation?.UpdateLocalization();
             _settings?.UpdateLocalization();
             _content?.UpdateLocalization();
+            _feed?.UpdateLocalization();
             _menu?.UpdateLocalization();
             _vault?.UpdateLocalization();
             _auraView?.UpdateLocalization();
+            _masterDossier?.UpdateLocalization();
             GetComponent<SupportUIController>()?.UpdateLocalization();
 
             if (_lblCurrentLangHUD != null)
@@ -1121,6 +1128,12 @@ namespace TimeAura.Features.UI.Nexus
                     _ => "EN"
                 };
                 _lblCurrentLangHUD.text = code;
+            }
+
+            var btnProfile = uiDocument?.rootVisualElement?.Q<Button>("BtnOpenProfile");
+            if (btnProfile != null)
+            {
+                btnProfile.text = _localization.GetPersonaString("nav_me", _authManager?.CurrentProfile?.OracleTone ?? OracleTone.Business, "ME").ToUpper();
             }
         }
 
