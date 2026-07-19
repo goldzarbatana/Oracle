@@ -91,10 +91,10 @@ namespace TimeAura.Core.Infrastructure
             // Services
             builder.Register(c => new NetworkService(), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
             builder.Register(c => new MediaService(), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
-            builder.Register<GoogleSheetsConfigSource>(Lifetime.Singleton).As<IRemoteConfigSource>();
-            builder.Register<RemoteConfigService>(Lifetime.Singleton).AsSelf();
-            builder.Register<TelemetryService>(Lifetime.Singleton).AsSelf();
-            builder.Register<FirebaseBackendService>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
+            builder.Register(c => new GoogleSheetsConfigSource(c.Resolve<AppConfig>()), Lifetime.Singleton).As<IRemoteConfigSource>();
+            builder.Register(c => new RemoteConfigService(c.Resolve<IRemoteConfigSource>()), Lifetime.Singleton).AsSelf();
+            builder.Register(c => new TelemetryService(), Lifetime.Singleton).AsSelf();
+            builder.Register(c => new FirebaseBackendService(), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
             
             // Oracle Providers
             builder.Register(c => new GeminiOracleProvider(c.Resolve<AppConfig>()), Lifetime.Singleton).AsSelf();
@@ -154,8 +154,8 @@ namespace TimeAura.Core.Infrastructure
             builder.Register(c => new AuraPresenter(c.Resolve<IDataService>(), c.Resolve<AuthManager>(), c.Resolve<IAuraOracleService>(), c.Resolve<AuraPillarSO[]>()), Lifetime.Singleton).AsSelf();
             builder.Register(c => new HarmonyManager(c.Resolve<IDataService>(), c.Resolve<SocialManager>()), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
             builder.Register(c => new HorasEconomyService(c.Resolve<IDataService>(), c.Resolve<ResonanceEconomySO>(), c.Resolve<AuraValueCalculator>()), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
-            builder.Register<QuantumWalletService>(Lifetime.Singleton).AsSelf();
-            builder.Register<TimeWalletService>(Lifetime.Singleton).AsSelf();
+            builder.Register(c => new QuantumWalletService(c.Resolve<ISecureBackendService>()), Lifetime.Singleton).AsSelf();
+            builder.Register(c => new TimeWalletService(c.Resolve<ISecureBackendService>()), Lifetime.Singleton).AsSelf();
             
             // Stripe Service Registration - Use Real or Mock based on config
             if (appConfig != null && appConfig.UseRealStripeTestMode)
@@ -165,12 +165,12 @@ namespace TimeAura.Core.Infrastructure
             }
             else
             {
-                builder.Register<MockStripeService>(Lifetime.Singleton).As<IStripeService>().AsSelf();
+                builder.Register(c => new MockStripeService(), Lifetime.Singleton).As<IStripeService>().AsSelf();
                 Debug.Log("[TimeAuraLifetimeScope] 💳 Registered MockStripeService");
             }
             
-            builder.Register<OracleIntentParser>(Lifetime.Singleton).AsSelf();
-            builder.Register<TimeAura.Features.Economy.MonetizationEconomyAdapter>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
+            builder.Register(c => new OracleIntentParser(c.Resolve<IOracleService>(), c.Resolve<AuthManager>()), Lifetime.Singleton).AsSelf();
+            builder.Register(c => new TimeAura.Features.Economy.MonetizationEconomyAdapter(c.Resolve<IDataService>(), c.Resolve<AuthManager>(), c.Resolve<AppConfig>()), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
             builder.Register(c => new MatchingManager(c.Resolve<IDataService>()), Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
             builder.Register(c => new MatchmakingManager(
                 c.Resolve<IDataService>(), 

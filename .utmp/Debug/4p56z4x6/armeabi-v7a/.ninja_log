@@ -1,12 +1,12 @@
 # ninja log v5
-57	7230	8061613562359831	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	dfcf1b6d9b537ca6
-42	7332	8061613563365197	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7f1fca5515678da5
-34	7350	8061613563883315	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6f86fcfdda5f7406
-26	7410	8061613564114413	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	83c6f86302c90b03
-49	8132	8061613571134097	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ad227938a24b7f0f
-7351	8183	8061613572315464	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	2ec3ff30eb2cf623
-2	8261	8061613572295032	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	5ce756f69a4b4ae5
-8183	11584	8061613595555178	G:/UnityEditor/TimeAura/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/Debug/4p56z4x6/obj/armeabi-v7a/libswappywrapper.so	fdc0789cd1a45abf
-7235	13624	8061613626039079	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c8291598c901a1af
-7332	13630	8061613626278213	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	48d4bf70d125834a
-13630	15598	8061613644117810	G:/UnityEditor/TimeAura/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/Debug/4p56z4x6/obj/armeabi-v7a/libgame.so	47b34a3a55d6a447
+141	10231	8061632037795057	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	5e6779ef4a93d106
+134	10431	8061632037835354	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df3c7848232a1d4e
+61	10551	8061632041376765	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	329adf67547c2875
+46	10656	8061632040606907	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ee67f5a96e797c90
+127	11229	8061632046796576	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	95f3a90f1d1fce72
+1	12347	8061632058934880	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1d3860f0dcf97d43
+10552	12355	8061632060229800	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5166925b17084632
+12356	16413	8061632089310946	G:/UnityEditor/TimeAura/Library/PramData/AndroidApplicationController/Cache/com.TimeAura.app/gradle-project/unityLibrary/build/intermediates/cxx/Debug/4p56z4x6/obj/armeabi-v7a/libswappywrapper.so	eabf0a32195bb872
+10240	19040	8061632127370324	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	f0c56ea0f39e2dac
+10432	20071	8061632137006414	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7d83bbee246e5025
+20071	21311	8061632146954926	G:/UnityEditor/TimeAura/Library/PramData/AndroidApplicationController/Cache/com.TimeAura.app/gradle-project/unityLibrary/build/intermediates/cxx/Debug/4p56z4x6/obj/armeabi-v7a/libgame.so	31c70b5f9b8ad60

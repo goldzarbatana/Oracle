@@ -8,6 +8,7 @@ namespace TimeAura.Core.Services
     {
         private readonly IRemoteConfigSource _source;
 
+        [VContainer.Inject]
         public RemoteConfigService(IRemoteConfigSource source)
         {
             _source = source;

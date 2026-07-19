@@ -1,4 +1,4 @@
-# Install script for directory: G:/UnityEditor/TimeAura/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp/FramePacing
+# Install script for directory: G:/UnityEditor/TimeAura/Library/PramData/AndroidApplicationController/Cache/com.TimeAura.app/gradle-project/unityLibrary/src/main/cpp/FramePacing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

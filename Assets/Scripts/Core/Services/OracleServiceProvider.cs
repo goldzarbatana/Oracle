@@ -31,17 +31,14 @@ namespace TimeAura.Core.Services
 
         private async UniTask<IOracleService> GetActiveProviderAsync()
         {
-            string currentLang = _localization != null ? _localization.CurrentLanguage.ToString().ToLower() : "en";
+            // PARTNER DECISION: Gemini is completely disabled for now.
+            // All requests are routed exclusively to Qwen.
+            Debug.Log("[OracleProvider] Gemini is disabled. Routing request exclusively to Qwen.");
             
-            bool isQwenHealthy = await _qwenProvider.HealthCheckAsync();
-            if (isQwenHealthy)
-            {
-                Debug.Log($"[OracleProvider] Routing request to Qwen for {currentLang.ToUpper()} locale.");
-                return _qwenProvider;
-            }
+            // Wait for Qwen health check just to be consistent, but never fallback
+            await _qwenProvider.HealthCheckAsync();
             
-            Debug.LogWarning($"[OracleProvider] Qwen is unhealthy or missing key. Falling back to Gemini for {currentLang.ToUpper()} locale.");
-            return _geminiProvider;
+            return _qwenProvider;
         }
 
         public async UniTask<bool> HealthCheckAsync()

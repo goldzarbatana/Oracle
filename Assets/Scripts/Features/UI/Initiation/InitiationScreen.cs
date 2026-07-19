@@ -113,9 +113,6 @@ namespace TimeAura.Features.UI.Initiation
                 // Oracle is usually at -1 or 100. We want to be definitely on top of background but below system popups.
                 uiDocument.sortingOrder = 50; 
 
-                // 4. Wait for UI Toolkit Layout Engine
-                await UniTask.NextFrame();
-
                 var root = uiDocument.rootVisualElement;
                 if (root == null)
                 {
@@ -130,7 +127,6 @@ namespace TimeAura.Features.UI.Initiation
                 Debug.Log($"[InitiationScreen] 🛠️ UI DIAGNOSTICS:");
                 Debug.Log($" - Panel Settings: {panelSettingsName}");
                 Debug.Log($" - Stylesheets: {sheetCount}");
-                Debug.Log($" - Root Size: {root.layout.width}x{root.layout.height}");
                 Debug.Log($" - Sorting Order: {uiDocument.sortingOrder}");
 
                 if (panelSettingsName.Contains("Nexus") || panelSettingsName.Contains("Menu"))
@@ -141,6 +137,10 @@ namespace TimeAura.Features.UI.Initiation
                 // 6. Bind Elements and Initialize
                 InitializeWiring();
                 UpdateLocalization();
+                
+                // 4. Wait for UI Toolkit Layout Engine (moved after localization to prevent flash of English text)
+                await UniTask.NextFrame();
+                Debug.Log($" - Root Size: {root.layout.width}x{root.layout.height}");
                 
                 // --- Task: Ensure visibility of core elements ---
                 var mainContent = _root.Q("MainContent");

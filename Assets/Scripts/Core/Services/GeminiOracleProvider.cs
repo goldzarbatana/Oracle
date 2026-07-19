@@ -86,7 +86,7 @@ namespace TimeAura.Core.Services
                 // If it's a raw API key, build the direct URL. Otherwise, use it as a URL.
                 string url = apiKeyOrUrl.StartsWith("http") 
                     ? apiKeyOrUrl 
-                    : $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={apiKeyOrUrl}";
+                    : $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={apiKeyOrUrl}";
 
                 // If user pasted Gemini direct URL but forgot ?key=
                 if (url.Contains("generativelanguage.googleapis.com") && !url.Contains("key="))

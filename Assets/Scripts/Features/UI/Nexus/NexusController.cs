@@ -100,6 +100,13 @@ namespace TimeAura.Features.UI.Nexus
             }
             _instance = this;
 
+            if (uiDocument == null) uiDocument = GetComponent<UIDocument>();
+            if (uiDocument != null && uiDocument.rootVisualElement != null)
+            {
+                // Hide immediately to prevent unlocalized text flash during async initialization
+                uiDocument.rootVisualElement.style.opacity = 0f;
+            }
+
             if (_makePersistent)
             {
                 transform.SetParent(null);
@@ -285,6 +292,14 @@ namespace TimeAura.Features.UI.Nexus
             if (_localization == null)
             {
                 Debug.LogError("[NexusController] 💀 FATAL: Dependency Injection failed after 20 frames. Interface will be non-functional.");
+                ShowFatalErrorOverlay("Помилка ініціалізації системи (DI Failed).\nБудь ласка, перезапустіть додаток.");
+                
+                // Restore visibility so the error is visible
+                if (uiDocument != null && uiDocument.rootVisualElement != null)
+                {
+                    uiDocument.rootVisualElement.style.opacity = 1f;
+                }
+                return; // Stop further initialization
             }
             else
             {
@@ -292,6 +307,13 @@ namespace TimeAura.Features.UI.Nexus
             }
 
             InitializeWiring();
+            UpdateLocalization();
+
+            // Restore visibility now that everything is wired and localized
+            if (uiDocument != null && uiDocument.rootVisualElement != null)
+            {
+                uiDocument.rootVisualElement.style.opacity = 1f;
+            }
             
             if (_navigation != null)
             {
@@ -1423,6 +1445,42 @@ namespace TimeAura.Features.UI.Nexus
                     Debug.Log("[NexusController] 🎵 Звуковий ландшафт: Ритмічний технологічний амбієнт (TechAuraMusic).");
                 }
             }
+        }
+        private void ShowFatalErrorOverlay(string message)
+        {
+            if (uiDocument == null || uiDocument.rootVisualElement == null) return;
+            
+            var overlay = new UnityEngine.UIElements.VisualElement();
+            overlay.style.position = UnityEngine.UIElements.Position.Absolute;
+            overlay.style.top = 0;
+            overlay.style.bottom = 0;
+            overlay.style.left = 0;
+            overlay.style.right = 0;
+            overlay.style.backgroundColor = new UnityEngine.UIElements.StyleColor(new Color(0.1f, 0f, 0f, 0.95f));
+            overlay.style.alignItems = UnityEngine.UIElements.Align.Center;
+            overlay.style.justifyContent = UnityEngine.UIElements.Justify.Center;
+
+            var label = new UnityEngine.UIElements.Label(message);
+            label.style.color = new UnityEngine.UIElements.StyleColor(Color.white);
+            label.style.fontSize = 42;
+            label.style.unityTextAlign = UnityEngine.TextAnchor.MiddleCenter;
+            label.style.whiteSpace = UnityEngine.UIElements.WhiteSpace.Normal;
+            
+            var btn = new UnityEngine.UIElements.Button(() => UnityEngine.Application.Quit());
+            btn.text = "Вийти";
+            btn.style.marginTop = 40;
+            btn.style.paddingTop = 15;
+            btn.style.paddingBottom = 15;
+            btn.style.paddingLeft = 40;
+            btn.style.paddingRight = 40;
+            btn.style.fontSize = 32;
+            btn.style.backgroundColor = new UnityEngine.UIElements.StyleColor(new Color(0.8f, 0.1f, 0.1f));
+            btn.style.color = new UnityEngine.UIElements.StyleColor(Color.white);
+
+            overlay.Add(label);
+            overlay.Add(btn);
+            
+            uiDocument.rootVisualElement.Add(overlay);
         }
     }
 }

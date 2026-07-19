@@ -807,7 +807,7 @@
 	"paths" : 
 	{
 		"build" : "G:/UnityEditor/TimeAura/.utmp/Debug/4p56z4x6/armeabi-v7a",
-		"source" : "G:/UnityEditor/TimeAura/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp"
+		"source" : "G:/UnityEditor/TimeAura/Library/PramData/AndroidApplicationController/Cache/com.TimeAura.app/gradle-project/unityLibrary/src/main/cpp"
 	},
 	"version" : 
 	{
