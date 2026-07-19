@@ -53,6 +53,7 @@ namespace TimeAura.Features.Economy
                 
                 // Емуляція URL для тестування
                 string checkoutUrl = $"https://checkout.stripe.com/pay/test_{clientId}_{freelancerId}_{amountCents}";
+                await UniTask.CompletedTask;
                 
                 Debug.Log($"[RealStripe] Session created. Opening URL: {checkoutUrl}");
                 
@@ -99,6 +100,7 @@ namespace TimeAura.Features.Economy
                 
                 // Емуляція успішного випуску
                 bool success = true;
+                await UniTask.CompletedTask;
                 Debug.Log($"[RealStripe] Escrow release {(success ? "successful" : "failed")} for ID: {escrowId}");
                 return success;
             }
@@ -140,6 +142,7 @@ namespace TimeAura.Features.Economy
                 
                 // Емуляція успішного повернення
                 bool success = true;
+                await UniTask.CompletedTask;
                 Debug.Log($"[RealStripe] Escrow refund {(success ? "successful" : "failed")} for ID: {escrowId}");
                 return success;
             }

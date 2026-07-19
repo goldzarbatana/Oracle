@@ -1,1 +1,1 @@
-G:\UnityEditor\TimeAura\Library\PramData\AndroidApplicationController\Cache\com.TimeAura.app\gradle-project\unityLibrary\build\intermediates\cxx\Debug\4p56z4x6\obj\armeabi-v7a
+G:\UnityEditor\TimeAura\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\cxx\Debug\4p56z4x6\obj\armeabi-v7a

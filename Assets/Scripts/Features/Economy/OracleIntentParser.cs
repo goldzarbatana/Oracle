@@ -38,6 +38,7 @@ namespace TimeAura.Features.Economy
             "  \"confidence\": <number between 0.0 and 1.0>\n" +
             "}";
 
+        [VContainer.Inject]
         public OracleIntentParser(IOracleService geminiAI, AuthManager authManager)
         {
             _geminiAI = geminiAI;

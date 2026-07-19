@@ -48,7 +48,7 @@
                 <ui:VisualElement name="QuickStartSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
                     <ui:Button name="BtnQuickStartFindMaster" text="🔍 Знайти Майстра" class="btn-primary" style="width: 80%; height: 80px; margin-bottom: 20px; font-size: 24px;"/>
                     <ui:Button name="BtnQuickStartAskOracle" text="👁️ Запитати Оракула" class="btn-primary" style="width: 80%; height: 80px; margin-bottom: 20px; font-size: 24px;"/>
-                    <ui:Button name="BtnQuickStartConfigureAura" text="✨ Налаштувати Ауру" class="ritual-btn" style="width: 80%; height: 60px; font-size: 20px; margin-top: 20px;"/>
+                    <ui:Button name="BtnQuickStartConfigureAura" text="✨ Налаштувати Ауру" class="btn-primary" style="width: 80%; height: 80px; margin-bottom: 20px; font-size: 24px; margin-top: 20px;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="PersonaSection" class="ritual-section" style="width: 100%; align-items: center; display: none;">
                     <ui:Label name="LblPersonaQuestion" text="Choose your resonance style" class="text-gold" style="font-size: 20px; margin-bottom: 30px; opacity: 0.8;"/>

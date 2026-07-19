@@ -14,6 +14,7 @@ namespace TimeAura.Features.Economy
     {
         private readonly ISecureBackendService _backend;
 
+        [VContainer.Inject]
         public QuantumWalletService(ISecureBackendService backend)
         {
             _backend = backend;

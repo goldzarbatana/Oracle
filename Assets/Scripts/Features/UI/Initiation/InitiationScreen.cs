@@ -341,14 +341,34 @@ namespace TimeAura.Features.UI.Initiation
                         {
                             Debug.Log("<color=#FFD700><b>[PULSE]</b></color> Entering Sub-Panel: <color=#FF00FF><b>THE RITUAL</b></color>");
                             _ritual.SetActive(true);
-                            await _ritual.RunRitualAsync(result.Profile);
+                            bool completed = await _ritual.RunRitualAsync(result.Profile);
                             _ritual.SetActive(false);
                             
-                            // Task: Commit the new initiate's soul to the Akashic Records (Save to DB)
-                            Debug.Log("[Initiation] 💾 Sealing the Ritual. Persisting profile to the Records...");
-                            await _dataService.SaveUserProfileAsync(result.Profile, _cts.Token);
-                            result.Profile.CompleteInitiation();
-                            await _dataService.SaveUserProfileAsync(result.Profile, _cts.Token);
+                            if (completed)
+                            {
+                                Debug.Log("[Initiation] 💾 Sealing the Ritual. Persisting profile to the Records...");
+                                await _dataService.SaveUserProfileAsync(result.Profile, _cts.Token);
+                                result.Profile.CompleteInitiation();
+                                await _dataService.SaveUserProfileAsync(result.Profile, _cts.Token);
+                            }
+                            else
+                            {
+                                // User backed out of the ritual, restore login screen
+                                _authManager?.SignOut();
+                                if (_inputGroup != null) _inputGroup.style.display = DisplayStyle.Flex;
+                                if (_btnInitiate != null)
+                                {
+                                    _btnInitiate.style.display = DisplayStyle.Flex;
+                                    var toneLocal = _localization.CurrentTone;
+                                    _btnInitiate.text = _localization?.GetPersonaString(AuraTerms.LOGIN, toneLocal, "INITIATE") ?? "INITIATE";
+                                    _btnInitiate.SetEnabled(true);
+                                }
+                                var logoEl = _root.Q("LogoMain");
+                                if (logoEl != null) logoEl.style.display = DisplayStyle.Flex;
+                                var topBarEl = _root.Q("TopBar");
+                                if (topBarEl != null) topBarEl.style.display = DisplayStyle.Flex;
+                                return; // Cancel the transition
+                            }
                         }
                     }
                     await TransitionToConvergenceAsync();
@@ -397,15 +417,39 @@ namespace TimeAura.Features.UI.Initiation
             {
                 Debug.Log("<color=#FFD700><b>[PULSE]</b></color> Entering Sub-Panel: <color=#FF00FF><b>THE RITUAL</b></color>");
                 _ritual.SetActive(true);
-                await _ritual.RunRitualAsync(profile);
+                bool completed = await _ritual.RunRitualAsync(profile);
                 _ritual.SetActive(false);
                 
-                Debug.Log("[Initiation] 💾 Sealing the Ritual. Persisting profile to the Records...");
-                await _dataService.SaveUserProfileAsync(profile, default);
-                profile.CompleteInitiation();
-                await _dataService.SaveUserProfileAsync(profile, default);
+                if (completed)
+                {
+                    Debug.Log("[Initiation] 💾 Sealing the Ritual. Persisting profile to the Records...");
+                    await _dataService.SaveUserProfileAsync(profile, default);
+                    profile.CompleteInitiation();
+                    await _dataService.SaveUserProfileAsync(profile, default);
+                    await TransitionToConvergenceAsync();
+                }
+                else
+                {
+                    // User aborted resumed ritual
+                    _authManager?.SignOut();
+                    if (_inputGroup != null) _inputGroup.style.display = DisplayStyle.Flex;
+                    if (_btnInitiate != null) 
+                    {
+                        _btnInitiate.style.display = DisplayStyle.Flex;
+                        var toneLocal = _localization?.CurrentTone ?? TimeAura.Core.Data.SO.OracleTone.Mystic;
+                        _btnInitiate.text = _localization?.GetPersonaString(AuraTerms.LOGIN, toneLocal, "INITIATE") ?? "INITIATE";
+                        _btnInitiate.SetEnabled(true);
+                    }
+                    var logoEl = _root.Q("LogoMain");
+                    if (logoEl != null) logoEl.style.display = DisplayStyle.Flex;
+                    var topBarEl = _root.Q("TopBar");
+                    if (topBarEl != null) topBarEl.style.display = DisplayStyle.Flex;
+                }
             }
-            await TransitionToConvergenceAsync();
+            else
+            {
+                await TransitionToConvergenceAsync();
+            }
         }
 
         private async UniTask TransitionToConvergenceAsync()

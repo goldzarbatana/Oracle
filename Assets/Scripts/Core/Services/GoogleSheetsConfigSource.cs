@@ -19,6 +19,7 @@ namespace TimeAura.Core.Services
         private const string LastFetchTimeKey = "GoogleSheetsConfigLastFetchTime";
         private const int CacheCooldownSeconds = 300; // 5 minutes
 
+        [VContainer.Inject]
         public GoogleSheetsConfigSource(AppConfig appConfig)
         {
             _appConfig = appConfig;

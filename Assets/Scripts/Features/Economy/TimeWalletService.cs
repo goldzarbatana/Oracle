@@ -13,6 +13,7 @@ namespace TimeAura.Features.Economy
     {
         private readonly ISecureBackendService _backend;
 
+        [VContainer.Inject]
         public TimeWalletService(ISecureBackendService backend)
         {
             _backend = backend;

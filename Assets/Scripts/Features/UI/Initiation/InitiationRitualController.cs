@@ -390,7 +390,7 @@ namespace TimeAura.Features.UI.Initiation
             _vfxController?.PlayFlash(value ? Color.white : Color.gray);
         }
 
-        public async UniTask RunRitualAsync(Features.Data.UserProfile profile)
+        public async UniTask<bool> RunRitualAsync(Features.Data.UserProfile profile)
         {
             _currentProfile = profile;
             if (_ritualContainer != null) _ritualContainer.style.display = DisplayStyle.Flex;
@@ -435,11 +435,21 @@ namespace TimeAura.Features.UI.Initiation
 
                 if (_backRequested)
                 {
-                    if ((int)_currentStep > 0) _currentStep--;
-                    if (_vfxController != null) _vfxController.PlayFlash(Color.gray);
-            
-                    if (_locPlaceholder != null) _locPlaceholder.text = _localization.Get(AuraTerms.INIT_LOC_PLACEHOLDER, "SEARCH YOUR REALM...");
-                    await UniTask.Delay(300);
+                    if ((int)_currentStep > 0)
+                    {
+                        _currentStep--;
+                        if (_vfxController != null) _vfxController.PlayFlash(Color.gray);
+                
+                        if (_locPlaceholder != null) _locPlaceholder.text = _localization.Get(AuraTerms.INIT_LOC_PLACEHOLDER, "SEARCH YOUR REALM...");
+                        await UniTask.Delay(300);
+                    }
+                    else
+                    {
+                        Debug.Log("[InitiationRitual] 🚪 Aborting Ritual. Returning to Initiation Gateway.");
+                        if (_ritualContainer != null) await FadeOutElement(_ritualContainer);
+                        if (_ritualContainer != null) _ritualContainer.style.display = DisplayStyle.None;
+                        return false;
+                    }
                 }
                 else
                 {
@@ -460,6 +470,7 @@ namespace TimeAura.Features.UI.Initiation
             await UniTask.Delay(2000);
             await _typeOracleText(_localization.Get("msg.convergence_begins", "The convergence begins..."));
             await UniTask.Delay(1500); 
+            return true;
         }
 
         private void ExecuteQuickStartChoice(string choice)
@@ -470,7 +481,7 @@ namespace TimeAura.Features.UI.Initiation
 
         private async UniTask RunQuickStartChoiceStep(Features.Data.UserProfile profile)
         {
-            await _typeOracleText(_localization.GetPersonaString(AuraTerms.ORACLE_QUICKSTART, profile.OracleTone, "Шлях відкритий. Обирай свою долю."));
+            await _typeOracleText(_localization.GetPersonaString(AuraTerms.ORACLE_QUICKSTART, profile.OracleTone, "The path is open. Choose your destiny."));
             if (_quickStartSection != null) _quickStartSection.style.display = DisplayStyle.Flex;
 
             _quickStartChoice = null;
@@ -878,6 +889,15 @@ namespace TimeAura.Features.UI.Initiation
 
             var lblProphecy = root.Q<Label>("ProphecyLabel");
             if (lblProphecy != null) lblProphecy.text = _localization.GetPersonaString(AuraTerms.INIT_PROPHECY_WAIT, tone, "Awaiting the sacred breath...");
+
+            var btnFindMaster = root.Q<Button>("BtnQuickStartFindMaster");
+            if (btnFindMaster != null) btnFindMaster.text = "🔍 " + _localization.GetPersonaString("btn.find_master", tone, "FIND MASTER");
+            
+            var btnAskOracle = root.Q<Button>("BtnQuickStartAskOracle");
+            if (btnAskOracle != null) btnAskOracle.text = "👁️ " + _localization.GetPersonaString("btn.ask_oracle", tone, "ASK ORACLE");
+            
+            var btnConfigAura = root.Q<Button>("BtnQuickStartConfigureAura");
+            if (btnConfigAura != null) btnConfigAura.text = "✨ " + _localization.GetPersonaString("btn.config_aura", tone, "CONFIGURE AURA");
         }
 
         private int ScaleToIndex(float scale)
