@@ -1110,6 +1110,7 @@ namespace TimeAura.Features.UI.Nexus
             _auraView?.UpdateLocalization();
             _masterDossier?.UpdateLocalization();
             GetComponent<SupportUIController>()?.UpdateLocalization();
+            TimeAura.Features.UI.Oracle.SanctuaryUIController.Instance?.UpdateLocalization();
 
             if (_lblCurrentLangHUD != null)
             {

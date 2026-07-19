@@ -26,8 +26,10 @@ MonoBehaviour:
   freeContractsLimit: 1
   freeContractsPeriodDays: 7
   requireVisageForHarmony: 0
-  simulateOracle: 1
+  simulateOracle: 0
   useCloudFunctions: 1
-  oracleCloudFunctionUrl: AQ.Ab8RN6K6HK3PSBpY6RmJ_-jv9yld7sSr5kTNwdRTvA0ClPLcvw
+  oracleCloudFunctionUrl: https://askoracle-uc.a.run.app
+  geminiApiKey: 
+  qwenApiKey: 
   googleSheetBaseUrl: https://docs.google.com/spreadsheets/d/1FUxZWdzPU3hoskr0ts25Y1eUfdQjkgt2ohNcLFBteGk/edit?usp=sharing
   useRealStripeTestMode: 0

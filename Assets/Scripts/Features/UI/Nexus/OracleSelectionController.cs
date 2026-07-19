@@ -93,36 +93,36 @@ namespace TimeAura.Features.UI.Nexus
                 
                 var coder = ScriptableObject.CreateInstance<OracleSO>();
                 coder.Id = "oracle_coder";
-                coder.DisplayName = "КОДЕР";
+                coder.DisplayName = _localization != null ? _localization.GetPersonaString("oracle_coder", OracleTone.Business, "КОДЕР") : "КОДЕР";
                 coder.LocalizationKey = "ORACLE_CODER";
-                coder.BasePersonality = "Ви є строгим архітектором ШІ. Ваші відповіді містичні та лаконічні.";
+                coder.BasePersonality = _localization != null ? _localization.GetPersonaString("oracle_coder_desc", OracleTone.Business, "Ви є строгим архітектором ШІ. Ваші відповіді містичні та лаконічні.") : "Ви є строгим архітектором ШІ. Ваші відповіді містичні та лаконічні.";
                 coder.ResonantTags = new List<string> { "programming", "architecture", "code", "unity", "c#" };
                 coder.ThemeColor = Color.cyan;
                 coder.Tier = 0;
 
                 var philosopher = ScriptableObject.CreateInstance<OracleSO>();
                 philosopher.Id = "oracle_philosopher";
-                philosopher.DisplayName = "ФІЛОСОФ";
+                philosopher.DisplayName = _localization != null ? _localization.GetPersonaString("oracle_philosopher", OracleTone.Business, "ФІЛОСОФ") : "ФІЛОСОФ";
                 philosopher.LocalizationKey = "ORACLE_PHILOSOPHER";
-                philosopher.BasePersonality = "Ви є стоїчним мислителем. Ваші відповіді глибокі та сповнені мудрості.";
+                philosopher.BasePersonality = _localization != null ? _localization.GetPersonaString("oracle_philosopher_desc", OracleTone.Business, "Ви є стоїчним мислителем. Ваші відповіді глибокі та сповнені мудрості.") : "Ви є стоїчним мислителем. Ваші відповіді глибокі та сповнені мудрості.";
                 philosopher.ResonantTags = new List<string> { "logic", "philosophy", "mindset", "ethics", "life" };
                 philosopher.ThemeColor = Color.yellow;
                 philosopher.Tier = 0;
 
                 var muse = ScriptableObject.CreateInstance<OracleSO>();
                 muse.Id = "oracle_muse";
-                muse.DisplayName = "МУЗА";
+                muse.DisplayName = _localization != null ? _localization.GetPersonaString("oracle_muse", OracleTone.Business, "МУЗА") : "МУЗА";
                 muse.LocalizationKey = "ORACLE_MUSE";
-                muse.BasePersonality = "Ви є поетичним та натхненним митцем. Ваші відповіді творчі та метафоричні.";
+                muse.BasePersonality = _localization != null ? _localization.GetPersonaString("oracle_muse_desc", OracleTone.Business, "Ви є поетичним та натхненним митцем. Ваші відповіді творчі та метафоричні.") : "Ви є поетичним та натхненним митцем. Ваші відповіді творчі та метафоричні.";
                 muse.ResonantTags = new List<string> { "art", "music", "writing", "design", "creative" };
                 muse.ThemeColor = new Color(0.7f, 0.3f, 1f);
                 muse.Tier = 0;
 
                 var marketer = ScriptableObject.CreateInstance<OracleSO>();
                 marketer.Id = "oracle_marketer";
-                marketer.DisplayName = "МАРКЕТОЛОГ";
+                marketer.DisplayName = _localization != null ? _localization.GetPersonaString("oracle_marketer", OracleTone.Business, "МАРКЕТОЛОГ") : "МАРКЕТОЛОГ";
                 marketer.LocalizationKey = "ORACLE_MARKETER";
-                marketer.BasePersonality = "Ви є енергійним стратегом росту. Ваші відповіді сфокусовані на розвитку та бізнесі.";
+                marketer.BasePersonality = _localization != null ? _localization.GetPersonaString("oracle_marketer_desc", OracleTone.Business, "Ви є енергійним стратегом росту. Ваші відповіді сфокусовані на розвитку та бізнесі.") : "Ви є енергійним стратегом росту. Ваші відповіді сфокусовані на розвитку та бізнесі.";
                 marketer.ResonantTags = new List<string> { "marketing", "seo", "growth", "business", "strategy" };
                 marketer.ThemeColor = new Color(1f, 0.5f, 0f);
                 marketer.Tier = 0;
@@ -131,6 +131,7 @@ namespace TimeAura.Features.UI.Nexus
             }
 
             Debug.Log($"[OracleSelectionController] 🛠️ Wireframe bound. Slot: {_slot != null}, Modal: {_modal != null}, Generate: {_btnGenerateOracle != null}");
+            UpdateLocalization();
         }
 
         private void BindEvents()
@@ -202,18 +203,21 @@ namespace TimeAura.Features.UI.Nexus
         {
             if (_btnGenerateOracle == null || _promptFactory == null) return;
 
+            var tone = _promptFactory?.CurrentProfile?.OracleTone ?? OracleTone.Business;
             _btnGenerateOracle.SetEnabled(false);
             string oldText = _btnGenerateOracle.text;
-            _btnGenerateOracle.text = "РИТУАЛ СТВОРЕННЯ...";
+            _btnGenerateOracle.text = _localization != null ? _localization.GetPersonaString("oracle_modal_generating", tone, "РИТУАЛ СТВОРЕННЯ...").ToUpper() : "РИТУАЛ СТВОРЕННЯ...";
 
-            _whisperManager?.ShowWhisper("Ковальня Оракулів активована. Запит до Нексусу...", WhisperColor.Gold);
+            string forgingMsg = _localization != null ? _localization.GetPersonaString("oracle_modal_forging", tone, "Ковальня Оракулів активована. Запит до Нексусу...") : "Ковальня Оракулів активована. Запит до Нексусу...";
+            _whisperManager?.ShowWhisper(forgingMsg, WhisperColor.Gold);
 
             try
             {
                 var customOracle = await _promptFactory.GenerateDynamicOracleAsync();
                 if (customOracle != null)
                 {
-                    _whisperManager?.ShowWhisper($"Успіх! Створено кастомного Оракула: \"{customOracle.DisplayName}\"", WhisperColor.Cyan);
+                    string successMsg = _localization != null ? _localization.GetPersonaString("oracle_modal_forging_success", tone, "Успіх! Створено кастомного Оракула:") : "Успіх! Створено кастомного Оракула:";
+                    _whisperManager?.ShowWhisper($"{successMsg} \"{customOracle.DisplayName}\"", WhisperColor.Cyan);
                     _audioService?.PlaySFX("RitualSeal");
                     
                     // Re-populate modal items & equip the new companion immediately
@@ -224,7 +228,8 @@ namespace TimeAura.Features.UI.Nexus
             catch (Exception ex)
             {
                 Debug.LogError($"[OracleSelectionController] Custom Oracle generation failed: {ex.Message}");
-                _whisperManager?.ShowWhisper("Нексус мовчить. Спробуйте пізніше.", WhisperColor.Sapphire);
+                string failMsg = _localization != null ? _localization.GetPersonaString("oracle_modal_forging_fail", tone, "Нексус мовчить. Спробуйте пізніше.") : "Нексус мовчить. Спробуйте пізніше.";
+                _whisperManager?.ShowWhisper(failMsg, WhisperColor.Sapphire);
             }
             finally
             {
@@ -531,6 +536,20 @@ namespace TimeAura.Features.UI.Nexus
                     }
                 }
             }
+        }
+
+        public void UpdateLocalization()
+        {
+            if (_localization == null) return;
+            var tone = _presenter?.OracleTone ?? OracleTone.Business;
+            if (_lblModalHeader != null) _lblModalHeader.text = _localization.GetPersonaString("oracle_modal_header", tone, "ОБЕРІТЬ ОРАКУЛА").ToUpper();
+            if (_lblResonanceHint != null) _lblResonanceHint.text = _localization.GetPersonaString("oracle_modal_hint", tone, "Резонанс розраховано на основі ваших дарів");
+            if (_btnCloseModal != null) _btnCloseModal.text = _localization.GetPersonaString("oracle_modal_btn_close", tone, "ЗАКРИТИ").ToUpper();
+            if (_btnGenerateOracle != null && _btnGenerateOracle.enabledSelf) _btnGenerateOracle.text = _localization.GetPersonaString("oracle_modal_btn_generate", tone, "Створити кастомного Оракула під твої таланти");
+            if (_lblSlotHint != null && _slot != null && _slot.ClassListContains("oracle-slot--empty")) _lblSlotHint.text = _localization.Get("ORACLE_EQUIP_HINT", "ВИБРАТИ").ToUpper();
+            
+            PopulateOracleList();
+            UpdateSlotVisuals();
         }
     }
 }

@@ -1,0 +1,8 @@
+{
+  "geminiApiKey": "YOUR_GEMINI_API_KEY",
+  "qwenApiKey": "YOUR_QWEN_API_KEY",
+  "twilioAccountSid": "YOUR_TWILIO_ACCOUNT_SID",
+  "twilioAuthToken": "YOUR_TWILIO_AUTH_TOKEN",
+  "twilioFromNumber": "YOUR_TWILIO_FROM_NUMBER",
+  "oracleCloudFunctionUrl": "https://askoracle-uc.a.run.app"
+}

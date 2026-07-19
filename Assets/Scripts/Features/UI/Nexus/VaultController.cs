@@ -30,7 +30,8 @@ namespace TimeAura.Features.UI.Nexus
         private Button _btnSave, _btnCancel;
         private Label _lblEditAgeValue;
         private VisualElement _vaultAvatarContainer, _vaultAvatarImage, _lblChangePhoto;
-        private Button _btnAd, _btnIap, _btnOpenShop;
+        private Button _btnAd, _btnIap, _btnOpenShop, _btnOpenAura, _btnProfileSupport;
+        private Label _vaultHeader;
 
         private bool _isEditing;
 
@@ -65,6 +66,8 @@ namespace TimeAura.Features.UI.Nexus
             _btnSave = root.Q<Button>("BtnSaveProfile");
             _btnCancel = root.Q<Button>("BtnCancelEdit");
             _lblCooldownHint = root.Q<Label>("LblCooldownHint");
+            _vaultHeader = root.Q<Label>("VaultHeader");
+            _btnProfileSupport = root.Q<Button>("BtnProfileSupport");
 
             // Callbacks
             if (_sliderAge != null)
@@ -108,11 +111,11 @@ namespace TimeAura.Features.UI.Nexus
             };
             
             _btnOpenShop = root.Q<Button>("BtnOpenShop");
-            var btnOpenAura = root.Q<Button>("BtnOpenAura");
+            _btnOpenAura = root.Q<Button>("BtnOpenAura");
             var auraPanel = root.parent?.Q("AuraPanel") ?? root.Q("AuraPanel");
-            if (btnOpenAura != null && auraPanel != null)
+            if (_btnOpenAura != null && auraPanel != null)
             {
-                btnOpenAura.clicked += () =>
+                _btnOpenAura.clicked += () =>
                 {
                     _audioService?.PlaySFX("CrystalClick");
                     auraPanel.RemoveFromClassList("panel--hidden");
@@ -224,6 +227,24 @@ namespace TimeAura.Features.UI.Nexus
             {
                 _btnOpenShop.text = _localization != null ? _localization.Get(AuraTerms.VAULT_BTN_OPEN_SHOP, "💎 REFILL QUANTS") : "💎 REFILL QUANTS";
             }
+            if (_btnOpenAura != null)
+            {
+                _btnOpenAura.text = _localization != null ? _localization.Get("vault_btn_aura", "🔮 МОЯ АУРА").ToUpper() : "🔮 МОЯ АУРА";
+            }
+            if (_btnProfileSupport != null)
+            {
+                _btnProfileSupport.text = _localization != null ? _localization.GetPersonaString("vault_btn_support", tone, "SEND ENERGY TO CREATORS").ToUpper() : "SEND ENERGY TO CREATORS";
+            }
+            if (_vaultHeader != null)
+            {
+                _vaultHeader.text = _localization != null ? _localization.GetPersonaString("vault_header", tone, "MASTER VAULT").ToUpper() : "MASTER VAULT";
+            }
+            if (_inputName != null) _inputName.label = _localization != null ? _localization.GetPersonaString("vault_input_name", tone, "NEXUS NAME").ToUpper() : "NEXUS NAME";
+            if (_sliderAge != null) _sliderAge.label = _localization != null ? _localization.GetPersonaString("vault_input_age", tone, "YOUR AGE").ToUpper() : "YOUR AGE";
+            if (_inputBio != null) _inputBio.label = _localization != null ? _localization.GetPersonaString("vault_input_bio", tone, "LEGACY (BIO)").ToUpper() : "LEGACY (BIO)";
+            if (_btnSave != null) _btnSave.text = _localization != null ? _localization.GetPersonaString("vault_btn_save", tone, "SEAL CHANGES").ToUpper() : "SEAL CHANGES";
+            if (_btnCancel != null) _btnCancel.text = _localization != null ? _localization.GetPersonaString("vault_btn_cancel", tone, "CANCEL").ToUpper() : "CANCEL";
+            if (_lblCooldownHint != null) _lblCooldownHint.text = _localization != null ? _localization.GetPersonaString("vault_cooldown_hint", tone, "Identity stability: 7 days cooldown") : "Identity stability: 7 days cooldown";
 
             // Edit Mode Pre-fill
             if (_inputName != null) _inputName.value = profile.DisplayName;
@@ -251,7 +272,8 @@ namespace TimeAura.Features.UI.Nexus
                 _constellationContainer.style.borderTopWidth = 1;
                 _constellationContainer.style.overflow = Overflow.Hidden;
                 
-                var title = new Label("✨ ЗОРЯНА КАРТА РЕПУТАЦІЇ ✨");
+                var tone = _localization != null ? _localization.CurrentTone : OracleTone.Business;
+                var title = new Label(_localization != null ? _localization.GetPersonaString("vault_star_map", tone, "✨ ЗОРЯНА КАРТА РЕПУТАЦІЇ ✨").ToUpper() : "✨ ЗОРЯНА КАРТА РЕПУТАЦІЇ ✨");
                 title.style.color = new StyleColor(new Color(0.83f, 0.69f, 0.22f));
                 title.style.fontSize = 14;
                 title.style.unityTextAlign = TextAnchor.MiddleCenter;
@@ -382,7 +404,10 @@ namespace TimeAura.Features.UI.Nexus
             catch (Exception ex)
             {
                 Debug.LogError($"[Vault] ❌ Ritual failed (Save Error): {ex.Message}");
-                FindAnyObjectByType<UIManager>()?.ShowErrorPopup("Помилка", $"Не вдалося зберегти профіль: {ex.Message}");
+                var tone = _localization != null ? _localization.CurrentTone : OracleTone.Business;
+                string errTitle = _localization != null ? _localization.GetPersonaString("vault_err_title", tone, "Помилка") : "Помилка";
+                string errMsg = _localization != null ? _localization.GetPersonaString("vault_err_msg", tone, "Не вдалося зберегти профіль:") : "Не вдалося зберегти профіль:";
+                FindAnyObjectByType<UIManager>()?.ShowErrorPopup(errTitle, $"{errMsg} {ex.Message}");
             }
             
             RefreshUI();

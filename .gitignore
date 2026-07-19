@@ -67,3 +67,10 @@ GoogleService-Info.plist
 
 # Ignore large temporary assets
 Assets/GeneratedLocalRepo/
+
+# Local configuration overrides
+TimeAuraAppConfig.local.json
+
+# Environment configurations
+.env
+**/.env

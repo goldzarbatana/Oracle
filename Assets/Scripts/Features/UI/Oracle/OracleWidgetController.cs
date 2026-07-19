@@ -333,7 +333,7 @@ namespace TimeAura.Features.UI.Oracle
                                 string response = await _gemini.RequestOracleWithAudio(
                                     audioBase64, 
                                     systemInstruction: customSystemInstruction,
-                                    fallback: "[Request: (Голосовий запит без бекенду)]\nОракул чує твій голос, але URL хмарної функції (Cloud Function URL) не вказано в налаштуваннях AppConfig. Заповни це поле в інспекторі Unity, щоб розблокувати повне розпізнавання голосу."
+                                    fallback: "[Request: (Голосовий запит без бекенду)]\nОракул чує твій голос, але URL хмарної функції (Cloud Function URL) не вказано в налаштуваннях AppConfig."
                                 );
                                 Debug.Log($"[OracleWidget] 🔮 Response: {response}");
                                 
@@ -429,6 +429,11 @@ namespace TimeAura.Features.UI.Oracle
                                         UpdateMenuButtonVisualState();
                                     }
                                 }
+                            }
+                            else
+                            {
+                                var uiManager = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
+                                if (uiManager != null) uiManager.ShowToast("⚠️ Мікрофон заблоковано іншою програмою.", "error");
                             }
                         });
                     }

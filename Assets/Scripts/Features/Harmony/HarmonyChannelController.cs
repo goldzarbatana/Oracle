@@ -184,6 +184,13 @@ namespace TimeAura.Features.Harmony
             StartTimer();
             _root.style.display = DisplayStyle.Flex;
             _root.style.opacity = 1f;
+            
+            var innerRoot = _root.Q("HarmonyChannelRoot");
+            if (innerRoot != null)
+            {
+                innerRoot.style.display = DisplayStyle.Flex;
+                innerRoot.style.opacity = 1f;
+            }
             _messageListener?.Dispose();
             _messageListener = _dataService.ListenToHarmonyMessages(_session.sessionId, OnMessagesReceived);
             

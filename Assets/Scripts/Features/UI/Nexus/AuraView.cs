@@ -114,6 +114,12 @@ namespace TimeAura.Features.UI.Nexus
             _visagePlaceholder = _root.Q("VisagePlaceholder");
             _lblAuraTitle = _root.Q<Label>("LblAuraTitle");
             _loadingOverlay = _root.Q("LoadingOverlay");
+            var lblOracleSectionTitle = _root.Q<Label>("LblOracleSectionTitle");
+            if (lblOracleSectionTitle != null && _localization != null)
+            {
+                var tone = _presenter?.OracleTone ?? OracleTone.Business;
+                lblOracleSectionTitle.text = _localization.GetPersonaString("aura_oracle_section_title", tone, "ОРАКУЛ-СУПУТНИК").ToUpper();
+            }
 
             // Tabs
             _btnTabUnified = _root.Q<Button>("BtnTabUnified");
@@ -359,6 +365,10 @@ namespace TimeAura.Features.UI.Nexus
             }
             
             if (_btnConsultOracle != null) _btnConsultOracle.text = _localization.GetPersonaString(AuraTerms.BTN_CONSULT_ORACLE, tone, "CONSULT THE ORACLE").ToUpper();
+            if (_btnLaunchResonance != null) _btnLaunchResonance.text = _localization.GetPersonaString("aura_btn_launch_resonance", tone, "ШУКАТИ").ToUpper();
+            
+            var lblOracleSectionTitle = _root.Q<Label>("LblOracleSectionTitle");
+            if (lblOracleSectionTitle != null) lblOracleSectionTitle.text = _localization.GetPersonaString("aura_oracle_section_title", tone, "ОРАКУЛ-СУПУТНИК").ToUpper();
 
 
             if (_lblAuraTitle != null)
@@ -464,7 +474,7 @@ namespace TimeAura.Features.UI.Nexus
             if (_btnConsultOracle != null)
                 _btnConsultOracle.text = _localization.GetPersonaString(AuraTerms.BTN_CONSULT_ORACLE, tone, "CONSULT THE ORACLE").ToUpper();
 
-
+            _oracleSelectionController?.UpdateLocalization();
             RefreshVisuals();
         }
 

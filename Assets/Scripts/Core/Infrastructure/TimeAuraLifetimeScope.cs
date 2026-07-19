@@ -63,11 +63,13 @@ namespace TimeAura.Core.Infrastructure
 
             if (appConfig != null)
             {
+                appConfig.LoadLocalOverrides();
                 builder.RegisterInstance(appConfig).AsSelf();
             }
             else
             {
                 var fallback = ScriptableObject.CreateInstance<AppConfig>();
+                fallback.LoadLocalOverrides();
                 builder.RegisterInstance(fallback).AsSelf();
             }
 

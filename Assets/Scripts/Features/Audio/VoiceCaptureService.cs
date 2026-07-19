@@ -8,7 +8,7 @@ namespace TimeAura.Core.Services
         private AudioClip _recordedClip;
         private string _microphoneDevice;
         private const int MaxRecordingTime = 15; // seconds
-        private const int SampleRate = 16000; // Gemini recommended sample rate
+        private const int SampleRate = 44100; // Unity default safe sample rate (Gemini supports it)
 
         public bool IsRecording { get; private set; }
 
@@ -28,26 +28,37 @@ namespace TimeAura.Core.Services
         {
             if (string.IsNullOrEmpty(_microphoneDevice)) return;
             
-            _recordedClip = Microphone.Start(_microphoneDevice, false, MaxRecordingTime, SampleRate);
-            IsRecording = true;
-            Debug.Log("[Voice] Recording started...");
+            try
+            {
+                _recordedClip = Microphone.Start(_microphoneDevice, false, MaxRecordingTime, SampleRate);
+                IsRecording = true;
+                Debug.Log("[Voice] Recording started...");
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"[Voice] Microphone blocked by screen recorder! Entering MOCK mode. ({e.Message})");
+                _recordedClip = null;
+                IsRecording = true; // Pretend we are recording for the UI
+            }
         }
 
         public void StopRecording(Action<string> onAudioBase64Ready)
         {
             if (!IsRecording) return;
             
-            Microphone.End(_microphoneDevice);
             IsRecording = false;
-            Debug.Log("[Voice] Recording stopped.");
 
-            if (_recordedClip != null)
+            if (_recordedClip != null && Microphone.IsRecording(_microphoneDevice))
             {
+                Microphone.End(_microphoneDevice);
+                Debug.Log("[Voice] Recording stopped.");
                 string base64 = ConvertAudioClipToBase64(_recordedClip);
                 onAudioBase64Ready?.Invoke(base64);
             }
             else
             {
+                // Microphone failed or was blocked. Return null so the system falls back to text or warns the user.
+                Debug.Log("[Voice] No audio captured. Returning null.");
                 onAudioBase64Ready?.Invoke(null);
             }
         }

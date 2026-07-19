@@ -25,7 +25,7 @@ namespace TimeAura.Core.Services
 
         public UniTask<bool> HealthCheckAsync()
         {
-            bool isHealthy = !string.IsNullOrEmpty(_config.OracleCloudFunctionUrl);
+            bool isHealthy = !string.IsNullOrEmpty(_config.GeminiApiKey) || !string.IsNullOrEmpty(_config.OracleCloudFunctionUrl);
             return UniTask.FromResult(isHealthy);
         }
 
@@ -51,13 +51,14 @@ namespace TimeAura.Core.Services
                 return $"[Simulation] Oracle responds to: {userPrompt.Substring(0, Mathf.Min(20, userPrompt.Length))}...";
             }
 
-            if (string.IsNullOrEmpty(_config.OracleCloudFunctionUrl))
+            if (string.IsNullOrEmpty(_config.GeminiApiKey) && string.IsNullOrEmpty(_config.OracleCloudFunctionUrl))
             {
-                Debug.LogWarning("[Oracle] Cloud Function URL is missing. Using mystical fallback.");
+                Debug.LogWarning("[Oracle] Gemini API Key & Cloud Function URL are both missing. Using mystical fallback.");
                 return fallback ?? MysticalTerms.StatusMessages.Processing;
             }
 
-            return await RequestOracleViaDirectApi(_config.OracleCloudFunctionUrl, userPrompt, systemInstruction, null, fallback);
+            string targetKeyOrUrl = !string.IsNullOrEmpty(_config.GeminiApiKey) ? _config.GeminiApiKey : _config.OracleCloudFunctionUrl;
+            return await RequestOracleViaDirectApi(targetKeyOrUrl, userPrompt, systemInstruction, null, fallback);
         }
 
         public async UniTask<string> RequestOracleWithAudio(string audioBase64, string prompt = null, string systemInstruction = null, string fallback = null)
@@ -68,13 +69,14 @@ namespace TimeAura.Core.Services
                 return "[Request: (Test voice request)]\n[Simulation] The Oracle has heard your voice through the Golden Microphone! For actual recognition, disable 'Simulate Oracle' and provide the Cloud Function URL.\n[Search: Seek=Lawn]";
             }
 
-            if (string.IsNullOrEmpty(_config.OracleCloudFunctionUrl))
+            if (string.IsNullOrEmpty(_config.GeminiApiKey) && string.IsNullOrEmpty(_config.OracleCloudFunctionUrl))
             {
-                Debug.LogWarning("[Oracle] Cloud Function URL is missing. Using mystical fallback.");
+                Debug.LogWarning("[Oracle] Gemini API Key & Cloud Function URL are both missing. Using mystical fallback.");
                 return fallback ?? MysticalTerms.StatusMessages.Processing;
             }
 
-            return await RequestOracleViaDirectApi(_config.OracleCloudFunctionUrl, prompt, systemInstruction, audioBase64, fallback);
+            string targetKeyOrUrl = !string.IsNullOrEmpty(_config.GeminiApiKey) ? _config.GeminiApiKey : _config.OracleCloudFunctionUrl;
+            return await RequestOracleViaDirectApi(targetKeyOrUrl, prompt, systemInstruction, audioBase64, fallback);
         }
 
         private async UniTask<string> RequestOracleViaDirectApi(string apiKeyOrUrl, string prompt, string systemInstruction, string audioBase64, string fallback)
@@ -84,9 +86,15 @@ namespace TimeAura.Core.Services
                 // If it's a raw API key, build the direct URL. Otherwise, use it as a URL.
                 string url = apiKeyOrUrl.StartsWith("http") 
                     ? apiKeyOrUrl 
-                    : $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={apiKeyOrUrl}";
+                    : $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={apiKeyOrUrl}";
 
-                Debug.Log($"<color=magenta>[GeminiOracle - REQUEST OUT] Time: {System.DateTime.Now:HH:mm:ss.fff} | Length: {prompt?.Length ?? 0} chars | HasAudio: {!string.IsNullOrEmpty(audioBase64)}</color>");
+                // If user pasted Gemini direct URL but forgot ?key=
+                if (url.Contains("generativelanguage.googleapis.com") && !url.Contains("key="))
+                {
+                    Debug.LogError("[GeminiOracle] The provided URL points to Google API but is missing the API key! Please provide an API key in AppConfig.GeminiApiKey.");
+                }
+
+                Debug.Log($"<color=magenta>[GeminiOracle - REQUEST OUT] Time: {System.DateTime.Now:HH:mm:ss.fff} | Length: {prompt?.Length ?? 0} chars | HasAudio: {!string.IsNullOrEmpty(audioBase64)}</color>\nURL: {url}");
                 
                 string escapedPrompt = prompt?.Replace("\"", "\\\"").Replace("\n", "\\n");
                 string escapedInstruction = systemInstruction?.Replace("\"", "\\\"").Replace("\n", "\\n");
@@ -129,7 +137,14 @@ namespace TimeAura.Core.Services
 
                 if (request.result != UnityWebRequest.Result.Success)
                 {
-                    Debug.LogError($"<color=red>[GeminiOracle - ERROR IN] Time: {System.DateTime.Now:HH:mm:ss.fff} | Error: {request.error}</color>\n{request.downloadHandler.text}");
+                    string errText = request.downloadHandler.text;
+                    Debug.LogError($"<color=red>[GeminiOracle - ERROR IN] Time: {System.DateTime.Now:HH:mm:ss.fff} | Error: {request.error}</color>\n{errText}");
+                    
+                    if (request.responseCode == 401 || errText.Contains("UNAUTHENTICATED"))
+                    {
+                        return "[Request: (Помилка Авторизації)]\nБракує Gemini API Key або Cloud Function не пропускає без авторизації. Перевір AppConfig (GeminiApiKey) або налаштування бекенду!";
+                    }
+                    
                     return fallback ?? MysticalTerms.StatusMessages.Error;
                 }
 
@@ -147,7 +162,15 @@ namespace TimeAura.Core.Services
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[OracleProvider] Secure connection faltered: {ex.Message}");
+                string msg = ex.Message;
+                string details = (ex as Cysharp.Threading.Tasks.UnityWebRequestException)?.Text ?? "";
+                Debug.LogError($"[OracleProvider] Secure connection faltered: {msg}\n{details}");
+                
+                if (msg.Contains("401") || details.Contains("UNAUTHENTICATED"))
+                {
+                    return "[Request: (Помилка Авторизації)]\nОракул не зміг ідентифікувати твій ключ (401 Unauthorized). Переконайся, що ти вставив правильний Gemini API Key в поле GeminiApiKey в AppConfig!";
+                }
+
                 return fallback ?? MysticalTerms.StatusMessages.NetworkError;
             }
         }

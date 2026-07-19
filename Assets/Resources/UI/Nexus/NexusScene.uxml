@@ -378,7 +378,7 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="DossierCompatibility" class="dossier-section">
-                        <ui:Label text="СИНХРОНІЗАЦІЯ СТОВПІВ" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 48px; -unity-text-generator: advanced;"/>
+                        <ui:Label name="LblPillarsSectionTitle" text="СИНХРОНІЗАЦІЯ СТОВПІВ" class="dossier-section-title" style="-unity-text-auto-size: best-fit 10px 48px; -unity-text-generator: advanced;"/>
                         <ui:VisualElement name="CardTags" class="dossier-pillars-container" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 10px;"/>
                     </ui:VisualElement>
                     <ui:VisualElement name="BioContainer" class="dossier-section" style="margin-top: 20px;">

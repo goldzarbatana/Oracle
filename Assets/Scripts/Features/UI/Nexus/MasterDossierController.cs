@@ -35,6 +35,7 @@ namespace TimeAura.Features.UI.Nexus
         private Label _lblResonanceTitle;
         private Label _lblFrequencyTitle;
         private Label _lblDossierSectionTitle;
+        private Label _lblPillarsSectionTitle;
 
         public event Action OnDossierClosed;
         public event Action<UserProfile> OnQuickChatRequested;
@@ -70,6 +71,7 @@ namespace TimeAura.Features.UI.Nexus
             _lblResonanceTitle = _root.Q<Label>("LblResonanceTitle");
             _lblFrequencyTitle = _root.Q<Label>("LblFrequencyTitle");
             _lblDossierSectionTitle = _root.Q<Label>("LblDossierSectionTitle");
+            _lblPillarsSectionTitle = _root.Q<Label>("LblPillarsSectionTitle");
 
             // Set the Oracle eye icon programmatically to avoid UXML url() parsing issues
             if (_btnOracleExplain != null)
@@ -239,6 +241,7 @@ namespace TimeAura.Features.UI.Nexus
             bool isUk = _localization.CurrentLanguage == SystemLanguage.Ukrainian;
 
             if (_lblDossierSectionTitle != null) _lblDossierSectionTitle.text = isUk ? "ХРОНІКИ АКАШІ" : "AKASHIC RECORDS";
+            if (_lblPillarsSectionTitle != null) _lblPillarsSectionTitle.text = isUk ? "СИНХРОНІЗАЦІЯ СТОВПІВ" : "PILLAR SYNCHRONIZATION";
             if (_lblResonanceTitle != null) _lblResonanceTitle.text = isUk ? "РЕЗОНАНС" : "RESONANCE";
             if (_lblFrequencyTitle != null) _lblFrequencyTitle.text = isUk ? "ЧАСТОТА" : "FREQUENCY";
             if (_btnOpenQuickChat != null) _btnOpenQuickChat.text = isUk ? "ПЕРЕГУКНУТИСЯ" : "RESONATE";
