@@ -3,8 +3,8 @@
     "rootNamespace": "CommerceOrchestrator",
     "references": [
         "UniTask",
-        "UnityEngine.Purchasing",
-        "UnityEngine.Purchasing.Stores",
+        "Unity.Purchasing",
+        "Unity.Purchasing.Stores",
         "Unity.TextMeshPro",
         "UnityEngine.UI",
         "Unity.Localization",

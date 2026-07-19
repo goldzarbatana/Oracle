@@ -102,8 +102,8 @@ namespace TimeAura.Core.Editor
             // Test Case 3: Live configuration override check (without mutating serialized assets)
             appConfig.LoadLocalOverrides();
             Debug.Log($"<b>[AppConfig Verification]</b> Current Active Configuration loaded successfully.");
-            Debug.Log($"   - Gemini API Key: {(string.IsNullOrEmpty(appConfig.GeminiApiKey) ? \"<empty/default>\" : \"[SET]\")}");
-            Debug.Log($"   - Qwen API Key: {(string.IsNullOrEmpty(appConfig.QwenApiKey) ? \"<empty/default>\" : \"[SET]\")}");
+            Debug.Log($"   - Gemini API Key: {(string.IsNullOrEmpty(appConfig.GeminiApiKey) ? "<empty/default>" : "[SET]")}");
+            Debug.Log($"   - Qwen API Key: {(string.IsNullOrEmpty(appConfig.QwenApiKey) ? "<empty/default>" : "[SET]")}");
             Debug.Log($"   - Cloud Function URL: {appConfig.OracleCloudFunctionUrl}");
             Debug.Log("<b>[AppConfig Verification]</b> Override verification complete!");
         }

@@ -30,9 +30,37 @@ We chose the **Agent Society** track, leveraging Alibaba Cloud's **Qwen 3.7 Plus
 
 ## 🚀 Try It Out
 
-* **[Devpost Submission]** - *(Add your Devpost link here)*
-* **[Video Demo / Walkthrough]** - *(Add YouTube/Vimeo link here)*
-* **[Live App / TestFlight / APK]** - *(Add link if applicable)*
+* **[Video Demo / Walkthrough]** - [Watch on YouTube](https://www.youtube.com/watch?v=xCqMNkps1hw)
+* **[Live App (APK)]** - Download `TimeAura_1.apk` or `TimeAura_2.apk` directly from the [Releases/Root] of this repository.
+* **[Devpost Submission]** - *(Link will be active after submission)*
+* **[Web Portal]** - [zarbatana-balance.web.app](https://zarbatana-balance.web.app)
+
+## 🏛️ System Architecture
+
+TimeAura operates as a hybrid platform with two client interfaces sharing a unified backend, heavily relying on **Alibaba Cloud** for AI orchestration and infrastructure.
+
+```mermaid
+graph TD
+    subgraph Clients["📱 Client Interfaces"]
+        Mobile["Unity Mobile (iOS/Android)<br/>- Mystical UX<br/>- Oracle Chat<br/>- Chamber & Feed"]
+        Web["React Web (Next.js)<br/>- B2B Portal<br/>- Freelancer Profiles<br/>- Contracts"]
+    end
+
+    Backend["Shared Backend API<br/>(Firebase Functions / Node.js)"]
+
+    subgraph Infrastructure["☁️ Global Infrastructure & AI"]
+        Alibaba["Alibaba Cloud<br/>(Qwen AI / OSS / CDN)"]
+        Stripe["Stripe Connect<br/>(Escrow & Fiat)"]
+        Firebase["Firebase<br/>(Firestore, Auth, DB)"]
+    end
+
+    Mobile --> Backend
+    Web --> Backend
+    
+    Backend --> Alibaba
+    Backend --> Stripe
+    Backend --> Firebase
+```
 
 ## 🏗️ Architecture Highlights
 

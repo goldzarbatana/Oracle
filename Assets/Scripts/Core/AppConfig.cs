@@ -57,10 +57,6 @@ namespace TimeAura.Core
             };
         }
 
-        public string TwilioAccountSid => twilioAccountSid;
-        public string TwilioAuthToken => twilioAuthToken;
-        public string TwilioFromNumber => twilioFromNumber;
-
         [Header("Оракул (Gemini AI & Qwen)")]
         [Tooltip("Увімкніть для локальної симуляції (заглушки) відповідей Оракула. Корисно для швидкого тестування UI та економіки без витрати лімітів реального API.")]
         [SerializeField] private bool simulateOracle = false;

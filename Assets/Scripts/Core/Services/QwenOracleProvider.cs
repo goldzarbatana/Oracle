@@ -18,7 +18,7 @@ namespace TimeAura.Core.Services
         private const string QwenModel = "qwen3.7-plus"; // Qwen 3.7 Plus with Deep Thinking
 
         public string ProviderName => "Qwen 3.7 Plus (Alibaba Cloud)";
-        public string[] SupportedLanguages => new[] { "uk", "ru", "pl", "be", "bg", "cs", "sk" };
+        public string[] SupportedLanguages => new[] { "uk", "ru", "pl", "be", "bg", "cs", "sk", "en" };
 
         public QwenOracleProvider(AppConfig config)
         {

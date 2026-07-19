@@ -31,27 +31,16 @@ namespace TimeAura.Core.Services
 
         private async UniTask<IOracleService> GetActiveProviderAsync()
         {
-            // For now, assume "uk", "ru", etc are string representations.
-            // Adjust based on the actual enum or structure of LocalizationManager.CurrentLanguage
             string currentLang = _localization != null ? _localization.CurrentLanguage.ToString().ToLower() : "en";
             
-            bool useQwen = _qwenProvider.SupportedLanguages.Any(l => currentLang.Contains(l));
-
-            if (useQwen)
+            bool isQwenHealthy = await _qwenProvider.HealthCheckAsync();
+            if (isQwenHealthy)
             {
-                bool isQwenHealthy = await _qwenProvider.HealthCheckAsync();
-                if (isQwenHealthy)
-                {
-                    Debug.Log($"[OracleProvider] Routing request to Qwen for {currentLang.ToUpper()} locale.");
-                    return _qwenProvider;
-                }
-                else
-                {
-                    Debug.LogWarning($"[OracleProvider] Qwen is unhealthy. Falling back to Gemini for {currentLang.ToUpper()} locale.");
-                }
+                Debug.Log($"[OracleProvider] Routing request to Qwen for {currentLang.ToUpper()} locale.");
+                return _qwenProvider;
             }
             
-            Debug.Log($"[OracleProvider] Routing request to Gemini for {currentLang.ToUpper()} locale.");
+            Debug.LogWarning($"[OracleProvider] Qwen is unhealthy or missing key. Falling back to Gemini for {currentLang.ToUpper()} locale.");
             return _geminiProvider;
         }
 
