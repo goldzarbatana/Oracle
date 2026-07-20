@@ -229,6 +229,8 @@ namespace TimeAura.Core.Localization
         public const string BTN_CONFIRM_AGE     = "btn.confirm_age";
         public const string BTN_ILLUMINATE      = "btn.illuminate";
         public const string INIT_ERR_CRITICAL   = "init.err_critical";
+        public const string INIT_ERR_OTP        = "init.err_otp";
+        public const string BTN_EXIT            = "btn.exit";
         public const string ORACLE_PERSONA_QUESTION = "init.persona_question";
         public const string INIT_LOADING        = "term.loading";
 
@@ -305,5 +307,32 @@ namespace TimeAura.Core.Localization
         public const string VAULT_BTN_WATCH_AD    = "vault.btn_watch_ad";
         public const string VAULT_BTN_BUY_STARTER = "vault.btn_buy_starter";
         public const string VAULT_BTN_OPEN_SHOP   = "vault.btn_open_shop";
+
+        // Onboarding
+        public const string ONBOARDING_NEXUS_TITLE = "onboarding.nexus.title";
+        public const string ONBOARDING_NEXUS_BODY  = "onboarding.nexus.body";
+        public const string ONBOARDING_HORAS_TITLE = "onboarding.horas.title";
+        public const string ONBOARDING_HORAS_BODY  = "onboarding.horas.body";
+        public const string ONBOARDING_FEED_TITLE  = "onboarding.feed.title";
+        public const string ONBOARDING_FEED_BODY   = "onboarding.feed.body";
+        public const string ONBOARDING_AURA_TITLE  = "onboarding.aura.title";
+        public const string ONBOARDING_AURA_BODY   = "onboarding.aura.body";
+        public const string BTN_UNDERSTOOD        = "btn.understood";
+
+        // Toasts
+        public const string TOAST_OPENING_PROFILE = "toast.opening_profile";
+        public const string TOAST_LINK_COPIED     = "toast.link_copied";
+        public const string TOAST_VOICE_START     = "toast.voice_start";
+        public const string TOAST_ORACLE_RECOGNIZING = "toast.oracle_recognizing";
+        public const string TOAST_VOICE_FAILED     = "toast.voice_failed";
+        public const string TOAST_VOICE_EMPTY      = "toast.voice_empty";
+        public const string TOAST_INTENT_EMPTY     = "toast.intent_empty";
+        public const string TOAST_AI_LIMIT          = "toast.ai_limit";
+        public const string TOAST_ORACLE_WEAVING    = "toast.oracle_weaving";
+        public const string TOAST_ORACLE_PARSE_FAILED = "toast.oracle_parse_failed";
+        public const string TOAST_AI_CONFIDENCE_LOW = "toast.ai_confidence_low";
+        public const string TOAST_ORACLE_POST_CREATED = "toast.oracle_post_created";
+        public const string TOAST_ORACLE_LISTENING  = "toast.oracle_listening";
+        public const string TOAST_MIC_BLOCKED       = "toast.mic_blocked";
     }
 }

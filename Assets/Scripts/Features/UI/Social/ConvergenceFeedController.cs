@@ -747,7 +747,11 @@ namespace TimeAura.Features.UI.Social
                 {
                     evt.StopPropagation();
                     _btnRecordVoice.style.scale = new StyleScale(new Scale(new Vector3(1.15f, 1.15f, 1f)));
-                    if (_uiManager != null) _uiManager.ShowToast("🎙️ Запис голосу розпочато...", "hint");
+                    if (_uiManager != null)
+                    {
+                        string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_VOICE_START, "🎙️ Запис голосу розпочато...") ?? "🎙️ Запис голосу розпочато...";
+                        _uiManager.ShowToast(msg, "hint");
+                    }
 
                     var capture = UnityEngine.Object.FindAnyObjectByType<VoiceCaptureService>();
                     if (capture != null) capture.StartRecording();
@@ -766,7 +770,11 @@ namespace TimeAura.Features.UI.Social
                         {
                             if (!string.IsNullOrEmpty(audioBase64))
                             {
-                                if (_uiManager != null) _uiManager.ShowToast("🔮 Оракул розпізнає твій голос...", "hint");
+                                if (_uiManager != null)
+                                {
+                                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_RECOGNIZING, "🔮 Оракул розпізнає твій голос...") ?? "🔮 Оракул розпізнає твій голос...";
+                                    _uiManager.ShowToast(msg, "hint");
+                                }
                                 if (_btnSubmitIntent != null) _btnSubmitIntent.SetEnabled(false);
                                 
                                 try
@@ -781,7 +789,11 @@ namespace TimeAura.Features.UI.Social
                                 catch (Exception ex)
                                 {
                                     Debug.LogError($"[ConvergenceFeed] Audio intent parsing failed: {ex.Message}");
-                                    if (_uiManager != null) _uiManager.ShowToast("❌ Не вдалося розпізнати голос.", "error");
+                                    if (_uiManager != null)
+                                    {
+                                        string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_VOICE_FAILED, "❌ Не вдалося розпізнати голос.") ?? "❌ Не вдалося розпізнати голос.";
+                                        _uiManager.ShowToast(msg, "error");
+                                    }
                                 }
                                 finally
                                 {
@@ -790,7 +802,11 @@ namespace TimeAura.Features.UI.Social
                             }
                             else
                             {
-                                if (_uiManager != null) _uiManager.ShowToast("⚠️ Запис порожній або не вдався.", "error");
+                                if (_uiManager != null)
+                                {
+                                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_VOICE_EMPTY, "⚠️ Запис порожній або не вдався.") ?? "⚠️ Запис порожній або не вдався.";
+                                    _uiManager.ShowToast(msg, "error");
+                                }
                             }
                         });
                     }
@@ -871,7 +887,11 @@ namespace TimeAura.Features.UI.Social
             string text = _inputIntentText?.value ?? "";
             if (string.IsNullOrWhiteSpace(text))
             {
-                if (_uiManager != null) _uiManager.ShowToast("❌ Бажання не може бути порожнім!", "error");
+                if (_uiManager != null)
+                {
+                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_INTENT_EMPTY, "❌ Бажання не може бути порожнім!") ?? "❌ Бажання не може бути порожнім!";
+                    _uiManager.ShowToast(msg, "error");
+                }
                 return;
             }
 
@@ -879,12 +899,17 @@ namespace TimeAura.Features.UI.Social
             {
                 if (_uiManager != null)
                 {
-                    _uiManager.ShowToast("🔮 AI request limit reached! Enlightened subscription required.", "error");
+                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_AI_LIMIT, "🔮 AI request limit reached! Enlightened subscription required.") ?? "🔮 AI request limit reached! Enlightened subscription required.";
+                    _uiManager.ShowToast(msg, "error");
                 }
                 return;
             }
 
-            if (_uiManager != null) _uiManager.ShowToast("🔮 Оракул тче нитки часу...", "hint");
+            if (_uiManager != null)
+            {
+                string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_WEAVING, "🔮 Оракул тче нитки часу...") ?? "🔮 Оракул тче нитки часу...";
+                _uiManager.ShowToast(msg, "hint");
+            }
 
             if (_btnSubmitIntent != null) _btnSubmitIntent.SetEnabled(false);
 
@@ -896,7 +921,11 @@ namespace TimeAura.Features.UI.Social
             catch (Exception ex)
             {
                 Debug.LogError($"[ConvergenceFeed] Intent parsing failed: {ex.Message}");
-                if (_uiManager != null) _uiManager.ShowToast("❌ Оракул не зміг розпізнати бажання.", "error");
+                if (_uiManager != null)
+                {
+                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_PARSE_FAILED, "❌ Оракул не зміг розпізнати бажання.") ?? "❌ Оракул не зміг розпізнати бажання.";
+                    _uiManager.ShowToast(msg, "error");
+                }
             }
             finally
             {
@@ -912,7 +941,8 @@ namespace TimeAura.Features.UI.Social
             {
                 if (_uiManager != null)
                 {
-                    _uiManager.ShowToast("⚠️ AI confidence low (< 70%). Verify data manually.", "error");
+                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_AI_CONFIDENCE_LOW, "⚠️ AI confidence low (< 70%). Verify data manually.") ?? "⚠️ AI confidence low (< 70%). Verify data manually.";
+                    _uiManager.ShowToast(msg, "error");
                 }
 
                 OpenCreatePostModal();
@@ -992,8 +1022,12 @@ namespace TimeAura.Features.UI.Social
                 
                 if (_uiManager != null)
                 {
-                    string currencyLabel = targetRealm == ExchangeRealm.Ether ? "Хор" : "Квант";
-                    _uiManager.ShowToast($"✨ Оракул створив запит: {result.price} {currencyLabel}!", "hint");
+                    string currencyLabel = targetRealm == ExchangeRealm.Ether 
+                        ? (_localization?.Get(TimeAura.Core.Localization.AuraTerms.CURRENCY, "Horas") ?? "Horas")
+                        : "Quants";
+                    string pattern = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_POST_CREATED, "✨ Оракул створив запит: {0} {1}!") ?? "✨ Оракул створив запит: {0} {1}!";
+                    string msg = string.Format(pattern, result.price, currencyLabel);
+                    _uiManager.ShowToast(msg, "hint");
                 }
             }
         }

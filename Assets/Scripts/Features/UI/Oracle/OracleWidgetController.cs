@@ -128,11 +128,17 @@ namespace TimeAura.Features.UI.Oracle
         {
             if (_instance != null && _instance != this)
             {
-                Destroy(gameObject);
+                Destroy(this);
                 return;
             }
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+
+            // Prevent the duplicate uncontrolled UI from GlobalManagers from rendering
+            var localDoc = GetComponent<UIDocument>();
+            if (localDoc != null && localDoc.rootVisualElement != null)
+            {
+                localDoc.rootVisualElement.style.display = DisplayStyle.None;
+            }
         }
 
         public void SetDocument(UIDocument doc)
@@ -145,15 +151,9 @@ namespace TimeAura.Features.UI.Oracle
 
         public void Refresh()
         {
-            if (!gameObject.activeInHierarchy) return;
             _widgetCts?.Cancel();
             _widgetCts?.Dispose();
             _widgetCts = null;
-            InitializeRoutine().Forget();
-        }
-
-        private void Start()
-        {
             InitializeRoutine().Forget();
         }
 
@@ -182,21 +182,6 @@ namespace TimeAura.Features.UI.Oracle
                     }
                 }
                 
-                // Search in other documents if needed
-                var allDocs = UnityEngine.Object.FindObjectsByType<UIDocument>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-                foreach (var doc in allDocs)
-                {
-                    if (doc.rootVisualElement != null && doc.rootVisualElement.Q("OracleEyeRoot") != null)
-                    {
-                        Debug.Log($"[OracleWidget] Found Eye in alternative doc: {doc.name}");
-                        _uiDocument = doc;
-                        _root = _uiDocument.rootVisualElement;
-                        _eyeRoot = _root.Q("OracleEyeRoot");
-                        break;
-                    }
-                }
-                if (_eyeRoot != null) break;
-
                 timeout -= Time.deltaTime;
                 await UniTask.Yield(PlayerLoopTiming.Update, cancellationToken: ct);
             }
@@ -248,8 +233,11 @@ namespace TimeAura.Features.UI.Oracle
                 }
             }
             
-            _eyeRoot.RemoveFromClassList("oracle-eye--closed");
-            
+            _eyeRoot.style.width = _eyeSize;
+            _eyeRoot.style.height = _eyeSize;
+
+            // Ensure the widget starts in a consistent open state
+            OpenWidget();
             GlowPulseLoopAsync(ct).Forget();
             IdleSwayLoopAsync(ct).Forget();
             AutoBlinkLoopAsync(ct).Forget();
@@ -304,9 +292,17 @@ namespace TimeAura.Features.UI.Oracle
                             {
                                 Debug.Log("[OracleWidget] 🎙️ Audio captured. Sending to Oracle...");
                                 var uiManager = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
-                                if (uiManager != null) uiManager.ShowToast("Oracle is listening...");
+                                if (uiManager != null)
+                                {
+                                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_LISTENING, "Oracle is listening...") ?? "Oracle is listening...";
+                                    uiManager.ShowToast(msg);
+                                }
                                 
-                                if (uiManager != null) uiManager.ShowToast("🔮 Оракул розпізнає голос...", "hint");
+                                if (uiManager != null)
+                                {
+                                    string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_ORACLE_RECOGNIZING, "🔮 Оракул розпізнає голос...") ?? "🔮 Оракул розпізнає голос...";
+                                    uiManager.ShowToast(msg, "hint");
+                                }
                                 
                                 string customSystemInstruction = "";
                                 string activeSessionPrompt = _auth?.CurrentProfile?.ActiveSessionPrompt;
@@ -432,8 +428,12 @@ namespace TimeAura.Features.UI.Oracle
                             }
                             else
                             {
-                                var uiManager = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
-                                if (uiManager != null) uiManager.ShowToast("⚠️ Мікрофон заблоковано іншою програмою.", "error");
+                                 var uiManager = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
+                                 if (uiManager != null)
+                                 {
+                                     string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_MIC_BLOCKED, "⚠️ Мікрофон заблоковано іншою програмою.") ?? "⚠️ Мікрофон заблоковано іншою програмою.";
+                                     uiManager.ShowToast(msg, "error");
+                                 }
                             }
                         });
                     }
@@ -462,7 +462,23 @@ namespace TimeAura.Features.UI.Oracle
             if (_eyeRoot != null)
             {
                 _eyeRoot.style.display = DisplayStyle.Flex;
+                _eyeRoot.style.visibility = Visibility.Visible;
+                _eyeRoot.style.opacity = 1f; // Force opacity
+                _eyeRoot.style.scale = new StyleScale(new Scale(Vector3.one)); // Force scale
                 _eyeRoot.RemoveFromClassList("oracle-eye--closed");
+                _eyeRoot.BringToFront(); // Ensure it's not hidden behind panels!
+                
+                // Force position just in case layout engine corrupted it
+                if (_root != null && _root.resolvedStyle.width > 100)
+                {
+                    _eyeRoot.style.left = _root.resolvedStyle.width - _eyeSize - 20;
+                    _eyeRoot.style.top = _root.resolvedStyle.height - _eyeSize - (_root.resolvedStyle.height * 0.22f);
+                }
+
+                // Debug log to ensure size and position are correct
+                Debug.Log($"[OracleWidget] 👁️ Eye Opened. TargetPos: {_eyeRoot.style.left.value.value},{_eyeRoot.style.top.value.value} | PrevRect: {_eyeRoot.resolvedStyle.width}x{_eyeRoot.resolvedStyle.height} @ {_eyeRoot.resolvedStyle.left},{_eyeRoot.resolvedStyle.top}");
+                
+                DumpLayoutDelayedAsync().Forget();
             }
             SetOracleAlertState(0);
             GeminiChatController.Instance?.ClearChat();
@@ -471,13 +487,24 @@ namespace TimeAura.Features.UI.Oracle
             Debug.Log("[OracleWidget] 👁️ Oracle Eye opened.");
         }
 
+        private async UniTaskVoid DumpLayoutDelayedAsync()
+        {
+            await UniTask.Yield(); // wait for layout
+            if (_eyeRoot != null)
+            {
+                Debug.Log($"[OracleWidget-DUMP] WorldBound: {_eyeRoot.worldBound} | Resolved: {_eyeRoot.resolvedStyle.width}x{_eyeRoot.resolvedStyle.height} @ {_eyeRoot.resolvedStyle.left},{_eyeRoot.resolvedStyle.top} | Display: {_eyeRoot.resolvedStyle.display} | Opacity: {_eyeRoot.resolvedStyle.opacity}");
+            }
+        }
+
         public void CloseWidget()
         {
             _widgetState = OracleWidgetState.Closed;
             if (_eyeRoot != null)
             {
-                _eyeRoot.style.display = DisplayStyle.None;
                 _eyeRoot.AddToClassList("oracle-eye--closed");
+                _eyeRoot.style.opacity = 0f; // Force it to be invisible
+                _eyeRoot.style.visibility = Visibility.Hidden; // Force hide
+                _eyeRoot.style.display = DisplayStyle.None; // Remove from layout
             }
             UpdateMenuButtonVisualState();
             GeminiChatController.Instance?.Close();
@@ -925,13 +952,22 @@ namespace TimeAura.Features.UI.Oracle
             }
             else
             {
-                // Clamp existing position to make sure it doesn't end up off-screen
                 float currentLeft = _eyeRoot.resolvedStyle.left;
                 float currentTop = _eyeRoot.resolvedStyle.top;
 
-                // Handle UI Toolkit returning NaN when element is display:none
-                if (float.IsNaN(currentLeft)) currentLeft = screenWidth - _eyeSize - 20;
-                if (float.IsNaN(currentTop)) currentTop = screenHeight - _eyeSize - (screenHeight * 0.22f);
+                // When display is None, resolvedStyle returns 0 or NaN. Fallback to the saved style value.
+                if (_eyeRoot.style.display == DisplayStyle.None || float.IsNaN(currentLeft) || float.IsNaN(currentTop))
+                {
+                    currentLeft = _eyeRoot.style.left.value.value;
+                    currentTop = _eyeRoot.style.top.value.value;
+                    
+                    // If even the style value is invalid/0 from a fresh init, use defaults
+                    if (currentLeft == 0f && currentTop == 0f)
+                    {
+                        currentLeft = screenWidth - _eyeSize - 20;
+                        currentTop = screenHeight - _eyeSize - (screenHeight * 0.22f);
+                    }
+                }
 
                 float clampedLeft = Mathf.Clamp(currentLeft, 0, screenWidth - _eyeSize);
                 float clampedTop = Mathf.Clamp(currentTop, 0, screenHeight - _eyeSize);

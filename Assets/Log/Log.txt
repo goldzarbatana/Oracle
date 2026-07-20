@@ -1,0 +1,494 @@
+[TimeAuraLifetimeScope] ✦ Established Global Persistent Root.
+
+[TimeAuraLifetimeScope] Configure — registering all services...
+
+[AppConfig] Local overrides successfully loaded from TimeAuraAppConfig.local.json
+
+[TimeAuraLifetimeScope] 💳 Registered MockStripeService
+
+[GoogleSheetsConfig] Loaded 93 keys from cache.
+
+[Orchestrator] 💉 Dependencies injected via Temple Ritual.
+
+[EventCloudBridge] 🌌 Establishing the Optimized Bifrost Event Bridge...
+
+[ActionExecutor] ⚡ Awakening the Divine Action Executor...
+
+[Economy] Initializing Unity Gaming Services for In-App Purchasing...
+
+[Economy] Unity Gaming Services initialized successfully.
+
+[CommerceOrchestrator] Pricing provider registered.
+
+[CommerceOrchestrator] Fetching pricing from Google Sheet. URL: https://docs.google.com/spreadsheets/d/1FUxZWdzPU3hoskr0ts25Y1eUfdQjkgt2ohNcLFBteGk/gviz/tq?tqx=out:csv&sheet=SHOP_ITEMS
+
+[Economy] 💰 Monetization Economy Adapter (Commerce Orchestrator) initialized. Listening for rewards and purchases.
+
+[GameManager] Core systems ready. Standing by for Auth.
+
+[MockAdProvider] ⚙️ Configuring Mock Provider.
+
+[MockAdProvider] ⚡ Initializing Mock Provider (Simulated).
+
+<color=#38ff8e>[RemoteConfig]</color> Fetching remote config from: https://docs.google.com/spreadsheets/d/e/2PACX-1vSdUDeV1qOd9sH0-CdJ0jIvAbOqXl_qypNgmEhXszmP-YlwnJkYpJAK5ezVCJCRAFqKlZzqUGR1lbe9/pub?gid=0&single=true&output=csv
+
+<color=#ffd238>[IAPManager]</color> 🚀 Initializing IAP Orchestrator...
+
+<color=yellow>[IAPManager] ⚠️</color> ⚠️ Mock Simulation Mode Active. Purchases will be simulated locally.
+UnityEngine.Debug:LogWarning (object)
+UniversalMonetization.IAPManager:LogWarning (string) (at Assets/Plugins/MonetizationOrchestrator/Scripts/Core/IAPManager.cs:351)
+UniversalMonetization.IAPManager:InitializeIAP () (at Assets/Plugins/MonetizationOrchestrator/Scripts/Core/IAPManager.cs:78)
+UniversalMonetization.IAPManager:Start () (at Assets/Plugins/MonetizationOrchestrator/Scripts/Core/IAPManager.cs:68)
+
+[Orchestrator] 🌌 Initiating Great Ritual (Boot Sequence)...
+
+[Orchestrator] 🏗️ Verifying Firebase Ley Lines...
+
+[Orchestrator] ✅ Firebase Ley Lines stabilized for App: __FIRAPP_DEFAULT
+
+[RemoteConfigService] Initializing remote config source...
+
+[GoogleSheetsConfig] Fetching Remote Config. Raw URL: https://docs.google.com/spreadsheets/d/1FUxZWdzPU3hoskr0ts25Y1eUfdQjkgt2ohNcLFBteGk/edit?usp=sharing | ID: 1FUxZWdzPU3hoskr0ts25Y1eUfdQjkgt2ohNcLFBteGk
+
+<color=green>[MockAdProvider] ✅ Mock Ad SDK Initialized successfully!</color>
+
+<color=#38c8ff>[AdManager]</color> ✅ Ad Provider successfully Initialized! Starting preloads...
+
+<color=#38c8ff>[AdManager]</color> Requesting Rewarded Ad load (source: auto_loop)
+
+<color=#38c8ff>[AdManager]</color> Requesting Interstitial Ad load (source: auto_loop)
+
+[CommerceOrchestrator] Pricing successfully updated from Google Sheet. Loaded 4 items.
+
+[CommerceOrchestrator] Initializing Unity IAP...
+
+[CommerceOrchestrator] Registered product: com.timeaura.quants.pack100 (Consumable)
+
+[CommerceOrchestrator] Registered product: com.timeaura.quants.pack500 (Consumable)
+
+[CommerceOrchestrator] Registered product: com.timeaura.quants.pack1000 (Consumable)
+
+[CommerceOrchestrator] Registered product: com.timeaura.subscription.enlightened (Subscription)
+
+InAppPurchasing: IStoreService.Connect called without a callback defined for IStoreService.OnStoreDisconnected.
+UnityEngine.Purchasing.UnityPurchasing:Initialize (UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder)
+CommerceOrchestrator.Core.StoreManager/<InitializeStoreAsync>d__31:MoveNext () (at Assets/Plugins/CommerceOrchestrator/Runtime/Core/StoreManager.cs:115)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Core.StoreManager/<InitializeStoreAsync>d__31>:Run () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:189)
+Cysharp.Threading.Tasks.AwaiterActions:Continuation (object) (at Assets/Plugins/UniTask/Runtime/UniTask.cs:25)
+Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1<Cysharp.Threading.Tasks.AsyncUnit>:TrySetResult (Cysharp.Threading.Tasks.AsyncUnit) (at Assets/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs:139)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14>:SetResult () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:204)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder:SetResult () (at Assets/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskMethodBuilder.cs:70)
+CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14:MoveNext () (at Assets/Plugins/CommerceOrchestrator/Runtime/Providers/GoogleSheetsPricingProvider.cs:94)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14>:Run () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:189)
+Cysharp.Threading.Tasks.AwaiterActions:Continuation (object) (at Assets/Plugins/UniTask/Runtime/UniTask.cs:25)
+Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1<UnityEngine.Networking.UnityWebRequest>:TrySetResult (UnityEngine.Networking.UnityWebRequest) (at Assets/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs:139)
+Cysharp.Threading.Tasks.UnityAsyncExtensions/UnityWebRequestAsyncOperationConfiguredSource:Continuation (UnityEngine.AsyncOperation) (at Assets/Plugins/UniTask/Runtime/UnityAsyncExtensions.cs:1207)
+UnityEngine.AsyncOperation:InvokeCompletionEvent ()
+
+InAppPurchasing: IPurchaseService.FetchPurchases called without a callback defined for IPurchaseService.OnPurchasesFetchFailed.
+UnityEngine.Purchasing.UnityPurchasing:Initialize (UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder)
+CommerceOrchestrator.Core.StoreManager/<InitializeStoreAsync>d__31:MoveNext () (at Assets/Plugins/CommerceOrchestrator/Runtime/Core/StoreManager.cs:115)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Core.StoreManager/<InitializeStoreAsync>d__31>:Run () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:189)
+Cysharp.Threading.Tasks.AwaiterActions:Continuation (object) (at Assets/Plugins/UniTask/Runtime/UniTask.cs:25)
+Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1<Cysharp.Threading.Tasks.AsyncUnit>:TrySetResult (Cysharp.Threading.Tasks.AsyncUnit) (at Assets/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs:139)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14>:SetResult () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:204)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder:SetResult () (at Assets/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskMethodBuilder.cs:70)
+CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14:MoveNext () (at Assets/Plugins/CommerceOrchestrator/Runtime/Providers/GoogleSheetsPricingProvider.cs:94)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1<CommerceOrchestrator.Providers.GoogleSheetsPricingProvider/<FetchProductsAsync>d__14>:Run () (at Assets/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs:189)
+Cysharp.Threading.Tasks.AwaiterActions:Continuation (object) (at Assets/Plugins/UniTask/Runtime/UniTask.cs:25)
+Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1<UnityEngine.Networking.UnityWebRequest>:TrySetResult (UnityEngine.Networking.UnityWebRequest) (at Assets/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs:139)
+Cysharp.Threading.Tasks.UnityAsyncExtensions/UnityWebRequestAsyncOperationConfiguredSource:Continuation (UnityEngine.AsyncOperation) (at Assets/Plugins/UniTask/Runtime/UnityAsyncExtensions.cs:1207)
+UnityEngine.AsyncOperation:InvokeCompletionEvent ()
+
+[CommerceOrchestrator] Store successfully initialized.
+
+[CommerceOrchestrator] Product: com.timeaura.quants.pack100 | Price: $0.01
+
+[CommerceOrchestrator] Product: com.timeaura.quants.pack500 | Price: $0.01
+
+[CommerceOrchestrator] Product: com.timeaura.quants.pack1000 | Price: $0.01
+
+[CommerceOrchestrator] Product: com.timeaura.subscription.enlightened | Price: $0.01
+
+[Economy] 🛒 Commerce Orchestrator Store initialized successfully.
+
+[GoogleSheetsConfig] Successfully fetched sheet: CONFIG
+
+[GoogleSheetsConfig] Successfully fetched sheet: ECONOMY
+
+[GoogleSheetsConfig] Successfully fetched sheet: ORACLE_PROMPTS
+
+[GoogleSheetsConfig] Successfully fetched sheet: FEATURE_FLAGS
+
+[MockAdProvider] 📺 Rewarded Ad Loaded (Simulated)
+
+[MockAdProvider] 📂 Interstitial Ad Loaded (Simulated)
+
+[GoogleSheetsConfig] Successfully fetched sheet: CONTENT
+
+[GoogleSheetsConfig] Successfully fetched sheet: AB_TESTS
+
+[GoogleSheetsConfig] Successfully fetched sheet: ANALYTICS_LOG
+
+[GoogleSheetsConfig] Remote Config updated. Total keys loaded: 93
+
+[RemoteConfigService] Initialization complete. Demo Mode: True, Oracle Daily Limit: 10
+
+[Telemetry] Initializing Analytics & Crashlytics...
+
+[Telemetry] Ready.
+
+[Orchestrator] 💾 Connecting to Akashic Records (Core Services)...
+
+[Orchestrator] ✨ Awakening NetworkService...
+
+[Orchestrator] ✨ Awakening MediaService...
+
+[Media] 📷 Calibrating lens for material preservation...
+
+[Orchestrator] ✨ Awakening GeminiOracleService...
+
+[OracleService] 🎭 Persona loaded: Mystic
+
+[Orchestrator] ✨ Awakening AddressableAssetService...
+
+[AddressableAssetService] Initialized successfully
+
+[Orchestrator] ✨ Awakening GeocodingService...
+
+[GeocodingService] 🗺️ Map of Existence initialized.
+
+[Orchestrator] ✨ Awakening PushNotificationService...
+
+[PushNotificationService] 📱 FCM Token acquired: StubToken
+
+[Orchestrator] ✨ Awakening AudioService...
+
+[AudioService] 🎵 Tuning the Celestial Channels...
+
+[Orchestrator] ✨ Awakening AuthManager...
+
+[Orchestrator] ✨ Awakening LocalizationManager...
+
+[LocalizationManager] 📂 CSV loaded from Resources: Localization/AuraTerms (Size: 105237 chars)
+
+[LocalizationManager] 📄 Lines detected: 475
+
+[LocalizationManager] 🌍 Languages detected in CSV: English, French, German, Hindi, Italian, Polish, Russian, Spanish, Ukrainian, Turkish
+
+[LocalizationManager] ✅ Successfully populated table with 474 keys.
+
+[LocalizationManager] 🌐 Switched to: Ukrainian
+
+[Orchestrator] ✨ Awakening LocationService...
+
+[LocationService] 📍 Calibrating the Sacred Compass...
+
+[Orchestrator] ✨ Awakening UIManager...
+
+[UIManager] Initialized. Scale: 1,3
+
+[Orchestrator] ✨ Awakening SocialManager...
+
+[Orchestrator] ✨ Awakening AuraEffectManager...
+
+[Orchestrator] ✨ Awakening InitiationProcessor...
+
+[Orchestrator] ✨ Awakening HarmonyManager...
+
+[HarmonyManager] 🌊 The Flow of Harmony awakens...
+
+[HarmonyManager] ✨ Harmony channels are now open.
+
+[Orchestrator] ✨ Awakening HorasEconomyService...
+
+[Economy] ⚖️ Balancing the scales of time...
+
+<color=#38ff8e>[RemoteConfig]</color> Successfully loaded 16 config keys.
+
+<color=#38c8ff>[AdManager]</color> 🔄 Remote Config applied to pacing parameters.
+
+[Orchestrator] ✨ Awakening MatchingManager...
+
+[Orchestrator] ✨ Awakening MatchmakingManager...
+
+[MatchmakingManager] 👁️ Loaded 4 Oracle Personas dynamically from Resources.
+
+[Orchestrator] ✨ Awakening SecurityHub...
+
+[Orchestrator] 👤 Checking Adept identity...
+
+[AuthManager] 🔍 Looking for existing session in the ether...
+
+[Orchestrator] 🚀 Boot Ritual Complete. Transcending to InitiationScene...
+
+[UISafeArea] Applied: L:0 R:0 T:79 B:0
+
+[InitiationScreen] 🖥️ UIDocument found with asset: IntroScene
+
+[InitiationScreen] 🗑️ Found legacy 'IntroUI' object. Deactivating to prevent style conflicts.
+UnityEngine.Debug:LogWarning (object)
+TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29:MoveNext () (at Assets/Scripts/Features/UI/Initiation/InitiationScreen.cs:100)
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start<TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29> (TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29&)
+TimeAura.Features.UI.Initiation.InitiationScreen:Start ()
+
+[InitiationScreen] 🛠️ UI DIAGNOSTICS:
+
+ - Panel Settings: Nexus Panel Settings
+
+ - Stylesheets: 1
+
+ - Sorting Order: 50
+
+[InitiationScreen] ⚠️ Using 'Nexus Panel Settings'. If styles are missing, check if this panel has a Theme StyleSheet.
+UnityEngine.Debug:LogWarning (object)
+TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29:MoveNext () (at Assets/Scripts/Features/UI/Initiation/InitiationScreen.cs:134)
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start<TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29> (TimeAura.Features.UI.Initiation.InitiationScreen/<Start>d__29&)
+TimeAura.Features.UI.Initiation.InitiationScreen:Start ()
+
+ - Root Size: 748,8624x1622,535
+
+[AudioService] 📥 Auto-loaded 'SacredCompass' from Resources/Audio/
+
+[Audio] 🎵 Crossfading to: SacredCompass
+
+[AuthManager] 🔍 Looking for existing session in the ether...
+
+[Telemetry] Event: oracle_request_made | type: standard
+
+[OracleProvider] Gemini is disabled. Routing request exclusively to Qwen.
+
+<color=magenta>[QwenOracle - REQUEST OUT] Time: 19:45:36.112 | Model: qwen3.7-plus | Length: 82 chars</color>
+
+[AuthManager] Starting phone auth (stub).
+
+[FirebaseDataService] ✨ Essence sealed in Firestore: users/50de76466f134b748fb486c08b32890a/profile/essence
+
+[EventCloudBridge] 🟡 Level 2: Logging accumulative event 'AuthCompleted' in user history logs...
+
+[EventCloudBridge] 🎧 Opening action channels for Adept: 50de76466f134b748fb486c08b32890a...
+
+[EventCloudBridge] 🎧 Active streaming for actions established.
+
+<color=#FFD700><b>[PULSE]</b></color> Entering Sub-Panel: <color=#FF00FF><b>THE RITUAL</b></color>
+
+[InitiationRitual] 🌀 Current Step: QuickStart
+
+[EventCloudBridge] Accumulative event logged in users/50de76466f134b748fb486c08b32890a/events_log/YEXv0ntnE1frd2hp08zr
+
+[InitiationRitual] ⚡ Quick Start Choice: FindMaster
+
+[Initiation] 💾 Sealing the Ritual. Persisting profile to the Records...
+
+[FirebaseDataService] ✨ Essence sealed in Firestore: users/50de76466f134b748fb486c08b32890a/profile/essence
+
+[FirebaseDataService] ✨ Essence sealed in Firestore: users/50de76466f134b748fb486c08b32890a/profile/essence
+
+[NexusController] 👁️ Linked to Global OracleWidgetController.
+
+[UISafeArea] Applied: L:0 R:0 T:79 B:0
+
+[NexusController] 🔍 DIAGNOSTICS:
+  UIDocument: NexusController
+  VisualTreeAsset: NexusScene
+  PanelSettings: Nexus Panel Settings
+  rootVisualElement: EXISTS (children: 1)
+  Enabled: True
+  GameObject Active: True
+
+[NexusController] ✅ UI Awakened! ScreenRoot found with 17 children.
+
+[NexusController] 🖥️ Successfully bound to: NexusController (Asset: NexusScene)
+
+[NexusController] 💉 Dependencies solidified after 0 frames.
+
+[NexusController] 🛠️ WIRING DIAGNOSTICS:
+  Localization: OK
+  Auth: OK
+  Data: OK
+  Gemini: OK
+  OracleService: OK
+  AuraPresenter: OK
+
+ - Child: ScreenRoot (Class: screen-container)
+
+[NexusController] 👁️ Linking to Global OracleWidgetController...
+
+[OracleWidget] Found Eye in assigned doc: GlobalManagers
+
+[OracleWidget] 👁️ Eye default position set immediately on init: left=472,8624, top=1009,578 (Screen: 748,8624x1622,535)
+
+[OracleWidget] 👁️ Oracle Eye closed & collapsed to bottom menu.
+
+[OracleWidget] 👁️ Oracle Controls fully bound and operational.
+
+[NexusController] 📂 MasterDossierPanel element found: True
+
+[NexusController] ⚡ SymmetryRiteModal element found: True
+
+[NexusController] ⚖️ HorasScalesPanel element found: True
+
+[Vault] 🛠️ Initializing with full data mastery.
+
+[Vault] 🔄 Refreshing UI for: Adept-3990 (Age: 0, Status: 0)
+
+[MysticalShop] 🔮 Initializing Mystical Shop UI Toolkit Overlay.
+
+[MysticalShop] 🎨 Attached ShopStyles.uss programmatically to ShopPanel.
+
+[OracleWidget] 👁️ Document swapped to: NexusController
+
+[OracleWidget] Found Eye in assigned doc: NexusController
+
+[OracleWidget] 👁️ Oracle Eye closed & collapsed to bottom menu.
+
+[OracleWidget] 👁️ Oracle Controls fully bound and operational.
+
+[OracleWidget] Found Eye in assigned doc: NexusController
+
+[OracleWidget] 👁️ Oracle Eye closed & collapsed to bottom menu.
+
+[OracleWidget] 👁️ Oracle Controls fully bound and operational.
+
+[Aura] 🌀 Initializing AuraView Ritual...
+
+[Aura] ✨ Resonance aligned with Pillar_Ethereal (Color: RGBA(0.600, 0.000, 0.800, 1.000))
+
+[OracleSelectionController] 🧪 No OracleSO assets found in Resources. Spawning default candidates.
+
+[OracleSelectionController] 🛠️ Wireframe bound. Slot: True, Modal: True, Generate: True
+
+[AuraView] Switched to Tab: UNIFIED
+
+[LocalizationManager] 🎭 Persona Tone set to: Business
+
+[EventCloudBridge] 🔴 Level 1: LanguageChanged. Updating Firestore profile language to: Ukrainian
+
+[Nexus] 🌐 Syncing Divine Tongues...
+
+[Vault] 🔄 Refreshing UI for: Adept-3990 (Age: 0, Status: 0)
+
+[Nexus] 🌐 Syncing Divine Tongues...
+
+[Vault] 🔄 Refreshing UI for: Adept-3990 (Age: 0, Status: 0)
+
+[AudioService] 📥 Auto-loaded 'MessageSent2' from Resources/Audio/
+
+[Telemetry] Event: oracle_request_made | type: standard
+
+[OracleProvider] Gemini is disabled. Routing request exclusively to Qwen.
+
+<color=magenta>[QwenOracle - REQUEST OUT] Time: 19:45:56.045 | Model: qwen3.7-plus | Length: 717 chars</color>
+
+[OracleWidget] 👁️ Eye default position initialized to: left=598,8624, top=1135,578 (Screen: 748,8624x1622,535)
+
+[SocialManager] 📡 Network feed unavailable (Cannot resolve destination host). Summoning Ethereal Chronicles...
+
+[EventCloudBridge] Language setting synced with Firestore profile.
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_1
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_2
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_5
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_4
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_0
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_3
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_2
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_3
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_0
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_1
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_4
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_2
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_3
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_3
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_4
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_1
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_0
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_1
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_4
+
+[SocialManager] 📡 Offline fallback: Materializing persona for user_2
+
+[OracleWidget] 🔮 SIMULATION: Low Alert (Cyan + Slow Particles)
+
+[OracleWidget] 🔮 SIMULATION: Low Alert (Cyan + Slow Particles)
+
+[OracleWidget] 🔮 SIMULATION: Low Alert (Cyan + Slow Particles)
+
+<color=magenta>[QwenOracle - RESPONSE IN] Time: 19:46:09.743 | Status: Success | Length: 110 chars</color>
+✨ Content: Welcome, Adept, to the space between seconds, where the tomorrow you seek has al...
+
+<color=magenta>[QwenOracle - RESPONSE IN] Time: 19:46:42.645 | Status: Success | Length: 104 chars</color>
+✨ Content: Вітаю, Adept-3990. У Нексусі твої нитки долі сплітаються з вічністю. Обирай риту...
+
+[OracleWidget] 🔮 SIMULATION: Medium Alert (Gold + Medium Particles)
+
+[OracleWidget] 🔮 SIMULATION: Medium Alert (Gold + Medium Particles)
+
+[OracleWidget] 🔮 SIMULATION: Medium Alert (Gold + Medium Particles)
+
+[Nexus] ⚡ Quick Start destination detected: FindMaster -> Navigating to radar
+
+[Popup] Opened: RadarPopup (Оракул шукає резонанс)
+
+<color=#FFD700><b>[PULSE]</b></color> Entering Panel: <color=#00FFFF><b>FEED</b></color>
+
+[OracleContext] 🧠 Context switched to: Nexus
+
+[Radar] 🔇 Resonance suspended. Clearing visual echoes.
+
+[OracleContext] 🧠 Context switched to: Nexus
+
+[Radar] 🔇 Resonance suspended. Clearing visual echoes.
+
+[AudioService] 📥 Auto-loaded 'TibetanBowls' from Resources/Audio/
+
+[Audio] 🎵 Crossfading to: TibetanBowls
+
+[OracleWhisperManager] 👁️ Background Whisper Loop started.
+
+[SocialManager] 📡 Network feed unavailable (Cannot resolve destination host). Summoning Ethereal Chronicles...
+
+[Onboarding] ⏳ Step onboarding_feed_v2_done showing...
+
+[UIManager] 🌌 ShowOnboardingStep (Modal): ✨ СТРІЧКА
+
+[Onboarding] ⏳ Step onboarding_feed_v2_done showing...
+
+[UIManager] 🌌 ShowOnboardingStep (Modal): ✨ СТРІЧКА
+
+[OracleWidget] 🔮 SIMULATION: High Alert (Gold + Crimson + Fast Particles)
+
+[OracleWidget] 🔮 SIMULATION: High Alert (Gold + Crimson + Fast Particles)
+
+[OracleWidget] 🔮 SIMULATION: High Alert (Gold + Crimson + Fast Particles)
+
+[UIManager] 💎 Onboarding button clicked: ✨ СТРІЧКА
+
+[Onboarding] ⚡ Step onboarding_feed_v2_done callback onConfirm invoked!
+
+[Onboarding] ✓ Step onboarding_feed_v2_done completed and saved.
+
+[OracleWhisperManager] 🌌 Publishing background whisper loop check...
+
+[EventCloudBridge] 🟡 Level 2: Logging accumulative event 'NewbieStateTriggered' in user history logs...
+
+[EventCloudBridge] Accumulative event logged in users/50de76466f134b748fb486c08b32890a/events_log/xvx4n6ULSv64MCIBgwNo
+

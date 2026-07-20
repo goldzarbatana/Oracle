@@ -665,7 +665,7 @@ namespace TimeAura.Features.UI.Nexus
             Debug.Log($"[NexusController] ⚡ SymmetryRiteModal element found: {riteEl != null}");
             if (riteEl != null)
             {
-                _symmetryRite = new SymmetryRiteController(riteEl, _audioService, _hapticService);
+                _symmetryRite = new SymmetryRiteController(riteEl, _audioService, _hapticService, _localization);
                 _symmetryRite.OnHarmonyAchieved += OnHarmonyAchieved;
                 _symmetryRite.OnSymmetryDeclined += OnSymmetryDeclined;
             }
@@ -982,7 +982,7 @@ namespace TimeAura.Features.UI.Nexus
             ringContainer.Add(nodeC);
 
             // Circular closing arrow label to make it explicitly closed-loop
-            var returnPathLabel = new Label("✦ Кільце Симетрії замикається назад на тебе ✦");
+            var returnPathLabel = new Label(_localization?.Get("term.slide_to_harmony", "✦ Кільце Симетрії замикається назад на тебе ✦") ?? "✦ Кільце Симетрії замикається назад на тебе ✦");
             returnPathLabel.style.color = new StyleColor(new Color(0.8f, 0.7f, 1f));
             returnPathLabel.style.fontSize = 12;
             returnPathLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
@@ -1017,7 +1017,10 @@ namespace TimeAura.Features.UI.Nexus
             }).Every(80);
 
             var btnClose = new Button();
-            btnClose.text = "МАНІФЕСТУВАТИ СОЮЗ";
+            string btnManifestText = _localization?.Get(AuraTerms.MSG_SEEKING_CONVERGENCE, "МАНІФЕСТУВАТИ СОЮЗ") ?? "МАНІФЕСТУВАТИ СОЮЗ";
+            btnClose.text = _localization != null
+                ? _localization.GetPersonaString(AuraTerms.MSG_SEEKING_CONVERGENCE, _authManager?.CurrentProfile?.OracleTone ?? OracleTone.Business, "МАНІФЕСТУВАТИ СОЮЗ").ToUpper()
+                : "МАНІФЕСТУВАТИ СОЮЗ";
             btnClose.style.backgroundColor = new StyleColor(new Color(0.45f, 0.1f, 0.65f));
             btnClose.style.color = new StyleColor(Color.white);
             btnClose.style.paddingTop = 12; btnClose.style.paddingBottom = 12;
@@ -1224,8 +1227,8 @@ namespace TimeAura.Features.UI.Nexus
             // Manage logic lifecycle based on panel
             if (panelId == "feed" || panelId == "discovery")
             {
-                _content?.Refresh();
-                if (panelId == "feed") _feed?.RefreshAsync().Forget();
+                if (_content != null) _content.Refresh();
+                if (panelId == "feed" && _feed != null) _feed.RefreshAsync().Forget();
             }
 
             // Sync Oracle Context
@@ -1241,11 +1244,17 @@ namespace TimeAura.Features.UI.Nexus
             };
             OracleContextManager.SetContext(context);
             
-            _content?.SetActive(panelId == "feed" || panelId == "vault" || panelId == "discovery");
-            if (panelId == "vault") _vault?.RefreshUI();
+            if (_content != null) _content.SetActive(panelId == "feed" || panelId == "vault" || panelId == "discovery");
+            if (panelId == "vault" && _vault != null) _vault.RefreshUI();
             
-            if (panelId == "radar") _radar?.Resume();
-            else _radar?.Pause();
+            if (panelId == "radar") 
+            {
+                if (_radar != null) _radar.Resume();
+            }
+            else 
+            {
+                if (_radar != null) _radar.Pause();
+            }
         }
 
         private void OnSearchCompleted(List<UserProfile> matches)
@@ -1467,7 +1476,7 @@ namespace TimeAura.Features.UI.Nexus
             label.style.whiteSpace = UnityEngine.UIElements.WhiteSpace.Normal;
             
             var btn = new UnityEngine.UIElements.Button(() => UnityEngine.Application.Quit());
-            btn.text = "Вийти";
+            btn.text = _localization != null ? _localization.Get(TimeAura.Core.Localization.AuraTerms.BTN_EXIT, "Вийти").ToUpper() : "ВИЙТИ";
             btn.style.marginTop = 40;
             btn.style.paddingTop = 15;
             btn.style.paddingBottom = 15;

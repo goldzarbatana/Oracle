@@ -57,23 +57,35 @@ namespace TimeAura.Features.UI.Nexus
 
             root.Q("NavFeed")?.RegisterCallback<ClickEvent>(e => SwitchTo("feed"));
             root.Q("BtnOpenChamber")?.RegisterCallback<ClickEvent>(e => SwitchTo("chamber"));
-            root.Q("BtnOracleEyeCollapsed")?.RegisterCallback<ClickEvent>(e => {
-                if (OracleWidgetController.Instance != null)
-                {
-                    _audioService?.PlaySFX("CrystalClick");
-                    _hapticService?.MediumTap();
+            var btnOracle = root.Q("BtnOracleEyeCollapsed");
+            if (btnOracle != null)
+            {
+                float lastToggleTime = 0f;
+                // Register both Click and PointerUp to ensure mobile taps are caught
+                EventCallback<EventBase> toggleOracle = e => {
+                    if (Time.time - lastToggleTime < 0.2f) return;
+                    lastToggleTime = Time.time;
                     
-                    var widget = OracleWidgetController.Instance;
-                    if (widget.WidgetState == OracleWidgetController.OracleWidgetState.Closed)
+                    if (OracleWidgetController.Instance != null)
                     {
-                        widget.OpenWidget();
+                        _audioService?.PlaySFX("CrystalClick");
+                        _hapticService?.MediumTap();
+                        
+                        var widget = OracleWidgetController.Instance;
+                        if (widget.WidgetState == OracleWidgetController.OracleWidgetState.Closed)
+                        {
+                            widget.OpenWidget();
+                        }
+                        else
+                        {
+                            widget.CloseWidget();
+                        }
                     }
-                    else
-                    {
-                        widget.CloseWidget();
-                    }
-                }
-            });
+                };
+                
+                btnOracle.RegisterCallback<ClickEvent>(toggleOracle);
+                btnOracle.RegisterCallback<PointerUpEvent>(toggleOracle);
+            }
 
             root.Q("BtnOpenProfile")?.RegisterCallback<ClickEvent>(e => SwitchTo("vault"));
             // BtnConsultOracle removed — was a duplicate of BtnOpenSanctuary.

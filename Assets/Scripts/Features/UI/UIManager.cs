@@ -21,9 +21,11 @@ namespace TimeAura.Features.UI
 
         public async UniTask InitializeAsync(CancellationToken cancellationToken)
         {
-            GlobalScale = PlayerPrefs.GetFloat("UIScale", 1.0f);
+            GlobalScale = PlayerPrefs.GetFloat("UIScale", 1.3f);
             Debug.Log($"[UIManager] Initialized. Scale: {GlobalScale}");
             IsInitialized = true;
+            // Apply the saved scale immediately on startup
+            SetGlobalScale(GlobalScale);
             await UniTask.Yield(cancellationToken);
         }
 
@@ -44,8 +46,8 @@ namespace TimeAura.Features.UI
                 
                 if (doc.rootVisualElement != null)
                 {
-                    // Adaptive Typography: Scale base font size (16px base)
-                    doc.rootVisualElement.style.fontSize = new Length(16f * scale, LengthUnit.Pixel);
+                    // Adaptive Typography: Scale base font size (18px base)
+                    doc.rootVisualElement.style.fontSize = new Length(18f * scale, LengthUnit.Pixel);
                 }
             }
         }
@@ -182,7 +184,7 @@ namespace TimeAura.Features.UI
         /// <summary>
         /// UX Audit #14: Shows a full-screen onboarding modal with title, explanation, and a confirm button.
         /// </summary>
-        public void ShowOnboardingStep(string title, string body, System.Action onConfirm = null)
+        public void ShowOnboardingStep(string title, string body, System.Action onConfirm = null, string confirmText = null)
         {
             Debug.Log($"[UIManager] 🌌 ShowOnboardingStep (Modal): {title}");
             var activeDoc = GetActiveMainDocument();
@@ -232,7 +234,7 @@ namespace TimeAura.Features.UI
             bodyLbl.style.marginBottom = 28;
 
             var btn = new Button();
-            btn.text = "ЗРОЗУМІЛО \u2726";
+            btn.text = confirmText ?? "ЗРОЗУМІЛО ✦";
             btn.style.height = 48;
             btn.style.fontSize = 15;
             btn.style.backgroundColor = new StyleColor(new Color(0.83f, 0.68f, 0.21f, 1f));

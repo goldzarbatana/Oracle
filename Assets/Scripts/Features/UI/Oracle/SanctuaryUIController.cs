@@ -311,7 +311,8 @@ namespace TimeAura.Features.UI.Oracle
                     if (string.IsNullOrEmpty(audioBase64))
                     {
                         var uiManager = UnityEngine.Object.FindAnyObjectByType<TimeAura.Features.UI.UIManager>();
-                        uiManager?.ShowToast("⚠️ Voice recording empty or failed.", "error");
+                        string msg = _localization?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_VOICE_EMPTY, "⚠️ Voice recording empty or failed.") ?? "⚠️ Voice recording empty or failed.";
+                        uiManager?.ShowToast(msg, "error");
                         return;
                     }
 

@@ -317,15 +317,15 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="NavigationDock" class="nav-dock" style="position: absolute; bottom: 0; width: 100%;">
-            <ui:VisualElement name="NavFeed" class="nav-item nav-item--active" style="width: 5%;">
-                <ui:Label name="LblNavFeed" text="СТРІЧКА" class="nav-label"/>
+        <ui:VisualElement name="NavigationDock" class="nav-dock" style="position: absolute; bottom: 0; width: 100%; flex-direction: row; justify-content: space-around;">
+            <ui:VisualElement name="NavFeed" class="nav-item nav-item--active" style="flex-grow: 1; align-items: center; justify-content: center;">
+                <ui:Label name="LblNavFeed" text="СТРІЧКА" class="nav-label" style="-unity-text-align: middle-center;"/>
             </ui:VisualElement>
-            <ui:VisualElement name="BtnOpenChamber" class="nav-item nav-item--center" style="margin-top: 0; width: 20%; margin-bottom: 0;">
-                <ui:Label text="CHAMBER" class="nav-label"/>
+            <ui:VisualElement name="BtnOpenChamber" class="nav-item nav-item--center" style="flex-grow: 1; align-items: center; justify-content: center; margin-top: 0; margin-bottom: 0;">
+                <ui:Label text="CHAMBER" class="nav-label" style="-unity-text-align: middle-center;"/>
             </ui:VisualElement>
-            <ui:VisualElement name="BtnOracleEyeCollapsed" class="nav-item" style="width: 5%;">
-                <ui:Label name="LblNavOracle" text="👁️ ORACLE" class="nav-label"/>
+            <ui:VisualElement name="BtnOracleEyeCollapsed" class="nav-item" style="flex-grow: 1; align-items: center; justify-content: center;">
+                <ui:Label name="LblNavOracle" text="👁️ ORACLE" class="nav-label" style="-unity-text-align: middle-center;"/>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="LogoMini" picking-mode="Ignore" class="logo-mini" style="height: 48px; width: 61px;">

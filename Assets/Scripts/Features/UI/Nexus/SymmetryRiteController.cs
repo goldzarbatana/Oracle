@@ -3,8 +3,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Cysharp.Threading.Tasks;
 using TimeAura.Core.Services;
+using TimeAura.Core.Localization;
 using TimeAura.Features.Auth;
 using TimeAura.Features.Data;
+using TimeAura.Features.Localization;
 
 namespace TimeAura.Features.UI.Nexus
 {
@@ -13,6 +15,7 @@ namespace TimeAura.Features.UI.Nexus
         private VisualElement _root;
         private AudioService _audio;
         private HapticService _haptic;
+        private LocalizationManager _localization;
 
         private VisualElement _sealContainer;
         private VisualElement _sealBase;
@@ -31,11 +34,12 @@ namespace TimeAura.Features.UI.Nexus
         private UserProfile _targetUser;
         public UserProfile TargetUser => _targetUser;
 
-        public SymmetryRiteController(VisualElement root, AudioService audio, HapticService haptic)
+        public SymmetryRiteController(VisualElement root, AudioService audio, HapticService haptic, LocalizationManager localization = null)
         {
             _root = root;
             _audio = audio;
             _haptic = haptic;
+            _localization = localization;
 
             _sealContainer = _root.Q("SealContainer");
             _sealBase = _root.Q("SealBase");
@@ -157,7 +161,7 @@ namespace TimeAura.Features.UI.Nexus
             }
             if (_lblHoldHint != null)
             {
-                _lblHoldHint.text = "HARMONY ACHIEVED";
+                _lblHoldHint.text = _localization?.Get(AuraTerms.HARMONY_STATUS_ACTIVE, "HARMONY ACHIEVED").ToUpper() ?? "HARMONY ACHIEVED";
                 _lblHoldHint.style.color = new StyleColor(new Color(1f, 0.84f, 0f, 1f)); 
             }
 
@@ -169,7 +173,7 @@ namespace TimeAura.Features.UI.Nexus
 
             if (_lblHoldHint != null)
             {
-                _lblHoldHint.text = "Hold to align";
+                _lblHoldHint.text = _localization?.Get(AuraTerms.SYMMETRY_HOLD_HINT, "Hold to align") ?? "Hold to align";
                 _lblHoldHint.style.color = new StyleColor(new Color(1f, 1f, 1f, 0.6f));
             }
         }

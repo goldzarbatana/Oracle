@@ -2,6 +2,9 @@ using System;
 using Cysharp.Threading.Tasks;
 using TimeAura.Features.Auth;
 using TimeAura.Features.UI;
+using TimeAura.Features.Localization;
+using TimeAura.Core.Localization;
+using TimeAura.Core.Data.SO;
 using UnityEngine;
 using VContainer;
 
@@ -21,6 +24,7 @@ namespace TimeAura.Features.UI.Nexus
 
         [Inject] private UIManager _uiManager;
         [Inject] private AuthManager _authManager;
+        [Inject] private LocalizationManager _localization;
 
         private void Start()
         {
@@ -59,29 +63,39 @@ namespace TimeAura.Features.UI.Nexus
                 panelId = nav != null ? nav.ActivePanelId : "sanctuary";
             }
 
+            var tone = profile.OracleTone;
+
             if (panelId == "sanctuary")
             {
                 if (PlayerPrefs.GetInt(PREF_NEXUS, 0) == 0)
                 {
-                    await ShowStep("\ud83c\udf0c Ласкаво просимо в NEXUS", "NEXUS — твій центр обміну часом і навичками.\n\nТут ти знайдеш людей, які пропонують те, що тобі потрібно, і навпаки.", PREF_NEXUS);
+                    string title = _localization?.GetPersonaString(AuraTerms.ONBOARDING_NEXUS_TITLE, tone, "🌌 Ласкаво просимо в NEXUS") ?? "🌌 Ласкаво просимо в NEXUS";
+                    string body = _localization?.GetPersonaString(AuraTerms.ONBOARDING_NEXUS_BODY, tone, "NEXUS — твій центр обміну часом і навичками.\n\nТут ти знайдеш людей, які пропонують те, що тобі потрібно, і навпаки.") ?? "NEXUS — твій центр обміну часом і навичками.\n\nТут ти знайдеш людей, які пропонують те, що тобі потрібно, і навпаки.";
+                    await ShowStep(title, body, PREF_NEXUS);
                 }
                 else if (PlayerPrefs.GetInt(PREF_HORAS, 0) == 0)
                 {
-                    await ShowStep("\u29c6 ХОРИ (HORAS)", "ХОРИ — валюта Нексусу.\n\n1 ХОРА = 1 година праці.\n\nТи отримуєш Хори, коли хтось цінує твій час. Витрачаєш — коли сам замовляєш послугу.", PREF_HORAS);
+                    string title = _localization?.GetPersonaString(AuraTerms.ONBOARDING_HORAS_TITLE, tone, "⧖ ХОРИ (HORAS)") ?? "⧖ ХОРИ (HORAS)";
+                    string body = _localization?.GetPersonaString(AuraTerms.ONBOARDING_HORAS_BODY, tone, "ХОРИ — валюта Нексусу.\n\n1 ХОРА = 1 година праці.\n\nТи отримуєш Хори, коли хтось цінує твій час. Витрачаєш — коли сам замовляєш послугу.") ?? "ХОРИ — валюта Нексусу.\n\n1 ХОРА = 1 година праці.\n\nТи отримуєш Хори, коли хтось цінує твій час. Витрачаєш — коли сам замовляєш послугу.";
+                    await ShowStep(title, body, PREF_HORAS);
                 }
             }
             else if (panelId == "feed")
             {
                 if (PlayerPrefs.GetInt(PREF_FEED, 0) == 0)
                 {
-                    await ShowStep("\u2728 СТРІЧКА (FEED)", "Тут живуть Адепти — люди з навичками, які тобі потрібні.\n\nПрогортай картки, натисни на профіль — і розпочни Симетрію (угоду).", PREF_FEED);
+                    string title = _localization?.GetPersonaString(AuraTerms.ONBOARDING_FEED_TITLE, tone, "✨ СТРІЧКА (FEED)") ?? "✨ СТРІЧКА (FEED)";
+                    string body = _localization?.GetPersonaString(AuraTerms.ONBOARDING_FEED_BODY, tone, "Тут живуть Адепти — люди з навичками, які тобі потрібні.\n\nПрогортай картки, натисни на профіль — і розпочни Симетрію (угоду).") ?? "Тут живуть Адепти — люди з навичками, які тобі потрібні.\n\nПрогортай картки, натисни на профіль — і розпочни Симетрію (угоду).";
+                    await ShowStep(title, body, PREF_FEED);
                 }
             }
             else if (panelId == "aura")
             {
                 if (PlayerPrefs.GetInt(PREF_AURA, 0) == 0)
                 {
-                    await ShowStep("\ud83c\udf00 АУРА (AURA)", "Тут ти налаштовуєш своє резюме Нексусу:\n\n\ud83c\udf81 MANIFEST = що ти вмієш і пропонуєш\n\ud83d\udd0d INTENT = що шукаєш\n\nЧим точніше — тим краще збіги!", PREF_AURA);
+                    string title = _localization?.GetPersonaString(AuraTerms.ONBOARDING_AURA_TITLE, tone, "🌀 АУРА (AURA)") ?? "🌀 АУРА (AURA)";
+                    string body = _localization?.GetPersonaString(AuraTerms.ONBOARDING_AURA_BODY, tone, "Тут ти налаштовуєш своє резюме Нексусу:\n\n✨ MANIFEST = що ти вмієш і пропонуєш\n🔍 INTENT = що шукаєш\n\nЧим точніше — тим краще збіги!") ?? "Тут ти налаштовуєш своє резюме Нексусу:\n\n✨ MANIFEST = що ти вмієш і пропонуєш\n🔍 INTENT = що шукаєш\n\nЧим точніше — тим краще збіги!";
+                    await ShowStep(title, body, PREF_AURA);
                 }
             }
         }
@@ -90,13 +104,16 @@ namespace TimeAura.Features.UI.Nexus
         {
             var tcs = new UniTaskCompletionSource();
             Debug.Log($"[Onboarding] ⏳ Step {prefKey} showing...");
+            var tone = _authManager?.CurrentProfile?.OracleTone ?? OracleTone.Business;
+            string confirmText = _localization?.GetPersonaString(AuraTerms.BTN_UNDERSTOOD, tone, "ЗРОЗУМІЛО ✦") ?? "ЗРОЗУМІЛО ✦";
             _uiManager?.ShowOnboardingStep(
                 title,
                 body,
                 () => {
                     Debug.Log($"[Onboarding] ⚡ Step {prefKey} callback onConfirm invoked!");
                     tcs.TrySetResult();
-                }
+                },
+                confirmText
             );
             await tcs.Task;
             PlayerPrefs.SetInt(prefKey, 1);

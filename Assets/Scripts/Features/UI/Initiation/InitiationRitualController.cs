@@ -280,6 +280,10 @@ namespace TimeAura.Features.UI.Initiation
                 int initialIndex = ScaleToIndex(_uiManager?.GlobalScale ?? 1.0f);
                 _sliderScale.value = initialIndex;
                 
+                // Apply the initial scale immediately so Ritual itself is readable
+                float initialScale = IndexToScale(initialIndex);
+                _uiManager?.SetGlobalScale(initialScale);
+                
                 // FORCE UPDATE LOCALIZATION AND LABELS IMMEDIATELY
                 UpdateLocalization();
                 UpdateScaleLabel(initialIndex);
@@ -844,24 +848,28 @@ namespace TimeAura.Features.UI.Initiation
             if (_lblScaleValue == null || _localization == null) return;
             var tone = _currentProfile?.OracleTone ?? OracleTone.Business;
             
+            // 0 = Standard (1.3x), 1 = Large (1.6x)
             string label = index switch
             {
-                0 => _localization.GetPersonaString(AuraTerms.LBL_SCALE_SMALL, tone, "SMALL"),
-                2 => _localization.GetPersonaString(AuraTerms.LBL_SCALE_LARGE, tone, "LARGE"),
-                _ => _localization.GetPersonaString(AuraTerms.LBL_SCALE_MEDIUM, tone, "MEDIUM")
+                0 => _localization.GetPersonaString(AuraTerms.LBL_SCALE_MEDIUM, tone, "СТАНДАРТНИЙ"),
+                1 => _localization.GetPersonaString(AuraTerms.LBL_SCALE_LARGE, tone, "ВЕЛИКИЙ"),
+                _ => _localization.GetPersonaString(AuraTerms.LBL_SCALE_MEDIUM, tone, "СТАНДАРТНИЙ")
             };
             
-            _lblScaleValue.text = label + " " + _localization.GetPersonaString(AuraTerms.LBL_VISION, tone, "VISION");
-            if (_lblSampleText != null) _lblSampleText.text = _localization.GetPersonaString(AuraTerms.MSG_SAMPLE_TEXT, tone, "The Aura resonates through time and space.");
+            _lblScaleValue.text = label;
+            if (_lblSampleText != null) _lblSampleText.text = _localization.GetPersonaString(AuraTerms.MSG_SAMPLE_TEXT, tone, "Аура резонує крізь час і простір.");
         }
 
         private float IndexToScale(int index)
         {
             return index switch
             {
-                0 => 0.8f,
-                2 => 1.3f,
-                _ => 1.0f
+                // 0 = Standard (Зручний)  — 1.3x
+                // 1 = Large   (Великий)   — 1.6x
+                // "Маленький" варіант прибрано — на сучасних телефонах нечитабельно
+                0 => 1.3f,
+                1 => 1.6f,
+                _ => 1.3f  // default теж великий
             };
         }
 

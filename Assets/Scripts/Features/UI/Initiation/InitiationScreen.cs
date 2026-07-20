@@ -301,7 +301,7 @@ namespace TimeAura.Features.UI.Initiation
             {
                 if (_inputOTP == null || string.IsNullOrEmpty(_inputOTP.value) || _inputOTP.value.Length < 4)
                 {
-                    _oracle?.ShowFeedback("The ethereal code is incomplete. We need 4 digits.");
+                    _oracle?.ShowFeedback(_localization?.GetPersonaString(AuraTerms.INIT_ERR_OTP, tone, "Код неповний. Потрібно 4 цифри.") ?? "Код неповний. Потрібно 4 цифри.");
                     return;
                 }
             }

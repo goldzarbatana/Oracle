@@ -286,7 +286,7 @@ namespace TimeAura.Features.UI.Social
             // Optimistic UI: Immediate golden glow
             transformButtonGlow.gameObject.SetActive(true);
             transformButton.interactable = false;
-            transformButtonText.text = "TRANSFORMING...";
+            transformButtonText.text = localizationManager?.Get(AuraTerms.TRANSCENDING, "TRANSFORMING...") ?? "TRANSFORMING...";
 
             try
             {
@@ -311,7 +311,9 @@ namespace TimeAura.Features.UI.Social
                 if (success)
                 {
                     // Success: Keep the glow briefly
-                    transformButtonText.text = "TRANSFORMED ✦";
+                    transformButtonText.text = localizationManager?.Get(AuraTerms.SUCCESS, "TRANSFORMED ✦") != null 
+                        ? localizationManager.Get(AuraTerms.SUCCESS, "TRANSFORMED ✦") + " ✦"
+                        : "TRANSFORMED ✦";
                     await UniTask.Delay(1000, cancellationToken: cts.Token);
                 }
                 else
@@ -321,7 +323,7 @@ namespace TimeAura.Features.UI.Social
                     currentPost.likesCount += currentPost.isLiked ? 1 : -1;
                     transformsCountText.text = FormatCount(currentPost.likesCount);
 
-                    transformButtonText.text = "CONNECTION LOST";
+                    transformButtonText.text = localizationManager?.Get(AuraTerms.ERROR, "CONNECTION LOST") ?? "CONNECTION LOST";
                     await UniTask.Delay(1500, cancellationToken: cts.Token);
                 }
             }
@@ -367,7 +369,8 @@ namespace TimeAura.Features.UI.Social
         private void OnConnectClicked()
         {
             Debug.Log($"[FateCard] Connect with adept: {currentProfile?.username ?? currentPost.username}");
-            FindAnyObjectByType<TimeAura.Features.UI.UIManager>()?.ShowToast("Відкриття профілю Майстра...");
+            string toast = localizationManager?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_OPENING_PROFILE, "Відкриття профілю Майстра...") ?? "Відкриття профілю Майстра...";
+            FindAnyObjectByType<TimeAura.Features.UI.UIManager>()?.ShowToast(toast);
         }
 
         private void OnShareClicked()
@@ -375,7 +378,8 @@ namespace TimeAura.Features.UI.Social
             string shareLink = $"https://timeaura.com/adept/{currentPost.userId}";
             GUIUtility.systemCopyBuffer = shareLink;
             Debug.Log($"[FateCard] Copied to clipboard: {shareLink}");
-            FindAnyObjectByType<TimeAura.Features.UI.UIManager>()?.ShowToast("Посилання скопійовано!");
+            string toast = localizationManager?.Get(TimeAura.Core.Localization.AuraTerms.TOAST_LINK_COPIED, "Посилання скопійовано!") ?? "Посилання скопійовано!";
+            FindAnyObjectByType<TimeAura.Features.UI.UIManager>()?.ShowToast(toast);
         }
 
         #endregion

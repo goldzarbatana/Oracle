@@ -17,11 +17,27 @@
 .text-caption { font-size: 75%; } /* ~12px */
 .text-tag { font-size: 87.5%; -unity-font-style: bold; } /* ~14px */
 
-Label, Button {
-    /* Auto-size is killed by default to preserve uniformity */
-    -unity-text-auto-size: none;
+Label {
+    -unity-text-auto-size: true;
+    -unity-font-size-min: 8px;
+    -unity-font-size-max: 80px;
     -unity-text-generator: advanced;
 }
+
+/* Buttons auto-shrink text to fit, never overflow */
+Button {
+    -unity-text-auto-size: true;
+    -unity-font-size-min: 10px;
+    -unity-font-size-max: 80px;
+    -unity-text-generator: advanced;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Override for specific classes that need standard generator */
 
 .standard-text,
 .deal-modal-title,
@@ -43,7 +59,8 @@ Label, Button {
     border-radius: 16px;
     padding: 20px;
     margin: 10px;
-    width: 320px;
+    width: 95%;
+    max-width: 600px;
     min-height: 400px;
 }
 

@@ -66,7 +66,7 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="ScaleSection" class="ritual-section ritual-section--column" style="width: 100%; align-items: center; display: none;">
                     <ui:Label name="LblScaleValue" text="" class="text-gold" style="font-size: 32px; margin-bottom: 40px;"/>
-                    <ui:SliderInt name="SliderScale" low-value="0" high-value="2" value="1" class="age-slider" style="width: 80%;"/>
+                    <ui:SliderInt name="SliderScale" low-value="0" high-value="1" value="0" class="age-slider" style="width: 80%;"/>
                     <ui:Label name="LblSampleText" text="" class="text-gold" style="font-size: 24px; margin-top: 30px; margin-bottom: 30px; white-space: normal; text-align: center; width: 90%; opacity: 0.6; -unity-font-style: italic;"/>
                     <ui:Button name="BtnConfirmScale" text="" class="btn-primary" style="font-size: 24px; height: 80px; width: 60%; margin-top: 20px;"/>
                 </ui:VisualElement>
